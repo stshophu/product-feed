@@ -3,6 +3,7 @@ const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, disableProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
+const { getCategoryCode } = require("./categories");
 
 const isFullSync = process.argv.includes("--full");
 
@@ -29,7 +30,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity 
     identifier: `shopify_variant_${variant.id}`,
     parent: `shopify_product_${product.id}`,
     enabled: true,
-    category: getCategoryCode(product.product_type),
+    category: getCategoryCode(product.product_type, product.tags),
     values: {
       name: [{ data: product.title, locale: config.defaultLocale }, { data: product.title, locale: config.secondaryLocale }],
       description: [{ data: product.body_html || product.title, locale: config.defaultLocale }, { data: product.body_html || product.title, locale: config.secondaryLocale }],
