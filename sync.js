@@ -5,6 +5,7 @@ const { upsertProduct, disableProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
+const { findColor } = require("./colormap");
 
 const isFullSync = process.argv.includes("--full");
 
@@ -36,7 +37,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   if (variant.option1) payload.values.size = [{ data: variant.option1 }];
   const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxxl|xxxxl|xxxs|xxs|one size|\d+|\d+\.\d+)$/i;
   if (variant.option2 && !sizePattern.test(variant.option2.trim())) {
-    payload.values.color = [{ data: variant.option2.replace(/[_-]/g, " ") }];
+    payload.values.color = [{ data: findColor(variant, product.tags) }];
   }
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];

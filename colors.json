@@ -1,0 +1,245 @@
+[
+  {
+    "code": "animal_print",
+    "attribute": "color",
+    "sort_order": 0,
+    "labels": {
+      "en_US": "Animal Print",
+      "nl_NL": "Dierenprint"
+    }
+  },
+  {
+    "code": "beige",
+    "attribute": "color",
+    "sort_order": 1,
+    "labels": {
+      "en_US": "Beige",
+      "nl_NL": "Beige"
+    }
+  },
+  {
+    "code": "black",
+    "attribute": "color",
+    "sort_order": 2,
+    "labels": {
+      "en_US": "Black",
+      "nl_NL": "Zwart"
+    }
+  },
+  {
+    "code": "blue",
+    "attribute": "color",
+    "sort_order": 3,
+    "labels": {
+      "en_US": "Blue",
+      "nl_NL": "Blauw"
+    }
+  },
+  {
+    "code": "brown",
+    "attribute": "color",
+    "sort_order": 4,
+    "labels": {
+      "en_US": "Brown",
+      "nl_NL": "Bruin"
+    }
+  },
+  {
+    "code": "cyan",
+    "attribute": "color",
+    "sort_order": 25,
+    "labels": {
+      "en_US": "Cyan",
+      "nl_NL": "Cyaan"
+    }
+  },
+  {
+    "code": "darkblue",
+    "attribute": "color",
+    "sort_order": 20,
+    "labels": {
+      "en_US": "Darkblue (Navy)",
+      "nl_NL": "Donker blauw (Navy)"
+    }
+  },
+  {
+    "code": "darkgray",
+    "attribute": "color",
+    "sort_order": 24,
+    "labels": {
+      "en_US": "Darkgray",
+      "nl_NL": "Donker grijs"
+    }
+  },
+  {
+    "code": "darkgreen",
+    "attribute": "color",
+    "sort_order": 22,
+    "labels": {
+      "en_US": "Darkgreen",
+      "nl_NL": "Donker groen"
+    }
+  },
+  {
+    "code": "divers",
+    "attribute": "color",
+    "sort_order": 5,
+    "labels": {
+      "en_US": "Divers",
+      "nl_NL": "Divers"
+    }
+  },
+  {
+    "code": "gold",
+    "attribute": "color",
+    "sort_order": 6,
+    "labels": {
+      "en_US": "Gold",
+      "nl_NL": "Goud"
+    }
+  },
+  {
+    "code": "gray",
+    "attribute": "color",
+    "sort_order": 7,
+    "labels": {
+      "en_US": "Gray",
+      "nl_NL": "Grijs"
+    }
+  },
+  {
+    "code": "green",
+    "attribute": "color",
+    "sort_order": 8,
+    "labels": {
+      "en_US": "Green",
+      "nl_NL": "Groen"
+    }
+  },
+  {
+    "code": "lightblue",
+    "attribute": "color",
+    "sort_order": 19,
+    "labels": {
+      "en_US": "Lightblue",
+      "nl_NL": "Licht blauw"
+    }
+  },
+  {
+    "code": "lightgray",
+    "attribute": "color",
+    "sort_order": 23,
+    "labels": {
+      "en_US": "Lightgray",
+      "nl_NL": "Licht grijs"
+    }
+  },
+  {
+    "code": "lightgreen",
+    "attribute": "color",
+    "sort_order": 21,
+    "labels": {
+      "en_US": "Lightgreen (Lime)",
+      "nl_NL": "Licht groen (Lime)"
+    }
+  },
+  {
+    "code": "maroon",
+    "attribute": "color",
+    "sort_order": 26,
+    "labels": {
+      "en_US": "Maroon",
+      "nl_NL": "Kastanjebruin (Maroon)"
+    }
+  },
+  {
+    "code": "metallic",
+    "attribute": "color",
+    "sort_order": 9,
+    "labels": {
+      "en_US": "Metallic",
+      "nl_NL": "Metallic"
+    }
+  },
+  {
+    "code": "neutral",
+    "attribute": "color",
+    "sort_order": 10,
+    "labels": {
+      "en_US": "Neutral",
+      "nl_NL": "Neutraal"
+    }
+  },
+  {
+    "code": "orange",
+    "attribute": "color",
+    "sort_order": 11,
+    "labels": {
+      "en_US": "Orange",
+      "nl_NL": "Oranje"
+    }
+  },
+  {
+    "code": "pink",
+    "attribute": "color",
+    "sort_order": 12,
+    "labels": {
+      "en_US": "Pink",
+      "nl_NL": "Roze"
+    }
+  },
+  {
+    "code": "purple",
+    "attribute": "color",
+    "sort_order": 13,
+    "labels": {
+      "en_US": "Purple",
+      "nl_NL": "Paars"
+    }
+  },
+  {
+    "code": "red",
+    "attribute": "color",
+    "sort_order": 14,
+    "labels": {
+      "en_US": "Red",
+      "nl_NL": "Rood"
+    }
+  },
+  {
+    "code": "silver",
+    "attribute": "color",
+    "sort_order": 15,
+    "labels": {
+      "en_US": "Silver",
+      "nl_NL": "Zilver"
+    }
+  },
+  {
+    "code": "taupe",
+    "attribute": "color",
+    "sort_order": 16,
+    "labels": {
+      "en_US": "Taupe",
+      "nl_NL": "Taupe"
+    }
+  },
+  {
+    "code": "white",
+    "attribute": "color",
+    "sort_order": 17,
+    "labels": {
+      "en_US": "White",
+      "nl_NL": "Wit"
+    }
+  },
+  {
+    "code": "yellow",
+    "attribute": "color",
+    "sort_order": 18,
+    "labels": {
+      "en_US": "Yellow",
+      "nl_NL": "Geel"
+    }
+  }
+]
