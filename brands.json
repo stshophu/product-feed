@@ -1,0 +1,9992 @@
+[
+  {
+    "code": "032c",
+    "attribute": "manufacturer",
+    "sort_order": 1076,
+    "labels": {
+      "en_US": "032C",
+      "nl_NL": "032C"
+    }
+  },
+  {
+    "code": "1017_alyx_9sm",
+    "attribute": "manufacturer",
+    "sort_order": 0,
+    "labels": {
+      "en_US": "1017_alyx_9sm",
+      "nl_NL": "1017 alyx 9sm"
+    }
+  },
+  {
+    "code": "120_lino",
+    "attribute": "manufacturer",
+    "sort_order": 1702,
+    "labels": {
+      "en_US": "120% Lino",
+      "nl_NL": "120% Lino"
+    }
+  },
+  {
+    "code": "123_rivington",
+    "attribute": "manufacturer",
+    "sort_order": 1550,
+    "labels": {
+      "en_US": "123 RIVINGTON",
+      "nl_NL": "123 RIVINGTON"
+    }
+  },
+  {
+    "code": "13_09_sr",
+    "attribute": "manufacturer",
+    "sort_order": 1701,
+    "labels": {
+      "en_US": "13 09 SR",
+      "nl_NL": "13 09 SR"
+    }
+  },
+  {
+    "code": "1313_selah",
+    "attribute": "manufacturer",
+    "sort_order": 1551,
+    "labels": {
+      "en_US": "1313 SELAH",
+      "nl_NL": "1313 SELAH"
+    }
+  },
+  {
+    "code": "24_uomo",
+    "attribute": "manufacturer",
+    "sort_order": 903,
+    "labels": {
+      "en_US": "24 Uomo",
+      "nl_NL": "24 Uomo"
+    }
+  },
+  {
+    "code": "247",
+    "attribute": "manufacturer",
+    "sort_order": 1704,
+    "labels": {
+      "en_US": "247",
+      "nl_NL": "247"
+    }
+  },
+  {
+    "code": "24kae",
+    "attribute": "manufacturer",
+    "sort_order": 1753,
+    "labels": {
+      "en_US": "24Kae",
+      "nl_NL": "24Kae"
+    }
+  },
+  {
+    "code": "2morrowshype",
+    "attribute": "manufacturer",
+    "sort_order": 986,
+    "labels": {
+      "en_US": "2morrowshype",
+      "nl_NL": "2morrowshype"
+    }
+  },
+  {
+    "code": "360cashmere",
+    "attribute": "manufacturer",
+    "sort_order": 1136,
+    "labels": {
+      "en_US": "360Cashmere",
+      "nl_NL": "360Cashmere"
+    }
+  },
+  {
+    "code": "3juin",
+    "attribute": "manufacturer",
+    "sort_order": 1269,
+    "labels": {
+      "en_US": "3JUIN",
+      "nl_NL": "3JUIN"
+    }
+  },
+  {
+    "code": "3x1",
+    "attribute": "manufacturer",
+    "sort_order": 1580,
+    "labels": {
+      "en_US": "3X1",
+      "nl_NL": "3X1"
+    }
+  },
+  {
+    "code": "424",
+    "attribute": "manufacturer",
+    "sort_order": 995,
+    "labels": {
+      "en_US": "424",
+      "nl_NL": "424"
+    }
+  },
+  {
+    "code": "44_label_group",
+    "attribute": "manufacturer",
+    "sort_order": 991,
+    "labels": {
+      "en_US": "44 Label Group",
+      "nl_NL": "44 Label Group"
+    }
+  },
+  {
+    "code": "7_for_all_man_kind",
+    "attribute": "manufacturer",
+    "sort_order": 6,
+    "labels": {
+      "en_US": "7 For All Mankind",
+      "nl_NL": "7 For All Mankind"
+    }
+  },
+  {
+    "code": "7_for_all_mankind",
+    "attribute": "manufacturer",
+    "sort_order": 7,
+    "labels": {
+      "en_US": "7 For All Mankind",
+      "nl_NL": "7 For All Mankind"
+    }
+  },
+  {
+    "code": "a_cold_wall",
+    "attribute": "manufacturer",
+    "sort_order": 709,
+    "labels": {
+      "en_US": "A-cold-wall",
+      "nl_NL": "A-cold-wall"
+    }
+  },
+  {
+    "code": "a_lange_and_sohne",
+    "attribute": "manufacturer",
+    "sort_order": 1487,
+    "labels": {
+      "en_US": "A. Lange & Söhne",
+      "nl_NL": "A. Lange & Söhne"
+    }
+  },
+  {
+    "code": "a_paper_kid",
+    "attribute": "manufacturer",
+    "sort_order": 1029,
+    "labels": {
+      "en_US": "A Paper Kid",
+      "nl_NL": "A Paper Kid"
+    }
+  },
+  {
+    "code": "ab_lifestyle",
+    "attribute": "manufacturer",
+    "sort_order": 985,
+    "labels": {
+      "en_US": "AB Lifestyle",
+      "nl_NL": "AB Lifestyle"
+    }
+  },
+  {
+    "code": "abro",
+    "attribute": "manufacturer",
+    "sort_order": 1188,
+    "labels": {
+      "en_US": "Abro",
+      "nl_NL": "Abro"
+    }
+  },
+  {
+    "code": "absolut_cashmere",
+    "attribute": "manufacturer",
+    "sort_order": 1174,
+    "labels": {
+      "en_US": "Absolut Cashmere",
+      "nl_NL": "Absolut Cashmere"
+    }
+  },
+  {
+    "code": "abstract",
+    "attribute": "manufacturer",
+    "sort_order": 1581,
+    "labels": {}
+  },
+  {
+    "code": "academia",
+    "attribute": "manufacturer",
+    "sort_order": 1582,
+    "labels": {
+      "en_US": "Academia",
+      "nl_NL": "Academia"
+    }
+  },
+  {
+    "code": "achilles_ion_gabriel",
+    "attribute": "manufacturer",
+    "sort_order": 1350,
+    "labels": {
+      "en_US": "Achilles Ion Gabriel",
+      "nl_NL": "Achilles Ion Gabriel"
+    }
+  },
+  {
+    "code": "acne_studios",
+    "attribute": "manufacturer",
+    "sort_order": 12,
+    "labels": {
+      "en_US": "Acne Studios",
+      "nl_NL": "Acne Studios"
+    }
+  },
+  {
+    "code": "add",
+    "attribute": "manufacturer",
+    "sort_order": 1249,
+    "labels": {
+      "en_US": "ADD",
+      "nl_NL": "ADD"
+    }
+  },
+  {
+    "code": "ader_error",
+    "attribute": "manufacturer",
+    "sort_order": 710,
+    "labels": {
+      "en_US": "Ader error",
+      "nl_NL": "Ader error"
+    }
+  },
+  {
+    "code": "adidas",
+    "attribute": "manufacturer",
+    "sort_order": 13,
+    "labels": {
+      "en_US": "Adidas",
+      "nl_NL": "Adidas"
+    }
+  },
+  {
+    "code": "adidas_by_raf_simons",
+    "attribute": "manufacturer",
+    "sort_order": 14,
+    "labels": {
+      "en_US": "Adidas by Raf Simons",
+      "nl_NL": "Adidas by Raf Simons"
+    }
+  },
+  {
+    "code": "aeden",
+    "attribute": "manufacturer",
+    "sort_order": 987,
+    "labels": {
+      "en_US": "Aeden",
+      "nl_NL": "Aeden"
+    }
+  },
+  {
+    "code": "aeronautica_militare",
+    "attribute": "manufacturer",
+    "sort_order": 1135,
+    "labels": {
+      "en_US": "Aeronautica Militare",
+      "nl_NL": "Aeronautica Militare"
+    }
+  },
+  {
+    "code": "aerowatch",
+    "attribute": "manufacturer",
+    "sort_order": 1490,
+    "labels": {
+      "en_US": "aerowatch",
+      "nl_NL": "Aerowatch"
+    }
+  },
+  {
+    "code": "aesop",
+    "attribute": "manufacturer",
+    "sort_order": 1469,
+    "labels": {
+      "en_US": "Aesop",
+      "nl_NL": "Aesop"
+    }
+  },
+  {
+    "code": "after_label",
+    "attribute": "manufacturer",
+    "sort_order": 1153,
+    "labels": {
+      "en_US": "After Label",
+      "nl_NL": "After Label"
+    }
+  },
+  {
+    "code": "ag_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1417,
+    "labels": {
+      "en_US": "AG Jeans",
+      "nl_NL": "AG Jeans"
+    }
+  },
+  {
+    "code": "agiato",
+    "attribute": "manufacturer",
+    "sort_order": 1152,
+    "labels": {
+      "en_US": "Agiato",
+      "nl_NL": "Agiato"
+    }
+  },
+  {
+    "code": "agnona",
+    "attribute": "manufacturer",
+    "sort_order": 1387,
+    "labels": {
+      "en_US": "Agnona",
+      "nl_NL": "Agnona"
+    }
+  },
+  {
+    "code": "agolde",
+    "attribute": "manufacturer",
+    "sort_order": 1039,
+    "labels": {
+      "en_US": "Agolde",
+      "nl_NL": "Agolde"
+    }
+  },
+  {
+    "code": "aiche",
+    "attribute": "manufacturer",
+    "sort_order": 1467,
+    "labels": {
+      "en_US": "Aiche",
+      "nl_NL": "Aiche"
+    }
+  },
+  {
+    "code": "aigner",
+    "attribute": "manufacturer",
+    "sort_order": 1657,
+    "labels": {
+      "en_US": "Aigner",
+      "nl_NL": "Aigner"
+    }
+  },
+  {
+    "code": "airforce",
+    "attribute": "manufacturer",
+    "sort_order": 17,
+    "labels": {
+      "en_US": "Airforce",
+      "nl_NL": "Airforce"
+    }
+  },
+  {
+    "code": "airforce_sport",
+    "attribute": "manufacturer",
+    "sort_order": 756,
+    "labels": {
+      "en_US": "Airforce Sport",
+      "nl_NL": "Airforce Sport"
+    }
+  },
+  {
+    "code": "akjiaerbede",
+    "attribute": "manufacturer",
+    "sort_order": 1752,
+    "labels": {
+      "en_US": "A.Kjiærbede",
+      "nl_NL": "A.Kjiærbede"
+    }
+  },
+  {
+    "code": "al_ain",
+    "attribute": "manufacturer",
+    "sort_order": 1418,
+    "labels": {
+      "en_US": "AL Ain",
+      "nl_NL": "AL Ain"
+    }
+  },
+  {
+    "code": "alaia",
+    "attribute": "manufacturer",
+    "sort_order": 18,
+    "labels": {
+      "en_US": "Alaïa",
+      "nl_NL": "Alaïa"
+    }
+  },
+  {
+    "code": "alainpaul",
+    "attribute": "manufacturer",
+    "sort_order": 1739,
+    "labels": {
+      "en_US": "ALAINPAUL",
+      "nl_NL": "ALAINPAUL"
+    }
+  },
+  {
+    "code": "alanui",
+    "attribute": "manufacturer",
+    "sort_order": 996,
+    "labels": {
+      "en_US": "Alanui",
+      "nl_NL": "Alanui"
+    }
+  },
+  {
+    "code": "alberta_ferretti",
+    "attribute": "manufacturer",
+    "sort_order": 1084,
+    "labels": {
+      "en_US": "Alberta Ferretti",
+      "nl_NL": "Alberta Ferretti"
+    }
+  },
+  {
+    "code": "alberto_aspesi",
+    "attribute": "manufacturer",
+    "sort_order": 1216,
+    "labels": {
+      "en_US": "Alberto Aspesi",
+      "nl_NL": "Alberto Aspesi"
+    }
+  },
+  {
+    "code": "alberto_biani",
+    "attribute": "manufacturer",
+    "sort_order": 1268,
+    "labels": {
+      "en_US": "Alberto Biani",
+      "nl_NL": "Alberto Biani"
+    }
+  },
+  {
+    "code": "alchemist",
+    "attribute": "manufacturer",
+    "sort_order": 1351,
+    "labels": {
+      "en_US": "Alchemist",
+      "nl_NL": "Alchemist"
+    }
+  },
+  {
+    "code": "alessandra_fontanelli",
+    "attribute": "manufacturer",
+    "sort_order": 1388,
+    "labels": {
+      "en_US": "Alessandra Fontanelli",
+      "nl_NL": "Alessandra Fontanelli"
+    }
+  },
+  {
+    "code": "alessandra_rich",
+    "attribute": "manufacturer",
+    "sort_order": 1583,
+    "labels": {
+      "en_US": "Alessandra Rich",
+      "nl_NL": "Alessandra Rich"
+    }
+  },
+  {
+    "code": "alessia_zamattio",
+    "attribute": "manufacturer",
+    "sort_order": 1217,
+    "labels": {
+      "en_US": "Alessia Zamattio",
+      "nl_NL": "Alessia Zamattio"
+    }
+  },
+  {
+    "code": "alevi",
+    "attribute": "manufacturer",
+    "sort_order": 1700,
+    "labels": {
+      "en_US": "Alevì",
+      "nl_NL": "Alevì"
+    }
+  },
+  {
+    "code": "alex_perry",
+    "attribute": "manufacturer",
+    "sort_order": 1699,
+    "labels": {
+      "en_US": "Alex Perry",
+      "nl_NL": "Alex Perry"
+    }
+  },
+  {
+    "code": "alexander_mc_queen",
+    "attribute": "manufacturer",
+    "sort_order": 22,
+    "labels": {
+      "en_US": "Alexander McQueen",
+      "nl_NL": "Alexander McQueen"
+    }
+  },
+  {
+    "code": "alexander_mcqueen",
+    "attribute": "manufacturer",
+    "sort_order": 26,
+    "labels": {
+      "en_US": "Alexander McQueen",
+      "nl_NL": "Alexander McQueen"
+    }
+  },
+  {
+    "code": "alexander_smith",
+    "attribute": "manufacturer",
+    "sort_order": 1090,
+    "labels": {
+      "en_US": "Alexander Smith",
+      "nl_NL": "Alexander Smith"
+    }
+  },
+  {
+    "code": "alexander_wang",
+    "attribute": "manufacturer",
+    "sort_order": 997,
+    "labels": {
+      "en_US": "Alexander Wang",
+      "nl_NL": "Alexander Wang"
+    }
+  },
+  {
+    "code": "alexandre_birman",
+    "attribute": "manufacturer",
+    "sort_order": 1137,
+    "labels": {
+      "en_US": "Alexandre Birman",
+      "nl_NL": "Alexandre Birman"
+    }
+  },
+  {
+    "code": "alexandre_vauthier",
+    "attribute": "manufacturer",
+    "sort_order": 1218,
+    "labels": {
+      "en_US": "Alexandre Vauthier",
+      "nl_NL": "Alexandre Vauthier"
+    }
+  },
+  {
+    "code": "alice_plus_olivia",
+    "attribute": "manufacturer",
+    "sort_order": 1584,
+    "labels": {
+      "en_US": "Alice + Olivia",
+      "nl_NL": "Alice + Olivia"
+    }
+  },
+  {
+    "code": "alix",
+    "attribute": "manufacturer",
+    "sort_order": 848,
+    "labels": {
+      "en_US": "Alix The Label",
+      "nl_NL": "Alix The Label"
+    }
+  },
+  {
+    "code": "allure",
+    "attribute": "manufacturer",
+    "sort_order": 1219,
+    "labels": {
+      "en_US": "Allure",
+      "nl_NL": "Allure"
+    }
+  },
+  {
+    "code": "alpha_industries",
+    "attribute": "manufacturer",
+    "sort_order": 931,
+    "labels": {
+      "en_US": "Alpha Industries",
+      "nl_NL": "Alpha Industries"
+    }
+  },
+  {
+    "code": "alphatauri",
+    "attribute": "manufacturer",
+    "sort_order": 877,
+    "labels": {
+      "en_US": "AlphaTauri",
+      "nl_NL": "AlphaTauri"
+    }
+  },
+  {
+    "code": "alpo",
+    "attribute": "manufacturer",
+    "sort_order": 1585,
+    "labels": {}
+  },
+  {
+    "code": "alter_ego",
+    "attribute": "manufacturer",
+    "sort_order": 1456,
+    "labels": {
+      "en_US": "Alter Ego",
+      "nl_NL": "Alter Ego"
+    }
+  },
+  {
+    "code": "altuzarra",
+    "attribute": "manufacturer",
+    "sort_order": 1367,
+    "labels": {
+      "en_US": "Altuzarra",
+      "nl_NL": "Altuzarra"
+    }
+  },
+  {
+    "code": "amaranto",
+    "attribute": "manufacturer",
+    "sort_order": 1099,
+    "labels": {
+      "en_US": "Amaranto",
+      "nl_NL": "Amaranto"
+    }
+  },
+  {
+    "code": "amazuin",
+    "attribute": "manufacturer",
+    "sort_order": 1698,
+    "labels": {
+      "en_US": "Amazuìn",
+      "nl_NL": "Amazuìn"
+    }
+  },
+  {
+    "code": "ambush",
+    "attribute": "manufacturer",
+    "sort_order": 786,
+    "labels": {
+      "en_US": "AMBUSH",
+      "nl_NL": "AMBUSH"
+    }
+  },
+  {
+    "code": "american_vintage",
+    "attribute": "manufacturer",
+    "sort_order": 1393,
+    "labels": {
+      "en_US": "American Vintage",
+      "nl_NL": "American Vintage"
+    }
+  },
+  {
+    "code": "ami_paris",
+    "attribute": "manufacturer",
+    "sort_order": 32,
+    "labels": {
+      "en_US": "AMI Paris",
+      "nl_NL": "AMI Paris"
+    }
+  },
+  {
+    "code": "amicci",
+    "attribute": "manufacturer",
+    "sort_order": 943,
+    "labels": {
+      "en_US": "Amicci",
+      "nl_NL": "Amicci"
+    }
+  },
+  {
+    "code": "amina_muaddi",
+    "attribute": "manufacturer",
+    "sort_order": 1220,
+    "labels": {
+      "en_US": "Amina Muaddi",
+      "nl_NL": "Amina Muaddi"
+    }
+  },
+  {
+    "code": "amiri",
+    "attribute": "manufacturer",
+    "sort_order": 33,
+    "labels": {
+      "en_US": "Amiri",
+      "nl_NL": "Amiri"
+    }
+  },
+  {
+    "code": "amish",
+    "attribute": "manufacturer",
+    "sort_order": 1751,
+    "labels": {
+      "en_US": "Amish",
+      "nl_NL": "Amish"
+    }
+  },
+  {
+    "code": "andreadamo",
+    "attribute": "manufacturer",
+    "sort_order": 1638,
+    "labels": {
+      "en_US": "ANDREADAMO",
+      "nl_NL": "ANDREADAMO"
+    }
+  },
+  {
+    "code": "anfiny",
+    "attribute": "manufacturer",
+    "sort_order": 1419,
+    "labels": {
+      "en_US": "Anfiny",
+      "nl_NL": "Anfiny"
+    }
+  },
+  {
+    "code": "ania_haie",
+    "attribute": "manufacturer",
+    "sort_order": 1448,
+    "labels": {
+      "en_US": "Ania Haie",
+      "nl_NL": "Ania Haie"
+    }
+  },
+  {
+    "code": "anine_bing",
+    "attribute": "manufacturer",
+    "sort_order": 37,
+    "labels": {
+      "en_US": "Anine Bing",
+      "nl_NL": "Anine Bing"
+    }
+  },
+  {
+    "code": "anna_october",
+    "attribute": "manufacturer",
+    "sort_order": 1639,
+    "labels": {}
+  },
+  {
+    "code": "ANSH46",
+    "attribute": "manufacturer",
+    "sort_order": 932,
+    "labels": {
+      "en_US": "ANSH46",
+      "nl_NL": "ANSH46"
+    }
+  },
+  {
+    "code": "antony_morato",
+    "attribute": "manufacturer",
+    "sort_order": 39,
+    "labels": {
+      "en_US": "Antony Morato",
+      "nl_NL": "Antony Morato"
+    }
+  },
+  {
+    "code": "anya_hindmarch",
+    "attribute": "manufacturer",
+    "sort_order": 1281,
+    "labels": {
+      "en_US": "Anya Hindmarch",
+      "nl_NL": "Anya Hindmarch"
+    }
+  },
+  {
+    "code": "apc",
+    "attribute": "manufacturer",
+    "sort_order": 41,
+    "labels": {
+      "en_US": "A.P.C.",
+      "nl_NL": "A.P.C."
+    }
+  },
+  {
+    "code": "aqua_di_parma",
+    "attribute": "manufacturer",
+    "sort_order": 906,
+    "labels": {
+      "en_US": "Acqua di Parma",
+      "nl_NL": "Acqua di Parma"
+    }
+  },
+  {
+    "code": "aquanautic",
+    "attribute": "manufacturer",
+    "sort_order": 1491,
+    "labels": {
+      "en_US": "Aquanautic",
+      "nl_NL": "Aquanautic"
+    }
+  },
+  {
+    "code": "aquazzura",
+    "attribute": "manufacturer",
+    "sort_order": 42,
+    "labels": {
+      "en_US": "Aquazzura",
+      "nl_NL": "Aquazzura"
+    }
+  },
+  {
+    "code": "arc_teryx",
+    "attribute": "manufacturer",
+    "sort_order": 809,
+    "labels": {
+      "en_US": "Arc'teryx",
+      "nl_NL": "Arc'teryx"
+    }
+  },
+  {
+    "code": "aries",
+    "attribute": "manufacturer",
+    "sort_order": 753,
+    "labels": {
+      "en_US": "Aries",
+      "nl_NL": "Aries"
+    }
+  },
+  {
+    "code": "arma",
+    "attribute": "manufacturer",
+    "sort_order": 1746,
+    "labels": {
+      "en_US": "ARMA",
+      "nl_NL": "ARMA"
+    }
+  },
+  {
+    "code": "armani_exchange",
+    "attribute": "manufacturer",
+    "sort_order": 1079,
+    "labels": {
+      "en_US": "Armani Exchange",
+      "nl_NL": "Armani Exchange"
+    }
+  },
+  {
+    "code": "arte",
+    "attribute": "manufacturer",
+    "sort_order": 643,
+    "labels": {
+      "en_US": "Arte",
+      "nl_NL": "Arte"
+    }
+  },
+  {
+    "code": "ash",
+    "attribute": "manufacturer",
+    "sort_order": 1115,
+    "labels": {
+      "en_US": "Ash",
+      "nl_NL": "Ash"
+    }
+  },
+  {
+    "code": "asics",
+    "attribute": "manufacturer",
+    "sort_order": 49,
+    "labels": {
+      "en_US": "Asics",
+      "nl_NL": "Asics"
+    }
+  },
+  {
+    "code": "askyurself",
+    "attribute": "manufacturer",
+    "sort_order": 1569,
+    "labels": {
+      "en_US": "ASKYURSELF",
+      "nl_NL": "ASKYURSELF"
+    }
+  },
+  {
+    "code": "aspact",
+    "attribute": "manufacturer",
+    "sort_order": 1043,
+    "labels": {
+      "en_US": "Aspact",
+      "nl_NL": "Aspact"
+    }
+  },
+  {
+    "code": "aspesi",
+    "attribute": "manufacturer",
+    "sort_order": 51,
+    "labels": {
+      "en_US": "Aspesi",
+      "nl_NL": "Aspesi"
+    }
+  },
+  {
+    "code": "assouline",
+    "attribute": "manufacturer",
+    "sort_order": 1686,
+    "labels": {
+      "en_US": "Assouline",
+      "nl_NL": "Assouline"
+    }
+  },
+  {
+    "code": "aston_martin",
+    "attribute": "manufacturer",
+    "sort_order": 1757,
+    "labels": {
+      "en_US": "Aston Martin",
+      "nl_NL": "Aston Martin"
+    }
+  },
+  {
+    "code": "atelier_verdi",
+    "attribute": "manufacturer",
+    "sort_order": 1015,
+    "labels": {
+      "en_US": "Atelier Verdi",
+      "nl_NL": "Atelier Verdi"
+    }
+  },
+  {
+    "code": "au_depart_paris",
+    "attribute": "manufacturer",
+    "sort_order": 1389,
+    "labels": {
+      "en_US": "Au Départ Paris",
+      "nl_NL": "Au Départ Paris"
+    }
+  },
+  {
+    "code": "audemars_piguet",
+    "attribute": "manufacturer",
+    "sort_order": 1489,
+    "labels": {
+      "en_US": "Audemars Piguet",
+      "nl_NL": "Audemars Piguet"
+    }
+  },
+  {
+    "code": "aurelien",
+    "attribute": "manufacturer",
+    "sort_order": 1443,
+    "labels": {
+      "en_US": "Aurélien",
+      "nl_NL": "Aurélien"
+    }
+  },
+  {
+    "code": "autry",
+    "attribute": "manufacturer",
+    "sort_order": 905,
+    "labels": {
+      "en_US": "Autry",
+      "nl_NL": "Autry"
+    }
+  },
+  {
+    "code": "avant_toi",
+    "attribute": "manufacturer",
+    "sort_order": 1586,
+    "labels": {}
+  },
+  {
+    "code": "avec_moderation",
+    "attribute": "manufacturer",
+    "sort_order": 1291,
+    "labels": {
+      "en_US": "Avec Moderation",
+      "nl_NL": "Avec Moderation"
+    }
+  },
+  {
+    "code": "avenue_67",
+    "attribute": "manufacturer",
+    "sort_order": 1100,
+    "labels": {
+      "en_US": "Avenue 67",
+      "nl_NL": "Avenue 67"
+    }
+  },
+  {
+    "code": "avirex",
+    "attribute": "manufacturer",
+    "sort_order": 1552,
+    "labels": {
+      "en_US": "Avirex",
+      "nl_NL": "Avirex"
+    }
+  },
+  {
+    "code": "awake",
+    "attribute": "manufacturer",
+    "sort_order": 1062,
+    "labels": {
+      "en_US": "Awake",
+      "nl_NL": "Awake"
+    }
+  },
+  {
+    "code": "axel_arigato",
+    "attribute": "manufacturer",
+    "sort_order": 58,
+    "labels": {
+      "en_US": "Axel Arigato",
+      "nl_NL": "Axel Arigato"
+    }
+  },
+  {
+    "code": "b1_archive",
+    "attribute": "manufacturer",
+    "sort_order": 1640,
+    "labels": {
+      "en_US": "B1 Archive",
+      "nl_NL": "B1 Archive"
+    }
+  },
+  {
+    "code": "ba_and_sh",
+    "attribute": "manufacturer",
+    "sort_order": 1394,
+    "labels": {
+      "en_US": "BA&SH",
+      "nl_NL": "BA&SH"
+    }
+  },
+  {
+    "code": "back_70",
+    "attribute": "manufacturer",
+    "sort_order": 1574,
+    "labels": {
+      "en_US": "Back 70",
+      "nl_NL": "Back 70"
+    }
+  },
+  {
+    "code": "balenciaga",
+    "attribute": "manufacturer",
+    "sort_order": 60,
+    "labels": {
+      "en_US": "Balenciaga",
+      "nl_NL": "Balenciaga"
+    }
+  },
+  {
+    "code": "ballantyne",
+    "attribute": "manufacturer",
+    "sort_order": 1124,
+    "labels": {
+      "en_US": "Ballantyne",
+      "nl_NL": "Ballantyne"
+    }
+  },
+  {
+    "code": "ballin_amsterdam",
+    "attribute": "manufacturer",
+    "sort_order": 61,
+    "labels": {
+      "en_US": "Ballin Amsterdam",
+      "nl_NL": "Ballin Amsterdam"
+    }
+  },
+  {
+    "code": "Bally",
+    "attribute": "manufacturer",
+    "sort_order": 1045,
+    "labels": {
+      "en_US": "Bally",
+      "nl_NL": "Bally"
+    }
+  },
+  {
+    "code": "balmain",
+    "attribute": "manufacturer",
+    "sort_order": 63,
+    "labels": {
+      "en_US": "Balmain",
+      "nl_NL": "Balmain"
+    }
+  },
+  {
+    "code": "balr",
+    "attribute": "manufacturer",
+    "sort_order": 64,
+    "labels": {
+      "en_US": "BALR",
+      "nl_NL": "BALR"
+    }
+  },
+  {
+    "code": "band_of_outsiders",
+    "attribute": "manufacturer",
+    "sort_order": 1725,
+    "labels": {
+      "en_US": "Band of Outsiders",
+      "nl_NL": "Band of Outsiders"
+    }
+  },
+  {
+    "code": "baobab",
+    "attribute": "manufacturer",
+    "sort_order": 1684,
+    "labels": {
+      "en_US": "Baobab",
+      "nl_NL": "Baobab"
+    }
+  },
+  {
+    "code": "baracuta",
+    "attribute": "manufacturer",
+    "sort_order": 1363,
+    "labels": {
+      "en_US": "Baracuta",
+      "nl_NL": "Baracuta"
+    }
+  },
+  {
+    "code": "barba",
+    "attribute": "manufacturer",
+    "sort_order": 1104,
+    "labels": {
+      "en_US": "Barba",
+      "nl_NL": "Barba"
+    }
+  },
+  {
+    "code": "barba_napoli",
+    "attribute": "manufacturer",
+    "sort_order": 1263,
+    "labels": {
+      "en_US": "Barba Napoli",
+      "nl_NL": "Barba Napoli"
+    }
+  },
+  {
+    "code": "barbour",
+    "attribute": "manufacturer",
+    "sort_order": 1050,
+    "labels": {
+      "en_US": "Barbour",
+      "nl_NL": "Barbour"
+    }
+  },
+  {
+    "code": "barena",
+    "attribute": "manufacturer",
+    "sort_order": 1231,
+    "labels": {
+      "en_US": "Barena",
+      "nl_NL": "Barena"
+    }
+  },
+  {
+    "code": "baron_filou",
+    "attribute": "manufacturer",
+    "sort_order": 973,
+    "labels": {
+      "en_US": "Baron Filou",
+      "nl_NL": "Baron Filou"
+    }
+  },
+  {
+    "code": "barrow",
+    "attribute": "manufacturer",
+    "sort_order": 1116,
+    "labels": {
+      "en_US": "Barrow",
+      "nl_NL": "Barrow"
+    }
+  },
+  {
+    "code": "baum_und_pferdgarten",
+    "attribute": "manufacturer",
+    "sort_order": 1406,
+    "labels": {
+      "en_US": "Baum Und Pferdgarten",
+      "nl_NL": "Baum Und Pferdgarten"
+    }
+  },
+  {
+    "code": "baume_and_mercier",
+    "attribute": "manufacturer",
+    "sort_order": 1492,
+    "labels": {
+      "en_US": "Baume & Mercier",
+      "nl_NL": "Baume & Mercier"
+    }
+  },
+  {
+    "code": "bazar_deluxe",
+    "attribute": "manufacturer",
+    "sort_order": 1587,
+    "labels": {
+      "en_US": "Bazar Deluxe",
+      "nl_NL": "Bazar Deluxe"
+    }
+  },
+  {
+    "code": "bdk",
+    "attribute": "manufacturer",
+    "sort_order": 1473,
+    "labels": {
+      "en_US": "BDK",
+      "nl_NL": "BDK"
+    }
+  },
+  {
+    "code": "beloro_jewels",
+    "attribute": "manufacturer",
+    "sort_order": 1658,
+    "labels": {
+      "en_US": "Beloro Jewels",
+      "nl_NL": "Beloro Jewels"
+    }
+  },
+  {
+    "code": "belstaff",
+    "attribute": "manufacturer",
+    "sort_order": 925,
+    "labels": {
+      "en_US": "Belstaff",
+      "nl_NL": "Belstaff"
+    }
+  },
+  {
+    "code": "benjamin_berner",
+    "attribute": "manufacturer",
+    "sort_order": 862,
+    "labels": {
+      "en_US": "Benjamin Berner",
+      "nl_NL": "Benjamin Berner"
+    }
+  },
+  {
+    "code": "better_with_age",
+    "attribute": "manufacturer",
+    "sort_order": 1041,
+    "labels": {
+      "en_US": "Better With Age",
+      "nl_NL": "Better With Age"
+    }
+  },
+  {
+    "code": "billi_bi",
+    "attribute": "manufacturer",
+    "sort_order": 1439,
+    "labels": {
+      "en_US": "Billi Bi",
+      "nl_NL": "Billi Bi"
+    }
+  },
+  {
+    "code": "billie_bi",
+    "attribute": "manufacturer",
+    "sort_order": 1438,
+    "labels": {
+      "en_US": "Billie Bi",
+      "nl_NL": "Billie Bi"
+    }
+  },
+  {
+    "code": "billion_and_beyond",
+    "attribute": "manufacturer",
+    "sort_order": 910,
+    "labels": {
+      "en_US": "Billion & Beyond",
+      "nl_NL": "Billion & Beyond"
+    }
+  },
+  {
+    "code": "birkenstock",
+    "attribute": "manufacturer",
+    "sort_order": 626,
+    "labels": {
+      "en_US": "Birkenstock",
+      "nl_NL": "Birkenstock"
+    }
+  },
+  {
+    "code": "birth_of_royal_child",
+    "attribute": "manufacturer",
+    "sort_order": 1553,
+    "labels": {
+      "en_US": "Birth of Royal Child",
+      "nl_NL": "Birth of Royal Child"
+    }
+  },
+  {
+    "code": "bklyn",
+    "attribute": "manufacturer",
+    "sort_order": 1588,
+    "labels": {}
+  },
+  {
+    "code": "black_bananas",
+    "attribute": "manufacturer",
+    "sort_order": 76,
+    "labels": {
+      "en_US": "Black Bananas",
+      "nl_NL": "Black Bananas"
+    }
+  },
+  {
+    "code": "blanca_vita",
+    "attribute": "manufacturer",
+    "sort_order": 1221,
+    "labels": {
+      "en_US": "Blanca Vita",
+      "nl_NL": "Blanca Vita"
+    }
+  },
+  {
+    "code": "blancpain",
+    "attribute": "manufacturer",
+    "sort_order": 1493,
+    "labels": {
+      "en_US": "Blancpain",
+      "nl_NL": "Blancpain"
+    }
+  },
+  {
+    "code": "blauer",
+    "attribute": "manufacturer",
+    "sort_order": 1109,
+    "labels": {
+      "en_US": "Blauer",
+      "nl_NL": "Blauer"
+    }
+  },
+  {
+    "code": "blaze_milano",
+    "attribute": "manufacturer",
+    "sort_order": 1150,
+    "labels": {
+      "en_US": "Blazé Milano",
+      "nl_NL": "Blazé Milano"
+    }
+  },
+  {
+    "code": "blue_sky_inn",
+    "attribute": "manufacturer",
+    "sort_order": 928,
+    "labels": {
+      "en_US": "Blue Sky Inn",
+      "nl_NL": "Blue Sky Inn"
+    }
+  },
+  {
+    "code": "blugirl",
+    "attribute": "manufacturer",
+    "sort_order": 1091,
+    "labels": {
+      "en_US": "Blugirl",
+      "nl_NL": "Blugirl"
+    }
+  },
+  {
+    "code": "Blumarine",
+    "attribute": "manufacturer",
+    "sort_order": 1057,
+    "labels": {
+      "en_US": "Blumarine",
+      "nl_NL": "Blumarine"
+    }
+  },
+  {
+    "code": "blundstone",
+    "attribute": "manufacturer",
+    "sort_order": 1092,
+    "labels": {
+      "en_US": "Blundstone",
+      "nl_NL": "Blundstone"
+    }
+  },
+  {
+    "code": "blush",
+    "attribute": "manufacturer",
+    "sort_order": 1010,
+    "labels": {
+      "en_US": "Blush",
+      "nl_NL": "Blush"
+    }
+  },
+  {
+    "code": "boccia_titanium",
+    "attribute": "manufacturer",
+    "sort_order": 1462,
+    "labels": {
+      "en_US": "Boccia Titanium",
+      "nl_NL": "Boccia Titanium"
+    }
+  },
+  {
+    "code": "bode",
+    "attribute": "manufacturer",
+    "sort_order": 998,
+    "labels": {
+      "en_US": "BODE",
+      "nl_NL": "BODE"
+    }
+  },
+  {
+    "code": "Boglioli",
+    "attribute": "manufacturer",
+    "sort_order": 1049,
+    "labels": {
+      "en_US": "Boglioli",
+      "nl_NL": "Boglioli"
+    }
+  },
+  {
+    "code": "bogner",
+    "attribute": "manufacturer",
+    "sort_order": 1189,
+    "labels": {
+      "en_US": "Bogner",
+      "nl_NL": "Bogner"
+    }
+  },
+  {
+    "code": "boiler_room",
+    "attribute": "manufacturer",
+    "sort_order": 1750,
+    "labels": {
+      "en_US": "Boiler Room",
+      "nl_NL": "Boiler Room"
+    }
+  },
+  {
+    "code": "bomboogie",
+    "attribute": "manufacturer",
+    "sort_order": 1203,
+    "labels": {
+      "en_US": "Bomboogie",
+      "nl_NL": "Bomboogie"
+    }
+  },
+  {
+    "code": "bonsai",
+    "attribute": "manufacturer",
+    "sort_order": 1032,
+    "labels": {
+      "en_US": "Bonsai",
+      "nl_NL": "Bonsai"
+    }
+  },
+  {
+    "code": "boragio",
+    "attribute": "manufacturer",
+    "sort_order": 81,
+    "labels": {
+      "en_US": "Boragio",
+      "nl_NL": "Boragio"
+    }
+  },
+  {
+    "code": "borbonese",
+    "attribute": "manufacturer",
+    "sort_order": 956,
+    "labels": {
+      "en_US": "Borbonese",
+      "nl_NL": "Borbonese"
+    }
+  },
+  {
+    "code": "borrelli",
+    "attribute": "manufacturer",
+    "sort_order": 1227,
+    "labels": {
+      "en_US": "Borrelli",
+      "nl_NL": "Borrelli"
+    }
+  },
+  {
+    "code": "borsalino",
+    "attribute": "manufacturer",
+    "sort_order": 1300,
+    "labels": {
+      "en_US": "Borsalino",
+      "nl_NL": "Borsalino"
+    }
+  },
+  {
+    "code": "boss",
+    "attribute": "manufacturer",
+    "sort_order": 1073,
+    "labels": {
+      "en_US": "Boss",
+      "nl_NL": "Boss"
+    }
+  },
+  {
+    "code": "bottega_veneta",
+    "attribute": "manufacturer",
+    "sort_order": 82,
+    "labels": {
+      "en_US": "Bottega Veneta",
+      "nl_NL": "Bottega Veneta"
+    }
+  },
+  {
+    "code": "botter",
+    "attribute": "manufacturer",
+    "sort_order": 1066,
+    "labels": {
+      "en_US": "Botter",
+      "nl_NL": "Botter"
+    }
+  },
+  {
+    "code": "boutique_moschino",
+    "attribute": "manufacturer",
+    "sort_order": 1238,
+    "labels": {
+      "en_US": "Boutique Moschino",
+      "nl_NL": "Boutique Moschino"
+    }
+  },
+  {
+    "code": "boy_london",
+    "attribute": "manufacturer",
+    "sort_order": 1729,
+    "labels": {
+      "en_US": "Boy London",
+      "nl_NL": "Boy London"
+    }
+  },
+  {
+    "code": "boy_lost",
+    "attribute": "manufacturer",
+    "sort_order": 1589,
+    "labels": {
+      "en_US": "Boy Lost",
+      "nl_NL": "Boy Lost"
+    }
+  },
+  {
+    "code": "brams_fruit",
+    "attribute": "manufacturer",
+    "sort_order": 972,
+    "labels": {
+      "en_US": "Bram's Fruit",
+      "nl_NL": "Bram's Fruit"
+    }
+  },
+  {
+    "code": "breitling",
+    "attribute": "manufacturer",
+    "sort_order": 1495,
+    "labels": {
+      "en_US": "Breitling",
+      "nl_NL": "Breitling"
+    }
+  },
+  {
+    "code": "breras_milano",
+    "attribute": "manufacturer",
+    "sort_order": 1117,
+    "labels": {
+      "en_US": "Breras Milano",
+      "nl_NL": "Breras Milano"
+    }
+  },
+  {
+    "code": "brian_atwood",
+    "attribute": "manufacturer",
+    "sort_order": 1368,
+    "labels": {
+      "en_US": "Brian Atwood",
+      "nl_NL": "Brian Atwood"
+    }
+  },
+  {
+    "code": "brioni",
+    "attribute": "manufacturer",
+    "sort_order": 1198,
+    "labels": {
+      "en_US": "Brioni",
+      "nl_NL": "Brioni"
+    }
+  },
+  {
+    "code": "bronx",
+    "attribute": "manufacturer",
+    "sort_order": 896,
+    "labels": {
+      "en_US": "Bronx",
+      "nl_NL": "Bronx"
+    }
+  },
+  {
+    "code": "brunello_cucinelli",
+    "attribute": "manufacturer",
+    "sort_order": 1044,
+    "labels": {
+      "en_US": "Brunello Cucinelli",
+      "nl_NL": "Brunello Cucinelli"
+    }
+  },
+  {
+    "code": "buffalo_london",
+    "attribute": "manufacturer",
+    "sort_order": 1340,
+    "labels": {
+      "en_US": "Buffalo London",
+      "nl_NL": "Buffalo London"
+    }
+  },
+  {
+    "code": "bulgari",
+    "attribute": "manufacturer",
+    "sort_order": 1496,
+    "labels": {
+      "en_US": "Bulgari",
+      "nl_NL": "Bulgari"
+    }
+  },
+  {
+    "code": "burberry",
+    "attribute": "manufacturer",
+    "sort_order": 87,
+    "labels": {
+      "en_US": "Burberry",
+      "nl_NL": "Burberry"
+    }
+  },
+  {
+    "code": "buscemi",
+    "attribute": "manufacturer",
+    "sort_order": 88,
+    "labels": {
+      "en_US": "Buscemi",
+      "nl_NL": "Buscemi"
+    }
+  },
+  {
+    "code": "bvlgari",
+    "attribute": "manufacturer",
+    "sort_order": 912,
+    "labels": {
+      "en_US": "Bvlgari",
+      "nl_NL": "Bvlgari"
+    }
+  },
+  {
+    "code": "by_far",
+    "attribute": "manufacturer",
+    "sort_order": 1159,
+    "labels": {
+      "en_US": "By Far",
+      "nl_NL": "By Far"
+    }
+  },
+  {
+    "code": "by_malene_birger",
+    "attribute": "manufacturer",
+    "sort_order": 1301,
+    "labels": {
+      "en_US": "By Malene Birger",
+      "nl_NL": "By Malene Birger"
+    }
+  },
+  {
+    "code": "by_orto",
+    "attribute": "manufacturer",
+    "sort_order": 1118,
+    "labels": {
+      "en_US": "By Orto",
+      "nl_NL": "By Orto"
+    }
+  },
+  {
+    "code": "caliban",
+    "attribute": "manufacturer",
+    "sort_order": 1357,
+    "labels": {
+      "en_US": "CALIBAN",
+      "nl_NL": "CALIBAN"
+    }
+  },
+  {
+    "code": "calvin_klein",
+    "attribute": "manufacturer",
+    "sort_order": 91,
+    "labels": {
+      "en_US": "Calvin Klein",
+      "nl_NL": "Calvin Klein"
+    }
+  },
+  {
+    "code": "camper",
+    "attribute": "manufacturer",
+    "sort_order": 1736,
+    "labels": {
+      "en_US": "Camper",
+      "nl_NL": "Camper"
+    }
+  },
+  {
+    "code": "camplin",
+    "attribute": "manufacturer",
+    "sort_order": 1119,
+    "labels": {
+      "en_US": "Camplin",
+      "nl_NL": "Camplin"
+    }
+  },
+  {
+    "code": "campomaggi",
+    "attribute": "manufacturer",
+    "sort_order": 1420,
+    "labels": {
+      "en_US": "Campomaggi",
+      "nl_NL": "Campomaggi"
+    }
+  },
+  {
+    "code": "canada_goose",
+    "attribute": "manufacturer",
+    "sort_order": 94,
+    "labels": {
+      "en_US": "Canada Goose",
+      "nl_NL": "Canada Goose"
+    }
+  },
+  {
+    "code": "canali",
+    "attribute": "manufacturer",
+    "sort_order": 1302,
+    "labels": {
+      "en_US": "Canali",
+      "nl_NL": "Canali"
+    }
+  },
+  {
+    "code": "car_shoe",
+    "attribute": "manufacturer",
+    "sort_order": 1206,
+    "labels": {
+      "en_US": "Car Shoe",
+      "nl_NL": "Car Shoe"
+    }
+  },
+  {
+    "code": "carel",
+    "attribute": "manufacturer",
+    "sort_order": 1026,
+    "labels": {
+      "en_US": "Carel",
+      "nl_NL": "Carel"
+    }
+  },
+  {
+    "code": "carel_paris",
+    "attribute": "manufacturer",
+    "sort_order": 1138,
+    "labels": {
+      "en_US": "Carel Paris",
+      "nl_NL": "Carel Paris"
+    }
+  },
+  {
+    "code": "carhartt",
+    "attribute": "manufacturer",
+    "sort_order": 718,
+    "labels": {
+      "en_US": "Carhartt",
+      "nl_NL": "Carhartt"
+    }
+  },
+  {
+    "code": "carl_f_bucherer",
+    "attribute": "manufacturer",
+    "sort_order": 1497,
+    "labels": {
+      "en_US": "Carl F. Bucherer",
+      "nl_NL": "Carl F. Bucherer"
+    }
+  },
+  {
+    "code": "carlo_colucci",
+    "attribute": "manufacturer",
+    "sort_order": 96,
+    "labels": {
+      "en_US": "Carlo Colucci",
+      "nl_NL": "Carlo Colucci"
+    }
+  },
+  {
+    "code": "carrera",
+    "attribute": "manufacturer",
+    "sort_order": 1733,
+    "labels": {
+      "en_US": "Carrera",
+      "nl_NL": "Carrera"
+    }
+  },
+  {
+    "code": "cartier",
+    "attribute": "manufacturer",
+    "sort_order": 715,
+    "labels": {
+      "en_US": "Cartier",
+      "nl_NL": "Cartier"
+    }
+  },
+  {
+    "code": "casablanco",
+    "attribute": "manufacturer",
+    "sort_order": 716,
+    "labels": {
+      "en_US": "Casablanca",
+      "nl_NL": "Casablanca"
+    }
+  },
+  {
+    "code": "casadei",
+    "attribute": "manufacturer",
+    "sort_order": 851,
+    "labels": {
+      "en_US": "Casadei",
+      "nl_NL": "Casadei"
+    }
+  },
+  {
+    "code": "casio",
+    "attribute": "manufacturer",
+    "sort_order": 1688,
+    "labels": {
+      "en_US": "Casio",
+      "nl_NL": "Casio"
+    }
+  },
+  {
+    "code": "castaner",
+    "attribute": "manufacturer",
+    "sort_order": 1341,
+    "labels": {
+      "en_US": "Castaner",
+      "nl_NL": "Castaner"
+    }
+  },
+  {
+    "code": "catherine_michiels",
+    "attribute": "manufacturer",
+    "sort_order": 1182,
+    "labels": {
+      "en_US": "Catherine Michiels",
+      "nl_NL": "Catherine Michiels"
+    }
+  },
+  {
+    "code": "cavalli_class",
+    "attribute": "manufacturer",
+    "sort_order": 1132,
+    "labels": {
+      "en_US": "Cavalli Class",
+      "nl_NL": "Cavalli Class"
+    }
+  },
+  {
+    "code": "cdlp",
+    "attribute": "manufacturer",
+    "sort_order": 1466,
+    "labels": {
+      "en_US": "CDLP",
+      "nl_NL": "CDLP"
+    }
+  },
+  {
+    "code": "ceasarss",
+    "attribute": "manufacturer",
+    "sort_order": 100,
+    "labels": {
+      "en_US": "Ceasarss",
+      "nl_NL": "Ceasarss"
+    }
+  },
+  {
+    "code": "cecilie_bahnsen",
+    "attribute": "manufacturer",
+    "sort_order": 1641,
+    "labels": {}
+  },
+  {
+    "code": "celine",
+    "attribute": "manufacturer",
+    "sort_order": 102,
+    "labels": {
+      "en_US": "Celine",
+      "nl_NL": "Celine"
+    }
+  },
+  {
+    "code": "cero_nine",
+    "attribute": "manufacturer",
+    "sort_order": 103,
+    "labels": {
+      "en_US": "Cero Nine",
+      "nl_NL": "Cero Nine"
+    }
+  },
+  {
+    "code": "cerruti_1881",
+    "attribute": "manufacturer",
+    "sort_order": 1718,
+    "labels": {
+      "en_US": "Cerruti 1881",
+      "nl_NL": "Cerruti 1881"
+    }
+  },
+  {
+    "code": "cesare_paciotti",
+    "attribute": "manufacturer",
+    "sort_order": 1215,
+    "labels": {
+      "en_US": "Cesare Paciotti",
+      "nl_NL": "Cesare Paciotti"
+    }
+  },
+  {
+    "code": "champion",
+    "attribute": "manufacturer",
+    "sort_order": 104,
+    "labels": {
+      "en_US": "Champion",
+      "nl_NL": "Champion"
+    }
+  },
+  {
+    "code": "chanel",
+    "attribute": "manufacturer",
+    "sort_order": 883,
+    "labels": {
+      "en_US": "Chanel",
+      "nl_NL": "Chanel"
+    }
+  },
+  {
+    "code": "charles_jeffrey_loverboy",
+    "attribute": "manufacturer",
+    "sort_order": 1554,
+    "labels": {
+      "en_US": "Charles Jeffrey Loverboy",
+      "nl_NL": "Charles Jeffrey Loverboy"
+    }
+  },
+  {
+    "code": "charlotte_olympia",
+    "attribute": "manufacturer",
+    "sort_order": 1253,
+    "labels": {
+      "en_US": "Charlotte Olympia",
+      "nl_NL": "Charlotte Olympia"
+    }
+  },
+  {
+    "code": "chaumet",
+    "attribute": "manufacturer",
+    "sort_order": 1498,
+    "labels": {
+      "en_US": "Chaumet",
+      "nl_NL": "Chaumet"
+    }
+  },
+  {
+    "code": "cheap_monday",
+    "attribute": "manufacturer",
+    "sort_order": 1024,
+    "labels": {
+      "en_US": "Cheap Monday",
+      "nl_NL": "Cheap Monday"
+    }
+  },
+  {
+    "code": "chiara_ferragni",
+    "attribute": "manufacturer",
+    "sort_order": 1131,
+    "labels": {
+      "en_US": "Chiara Ferragni",
+      "nl_NL": "Chiara Ferragni"
+    }
+  },
+  {
+    "code": "chie_mihara",
+    "attribute": "manufacturer",
+    "sort_order": 1111,
+    "labels": {
+      "en_US": "Chie Mihara",
+      "nl_NL": "Chie Mihara"
+    }
+  },
+  {
+    "code": "chique_noir",
+    "attribute": "manufacturer",
+    "sort_order": 1572,
+    "labels": {
+      "en_US": "Chique Noir",
+      "nl_NL": "Chique Noir"
+    }
+  },
+  {
+    "code": "chloe",
+    "attribute": "manufacturer",
+    "sort_order": 107,
+    "labels": {
+      "en_US": "Chloé",
+      "nl_NL": "Chloé"
+    }
+  },
+  {
+    "code": "chopard",
+    "attribute": "manufacturer",
+    "sort_order": 1499,
+    "labels": {
+      "en_US": "Chopard",
+      "nl_NL": "Chopard"
+    }
+  },
+  {
+    "code": "chopova_lowena",
+    "attribute": "manufacturer",
+    "sort_order": 1555,
+    "labels": {
+      "en_US": "Chopova Lowena",
+      "nl_NL": "Chopova Lowena"
+    }
+  },
+  {
+    "code": "christian_lacroix",
+    "attribute": "manufacturer",
+    "sort_order": 1369,
+    "labels": {
+      "en_US": "Christian Lacroix",
+      "nl_NL": "Christian Lacroix"
+    }
+  },
+  {
+    "code": "christian_louboutin",
+    "attribute": "manufacturer",
+    "sort_order": 554,
+    "labels": {
+      "en_US": "Christian Louboutin",
+      "nl_NL": "Christian Louboutin"
+    }
+  },
+  {
+    "code": "christopher_esber",
+    "attribute": "manufacturer",
+    "sort_order": 1303,
+    "labels": {
+      "en_US": "Christopher Esber",
+      "nl_NL": "Christopher Esber"
+    }
+  },
+  {
+    "code": "chronic_edp",
+    "attribute": "manufacturer",
+    "sort_order": 1568,
+    "labels": {
+      "en_US": "Chronic EDP",
+      "nl_NL": "Chronic EDP"
+    }
+  },
+  {
+    "code": "chronoswiss",
+    "attribute": "manufacturer",
+    "sort_order": 1500,
+    "labels": {
+      "en_US": "Chronoswiss",
+      "nl_NL": "Chronoswiss"
+    }
+  },
+  {
+    "code": "churchs",
+    "attribute": "manufacturer",
+    "sort_order": 1154,
+    "labels": {
+      "en_US": "Church’s",
+      "nl_NL": "Church’s"
+    }
+  },
+  {
+    "code": "ciesse_piumini",
+    "attribute": "manufacturer",
+    "sort_order": 1093,
+    "labels": {
+      "en_US": "Ciesse Piumini",
+      "nl_NL": "Ciesse Piumini"
+    }
+  },
+  {
+    "code": "circle_of_trust",
+    "attribute": "manufacturer",
+    "sort_order": 919,
+    "labels": {
+      "en_US": "Circle of Trust",
+      "nl_NL": "Circle of Trust"
+    }
+  },
+  {
+    "code": "circolo_1901",
+    "attribute": "manufacturer",
+    "sort_order": 1246,
+    "labels": {
+      "en_US": "Circolo 1901",
+      "nl_NL": "Circolo 1901"
+    }
+  },
+  {
+    "code": "circula",
+    "attribute": "manufacturer",
+    "sort_order": 1501,
+    "labels": {
+      "en_US": "CIRCULA",
+      "nl_NL": "CIRCULA"
+    }
+  },
+  {
+    "code": "citizen",
+    "attribute": "manufacturer",
+    "sort_order": 1442,
+    "labels": {
+      "en_US": "Citizen",
+      "nl_NL": "Citizen"
+    }
+  },
+  {
+    "code": "citizens_of_humanity",
+    "attribute": "manufacturer",
+    "sort_order": 1642,
+    "labels": {
+      "en_US": "Citizens of Humanity",
+      "nl_NL": "Citizens of Humanity"
+    }
+  },
+  {
+    "code": "clan_de_banlieue",
+    "attribute": "manufacturer",
+    "sort_order": 145,
+    "labels": {
+      "en_US": "Clan De Banlieue",
+      "nl_NL": "Clan De Banlieue"
+    }
+  },
+  {
+    "code": "clarks_original",
+    "attribute": "manufacturer",
+    "sort_order": 111,
+    "labels": {
+      "en_US": "Clarks",
+      "nl_NL": "Clarks"
+    }
+  },
+  {
+    "code": "clergerie",
+    "attribute": "manufacturer",
+    "sort_order": 1250,
+    "labels": {
+      "en_US": "Clergerie",
+      "nl_NL": "Clergerie"
+    }
+  },
+  {
+    "code": "closed",
+    "attribute": "manufacturer",
+    "sort_order": 1019,
+    "labels": {
+      "en_US": "Closed",
+      "nl_NL": "Closed"
+    }
+  },
+  {
+    "code": "club_of_gents",
+    "attribute": "manufacturer",
+    "sort_order": 1395,
+    "labels": {
+      "en_US": "Club of Gents",
+      "nl_NL": "Club of Gents"
+    }
+  },
+  {
+    "code": "co88_collection",
+    "attribute": "manufacturer",
+    "sort_order": 1676,
+    "labels": {
+      "en_US": "CO88 Collection",
+      "nl_NL": "CO88 Collection"
+    }
+  },
+  {
+    "code": "coach",
+    "attribute": "manufacturer",
+    "sort_order": 1282,
+    "labels": {
+      "en_US": "Coach",
+      "nl_NL": "Coach"
+    }
+  },
+  {
+    "code": "coccinelle",
+    "attribute": "manufacturer",
+    "sort_order": 1160,
+    "labels": {
+      "en_US": "Coccinelle",
+      "nl_NL": "Coccinelle"
+    }
+  },
+  {
+    "code": "code41",
+    "attribute": "manufacturer",
+    "sort_order": 1502,
+    "labels": {
+      "en_US": "CODE41",
+      "nl_NL": "CODE41"
+    }
+  },
+  {
+    "code": "colmar_originals",
+    "attribute": "manufacturer",
+    "sort_order": 154,
+    "labels": {
+      "en_US": "Colmar Originals",
+      "nl_NL": "Colmar Originals"
+    }
+  },
+  {
+    "code": "colombo",
+    "attribute": "manufacturer",
+    "sort_order": 1304,
+    "labels": {
+      "en_US": "COLOMBO",
+      "nl_NL": "COLOMBO"
+    }
+  },
+  {
+    "code": "colori",
+    "attribute": "manufacturer",
+    "sort_order": 1677,
+    "labels": {
+      "en_US": "Colori",
+      "nl_NL": "Colori"
+    }
+  },
+  {
+    "code": "columbia",
+    "attribute": "manufacturer",
+    "sort_order": 1719,
+    "labels": {
+      "en_US": "Columbia",
+      "nl_NL": "Columbia"
+    }
+  },
+  {
+    "code": "comme_des_garcons",
+    "attribute": "manufacturer",
+    "sort_order": 119,
+    "labels": {
+      "en_US": "Comme des Garcons",
+      "nl_NL": "Comme des Garcons"
+    }
+  },
+  {
+    "code": "comme_des_garcons_homme",
+    "attribute": "manufacturer",
+    "sort_order": 1336,
+    "labels": {
+      "en_US": "Comme des Garçons Homme",
+      "nl_NL": "Comme des Garçons Homme"
+    }
+  },
+  {
+    "code": "common_projects",
+    "attribute": "manufacturer",
+    "sort_order": 120,
+    "labels": {
+      "en_US": "Common Projects",
+      "nl_NL": "Common Projects"
+    }
+  },
+  {
+    "code": "converse",
+    "attribute": "manufacturer",
+    "sort_order": 124,
+    "labels": {
+      "en_US": "Converse",
+      "nl_NL": "Converse"
+    }
+  },
+  {
+    "code": "coor",
+    "attribute": "manufacturer",
+    "sort_order": 1749,
+    "labels": {
+      "en_US": "Coor",
+      "nl_NL": "Coor"
+    }
+  },
+  {
+    "code": "copenhagen",
+    "attribute": "manufacturer",
+    "sort_order": 123,
+    "labels": {
+      "en_US": "Copenhagen",
+      "nl_NL": "Copenhagen"
+    }
+  },
+  {
+    "code": "coperni",
+    "attribute": "manufacturer",
+    "sort_order": 854,
+    "labels": {
+      "en_US": "Coperni",
+      "nl_NL": "Coperni"
+    }
+  },
+  {
+    "code": "cormio",
+    "attribute": "manufacturer",
+    "sort_order": 1590,
+    "labels": {
+      "en_US": "CORMIO",
+      "nl_NL": "CORMIO"
+    }
+  },
+  {
+    "code": "corneliani",
+    "attribute": "manufacturer",
+    "sort_order": 1051,
+    "labels": {
+      "en_US": "Corneliani",
+      "nl_NL": "Corneliani"
+    }
+  },
+  {
+    "code": "corum",
+    "attribute": "manufacturer",
+    "sort_order": 1503,
+    "labels": {
+      "en_US": "Corum",
+      "nl_NL": "Corum"
+    }
+  },
+  {
+    "code": "corvari",
+    "attribute": "manufacturer",
+    "sort_order": 1120,
+    "labels": {
+      "en_US": "Corvari",
+      "nl_NL": "Corvari"
+    }
+  },
+  {
+    "code": "costume_national",
+    "attribute": "manufacturer",
+    "sort_order": 1261,
+    "labels": {
+      "en_US": "Costume National",
+      "nl_NL": "Costume National"
+    }
+  },
+  {
+    "code": "cou7ure_essentials",
+    "attribute": "manufacturer",
+    "sort_order": 898,
+    "labels": {
+      "en_US": "Cou7ure Essentials",
+      "nl_NL": "Cou7ure Essentials"
+    }
+  },
+  {
+    "code": "county_of_milan",
+    "attribute": "manufacturer",
+    "sort_order": 1742,
+    "labels": {
+      "en_US": "County of Milan",
+      "nl_NL": "County of Milan"
+    }
+  },
+  {
+    "code": "courreges",
+    "attribute": "manufacturer",
+    "sort_order": 879,
+    "labels": {
+      "en_US": "Courreges",
+      "nl_NL": "Courreges"
+    }
+  },
+  {
+    "code": "cowboysbag",
+    "attribute": "manufacturer",
+    "sort_order": 1659,
+    "labels": {}
+  },
+  {
+    "code": "cp_company",
+    "attribute": "manufacturer",
+    "sort_order": 128,
+    "labels": {
+      "en_US": "CP Company",
+      "nl_NL": "CP Company"
+    }
+  },
+  {
+    "code": "creenstone",
+    "attribute": "manufacturer",
+    "sort_order": 1396,
+    "labels": {
+      "en_US": "Creenstone",
+      "nl_NL": "Creenstone"
+    }
+  },
+  {
+    "code": "crime_london",
+    "attribute": "manufacturer",
+    "sort_order": 1094,
+    "labels": {
+      "en_US": "Crime London",
+      "nl_NL": "Crime London"
+    }
+  },
+  {
+    "code": "crocket_and_jones",
+    "attribute": "manufacturer",
+    "sort_order": 1095,
+    "labels": {
+      "en_US": "Crocket and Jones",
+      "nl_NL": "Crocket and Jones"
+    }
+  },
+  {
+    "code": "crocs",
+    "attribute": "manufacturer",
+    "sort_order": 775,
+    "labels": {
+      "en_US": "Crocs",
+      "nl_NL": "Crocs"
+    }
+  },
+  {
+    "code": "croyez",
+    "attribute": "manufacturer",
+    "sort_order": 981,
+    "labels": {
+      "en_US": "Croyez",
+      "nl_NL": "Croyez"
+    }
+  },
+  {
+    "code": "cruciani",
+    "attribute": "manufacturer",
+    "sort_order": 1245,
+    "labels": {
+      "en_US": "Cruciani",
+      "nl_NL": "Cruciani"
+    }
+  },
+  {
+    "code": "cruyff",
+    "attribute": "manufacturer",
+    "sort_order": 847,
+    "labels": {
+      "en_US": "Cruyff",
+      "nl_NL": "Cruyff"
+    }
+  },
+  {
+    "code": "cuba_lab",
+    "attribute": "manufacturer",
+    "sort_order": 1591,
+    "labels": {
+      "en_US": "Cuba Lab",
+      "nl_NL": "Cuba Lab"
+    }
+  },
+  {
+    "code": "cult_gaia",
+    "attribute": "manufacturer",
+    "sort_order": 1305,
+    "labels": {
+      "en_US": "Cult Gaia",
+      "nl_NL": "Cult Gaia"
+    }
+  },
+  {
+    "code": "cutler_and_gross",
+    "attribute": "manufacturer",
+    "sort_order": 1320,
+    "labels": {
+      "en_US": "Cutler & Gross",
+      "nl_NL": "Cutler & Gross"
+    }
+  },
+  {
+    "code": "cycleur_de_luxe",
+    "attribute": "manufacturer",
+    "sort_order": 1459,
+    "labels": {
+      "en_US": "Cycleur de Luxe",
+      "nl_NL": "Cycleur de Luxe"
+    }
+  },
+  {
+    "code": "d_annam",
+    "attribute": "manufacturer",
+    "sort_order": 1556,
+    "labels": {
+      "en_US": "d’Annam",
+      "nl_NL": "d’Annam"
+    }
+  },
+  {
+    "code": "d_Four",
+    "attribute": "manufacturer",
+    "sort_order": 1121,
+    "labels": {
+      "en_US": "D-Four",
+      "nl_NL": "D-Four"
+    }
+  },
+  {
+    "code": "dadado",
+    "attribute": "manufacturer",
+    "sort_order": 1414,
+    "labels": {
+      "en_US": "Dadado",
+      "nl_NL": "Dadado"
+    }
+  },
+  {
+    "code": "daily_paper",
+    "attribute": "manufacturer",
+    "sort_order": 132,
+    "labels": {
+      "en_US": "Daily Paper",
+      "nl_NL": "Daily Paper"
+    }
+  },
+  {
+    "code": "daniel_wellington",
+    "attribute": "manufacturer",
+    "sort_order": 1660,
+    "labels": {
+      "en_US": "Daniel Wellington",
+      "nl_NL": "Daniel Wellington"
+    }
+  },
+  {
+    "code": "dante6",
+    "attribute": "manufacturer",
+    "sort_order": 1407,
+    "labels": {
+      "en_US": "Dante6",
+      "nl_NL": "Dante6"
+    }
+  },
+  {
+    "code": "darkpark",
+    "attribute": "manufacturer",
+    "sort_order": 1643,
+    "labels": {
+      "en_US": "DARKPARK",
+      "nl_NL": "DARKPARK"
+    }
+  },
+  {
+    "code": "date",
+    "attribute": "manufacturer",
+    "sort_order": 1348,
+    "labels": {
+      "en_US": "D.A.T.E.",
+      "nl_NL": "D.A.T.E."
+    }
+  },
+  {
+    "code": "david_beckham",
+    "attribute": "manufacturer",
+    "sort_order": 1759,
+    "labels": {
+      "en_US": "David Beckham",
+      "nl_NL": "David Beckham"
+    }
+  },
+  {
+    "code": "david_koma",
+    "attribute": "manufacturer",
+    "sort_order": 1592,
+    "labels": {
+      "en_US": "David Koma",
+      "nl_NL": "David Koma"
+    }
+  },
+  {
+    "code": "dea_kudibal",
+    "attribute": "manufacturer",
+    "sort_order": 1397,
+    "labels": {
+      "en_US": "Dea Kudibal",
+      "nl_NL": "Dea Kudibal"
+    }
+  },
+  {
+    "code": "del_carlo",
+    "attribute": "manufacturer",
+    "sort_order": 1254,
+    "labels": {
+      "en_US": "Del Carlo",
+      "nl_NL": "Del Carlo"
+    }
+  },
+  {
+    "code": "delvaux",
+    "attribute": "manufacturer",
+    "sort_order": 1370,
+    "labels": {
+      "en_US": "Delvaux",
+      "nl_NL": "Delvaux"
+    }
+  },
+  {
+    "code": "denham",
+    "attribute": "manufacturer",
+    "sort_order": 137,
+    "labels": {
+      "en_US": "Denham",
+      "nl_NL": "Denham"
+    }
+  },
+  {
+    "code": "denim_tears",
+    "attribute": "manufacturer",
+    "sort_order": 1687,
+    "labels": {
+      "en_US": "Denim Tears",
+      "nl_NL": "Denim Tears"
+    }
+  },
+  {
+    "code": "department5",
+    "attribute": "manufacturer",
+    "sort_order": 1358,
+    "labels": {
+      "en_US": "DEPARTMENT5",
+      "nl_NL": "DEPARTMENT5"
+    }
+  },
+  {
+    "code": "dexterior",
+    "attribute": "manufacturer",
+    "sort_order": 1213,
+    "labels": {
+      "en_US": "D-Exterior",
+      "nl_NL": "D-Exterior"
+    }
+  },
+  {
+    "code": "diadora",
+    "attribute": "manufacturer",
+    "sort_order": 1017,
+    "labels": {
+      "en_US": "Diadora",
+      "nl_NL": "Diadora"
+    }
+  },
+  {
+    "code": "diamo_diamonds",
+    "attribute": "manufacturer",
+    "sort_order": 1661,
+    "labels": {}
+  },
+  {
+    "code": "diane_von_furstenberg",
+    "attribute": "manufacturer",
+    "sort_order": 1289,
+    "labels": {
+      "en_US": "Diane Von Furstenberg",
+      "nl_NL": "Diane Von Furstenberg"
+    }
+  },
+  {
+    "code": "dickies",
+    "attribute": "manufacturer",
+    "sort_order": 757,
+    "labels": {
+      "en_US": "Dickies",
+      "nl_NL": "Dickies"
+    }
+  },
+  {
+    "code": "diemme",
+    "attribute": "manufacturer",
+    "sort_order": 1593,
+    "labels": {
+      "en_US": "Diemme",
+      "nl_NL": "Diemme"
+    }
+  },
+  {
+    "code": "diesel",
+    "attribute": "manufacturer",
+    "sort_order": 144,
+    "labels": {
+      "en_US": "Diesel",
+      "nl_NL": "Diesel"
+    }
+  },
+  {
+    "code": "dion_lee",
+    "attribute": "manufacturer",
+    "sort_order": 1023,
+    "labels": {
+      "en_US": "Dion Lee",
+      "nl_NL": "Dion Lee"
+    }
+  },
+  {
+    "code": "dior",
+    "attribute": "manufacturer",
+    "sort_order": 147,
+    "labels": {
+      "en_US": "Dior",
+      "nl_NL": "Dior"
+    }
+  },
+  {
+    "code": "diptyque",
+    "attribute": "manufacturer",
+    "sort_order": 1472,
+    "labels": {
+      "en_US": "Diptyque",
+      "nl_NL": "Diptyque"
+    }
+  },
+  {
+    "code": "dirk_bikkembergs",
+    "attribute": "manufacturer",
+    "sort_order": 1243,
+    "labels": {
+      "en_US": "Dirk Bikkembergs",
+      "nl_NL": "Dirk Bikkembergs"
+    }
+  },
+  {
+    "code": "dita",
+    "attribute": "manufacturer",
+    "sort_order": 1565,
+    "labels": {
+      "en_US": "Dita",
+      "nl_NL": "Dita"
+    }
+  },
+  {
+    "code": "dkny",
+    "attribute": "manufacturer",
+    "sort_order": 1190,
+    "labels": {
+      "en_US": "DKNY",
+      "nl_NL": "DKNY"
+    }
+  },
+  {
+    "code": "dolce_and_gabbana",
+    "attribute": "manufacturer",
+    "sort_order": 150,
+    "labels": {
+      "en_US": "Dolce & Gabbana",
+      "nl_NL": "Dolce & Gabbana"
+    }
+  },
+  {
+    "code": "dolce_gabbana",
+    "attribute": "manufacturer",
+    "sort_order": 187,
+    "labels": {
+      "en_US": "Dolce & Gabbana",
+      "nl_NL": "Dolce & Gabbana"
+    }
+  },
+  {
+    "code": "dolly_sports",
+    "attribute": "manufacturer",
+    "sort_order": 868,
+    "labels": {
+      "en_US": "Dolly Sports",
+      "nl_NL": "Dolly Sports"
+    }
+  },
+  {
+    "code": "don_the_fuller",
+    "attribute": "manufacturer",
+    "sort_order": 1040,
+    "labels": {
+      "en_US": "Don The Fuller",
+      "nl_NL": "Don The Fuller"
+    }
+  },
+  {
+    "code": "dondup",
+    "attribute": "manufacturer",
+    "sort_order": 909,
+    "labels": {
+      "en_US": "Dondup",
+      "nl_NL": "Dondup"
+    }
+  },
+  {
+    "code": "donna_karan",
+    "attribute": "manufacturer",
+    "sort_order": 1390,
+    "labels": {
+      "en_US": "Donna Karan",
+      "nl_NL": "Donna Karan"
+    }
+  },
+  {
+    "code": "dont_waste_culture",
+    "attribute": "manufacturer",
+    "sort_order": 810,
+    "labels": {
+      "en_US": "Don't Waste Culture",
+      "nl_NL": "Don't Waste Culture"
+    }
+  },
+  {
+    "code": "dorothee_schumacher",
+    "attribute": "manufacturer",
+    "sort_order": 1321,
+    "labels": {
+      "en_US": "Dorothee Schumacher",
+      "nl_NL": "Dorothee Schumacher"
+    }
+  },
+  {
+    "code": "doucals",
+    "attribute": "manufacturer",
+    "sort_order": 1096,
+    "labels": {
+      "en_US": "Doucal's",
+      "nl_NL": "Doucal's"
+    }
+  },
+  {
+    "code": "dr_martens",
+    "attribute": "manufacturer",
+    "sort_order": 152,
+    "labels": {
+      "en_US": "Dr. Martens",
+      "nl_NL": "Dr. Martens"
+    }
+  },
+  {
+    "code": "dries_van_noten",
+    "attribute": "manufacturer",
+    "sort_order": 1052,
+    "labels": {
+      "en_US": "Dries van Noten",
+      "nl_NL": "Dries van Noten"
+    }
+  },
+  {
+    "code": "drole_de_monsieur",
+    "attribute": "manufacturer",
+    "sort_order": 155,
+    "labels": {
+      "en_US": "Drôle de Monsieur",
+      "nl_NL": "Drôle de Monsieur"
+    }
+  },
+  {
+    "code": "drumohr",
+    "attribute": "manufacturer",
+    "sort_order": 1292,
+    "labels": {
+      "en_US": "Drumohr",
+      "nl_NL": "Drumohr"
+    }
+  },
+  {
+    "code": "drykorn",
+    "attribute": "manufacturer",
+    "sort_order": 908,
+    "labels": {
+      "en_US": "Drykorn",
+      "nl_NL": "Drykorn"
+    }
+  },
+  {
+    "code": "dsquared2",
+    "attribute": "manufacturer",
+    "sort_order": 195,
+    "labels": {
+      "en_US": "Dsquared2",
+      "nl_NL": "Dsquared2"
+    }
+  },
+  {
+    "code": "duke_dexter",
+    "attribute": "manufacturer",
+    "sort_order": 1557,
+    "labels": {
+      "en_US": "Duke & Dexter",
+      "nl_NL": "Duke & Dexter"
+    }
+  },
+  {
+    "code": "dunhill",
+    "attribute": "manufacturer",
+    "sort_order": 1371,
+    "labels": {
+      "en_US": "Dunhill",
+      "nl_NL": "Dunhill"
+    }
+  },
+  {
+    "code": "dunst",
+    "attribute": "manufacturer",
+    "sort_order": 1594,
+    "labels": {
+      "en_US": "DUNST",
+      "nl_NL": "DUNST"
+    }
+  },
+  {
+    "code": "duvetica",
+    "attribute": "manufacturer",
+    "sort_order": 1139,
+    "labels": {
+      "en_US": "Duvetica",
+      "nl_NL": "Duvetica"
+    }
+  },
+  {
+    "code": "dwars",
+    "attribute": "manufacturer",
+    "sort_order": 1398,
+    "labels": {
+      "en_US": "Dwars",
+      "nl_NL": "Dwars"
+    }
+  },
+  {
+    "code": "ea7",
+    "attribute": "manufacturer",
+    "sort_order": 158,
+    "labels": {
+      "en_US": "EA7",
+      "nl_NL": "EA7"
+    }
+  },
+  {
+    "code": "eastpak",
+    "attribute": "manufacturer",
+    "sort_order": 1722,
+    "labels": {
+      "en_US": "Eastpak",
+      "nl_NL": "Eastpak"
+    }
+  },
+  {
+    "code": "ebel",
+    "attribute": "manufacturer",
+    "sort_order": 1504,
+    "labels": {
+      "en_US": "Ebel",
+      "nl_NL": "Ebel"
+    }
+  },
+  {
+    "code": "eberhard_and_co",
+    "attribute": "manufacturer",
+    "sort_order": 1505,
+    "labels": {
+      "en_US": "Eberhard & Co.",
+      "nl_NL": "Eberhard & Co."
+    }
+  },
+  {
+    "code": "edifice",
+    "attribute": "manufacturer",
+    "sort_order": 1662,
+    "labels": {
+      "en_US": "Edifice",
+      "nl_NL": "Edifice"
+    }
+  },
+  {
+    "code": "edward_achour",
+    "attribute": "manufacturer",
+    "sort_order": 1239,
+    "labels": {
+      "en_US": "Edward Achour",
+      "nl_NL": "Edward Achour"
+    }
+  },
+  {
+    "code": "edwin",
+    "attribute": "manufacturer",
+    "sort_order": 1595,
+    "labels": {
+      "en_US": "EDWIN",
+      "nl_NL": "EDWIN"
+    }
+  },
+  {
+    "code": "elegantaste",
+    "attribute": "manufacturer",
+    "sort_order": 902,
+    "labels": {
+      "en_US": "Elegantaste",
+      "nl_NL": "Elegantaste"
+    }
+  },
+  {
+    "code": "eleventy",
+    "attribute": "manufacturer",
+    "sort_order": 1222,
+    "labels": {
+      "en_US": "Eleventy",
+      "nl_NL": "Eleventy"
+    }
+  },
+  {
+    "code": "elisabetta_franchi",
+    "attribute": "manufacturer",
+    "sort_order": 160,
+    "labels": {
+      "en_US": "Elisabetta Franchi",
+      "nl_NL": "Elisabetta Franchi"
+    }
+  },
+  {
+    "code": "elli",
+    "attribute": "manufacturer",
+    "sort_order": 1537,
+    "labels": {
+      "en_US": "ELLI",
+      "nl_NL": "ELLI"
+    }
+  },
+  {
+    "code": "elvine",
+    "attribute": "manufacturer",
+    "sort_order": 162,
+    "labels": {
+      "en_US": "Elvine",
+      "nl_NL": "Elvine"
+    }
+  },
+  {
+    "code": "emanuele_bicocchi",
+    "attribute": "manufacturer",
+    "sort_order": 1558,
+    "labels": {
+      "en_US": "Emanuele Bicocchi",
+      "nl_NL": "Emanuele Bicocchi"
+    }
+  },
+  {
+    "code": "emilio_pucci",
+    "attribute": "manufacturer",
+    "sort_order": 1053,
+    "labels": {
+      "en_US": "Emilio Pucci",
+      "nl_NL": "Emilio Pucci"
+    }
+  },
+  {
+    "code": "emporio_armani",
+    "attribute": "manufacturer",
+    "sort_order": 163,
+    "labels": {
+      "en_US": "Emporio Armani",
+      "nl_NL": "Emporio Armani"
+    }
+  },
+  {
+    "code": "enamel_copenhagen",
+    "attribute": "manufacturer",
+    "sort_order": 1663,
+    "labels": {}
+  },
+  {
+    "code": "enfants_riches_deprimes",
+    "attribute": "manufacturer",
+    "sort_order": 950,
+    "labels": {
+      "en_US": "Enfants Riches Deprimes",
+      "nl_NL": "Enfants Riches Deprimes"
+    }
+  },
+  {
+    "code": "enterprise_japan",
+    "attribute": "manufacturer",
+    "sort_order": 1343,
+    "labels": {
+      "en_US": "Enterprise Japan",
+      "nl_NL": "Enterprise Japan"
+    }
+  },
+  {
+    "code": "entire_studios",
+    "attribute": "manufacturer",
+    "sort_order": 984,
+    "labels": {
+      "en_US": "Entire Studios",
+      "nl_NL": "Entire Studios"
+    }
+  },
+  {
+    "code": "equalite",
+    "attribute": "manufacturer",
+    "sort_order": 712,
+    "labels": {
+      "en_US": "Equalité",
+      "nl_NL": "Equalité"
+    }
+  },
+  {
+    "code": "equipment",
+    "attribute": "manufacturer",
+    "sort_order": 1140,
+    "labels": {
+      "en_US": "Equipment",
+      "nl_NL": "Equipment"
+    }
+  },
+  {
+    "code": "erdem",
+    "attribute": "manufacturer",
+    "sort_order": 1322,
+    "labels": {
+      "en_US": "Erdem",
+      "nl_NL": "Erdem"
+    }
+  },
+  {
+    "code": "eres",
+    "attribute": "manufacturer",
+    "sort_order": 1141,
+    "labels": {
+      "en_US": "ERES",
+      "nl_NL": "ERES"
+    }
+  },
+  {
+    "code": "ERL",
+    "attribute": "manufacturer",
+    "sort_order": 884,
+    "labels": {
+      "en_US": "ERL",
+      "nl_NL": "ERL"
+    }
+  },
+  {
+    "code": "ermanno_firenze",
+    "attribute": "manufacturer",
+    "sort_order": 1130,
+    "labels": {
+      "en_US": "Ermanno Firenze",
+      "nl_NL": "Ermanno Firenze"
+    }
+  },
+  {
+    "code": "ermanno_scervino",
+    "attribute": "manufacturer",
+    "sort_order": 1175,
+    "labels": {
+      "en_US": "Ermanno Scervino",
+      "nl_NL": "Ermanno Scervino"
+    }
+  },
+  {
+    "code": "ermenegildo_zegna",
+    "attribute": "manufacturer",
+    "sort_order": 1061,
+    "labels": {
+      "en_US": "Ermenegildo Zegna",
+      "nl_NL": "Ermenegildo Zegna"
+    }
+  },
+  {
+    "code": "escentric",
+    "attribute": "manufacturer",
+    "sort_order": 1474,
+    "labels": {
+      "en_US": "Escentric",
+      "nl_NL": "Escentric"
+    }
+  },
+  {
+    "code": "espadrij_loriginale",
+    "attribute": "manufacturer",
+    "sort_order": 1191,
+    "labels": {
+      "en_US": "Espadrij l'originale",
+      "nl_NL": "Espadrij l'originale"
+    }
+  },
+  {
+    "code": "essentiel_antwerp",
+    "attribute": "manufacturer",
+    "sort_order": 1080,
+    "labels": {
+      "en_US": "Essentiel Antwerp",
+      "nl_NL": "Essentiel Antwerp"
+    }
+  },
+  {
+    "code": "eton",
+    "attribute": "manufacturer",
+    "sort_order": 1404,
+    "labels": {
+      "en_US": "Eton",
+      "nl_NL": "Eton"
+    }
+  },
+  {
+    "code": "etonic",
+    "attribute": "manufacturer",
+    "sort_order": 1016,
+    "labels": {
+      "en_US": "Etonic",
+      "nl_NL": "Etonic"
+    }
+  },
+  {
+    "code": "etq_amsterdam",
+    "attribute": "manufacturer",
+    "sort_order": 168,
+    "labels": {
+      "en_US": "ETQ Amsterdam",
+      "nl_NL": "ETQ Amsterdam"
+    }
+  },
+  {
+    "code": "etro",
+    "attribute": "manufacturer",
+    "sort_order": 1020,
+    "labels": {
+      "en_US": "Etro",
+      "nl_NL": "Etro"
+    }
+  },
+  {
+    "code": "etudes",
+    "attribute": "manufacturer",
+    "sort_order": 959,
+    "labels": {
+      "en_US": "Études",
+      "nl_NL": "Études"
+    }
+  },
+  {
+    "code": "evisu",
+    "attribute": "manufacturer",
+    "sort_order": 1122,
+    "labels": {
+      "en_US": "EVISU",
+      "nl_NL": "EVISU"
+    }
+  },
+  {
+    "code": "extreme_cashmere",
+    "attribute": "manufacturer",
+    "sort_order": 1596,
+    "labels": {
+      "en_US": "Extreme Cashmere",
+      "nl_NL": "Extreme Cashmere"
+    }
+  },
+  {
+    "code": "eytys",
+    "attribute": "manufacturer",
+    "sort_order": 1342,
+    "labels": {
+      "en_US": "Eytys",
+      "nl_NL": "Eytys"
+    }
+  },
+  {
+    "code": "ezr",
+    "attribute": "manufacturer",
+    "sort_order": 1644,
+    "labels": {
+      "en_US": "EZR",
+      "nl_NL": "EZR"
+    }
+  },
+  {
+    "code": "f_ce",
+    "attribute": "manufacturer",
+    "sort_order": 1597,
+    "labels": {
+      "en_US": "F/CE",
+      "nl_NL": "F/CE"
+    }
+  },
+  {
+    "code": "fabi",
+    "attribute": "manufacturer",
+    "sort_order": 1463,
+    "labels": {
+      "en_US": "Fabi",
+      "nl_NL": "Fabi"
+    }
+  },
+  {
+    "code": "fabiana_filippi",
+    "attribute": "manufacturer",
+    "sort_order": 1142,
+    "labels": {
+      "en_US": "Fabiana Filippi",
+      "nl_NL": "Fabiana Filippi"
+    }
+  },
+  {
+    "code": "fabienne_chapot",
+    "attribute": "manufacturer",
+    "sort_order": 1412,
+    "labels": {
+      "en_US": "Fabienne Chapot",
+      "nl_NL": "Fabienne Chapot"
+    }
+  },
+  {
+    "code": "faliero_sarti",
+    "attribute": "manufacturer",
+    "sort_order": 1359,
+    "labels": {
+      "en_US": "FALIERO SARTI",
+      "nl_NL": "FALIERO SARTI"
+    }
+  },
+  {
+    "code": "falke",
+    "attribute": "manufacturer",
+    "sort_order": 1405,
+    "labels": {
+      "en_US": "FALKE",
+      "nl_NL": "FALKE"
+    }
+  },
+  {
+    "code": "farm_rio",
+    "attribute": "manufacturer",
+    "sort_order": 1421,
+    "labels": {
+      "en_US": "FARM Rio",
+      "nl_NL": "FARM Rio"
+    }
+  },
+  {
+    "code": "fay",
+    "attribute": "manufacturer",
+    "sort_order": 1105,
+    "labels": {
+      "en_US": "Fay",
+      "nl_NL": "Fay"
+    }
+  },
+  {
+    "code": "fear_of_god",
+    "attribute": "manufacturer",
+    "sort_order": 825,
+    "labels": {
+      "en_US": "Fear of God",
+      "nl_NL": "Fear of God"
+    }
+  },
+  {
+    "code": "fearless_blood",
+    "attribute": "manufacturer",
+    "sort_order": 1078,
+    "labels": {
+      "en_US": "Fearless Blood",
+      "nl_NL": "Fearless Blood"
+    }
+  },
+  {
+    "code": "fedeli",
+    "attribute": "manufacturer",
+    "sort_order": 1360,
+    "labels": {
+      "en_US": "Fedeli",
+      "nl_NL": "Fedeli"
+    }
+  },
+  {
+    "code": "fendi",
+    "attribute": "manufacturer",
+    "sort_order": 175,
+    "labels": {
+      "en_US": "Fendi",
+      "nl_NL": "Fendi"
+    }
+  },
+  {
+    "code": "feng_chen_wang",
+    "attribute": "manufacturer",
+    "sort_order": 1344,
+    "labels": {
+      "en_US": "Feng Chen Wang",
+      "nl_NL": "Feng Chen Wang"
+    }
+  },
+  {
+    "code": "ferragamo",
+    "attribute": "manufacturer",
+    "sort_order": 913,
+    "labels": {
+      "en_US": "Ferragamo",
+      "nl_NL": "Ferragamo"
+    }
+  },
+  {
+    "code": "ferrante",
+    "attribute": "manufacturer",
+    "sort_order": 1680,
+    "labels": {
+      "en_US": "Ferrante",
+      "nl_NL": "Ferrante"
+    }
+  },
+  {
+    "code": "festina",
+    "attribute": "manufacturer",
+    "sort_order": 1664,
+    "labels": {}
+  },
+  {
+    "code": "fila",
+    "attribute": "manufacturer",
+    "sort_order": 179,
+    "labels": {
+      "en_US": "Fila",
+      "nl_NL": "Fila"
+    }
+  },
+  {
+    "code": "filippa_k",
+    "attribute": "manufacturer",
+    "sort_order": 180,
+    "labels": {
+      "en_US": "Filippa K",
+      "nl_NL": "Filippa K"
+    }
+  },
+  {
+    "code": "filippo_de_laurentiis",
+    "attribute": "manufacturer",
+    "sort_order": 1361,
+    "labels": {
+      "en_US": "Filippo De Laurentiis",
+      "nl_NL": "Filippo De Laurentiis"
+    }
+  },
+  {
+    "code": "filling_pieces",
+    "attribute": "manufacturer",
+    "sort_order": 181,
+    "labels": {
+      "en_US": "Filling Pieces",
+      "nl_NL": "Filling Pieces"
+    }
+  },
+  {
+    "code": "filson",
+    "attribute": "manufacturer",
+    "sort_order": 1364,
+    "labels": {
+      "en_US": "Filson",
+      "nl_NL": "Filson"
+    }
+  },
+  {
+    "code": "finamore_1925_napoli",
+    "attribute": "manufacturer",
+    "sort_order": 1598,
+    "labels": {
+      "en_US": "Finamore 1925 Napoli",
+      "nl_NL": "Finamore 1925 Napoli"
+    }
+  },
+  {
+    "code": "fiorentini_plus_baker",
+    "attribute": "manufacturer",
+    "sort_order": 1349,
+    "labels": {
+      "en_US": "Fiorentini + Baker",
+      "nl_NL": "Fiorentini + Baker"
+    }
+  },
+  {
+    "code": "fiorucci",
+    "attribute": "manufacturer",
+    "sort_order": 1738,
+    "labels": {
+      "en_US": "Fiorucci",
+      "nl_NL": "Fiorucci"
+    }
+  },
+  {
+    "code": "flabelus",
+    "attribute": "manufacturer",
+    "sort_order": 1678,
+    "labels": {
+      "en_US": "Flabelus",
+      "nl_NL": "Flabelus"
+    }
+  },
+  {
+    "code": "flaneur_homme",
+    "attribute": "manufacturer",
+    "sort_order": 582,
+    "labels": {
+      "en_US": "Flaneur",
+      "nl_NL": "Flaneur"
+    }
+  },
+  {
+    "code": "flatlist",
+    "attribute": "manufacturer",
+    "sort_order": 1599,
+    "labels": {
+      "en_US": "FLATLIST",
+      "nl_NL": "FLATLIST"
+    }
+  },
+  {
+    "code": "floris_van_bommel",
+    "attribute": "manufacturer",
+    "sort_order": 1458,
+    "labels": {
+      "en_US": "Floris van Bommel",
+      "nl_NL": "Floris van Bommel"
+    }
+  },
+  {
+    "code": "flower_mountain",
+    "attribute": "manufacturer",
+    "sort_order": 1112,
+    "labels": {
+      "en_US": "Flower Mountain",
+      "nl_NL": "Flower Mountain"
+    }
+  },
+  {
+    "code": "fo_mo",
+    "attribute": "manufacturer",
+    "sort_order": 901,
+    "labels": {
+      "en_US": "FO-MO",
+      "nl_NL": "FO-MO"
+    }
+  },
+  {
+    "code": "formex",
+    "attribute": "manufacturer",
+    "sort_order": 1506,
+    "labels": {
+      "en_US": "Formex",
+      "nl_NL": "Formex"
+    }
+  },
+  {
+    "code": "forte_forte",
+    "attribute": "manufacturer",
+    "sort_order": 1161,
+    "labels": {
+      "en_US": "Forte Forte",
+      "nl_NL": "Forte Forte"
+    }
+  },
+  {
+    "code": "fortis",
+    "attribute": "manufacturer",
+    "sort_order": 1507,
+    "labels": {
+      "en_US": "Fortis",
+      "nl_NL": "Fortis"
+    }
+  },
+  {
+    "code": "fossil",
+    "attribute": "manufacturer",
+    "sort_order": 1027,
+    "labels": {
+      "en_US": "Fossil",
+      "nl_NL": "Fossil"
+    }
+  },
+  {
+    "code": "fountain_of_youth",
+    "attribute": "manufacturer",
+    "sort_order": 957,
+    "labels": {
+      "en_US": "Fountain of Youth",
+      "nl_NL": "Fountain of Youth"
+    }
+  },
+  {
+    "code": "four",
+    "attribute": "manufacturer",
+    "sort_order": 556,
+    "labels": {
+      "en_US": "FOUR",
+      "nl_NL": "FOUR"
+    }
+  },
+  {
+    "code": "frame",
+    "attribute": "manufacturer",
+    "sort_order": 1143,
+    "labels": {
+      "en_US": "Frame",
+      "nl_NL": "Frame"
+    }
+  },
+  {
+    "code": "francesco_russo",
+    "attribute": "manufacturer",
+    "sort_order": 1273,
+    "labels": {
+      "en_US": "Francesco Russo",
+      "nl_NL": "Francesco Russo"
+    }
+  },
+  {
+    "code": "franck_muller",
+    "attribute": "manufacturer",
+    "sort_order": 1508,
+    "labels": {
+      "en_US": "Franck Muller",
+      "nl_NL": "Franck Muller"
+    }
+  },
+  {
+    "code": "frank_1967",
+    "attribute": "manufacturer",
+    "sort_order": 1675,
+    "labels": {
+      "en_US": "Frank 1967",
+      "nl_NL": "Frank 1967"
+    }
+  },
+  {
+    "code": "frankie_morello",
+    "attribute": "manufacturer",
+    "sort_order": 1259,
+    "labels": {
+      "en_US": "Frankie Morello",
+      "nl_NL": "Frankie Morello"
+    }
+  },
+  {
+    "code": "fratelli_rossetti",
+    "attribute": "manufacturer",
+    "sort_order": 1209,
+    "labels": {
+      "en_US": "Fratelli Rossetti",
+      "nl_NL": "Fratelli Rossetti"
+    }
+  },
+  {
+    "code": "fred_perry",
+    "attribute": "manufacturer",
+    "sort_order": 190,
+    "labels": {
+      "en_US": "Fred Perry",
+      "nl_NL": "Fred Perry"
+    }
+  },
+  {
+    "code": "frederique_constant",
+    "attribute": "manufacturer",
+    "sort_order": 1509,
+    "labels": {
+      "en_US": "Frederique Constant",
+      "nl_NL": "Frederique Constant"
+    }
+  },
+  {
+    "code": "frs_for_restless_sleepers",
+    "attribute": "manufacturer",
+    "sort_order": 1323,
+    "labels": {
+      "en_US": "F.R.S For Restless Sleepers",
+      "nl_NL": "F.R.S For Restless Sleepers"
+    }
+  },
+  {
+    "code": "fugazzi",
+    "attribute": "manufacturer",
+    "sort_order": 1567,
+    "labels": {
+      "en_US": "Fugazzi",
+      "nl_NL": "Fugazzi"
+    }
+  },
+  {
+    "code": "furla",
+    "attribute": "manufacturer",
+    "sort_order": 192,
+    "labels": {
+      "en_US": "Furla",
+      "nl_NL": "Furla"
+    }
+  },
+  {
+    "code": "fusalp",
+    "attribute": "manufacturer",
+    "sort_order": 1683,
+    "labels": {
+      "en_US": "Fusalp",
+      "nl_NL": "Fusalp"
+    }
+  },
+  {
+    "code": "g_shock",
+    "attribute": "manufacturer",
+    "sort_order": 1445,
+    "labels": {
+      "en_US": "G-Shock",
+      "nl_NL": "G-Shock"
+    }
+  },
+  {
+    "code": "g_star_raw",
+    "attribute": "manufacturer",
+    "sort_order": 1689,
+    "labels": {}
+  },
+  {
+    "code": "gabriele_pasini",
+    "attribute": "manufacturer",
+    "sort_order": 1223,
+    "labels": {
+      "en_US": "Gabriele Pasini",
+      "nl_NL": "Gabriele Pasini"
+    }
+  },
+  {
+    "code": "gallery_dept",
+    "attribute": "manufacturer",
+    "sort_order": 779,
+    "labels": {
+      "en_US": "GALLERY DEPT",
+      "nl_NL": "GALLERY DEPT"
+    }
+  },
+  {
+    "code": "galliano",
+    "attribute": "manufacturer",
+    "sort_order": 1258,
+    "labels": {
+      "en_US": "Galliano",
+      "nl_NL": "Galliano"
+    }
+  },
+  {
+    "code": "gallo",
+    "attribute": "manufacturer",
+    "sort_order": 1318,
+    "labels": {
+      "en_US": "Gallo",
+      "nl_NL": "Gallo"
+    }
+  },
+  {
+    "code": "ganni",
+    "attribute": "manufacturer",
+    "sort_order": 199,
+    "labels": {
+      "en_US": "Ganni",
+      "nl_NL": "Ganni"
+    }
+  },
+  {
+    "code": "gant",
+    "attribute": "manufacturer",
+    "sort_order": 1434,
+    "labels": {
+      "en_US": "Gant",
+      "nl_NL": "Gant"
+    }
+  },
+  {
+    "code": "garment_workshop",
+    "attribute": "manufacturer",
+    "sort_order": 988,
+    "labels": {
+      "en_US": "Garment Workshop",
+      "nl_NL": "Garment Workshop"
+    }
+  },
+  {
+    "code": "gc",
+    "attribute": "manufacturer",
+    "sort_order": 1012,
+    "labels": {
+      "en_US": "GC",
+      "nl_NL": "GC"
+    }
+  },
+  {
+    "code": "gcds",
+    "attribute": "manufacturer",
+    "sort_order": 200,
+    "labels": {
+      "en_US": "GCDS",
+      "nl_NL": "GCDS"
+    }
+  },
+  {
+    "code": "gebauer_and_gebauer",
+    "attribute": "manufacturer",
+    "sort_order": 1712,
+    "labels": {
+      "en_US": "Gebauer & Gebauer",
+      "nl_NL": "Gebauer & Gebauer"
+    }
+  },
+  {
+    "code": "GENTI",
+    "attribute": "manufacturer",
+    "sort_order": 899,
+    "labels": {
+      "en_US": "Genti",
+      "nl_NL": "Genti"
+    }
+  },
+  {
+    "code": "gentiluomo",
+    "attribute": "manufacturer",
+    "sort_order": 1713,
+    "labels": {
+      "en_US": "Gentiluomo",
+      "nl_NL": "Gentiluomo"
+    }
+  },
+  {
+    "code": "geox",
+    "attribute": "manufacturer",
+    "sort_order": 1724,
+    "labels": {
+      "en_US": "Geox",
+      "nl_NL": "Geox"
+    }
+  },
+  {
+    "code": "ghoud",
+    "attribute": "manufacturer",
+    "sort_order": 203,
+    "labels": {
+      "en_US": "Ghoud",
+      "nl_NL": "Ghoud"
+    }
+  },
+  {
+    "code": "gia_borghini",
+    "attribute": "manufacturer",
+    "sort_order": 1345,
+    "labels": {
+      "en_US": "Gia Borghini",
+      "nl_NL": "Gia Borghini"
+    }
+  },
+  {
+    "code": "gia_couture",
+    "attribute": "manufacturer",
+    "sort_order": 1600,
+    "labels": {
+      "en_US": "Gia Couture",
+      "nl_NL": "Gia Couture"
+    }
+  },
+  {
+    "code": "giada_benincasa",
+    "attribute": "manufacturer",
+    "sort_order": 1297,
+    "labels": {
+      "en_US": "Giada Benincasa",
+      "nl_NL": "Giada Benincasa"
+    }
+  },
+  {
+    "code": "giambattista_valli",
+    "attribute": "manufacturer",
+    "sort_order": 1224,
+    "labels": {
+      "en_US": "Giambattista Valli",
+      "nl_NL": "Giambattista Valli"
+    }
+  },
+  {
+    "code": "gianni_chiarini",
+    "attribute": "manufacturer",
+    "sort_order": 951,
+    "labels": {
+      "en_US": "Gianni Chiarini",
+      "nl_NL": "Gianni Chiarini"
+    }
+  },
+  {
+    "code": "gianvito_rossi",
+    "attribute": "manufacturer",
+    "sort_order": 853,
+    "labels": {
+      "en_US": "Gianvito Rossi",
+      "nl_NL": "Gianvito Rossi"
+    }
+  },
+  {
+    "code": "gimos",
+    "attribute": "manufacturer",
+    "sort_order": 1435,
+    "labels": {
+      "en_US": "Gimo's",
+      "nl_NL": "Gimo's"
+    }
+  },
+  {
+    "code": "gio_plus",
+    "attribute": "manufacturer",
+    "sort_order": 1422,
+    "labels": {
+      "en_US": "Gio+",
+      "nl_NL": "Gio+"
+    }
+  },
+  {
+    "code": "giorgio_armani",
+    "attribute": "manufacturer",
+    "sort_order": 1225,
+    "labels": {
+      "en_US": "Giorgio Armani",
+      "nl_NL": "Giorgio Armani"
+    }
+  },
+  {
+    "code": "giorgio_brato",
+    "attribute": "manufacturer",
+    "sort_order": 1226,
+    "labels": {
+      "en_US": "Giorgio Brato",
+      "nl_NL": "Giorgio Brato"
+    }
+  },
+  {
+    "code": "girard_perregaux",
+    "attribute": "manufacturer",
+    "sort_order": 1510,
+    "labels": {
+      "en_US": "Girard Perregaux",
+      "nl_NL": "Girard Perregaux"
+    }
+  },
+  {
+    "code": "gisser_jewels",
+    "attribute": "manufacturer",
+    "sort_order": 1446,
+    "labels": {
+      "en_US": "Gisser Jewels",
+      "nl_NL": "Gisser Jewels"
+    }
+  },
+  {
+    "code": "giuseppe_di_morabito",
+    "attribute": "manufacturer",
+    "sort_order": 1601,
+    "labels": {
+      "en_US": "Giuseppe Di Morabito",
+      "nl_NL": "Giuseppe Di Morabito"
+    }
+  },
+  {
+    "code": "giuseppe_zanotti",
+    "attribute": "manufacturer",
+    "sort_order": 207,
+    "labels": {
+      "en_US": "Giuseppe Zanotti",
+      "nl_NL": "Giuseppe Zanotti"
+    }
+  },
+  {
+    "code": "givenchy",
+    "attribute": "manufacturer",
+    "sort_order": 209,
+    "labels": {
+      "en_US": "Givenchy",
+      "nl_NL": "Givenchy"
+    }
+  },
+  {
+    "code": "glashutte_original",
+    "attribute": "manufacturer",
+    "sort_order": 1511,
+    "labels": {
+      "en_US": "Glashütte Original",
+      "nl_NL": "Glashütte Original"
+    }
+  },
+  {
+    "code": "glow",
+    "attribute": "manufacturer",
+    "sort_order": 1449,
+    "labels": {
+      "en_US": "GLOW",
+      "nl_NL": "GLOW"
+    }
+  },
+  {
+    "code": "goldbergh",
+    "attribute": "manufacturer",
+    "sort_order": 907,
+    "labels": {
+      "en_US": "Goldbergh",
+      "nl_NL": "Goldbergh"
+    }
+  },
+  {
+    "code": "golden_goose",
+    "attribute": "manufacturer",
+    "sort_order": 212,
+    "labels": {
+      "en_US": "Golden Goose",
+      "nl_NL": "Golden Goose"
+    }
+  },
+  {
+    "code": "goldhawk",
+    "attribute": "manufacturer",
+    "sort_order": 1602,
+    "labels": {
+      "en_US": "Goldhawk",
+      "nl_NL": "Goldhawk"
+    }
+  },
+  {
+    "code": "goodies_sportive",
+    "attribute": "manufacturer",
+    "sort_order": 1706,
+    "labels": {
+      "en_US": "Goodies Sportive",
+      "nl_NL": "Goodies Sportive"
+    }
+  },
+  {
+    "code": "goorin_bros",
+    "attribute": "manufacturer",
+    "sort_order": 975,
+    "labels": {
+      "en_US": "Goorin Bros",
+      "nl_NL": "Goorin Bros"
+    }
+  },
+  {
+    "code": "goyard",
+    "attribute": "manufacturer",
+    "sort_order": 1372,
+    "labels": {
+      "en_US": "Goyard",
+      "nl_NL": "Goyard"
+    }
+  },
+  {
+    "code": "graham",
+    "attribute": "manufacturer",
+    "sort_order": 1512,
+    "labels": {
+      "en_US": "Graham",
+      "nl_NL": "Graham"
+    }
+  },
+  {
+    "code": "gramicci",
+    "attribute": "manufacturer",
+    "sort_order": 1603,
+    "labels": {
+      "en_US": "Gramicci",
+      "nl_NL": "Gramicci"
+    }
+  },
+  {
+    "code": "gran_sasso",
+    "attribute": "manufacturer",
+    "sort_order": 960,
+    "labels": {
+      "en_US": "Gran Sasso",
+      "nl_NL": "Gran Sasso"
+    }
+  },
+  {
+    "code": "grand_seiko",
+    "attribute": "manufacturer",
+    "sort_order": 1513,
+    "labels": {
+      "en_US": "Grand Seiko",
+      "nl_NL": "Grand Seiko"
+    }
+  },
+  {
+    "code": "greg_lauren",
+    "attribute": "manufacturer",
+    "sort_order": 1067,
+    "labels": {
+      "en_US": "Greg Lauren",
+      "nl_NL": "Greg Lauren"
+    }
+  },
+  {
+    "code": "greta_boldini",
+    "attribute": "manufacturer",
+    "sort_order": 1240,
+    "labels": {
+      "en_US": "GRETA BOLDINI",
+      "nl_NL": "GRETA BOLDINI"
+    }
+  },
+  {
+    "code": "grifoni",
+    "attribute": "manufacturer",
+    "sort_order": 1423,
+    "labels": {
+      "en_US": "Grifoni",
+      "nl_NL": "Grifoni"
+    }
+  },
+  {
+    "code": "gucci",
+    "attribute": "manufacturer",
+    "sort_order": 218,
+    "labels": {
+      "en_US": "Gucci",
+      "nl_NL": "Gucci"
+    }
+  },
+  {
+    "code": "gudrun_and_gudrun",
+    "attribute": "manufacturer",
+    "sort_order": 1424,
+    "labels": {
+      "en_US": "Gudrun & Gudrun",
+      "nl_NL": "Gudrun & Gudrun"
+    }
+  },
+  {
+    "code": "guess",
+    "attribute": "manufacturer",
+    "sort_order": 219,
+    "labels": {
+      "en_US": "Guess",
+      "nl_NL": "Guess"
+    }
+  },
+  {
+    "code": "haikure",
+    "attribute": "manufacturer",
+    "sort_order": 1645,
+    "labels": {
+      "en_US": "Haikure",
+      "nl_NL": "Haikure"
+    }
+  },
+  {
+    "code": "halfboy",
+    "attribute": "manufacturer",
+    "sort_order": 1646,
+    "labels": {}
+  },
+  {
+    "code": "han_kjobenhavn",
+    "attribute": "manufacturer",
+    "sort_order": 929,
+    "labels": {
+      "en_US": "Han Kjøbenhavn",
+      "nl_NL": "Han Kjøbenhavn"
+    }
+  },
+  {
+    "code": "handpicked",
+    "attribute": "manufacturer",
+    "sort_order": 1647,
+    "labels": {
+      "en_US": "HANDPICKED",
+      "nl_NL": "HANDPICKED"
+    }
+  },
+  {
+    "code": "hanhart",
+    "attribute": "manufacturer",
+    "sort_order": 1514,
+    "labels": {
+      "en_US": "Hanhart",
+      "nl_NL": "Hanhart"
+    }
+  },
+  {
+    "code": "harmont_and_blaine",
+    "attribute": "manufacturer",
+    "sort_order": 1162,
+    "labels": {
+      "en_US": "Harmont and Blaine",
+      "nl_NL": "Harmont and Blaine"
+    }
+  },
+  {
+    "code": "harris_wharf_london",
+    "attribute": "manufacturer",
+    "sort_order": 1319,
+    "labels": {
+      "en_US": "Harris Wharf London",
+      "nl_NL": "Harris Wharf London"
+    }
+  },
+  {
+    "code": "harry_winston",
+    "attribute": "manufacturer",
+    "sort_order": 1515,
+    "labels": {
+      "en_US": "Harry Winston",
+      "nl_NL": "Harry Winston"
+    }
+  },
+  {
+    "code": "havaianas",
+    "attribute": "manufacturer",
+    "sort_order": 952,
+    "labels": {
+      "en_US": "Havaianas",
+      "nl_NL": "Havaianas"
+    }
+  },
+  {
+    "code": "haze_and_glory",
+    "attribute": "manufacturer",
+    "sort_order": 1538,
+    "labels": {
+      "en_US": "Haze & Glory",
+      "nl_NL": "Haze & Glory"
+    }
+  },
+  {
+    "code": "heliot_emil",
+    "attribute": "manufacturer",
+    "sort_order": 610,
+    "labels": {
+      "en_US": "HELIOT EMIL",
+      "nl_NL": "HELIOT EMIL"
+    }
+  },
+  {
+    "code": "hellstar",
+    "attribute": "manufacturer",
+    "sort_order": 1544,
+    "labels": {
+      "en_US": "Hellstar",
+      "nl_NL": "Hellstar"
+    }
+  },
+  {
+    "code": "helmut_lang",
+    "attribute": "manufacturer",
+    "sort_order": 999,
+    "labels": {
+      "en_US": "Helmut Lang",
+      "nl_NL": "Helmut Lang"
+    }
+  },
+  {
+    "code": "helvetica",
+    "attribute": "manufacturer",
+    "sort_order": 226,
+    "labels": {
+      "en_US": "Helvetica",
+      "nl_NL": "Helvetica"
+    }
+  },
+  {
+    "code": "henderson",
+    "attribute": "manufacturer",
+    "sort_order": 1097,
+    "labels": {
+      "en_US": "Henderson",
+      "nl_NL": "Henderson"
+    }
+  },
+  {
+    "code": "hermes",
+    "attribute": "manufacturer",
+    "sort_order": 882,
+    "labels": {
+      "en_US": "Hermès",
+      "nl_NL": "Hermès"
+    }
+  },
+  {
+    "code": "HERNO",
+    "attribute": "manufacturer",
+    "sort_order": 889,
+    "labels": {
+      "en_US": "Herno",
+      "nl_NL": "Herno"
+    }
+  },
+  {
+    "code": "heron_preston",
+    "attribute": "manufacturer",
+    "sort_order": 228,
+    "labels": {
+      "en_US": "Heron Preston",
+      "nl_NL": "Heron Preston"
+    }
+  },
+  {
+    "code": "hetrego",
+    "attribute": "manufacturer",
+    "sort_order": 1208,
+    "labels": {
+      "en_US": "Hetregò",
+      "nl_NL": "Hetregò"
+    }
+  },
+  {
+    "code": "heuer",
+    "attribute": "manufacturer",
+    "sort_order": 1516,
+    "labels": {
+      "en_US": "Heuer",
+      "nl_NL": "Heuer"
+    }
+  },
+  {
+    "code": "hi_tec",
+    "attribute": "manufacturer",
+    "sort_order": 230,
+    "labels": {
+      "en_US": "Hi-Tec",
+      "nl_NL": "Hi-Tec"
+    }
+  },
+  {
+    "code": "hillside_the_label",
+    "attribute": "manufacturer",
+    "sort_order": 1461,
+    "labels": {
+      "en_US": "Hillside the Label",
+      "nl_NL": "Hillside the Label"
+    }
+  },
+  {
+    "code": "hinnominate",
+    "attribute": "manufacturer",
+    "sort_order": 1106,
+    "labels": {
+      "en_US": "Hinnominate",
+      "nl_NL": "Hinnominate"
+    }
+  },
+  {
+    "code": "hogan",
+    "attribute": "manufacturer",
+    "sort_order": 234,
+    "labels": {
+      "en_US": "HOGAN",
+      "nl_NL": "HOGAN"
+    }
+  },
+  {
+    "code": "hoka",
+    "attribute": "manufacturer",
+    "sort_order": 967,
+    "labels": {
+      "en_US": "Hoka",
+      "nl_NL": "Hoka"
+    }
+  },
+  {
+    "code": "hoka_one_one",
+    "attribute": "manufacturer",
+    "sort_order": 1201,
+    "labels": {
+      "en_US": "Hoka One One",
+      "nl_NL": "Hoka One One"
+    }
+  },
+  {
+    "code": "homage_to_denim",
+    "attribute": "manufacturer",
+    "sort_order": 1432,
+    "labels": {
+      "en_US": "Homage to Denim",
+      "nl_NL": "Homage to Denim"
+    }
+  },
+  {
+    "code": "homme_plisse_issey_miyake",
+    "attribute": "manufacturer",
+    "sort_order": 1022,
+    "labels": {
+      "en_US": "HOMME PLISSÉ ISSEY MIYAKE",
+      "nl_NL": "HOMME PLISSÉ ISSEY MIYAKE"
+    }
+  },
+  {
+    "code": "homme_plus",
+    "attribute": "manufacturer",
+    "sort_order": 1068,
+    "labels": {
+      "en_US": "Homme Plus",
+      "nl_NL": "Homme Plus"
+    }
+  },
+  {
+    "code": "howlin",
+    "attribute": "manufacturer",
+    "sort_order": 1604,
+    "labels": {
+      "en_US": "Howlin",
+      "nl_NL": "Howlin"
+    }
+  },
+  {
+    "code": "hublot",
+    "attribute": "manufacturer",
+    "sort_order": 1517,
+    "labels": {
+      "en_US": "Hublot",
+      "nl_NL": "Hublot"
+    }
+  },
+  {
+    "code": "huf",
+    "attribute": "manufacturer",
+    "sort_order": 636,
+    "labels": {
+      "en_US": "Huf",
+      "nl_NL": "Huf"
+    }
+  },
+  {
+    "code": "hugo",
+    "attribute": "manufacturer",
+    "sort_order": 1072,
+    "labels": {
+      "en_US": "Hugo",
+      "nl_NL": "Hugo"
+    }
+  },
+  {
+    "code": "hunter",
+    "attribute": "manufacturer",
+    "sort_order": 1346,
+    "labels": {
+      "en_US": "Hunter",
+      "nl_NL": "Hunter"
+    }
+  },
+  {
+    "code": "iceberg",
+    "attribute": "manufacturer",
+    "sort_order": 240,
+    "labels": {
+      "en_US": "Iceberg",
+      "nl_NL": "Iceberg"
+    }
+  },
+  {
+    "code": "icecream",
+    "attribute": "manufacturer",
+    "sort_order": 1605,
+    "labels": {
+      "en_US": "ICECREAM",
+      "nl_NL": "ICECREAM"
+    }
+  },
+  {
+    "code": "icon_denim",
+    "attribute": "manufacturer",
+    "sort_order": 1033,
+    "labels": {
+      "en_US": "Icon Denim",
+      "nl_NL": "Icon Denim"
+    }
+  },
+  {
+    "code": "im_isola_marras",
+    "attribute": "manufacturer",
+    "sort_order": 1299,
+    "labels": {
+      "en_US": "I'm Isola Marras",
+      "nl_NL": "I'm Isola Marras"
+    }
+  },
+  {
+    "code": "in_gold_we_trust",
+    "attribute": "manufacturer",
+    "sort_order": 242,
+    "labels": {
+      "en_US": "In Gold We Trust",
+      "nl_NL": "In Gold We Trust"
+    }
+  },
+  {
+    "code": "incotex",
+    "attribute": "manufacturer",
+    "sort_order": 1317,
+    "labels": {
+      "en_US": "Incotex",
+      "nl_NL": "Incotex"
+    }
+  },
+  {
+    "code": "inuikii",
+    "attribute": "manufacturer",
+    "sort_order": 1716,
+    "labels": {
+      "en_US": "Inuikii",
+      "nl_NL": "Inuikii"
+    }
+  },
+  {
+    "code": "invicta",
+    "attribute": "manufacturer",
+    "sort_order": 1545,
+    "labels": {
+      "en_US": "Invicta",
+      "nl_NL": "Invicta"
+    }
+  },
+  {
+    "code": "iro",
+    "attribute": "manufacturer",
+    "sort_order": 243,
+    "labels": {
+      "en_US": "Iro",
+      "nl_NL": "Iro"
+    }
+  },
+  {
+    "code": "isabel_benenato",
+    "attribute": "manufacturer",
+    "sort_order": 1181,
+    "labels": {
+      "en_US": "Isabel Benenato",
+      "nl_NL": "Isabel Benenato"
+    }
+  },
+  {
+    "code": "isabel_bernard",
+    "attribute": "manufacturer",
+    "sort_order": 1540,
+    "labels": {
+      "en_US": "Isabel Bernard",
+      "nl_NL": "Isabel Bernard"
+    }
+  },
+  {
+    "code": "isabel_marant",
+    "attribute": "manufacturer",
+    "sort_order": 244,
+    "labels": {
+      "en_US": "Isabel Marant",
+      "nl_NL": "Isabel Marant"
+    }
+  },
+  {
+    "code": "it_nom_uh_nit",
+    "attribute": "manufacturer",
+    "sort_order": 1070,
+    "labels": {
+      "en_US": "Ih Nom Uh Nit",
+      "nl_NL": "Ih Nom Uh Nit"
+    }
+  },
+  {
+    "code": "iwc",
+    "attribute": "manufacturer",
+    "sort_order": 1481,
+    "labels": {
+      "en_US": "IWC",
+      "nl_NL": "IWC"
+    }
+  },
+  {
+    "code": "j_brand",
+    "attribute": "manufacturer",
+    "sort_order": 1257,
+    "labels": {
+      "en_US": "J Brand",
+      "nl_NL": "J Brand"
+    }
+  },
+  {
+    "code": "j_lindeberg",
+    "attribute": "manufacturer",
+    "sort_order": 1542,
+    "labels": {
+      "en_US": "J.Lindeberg",
+      "nl_NL": "J.Lindeberg"
+    }
+  },
+  {
+    "code": "j_w_anderson",
+    "attribute": "manufacturer",
+    "sort_order": 313,
+    "labels": {
+      "en_US": "J.W. Anderson",
+      "nl_NL": "J.W. Anderson"
+    }
+  },
+  {
+    "code": "jackie_gold",
+    "attribute": "manufacturer",
+    "sort_order": 1454,
+    "labels": {
+      "en_US": "Jackie Gold",
+      "nl_NL": "Jackie Gold"
+    }
+  },
+  {
+    "code": "jacob_cohen",
+    "attribute": "manufacturer",
+    "sort_order": 249,
+    "labels": {
+      "en_US": "Jacob Cohen",
+      "nl_NL": "Jacob Cohen"
+    }
+  },
+  {
+    "code": "jacquemus",
+    "attribute": "manufacturer",
+    "sort_order": 818,
+    "labels": {
+      "en_US": "Jacquemus",
+      "nl_NL": "Jacquemus"
+    }
+  },
+  {
+    "code": "jacques_du_manoir",
+    "attribute": "manufacturer",
+    "sort_order": 1013,
+    "labels": {
+      "en_US": "Jacques du Manoir",
+      "nl_NL": "Jacques du Manoir"
+    }
+  },
+  {
+    "code": "jaeger_lecoultre",
+    "attribute": "manufacturer",
+    "sort_order": 1518,
+    "labels": {
+      "en_US": "Jaeger-LeCoultre",
+      "nl_NL": "Jaeger-LeCoultre"
+    }
+  },
+  {
+    "code": "jaguar",
+    "attribute": "manufacturer",
+    "sort_order": 1665,
+    "labels": {}
+  },
+  {
+    "code": "james_perse",
+    "attribute": "manufacturer",
+    "sort_order": 1648,
+    "labels": {}
+  },
+  {
+    "code": "jean_paul_gaultier",
+    "attribute": "manufacturer",
+    "sort_order": 1077,
+    "labels": {
+      "en_US": "Jean Paul Gaultier",
+      "nl_NL": "Jean Paul Gaultier"
+    }
+  },
+  {
+    "code": "jeffrey_campbell",
+    "attribute": "manufacturer",
+    "sort_order": 1262,
+    "labels": {
+      "en_US": "Jeffrey Campbell",
+      "nl_NL": "Jeffrey Campbell"
+    }
+  },
+  {
+    "code": "jeremy_scott",
+    "attribute": "manufacturer",
+    "sort_order": 1295,
+    "labels": {
+      "en_US": "Jeremy Scott",
+      "nl_NL": "Jeremy Scott"
+    }
+  },
+  {
+    "code": "jerome_dreyfuss",
+    "attribute": "manufacturer",
+    "sort_order": 1163,
+    "labels": {
+      "en_US": "Jerome Dreyfuss",
+      "nl_NL": "Jerome Dreyfuss"
+    }
+  },
+  {
+    "code": "jhonn_dalia",
+    "attribute": "manufacturer",
+    "sort_order": 1564,
+    "labels": {
+      "en_US": "Jhonn Dalia",
+      "nl_NL": "Jhonn Dalia"
+    }
+  },
+  {
+    "code": "jil_sander",
+    "attribute": "manufacturer",
+    "sort_order": 254,
+    "labels": {
+      "en_US": "Jil Sander",
+      "nl_NL": "Jil Sander"
+    }
+  },
+  {
+    "code": "jimmy_choo",
+    "attribute": "manufacturer",
+    "sort_order": 256,
+    "labels": {
+      "en_US": "Jimmy Choo",
+      "nl_NL": "Jimmy Choo"
+    }
+  },
+  {
+    "code": "johanna_ortiz",
+    "attribute": "manufacturer",
+    "sort_order": 1306,
+    "labels": {
+      "en_US": "Johanna Ortiz",
+      "nl_NL": "Johanna Ortiz"
+    }
+  },
+  {
+    "code": "john_elliot",
+    "attribute": "manufacturer",
+    "sort_order": 946,
+    "labels": {
+      "en_US": "John Elliot",
+      "nl_NL": "John Elliot"
+    }
+  },
+  {
+    "code": "john_elliott",
+    "attribute": "manufacturer",
+    "sort_order": 1307,
+    "labels": {
+      "en_US": "John Elliott",
+      "nl_NL": "John Elliott"
+    }
+  },
+  {
+    "code": "john_lobb",
+    "attribute": "manufacturer",
+    "sort_order": 1308,
+    "labels": {
+      "en_US": "John Lobb",
+      "nl_NL": "John Lobb"
+    }
+  },
+  {
+    "code": "john_richmond",
+    "attribute": "manufacturer",
+    "sort_order": 1164,
+    "labels": {
+      "en_US": "John Richmond",
+      "nl_NL": "John Richmond"
+    }
+  },
+  {
+    "code": "jonathan_simkhai",
+    "attribute": "manufacturer",
+    "sort_order": 1309,
+    "labels": {
+      "en_US": "Jonathan Simkhai",
+      "nl_NL": "Jonathan Simkhai"
+    }
+  },
+  {
+    "code": "joop",
+    "attribute": "manufacturer",
+    "sort_order": 1192,
+    "labels": {
+      "en_US": "JOOP!",
+      "nl_NL": "JOOP!"
+    }
+  },
+  {
+    "code": "joop_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1193,
+    "labels": {
+      "en_US": "JOOP! Jeans",
+      "nl_NL": "JOOP! Jeans"
+    }
+  },
+  {
+    "code": "jorcustom",
+    "attribute": "manufacturer",
+    "sort_order": 258,
+    "labels": {
+      "en_US": "Jorcustom",
+      "nl_NL": "Jorcustom"
+    }
+  },
+  {
+    "code": "joseph",
+    "attribute": "manufacturer",
+    "sort_order": 1251,
+    "labels": {
+      "en_US": "Joseph",
+      "nl_NL": "Joseph"
+    }
+  },
+  {
+    "code": "joseph_ribkoff",
+    "attribute": "manufacturer",
+    "sort_order": 1437,
+    "labels": {
+      "en_US": "Joseph Ribkoff",
+      "nl_NL": "Joseph Ribkoff"
+    }
+  },
+  {
+    "code": "josh",
+    "attribute": "manufacturer",
+    "sort_order": 1666,
+    "labels": {}
+  },
+  {
+    "code": "josh_v",
+    "attribute": "manufacturer",
+    "sort_order": 261,
+    "labels": {
+      "en_US": "Josh V",
+      "nl_NL": "Josh V"
+    }
+  },
+  {
+    "code": "joshua_sanders",
+    "attribute": "manufacturer",
+    "sort_order": 1228,
+    "labels": {
+      "en_US": "Joshua Sanders",
+      "nl_NL": "Joshua Sanders"
+    }
+  },
+  {
+    "code": "juicy_couture",
+    "attribute": "manufacturer",
+    "sort_order": 900,
+    "labels": {
+      "en_US": "Juicy Couture",
+      "nl_NL": "Juicy Couture"
+    }
+  },
+  {
+    "code": "junya_watanabe",
+    "attribute": "manufacturer",
+    "sort_order": 1000,
+    "labels": {
+      "en_US": "Junya Watanabe",
+      "nl_NL": "Junya Watanabe"
+    }
+  },
+  {
+    "code": "junya_watanabe_man",
+    "attribute": "manufacturer",
+    "sort_order": 1287,
+    "labels": {
+      "en_US": "Junya Watanabe MAN",
+      "nl_NL": "Junya Watanabe MAN"
+    }
+  },
+  {
+    "code": "just_cavalli",
+    "attribute": "manufacturer",
+    "sort_order": 1186,
+    "labels": {
+      "en_US": "Just Cavalli",
+      "nl_NL": "Just Cavalli"
+    }
+  },
+  {
+    "code": "just_done",
+    "attribute": "manufacturer",
+    "sort_order": 1055,
+    "labels": {
+      "en_US": "Just Done",
+      "nl_NL": "Just Done"
+    }
+  },
+  {
+    "code": "juun_j",
+    "attribute": "manufacturer",
+    "sort_order": 1352,
+    "labels": {
+      "en_US": "Juun.J",
+      "nl_NL": "Juun.J"
+    }
+  },
+  {
+    "code": "jw_anderson",
+    "attribute": "manufacturer",
+    "sort_order": 247,
+    "labels": {
+      "en_US": "J.W. Anderson",
+      "nl_NL": "J.W. Anderson"
+    }
+  },
+  {
+    "code": "K_WAY",
+    "attribute": "manufacturer",
+    "sort_order": 886,
+    "labels": {
+      "en_US": "K-WAY",
+      "nl_NL": "K-WAY"
+    }
+  },
+  {
+    "code": "kangol",
+    "attribute": "manufacturer",
+    "sort_order": 1731,
+    "labels": {
+      "en_US": "Kangol",
+      "nl_NL": "Kangol"
+    }
+  },
+  {
+    "code": "kangool",
+    "attribute": "manufacturer",
+    "sort_order": 1025,
+    "labels": {
+      "en_US": "Kangool",
+      "nl_NL": "Kangool"
+    }
+  },
+  {
+    "code": "kangra",
+    "attribute": "manufacturer",
+    "sort_order": 1101,
+    "labels": {
+      "en_US": "Kangra",
+      "nl_NL": "Kangra"
+    }
+  },
+  {
+    "code": "kaotiko",
+    "attribute": "manufacturer",
+    "sort_order": 1476,
+    "labels": {
+      "en_US": "Kaotiko",
+      "nl_NL": "Kaotiko"
+    }
+  },
+  {
+    "code": "kappa",
+    "attribute": "manufacturer",
+    "sort_order": 1741,
+    "labels": {
+      "en_US": "Kappa",
+      "nl_NL": "Kappa"
+    }
+  },
+  {
+    "code": "kardo",
+    "attribute": "manufacturer",
+    "sort_order": 1607,
+    "labels": {
+      "en_US": "Kardo",
+      "nl_NL": "Kardo"
+    }
+  },
+  {
+    "code": "karhu",
+    "attribute": "manufacturer",
+    "sort_order": 1133,
+    "labels": {
+      "en_US": "Karhu",
+      "nl_NL": "Karhu"
+    }
+  },
+  {
+    "code": "karl_lagerfeld",
+    "attribute": "manufacturer",
+    "sort_order": 921,
+    "labels": {
+      "en_US": "Karl Lagerfeld",
+      "nl_NL": "Karl Lagerfeld"
+    }
+  },
+  {
+    "code": "karl_lagerfeld_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1194,
+    "labels": {
+      "en_US": "Karl Lagerfeld Jeans",
+      "nl_NL": "Karl Lagerfeld Jeans"
+    }
+  },
+  {
+    "code": "karma",
+    "attribute": "manufacturer",
+    "sort_order": 1667,
+    "labels": {
+      "en_US": "Karma",
+      "nl_NL": "Karma"
+    }
+  },
+  {
+    "code": "kate_spade_new_york",
+    "attribute": "manufacturer",
+    "sort_order": 1284,
+    "labels": {
+      "en_US": "Kate Spade New York",
+      "nl_NL": "Kate Spade New York"
+    }
+  },
+  {
+    "code": "kenzo",
+    "attribute": "manufacturer",
+    "sort_order": 274,
+    "labels": {
+      "en_US": "Kenzo",
+      "nl_NL": "Kenzo"
+    }
+  },
+  {
+    "code": "khaite",
+    "attribute": "manufacturer",
+    "sort_order": 1310,
+    "labels": {
+      "en_US": "Khaite",
+      "nl_NL": "Khaite"
+    }
+  },
+  {
+    "code": "khrisjoy",
+    "attribute": "manufacturer",
+    "sort_order": 1085,
+    "labels": {
+      "en_US": "khrisjoy",
+      "nl_NL": "khrisjoy"
+    }
+  },
+  {
+    "code": "KHUJO",
+    "attribute": "manufacturer",
+    "sort_order": 887,
+    "labels": {
+      "en_US": "Khujo",
+      "nl_NL": "Khujo"
+    }
+  },
+  {
+    "code": "kidsuper",
+    "attribute": "manufacturer",
+    "sort_order": 1679,
+    "labels": {
+      "en_US": "KidSuper",
+      "nl_NL": "KidSuper"
+    }
+  },
+  {
+    "code": "killer_instinct",
+    "attribute": "manufacturer",
+    "sort_order": 821,
+    "labels": {
+      "en_US": "Killer Instinct",
+      "nl_NL": "Killer Instinct"
+    }
+  },
+  {
+    "code": "kiton",
+    "attribute": "manufacturer",
+    "sort_order": 1155,
+    "labels": {
+      "en_US": "Kiton",
+      "nl_NL": "Kiton"
+    }
+  },
+  {
+    "code": "kjacques",
+    "attribute": "manufacturer",
+    "sort_order": 1606,
+    "labels": {
+      "en_US": "K.Jacques",
+      "nl_NL": "K.Jacques"
+    }
+  },
+  {
+    "code": "krakatau",
+    "attribute": "manufacturer",
+    "sort_order": 277,
+    "labels": {
+      "en_US": "Krakatau",
+      "nl_NL": "Krakatau"
+    }
+  },
+  {
+    "code": "kurt_geiger_london",
+    "attribute": "manufacturer",
+    "sort_order": 876,
+    "labels": {
+      "en_US": "Kurt Geiger London",
+      "nl_NL": "Kurt Geiger London"
+    }
+  },
+  {
+    "code": "kuzzoi",
+    "attribute": "manufacturer",
+    "sort_order": 1539,
+    "labels": {
+      "en_US": "KUZZOI",
+      "nl_NL": "KUZZOI"
+    }
+  },
+  {
+    "code": "l_autre_chose",
+    "attribute": "manufacturer",
+    "sort_order": 356,
+    "labels": {
+      "en_US": "L'Autre Chose",
+      "nl_NL": "L'Autre Chose"
+    }
+  },
+  {
+    "code": "l_edition",
+    "attribute": "manufacturer",
+    "sort_order": 358,
+    "labels": {
+      "en_US": "L'edition",
+      "nl_NL": "L'edition"
+    }
+  },
+  {
+    "code": "la_martina",
+    "attribute": "manufacturer",
+    "sort_order": 1293,
+    "labels": {
+      "en_US": "La Martina",
+      "nl_NL": "La Martina"
+    }
+  },
+  {
+    "code": "la_milanesa",
+    "attribute": "manufacturer",
+    "sort_order": 1134,
+    "labels": {
+      "en_US": "La MILANESA",
+      "nl_NL": "La MILANESA"
+    }
+  },
+  {
+    "code": "la_scene_de_rue",
+    "attribute": "manufacturer",
+    "sort_order": 803,
+    "labels": {
+      "en_US": "La Scène de Rue",
+      "nl_NL": "La Scène de Rue"
+    }
+  },
+  {
+    "code": "la_sisters",
+    "attribute": "manufacturer",
+    "sort_order": 281,
+    "labels": {
+      "en_US": "LA Sisters",
+      "nl_NL": "LA Sisters"
+    }
+  },
+  {
+    "code": "laagam",
+    "attribute": "manufacturer",
+    "sort_order": 1457,
+    "labels": {
+      "en_US": "Laagam",
+      "nl_NL": "Laagam"
+    }
+  },
+  {
+    "code": "labubu",
+    "attribute": "manufacturer",
+    "sort_order": 1488,
+    "labels": {
+      "en_US": "Labubu",
+      "nl_NL": "Labubu"
+    }
+  },
+  {
+    "code": "lacoste",
+    "attribute": "manufacturer",
+    "sort_order": 282,
+    "labels": {
+      "en_US": "Lacoste",
+      "nl_NL": "Lacoste"
+    }
+  },
+  {
+    "code": "lagence",
+    "attribute": "manufacturer",
+    "sort_order": 1276,
+    "labels": {
+      "en_US": "L'AGENCE",
+      "nl_NL": "L'AGENCE"
+    }
+  },
+  {
+    "code": "lala_berlin",
+    "attribute": "manufacturer",
+    "sort_order": 1195,
+    "labels": {
+      "en_US": "Lala Berlin",
+      "nl_NL": "Lala Berlin"
+    }
+  },
+  {
+    "code": "lancel",
+    "attribute": "manufacturer",
+    "sort_order": 1144,
+    "labels": {
+      "en_US": "Lancel",
+      "nl_NL": "Lancel"
+    }
+  },
+  {
+    "code": "laneus",
+    "attribute": "manufacturer",
+    "sort_order": 1214,
+    "labels": {
+      "en_US": "Laneus",
+      "nl_NL": "Laneus"
+    }
+  },
+  {
+    "code": "lanvin",
+    "attribute": "manufacturer",
+    "sort_order": 283,
+    "labels": {
+      "en_US": "Lanvin",
+      "nl_NL": "Lanvin"
+    }
+  },
+  {
+    "code": "lardini",
+    "attribute": "manufacturer",
+    "sort_order": 1156,
+    "labels": {
+      "en_US": "Lardini",
+      "nl_NL": "Lardini"
+    }
+  },
+  {
+    "code": "lautre_chose",
+    "attribute": "manufacturer",
+    "sort_order": 279,
+    "labels": {
+      "en_US": "L'Autre Chose",
+      "nl_NL": "L'Autre Chose"
+    }
+  },
+  {
+    "code": "lbm_1911",
+    "attribute": "manufacturer",
+    "sort_order": 1278,
+    "labels": {
+      "en_US": "L.B.M 1911",
+      "nl_NL": "L.B.M 1911"
+    }
+  },
+  {
+    "code": "le_silla",
+    "attribute": "manufacturer",
+    "sort_order": 1086,
+    "labels": {
+      "en_US": "Le Silla",
+      "nl_NL": "Le Silla"
+    }
+  },
+  {
+    "code": "ledition",
+    "attribute": "manufacturer",
+    "sort_order": 280,
+    "labels": {
+      "en_US": "L'edition",
+      "nl_NL": "L'edition"
+    }
+  },
+  {
+    "code": "lee",
+    "attribute": "manufacturer",
+    "sort_order": 1728,
+    "labels": {
+      "en_US": "Lee",
+      "nl_NL": "Lee"
+    }
+  },
+  {
+    "code": "lemaire",
+    "attribute": "manufacturer",
+    "sort_order": 834,
+    "labels": {
+      "en_US": "Lemaire",
+      "nl_NL": "Lemaire"
+    }
+  },
+  {
+    "code": "lempelius",
+    "attribute": "manufacturer",
+    "sort_order": 1608,
+    "labels": {
+      "en_US": "LEMPELIUS",
+      "nl_NL": "LEMPELIUS"
+    }
+  },
+  {
+    "code": "les_brutes",
+    "attribute": "manufacturer",
+    "sort_order": 1547,
+    "labels": {
+      "en_US": "Les Brutes",
+      "nl_NL": "Les Brutes"
+    }
+  },
+  {
+    "code": "les_coyotes_de_paris",
+    "attribute": "manufacturer",
+    "sort_order": 894,
+    "labels": {
+      "en_US": "Les Coyotes de Paris",
+      "nl_NL": "Les Coyotes de Paris"
+    }
+  },
+  {
+    "code": "les_deux",
+    "attribute": "manufacturer",
+    "sort_order": 286,
+    "labels": {
+      "en_US": "Les Deux",
+      "nl_NL": "Les Deux"
+    }
+  },
+  {
+    "code": "les_hommes",
+    "attribute": "manufacturer",
+    "sort_order": 1230,
+    "labels": {
+      "en_US": "LES HOMMES",
+      "nl_NL": "LES HOMMES"
+    }
+  },
+  {
+    "code": "les_visionnaires",
+    "attribute": "manufacturer",
+    "sort_order": 1196,
+    "labels": {
+      "en_US": "LES VISIONNAIRES",
+      "nl_NL": "LES VISIONNAIRES"
+    }
+  },
+  {
+    "code": "levi_s",
+    "attribute": "manufacturer",
+    "sort_order": 380,
+    "labels": {
+      "en_US": "Levi's",
+      "nl_NL": "Levi's"
+    }
+  },
+  {
+    "code": "liebeskind_berlin",
+    "attribute": "manufacturer",
+    "sort_order": 1197,
+    "labels": {
+      "en_US": "Liebeskind Berlin",
+      "nl_NL": "Liebeskind Berlin"
+    }
+  },
+  {
+    "code": "linda_farrow",
+    "attribute": "manufacturer",
+    "sort_order": 1311,
+    "labels": {
+      "en_US": "Linda Farrow",
+      "nl_NL": "Linda Farrow"
+    }
+  },
+  {
+    "code": "linea",
+    "attribute": "manufacturer",
+    "sort_order": 1173,
+    "labels": {
+      "en_US": "Linea",
+      "nl_NL": "Linea"
+    }
+  },
+  {
+    "code": "lisa_yang",
+    "attribute": "manufacturer",
+    "sort_order": 1609,
+    "labels": {
+      "en_US": "Lisa Yang",
+      "nl_NL": "Lisa Yang"
+    }
+  },
+  {
+    "code": "liu_jo",
+    "attribute": "manufacturer",
+    "sort_order": 292,
+    "labels": {
+      "en_US": "Liu Jo",
+      "nl_NL": "Liu Jo"
+    }
+  },
+  {
+    "code": "live_the_process",
+    "attribute": "manufacturer",
+    "sort_order": 1649,
+    "labels": {
+      "en_US": "Live The Process",
+      "nl_NL": "Live The Process"
+    }
+  },
+  {
+    "code": "liviana_conti",
+    "attribute": "manufacturer",
+    "sort_order": 1242,
+    "labels": {
+      "en_US": "Liviana Conti",
+      "nl_NL": "Liviana Conti"
+    }
+  },
+  {
+    "code": "loewe",
+    "attribute": "manufacturer",
+    "sort_order": 293,
+    "labels": {
+      "en_US": "Loewe",
+      "nl_NL": "Loewe"
+    }
+  },
+  {
+    "code": "lois_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1455,
+    "labels": {
+      "en_US": "Lois Jeans",
+      "nl_NL": "Lois Jeans"
+    }
+  },
+  {
+    "code": "lola_cruz",
+    "attribute": "manufacturer",
+    "sort_order": 1453,
+    "labels": {
+      "en_US": "Lola Cruz",
+      "nl_NL": "Lola Cruz"
+    }
+  },
+  {
+    "code": "longchamp",
+    "attribute": "manufacturer",
+    "sort_order": 1283,
+    "labels": {
+      "en_US": "Longchamp",
+      "nl_NL": "Longchamp"
+    }
+  },
+  {
+    "code": "longines",
+    "attribute": "manufacturer",
+    "sort_order": 1381,
+    "labels": {
+      "en_US": "Longines",
+      "nl_NL": "Longines"
+    }
+  },
+  {
+    "code": "lords_and_fools",
+    "attribute": "manufacturer",
+    "sort_order": 296,
+    "labels": {
+      "en_US": "Lords & Fools",
+      "nl_NL": "Lords & Fools"
+    }
+  },
+  {
+    "code": "lords_fools",
+    "attribute": "manufacturer",
+    "sort_order": 394,
+    "labels": {
+      "en_US": "Lords & Fools",
+      "nl_NL": "Lords & Fools"
+    }
+  },
+  {
+    "code": "loro_piana",
+    "attribute": "manufacturer",
+    "sort_order": 934,
+    "labels": {
+      "en_US": "Loro Piana",
+      "nl_NL": "Loro Piana"
+    }
+  },
+  {
+    "code": "lorus",
+    "attribute": "manufacturer",
+    "sort_order": 1668,
+    "labels": {}
+  },
+  {
+    "code": "louis_vuitton",
+    "attribute": "manufacturer",
+    "sort_order": 881,
+    "labels": {
+      "en_US": "Louis Vuitton",
+      "nl_NL": "Louis Vuitton"
+    }
+  },
+  {
+    "code": "love_moschino",
+    "attribute": "manufacturer",
+    "sort_order": 298,
+    "labels": {
+      "en_US": "Love Moschino",
+      "nl_NL": "Love Moschino"
+    }
+  },
+  {
+    "code": "love_stories",
+    "attribute": "manufacturer",
+    "sort_order": 1425,
+    "labels": {
+      "en_US": "Love Stories",
+      "nl_NL": "Love Stories"
+    }
+  },
+  {
+    "code": "loveshackfancy",
+    "attribute": "manufacturer",
+    "sort_order": 1696,
+    "labels": {
+      "en_US": "LoveShackFancy",
+      "nl_NL": "LoveShackFancy"
+    }
+  },
+  {
+    "code": "luigi_bianchi",
+    "attribute": "manufacturer",
+    "sort_order": 1392,
+    "labels": {
+      "en_US": "Luigi Bianchi",
+      "nl_NL": "Luigi Bianchi"
+    }
+  },
+  {
+    "code": "lumi3re",
+    "attribute": "manufacturer",
+    "sort_order": 797,
+    "labels": {
+      "en_US": "LUMI3RE",
+      "nl_NL": "LUMI3RE"
+    }
+  },
+  {
+    "code": "lune_active",
+    "attribute": "manufacturer",
+    "sort_order": 938,
+    "labels": {
+      "en_US": "Lune Active",
+      "nl_NL": "Lune Active"
+    }
+  },
+  {
+    "code": "lyle_scott",
+    "attribute": "manufacturer",
+    "sort_order": 399,
+    "labels": {
+      "en_US": "Lyle & Scott",
+      "nl_NL": "Lyle & Scott"
+    }
+  },
+  {
+    "code": "ma_strum",
+    "attribute": "manufacturer",
+    "sort_order": 301,
+    "labels": {
+      "en_US": "Ma.Strum",
+      "nl_NL": "Ma.Strum"
+    }
+  },
+  {
+    "code": "mabrun",
+    "attribute": "manufacturer",
+    "sort_order": 1549,
+    "labels": {
+      "en_US": "Mabrun",
+      "nl_NL": "Mabrun"
+    }
+  },
+  {
+    "code": "mach_and_mach",
+    "attribute": "manufacturer",
+    "sort_order": 1312,
+    "labels": {
+      "en_US": "Mach&Mach",
+      "nl_NL": "Mach&Mach"
+    }
+  },
+  {
+    "code": "mach_and_mach_pre",
+    "attribute": "manufacturer",
+    "sort_order": 1048,
+    "labels": {
+      "en_US": "Mach & Mach Pre",
+      "nl_NL": "Mach & Mach Pre"
+    }
+  },
+  {
+    "code": "mackage",
+    "attribute": "manufacturer",
+    "sort_order": 891,
+    "labels": {
+      "en_US": "Mackage",
+      "nl_NL": "Mackage"
+    }
+  },
+  {
+    "code": "mackintosh",
+    "attribute": "manufacturer",
+    "sort_order": 1650,
+    "labels": {}
+  },
+  {
+    "code": "magda_butrym",
+    "attribute": "manufacturer",
+    "sort_order": 1313,
+    "labels": {
+      "en_US": "Magda Butrym",
+      "nl_NL": "Magda Butrym"
+    }
+  },
+  {
+    "code": "maison_crivelli",
+    "attribute": "manufacturer",
+    "sort_order": 1471,
+    "labels": {
+      "en_US": "Maison Crivelli",
+      "nl_NL": "Maison Crivelli"
+    }
+  },
+  {
+    "code": "maison_gate",
+    "attribute": "manufacturer",
+    "sort_order": 799,
+    "labels": {
+      "en_US": "Maison Gate",
+      "nl_NL": "Maison Gate"
+    }
+  },
+  {
+    "code": "maison_kitsune",
+    "attribute": "manufacturer",
+    "sort_order": 305,
+    "labels": {
+      "en_US": "Maison Kitsuné",
+      "nl_NL": "Maison Kitsuné"
+    }
+  },
+  {
+    "code": "maison_labiche",
+    "attribute": "manufacturer",
+    "sort_order": 927,
+    "labels": {
+      "en_US": "Maison Labiche",
+      "nl_NL": "Maison Labiche"
+    }
+  },
+  {
+    "code": "maison_margiela",
+    "attribute": "manufacturer",
+    "sort_order": 557,
+    "labels": {
+      "en_US": "Maison Margiela",
+      "nl_NL": "Maison Margiela"
+    }
+  },
+  {
+    "code": "maison_mihara_yasuhiro",
+    "attribute": "manufacturer",
+    "sort_order": 955,
+    "labels": {
+      "en_US": "Maison Mihara Yasuhiro",
+      "nl_NL": "Maison Mihara Yasuhiro"
+    }
+  },
+  {
+    "code": "malelions",
+    "attribute": "manufacturer",
+    "sort_order": 980,
+    "labels": {
+      "en_US": "Malelions",
+      "nl_NL": "Malelions"
+    }
+  },
+  {
+    "code": "malelions_premium",
+    "attribute": "manufacturer",
+    "sort_order": 1682,
+    "labels": {
+      "en_US": "Malelions Premium",
+      "nl_NL": "Malelions Premium"
+    }
+  },
+  {
+    "code": "malin_plus_goetz",
+    "attribute": "manufacturer",
+    "sort_order": 1470,
+    "labels": {
+      "en_US": "Malin + Goetz",
+      "nl_NL": "Malin + Goetz"
+    }
+  },
+  {
+    "code": "mallet",
+    "attribute": "manufacturer",
+    "sort_order": 309,
+    "labels": {
+      "en_US": "Mallet",
+      "nl_NL": "Mallet"
+    }
+  },
+  {
+    "code": "malone_souliers",
+    "attribute": "manufacturer",
+    "sort_order": 1685,
+    "labels": {
+      "en_US": "Malone Souliers",
+      "nl_NL": "Malone Souliers"
+    }
+  },
+  {
+    "code": "mammut",
+    "attribute": "manufacturer",
+    "sort_order": 1288,
+    "labels": {
+      "en_US": "Mammut",
+      "nl_NL": "Mammut"
+    }
+  },
+  {
+    "code": "MANEBI",
+    "attribute": "manufacturer",
+    "sort_order": 1058,
+    "labels": {
+      "en_US": "Manebi",
+      "nl_NL": "Manebi"
+    }
+  },
+  {
+    "code": "manolo_blahnik",
+    "attribute": "manufacturer",
+    "sort_order": 1200,
+    "labels": {
+      "en_US": "Manolo Blahnik",
+      "nl_NL": "Manolo Blahnik"
+    }
+  },
+  {
+    "code": "mansons",
+    "attribute": "manufacturer",
+    "sort_order": 1102,
+    "labels": {
+      "en_US": "Manson's",
+      "nl_NL": "Manson's"
+    }
+  },
+  {
+    "code": "mansour",
+    "attribute": "manufacturer",
+    "sort_order": 1692,
+    "labels": {
+      "en_US": "Mansour",
+      "nl_NL": "Mansour"
+    }
+  },
+  {
+    "code": "mansuel_gavriel",
+    "attribute": "manufacturer",
+    "sort_order": 1165,
+    "labels": {
+      "en_US": "Mansuel Gavriel",
+      "nl_NL": "Mansuel Gavriel"
+    }
+  },
+  {
+    "code": "mansur_gavriel",
+    "attribute": "manufacturer",
+    "sort_order": 1255,
+    "labels": {
+      "en_US": "Mansur Gavriel",
+      "nl_NL": "Mansur Gavriel"
+    }
+  },
+  {
+    "code": "manuel_ritz",
+    "attribute": "manufacturer",
+    "sort_order": 1166,
+    "labels": {
+      "en_US": "Manuel Ritz",
+      "nl_NL": "Manuel Ritz"
+    }
+  },
+  {
+    "code": "marc_cain",
+    "attribute": "manufacturer",
+    "sort_order": 1333,
+    "labels": {
+      "en_US": "Marc Cain",
+      "nl_NL": "Marc Cain"
+    }
+  },
+  {
+    "code": "marc_jacobs",
+    "attribute": "manufacturer",
+    "sort_order": 665,
+    "labels": {
+      "en_US": "Marc Jacobs",
+      "nl_NL": "Marc Jacobs"
+    }
+  },
+  {
+    "code": "marcelo_burlon",
+    "attribute": "manufacturer",
+    "sort_order": 317,
+    "labels": {
+      "en_US": "Marcelo Burlon",
+      "nl_NL": "Marcelo Burlon"
+    }
+  },
+  {
+    "code": "marco_de_vincenzo",
+    "attribute": "manufacturer",
+    "sort_order": 1212,
+    "labels": {
+      "en_US": "Marco De Vincenzo",
+      "nl_NL": "Marco De Vincenzo"
+    }
+  },
+  {
+    "code": "marine_serre",
+    "attribute": "manufacturer",
+    "sort_order": 711,
+    "labels": {
+      "en_US": "Marine serre",
+      "nl_NL": "Marine serre"
+    }
+  },
+  {
+    "code": "marni",
+    "attribute": "manufacturer",
+    "sort_order": 321,
+    "labels": {
+      "en_US": "Marni",
+      "nl_NL": "Marni"
+    }
+  },
+  {
+    "code": "marshall_artist",
+    "attribute": "manufacturer",
+    "sort_order": 920,
+    "labels": {
+      "en_US": "Marshall Artist",
+      "nl_NL": "Marshall Artist"
+    }
+  },
+  {
+    "code": "martine_rose",
+    "attribute": "manufacturer",
+    "sort_order": 700,
+    "labels": {
+      "en_US": "Martine Rose",
+      "nl_NL": "Martine Rose"
+    }
+  },
+  {
+    "code": "maru",
+    "attribute": "manufacturer",
+    "sort_order": 1610,
+    "labels": {
+      "en_US": "MARU",
+      "nl_NL": "MARU"
+    }
+  },
+  {
+    "code": "mason_garments",
+    "attribute": "manufacturer",
+    "sort_order": 324,
+    "labels": {
+      "en_US": "Mason Garments",
+      "nl_NL": "Mason Garments"
+    }
+  },
+  {
+    "code": "masons",
+    "attribute": "manufacturer",
+    "sort_order": 1180,
+    "labels": {
+      "en_US": "Mason's",
+      "nl_NL": "Mason's"
+    }
+  },
+  {
+    "code": "mats_meier",
+    "attribute": "manufacturer",
+    "sort_order": 1570,
+    "labels": {
+      "en_US": "Mats Meier",
+      "nl_NL": "Mats Meier"
+    }
+  },
+  {
+    "code": "maurice_lacroix",
+    "attribute": "manufacturer",
+    "sort_order": 1519,
+    "labels": {
+      "en_US": "Maurice Lacroix",
+      "nl_NL": "Maurice Lacroix"
+    }
+  },
+  {
+    "code": "maxmara",
+    "attribute": "manufacturer",
+    "sort_order": 327,
+    "labels": {
+      "en_US": "MaxMara",
+      "nl_NL": "MaxMara"
+    }
+  },
+  {
+    "code": "mc2_saint_barth",
+    "attribute": "manufacturer",
+    "sort_order": 944,
+    "labels": {
+      "en_US": "MC2 Saint Barth",
+      "nl_NL": "MC2 Saint Barth"
+    }
+  },
+  {
+    "code": "mcm",
+    "attribute": "manufacturer",
+    "sort_order": 911,
+    "labels": {
+      "en_US": "MCM",
+      "nl_NL": "MCM"
+    }
+  },
+  {
+    "code": "medea",
+    "attribute": "manufacturer",
+    "sort_order": 1373,
+    "labels": {
+      "en_US": "Medea",
+      "nl_NL": "Medea"
+    }
+  },
+  {
+    "code": "mercer_amsterdam",
+    "attribute": "manufacturer",
+    "sort_order": 331,
+    "labels": {
+      "en_US": "Mercer Amsterdam",
+      "nl_NL": "Mercer Amsterdam"
+    }
+  },
+  {
+    "code": "MERZ_BSCHWANEN",
+    "attribute": "manufacturer",
+    "sort_order": 1071,
+    "labels": {
+      "en_US": "Merz B.Schwanen",
+      "nl_NL": "Merz B.Schwanen"
+    }
+  },
+  {
+    "code": "mesmo_since_day_one",
+    "attribute": "manufacturer",
+    "sort_order": 581,
+    "labels": {
+      "en_US": "MESMO since day one",
+      "nl_NL": "MESMO since day one"
+    }
+  },
+  {
+    "code": "met",
+    "attribute": "manufacturer",
+    "sort_order": 1732,
+    "labels": {
+      "en_US": "Met",
+      "nl_NL": "Met"
+    }
+  },
+  {
+    "code": "metalgienchi",
+    "attribute": "manufacturer",
+    "sort_order": 1611,
+    "labels": {
+      "en_US": "Metalgienchi",
+      "nl_NL": "Metalgienchi"
+    }
+  },
+  {
+    "code": "mi_piace",
+    "attribute": "manufacturer",
+    "sort_order": 1681,
+    "labels": {
+      "en_US": "Mi Piace",
+      "nl_NL": "Mi Piace"
+    }
+  },
+  {
+    "code": "michael_kors",
+    "attribute": "manufacturer",
+    "sort_order": 334,
+    "labels": {
+      "en_US": "Michael Kors",
+      "nl_NL": "Michael Kors"
+    }
+  },
+  {
+    "code": "micmacbags",
+    "attribute": "manufacturer",
+    "sort_order": 1669,
+    "labels": {}
+  },
+  {
+    "code": "misbhv",
+    "attribute": "manufacturer",
+    "sort_order": 339,
+    "labels": {
+      "en_US": "MISBHV",
+      "nl_NL": "MISBHV"
+    }
+  },
+  {
+    "code": "missoni",
+    "attribute": "manufacturer",
+    "sort_order": 341,
+    "labels": {
+      "en_US": "Missoni",
+      "nl_NL": "Missoni"
+    }
+  },
+  {
+    "code": "mitchell_and_ness",
+    "attribute": "manufacturer",
+    "sort_order": 1477,
+    "labels": {
+      "en_US": "Mitchell and Ness",
+      "nl_NL": "Mitchell and Ness"
+    }
+  },
+  {
+    "code": "miu_miu",
+    "attribute": "manufacturer",
+    "sort_order": 342,
+    "labels": {
+      "en_US": "Miu Miu",
+      "nl_NL": "Miu Miu"
+    }
+  },
+  {
+    "code": "mizuno",
+    "attribute": "manufacturer",
+    "sort_order": 936,
+    "labels": {
+      "en_US": "Mizuno",
+      "nl_NL": "Mizuno"
+    }
+  },
+  {
+    "code": "mm6_maison_margiela",
+    "attribute": "manufacturer",
+    "sort_order": 343,
+    "labels": {
+      "en_US": "MM6 Maison Margiela",
+      "nl_NL": "MM6 Maison Margiela"
+    }
+  },
+  {
+    "code": "mockberg",
+    "attribute": "manufacturer",
+    "sort_order": 1670,
+    "labels": {
+      "en_US": "Mockberg",
+      "nl_NL": "Mockberg"
+    }
+  },
+  {
+    "code": "moismont",
+    "attribute": "manufacturer",
+    "sort_order": 1612,
+    "labels": {
+      "en_US": "Moismont",
+      "nl_NL": "Moismont"
+    }
+  },
+  {
+    "code": "moncler",
+    "attribute": "manufacturer",
+    "sort_order": 345,
+    "labels": {
+      "en_US": "Moncler",
+      "nl_NL": "Moncler"
+    }
+  },
+  {
+    "code": "mondaine",
+    "attribute": "manufacturer",
+    "sort_order": 1409,
+    "labels": {
+      "en_US": "Mondaine",
+      "nl_NL": "Mondaine"
+    }
+  },
+  {
+    "code": "monnalisa",
+    "attribute": "manufacturer",
+    "sort_order": 1674,
+    "labels": {
+      "en_US": "Monnalisa",
+      "nl_NL": "Monnalisa"
+    }
+  },
+  {
+    "code": "montale",
+    "attribute": "manufacturer",
+    "sort_order": 347,
+    "labels": {
+      "en_US": "Montale Paris",
+      "nl_NL": "Montale Paris"
+    }
+  },
+  {
+    "code": "montblanc",
+    "attribute": "manufacturer",
+    "sort_order": 1157,
+    "labels": {
+      "en_US": "Montblanc",
+      "nl_NL": "Montblanc"
+    }
+  },
+  {
+    "code": "montres_brequet",
+    "attribute": "manufacturer",
+    "sort_order": 1494,
+    "labels": {
+      "en_US": "Montres Brequet",
+      "nl_NL": "Montres Brequet"
+    }
+  },
+  {
+    "code": "moon_boot",
+    "attribute": "manufacturer",
+    "sort_order": 962,
+    "labels": {
+      "en_US": "Moon Boot",
+      "nl_NL": "Moon Boot"
+    }
+  },
+  {
+    "code": "Moorer",
+    "attribute": "manufacturer",
+    "sort_order": 1059,
+    "labels": {
+      "en_US": "Moorer",
+      "nl_NL": "Moorer"
+    }
+  },
+  {
+    "code": "moose_knuckles",
+    "attribute": "manufacturer",
+    "sort_order": 350,
+    "labels": {
+      "en_US": "Moose Knuckles",
+      "nl_NL": "Moose Knuckles"
+    }
+  },
+  {
+    "code": "mos_mosh",
+    "attribute": "manufacturer",
+    "sort_order": 1399,
+    "labels": {
+      "en_US": "Mos Mosh",
+      "nl_NL": "Mos Mosh"
+    }
+  },
+  {
+    "code": "moschino",
+    "attribute": "manufacturer",
+    "sort_order": 355,
+    "labels": {
+      "en_US": "Moschino",
+      "nl_NL": "Moschino"
+    }
+  },
+  {
+    "code": "mother",
+    "attribute": "manufacturer",
+    "sort_order": 1400,
+    "labels": {
+      "en_US": "Mother",
+      "nl_NL": "Mother"
+    }
+  },
+  {
+    "code": "mother_denim",
+    "attribute": "manufacturer",
+    "sort_order": 646,
+    "labels": {
+      "en_US": "Mother Denim",
+      "nl_NL": "Mother Denim"
+    }
+  },
+  {
+    "code": "mou",
+    "attribute": "manufacturer",
+    "sort_order": 961,
+    "labels": {
+      "en_US": "MOU",
+      "nl_NL": "MOU"
+    }
+  },
+  {
+    "code": "mrz",
+    "attribute": "manufacturer",
+    "sort_order": 1232,
+    "labels": {
+      "en_US": "MRZ",
+      "nl_NL": "MRZ"
+    }
+  },
+  {
+    "code": "msgm",
+    "attribute": "manufacturer",
+    "sort_order": 360,
+    "labels": {
+      "en_US": "MSGM",
+      "nl_NL": "MSGM"
+    }
+  },
+  {
+    "code": "muchachomalo",
+    "attribute": "manufacturer",
+    "sort_order": 1703,
+    "labels": {
+      "en_US": "Muchachomalo",
+      "nl_NL": "Muchachomalo"
+    }
+  },
+  {
+    "code": "muchi",
+    "attribute": "manufacturer",
+    "sort_order": 1613,
+    "labels": {
+      "en_US": "MUCHI",
+      "nl_NL": "MUCHI"
+    }
+  },
+  {
+    "code": "mugler",
+    "attribute": "manufacturer",
+    "sort_order": 1001,
+    "labels": {
+      "en_US": "MUGLER",
+      "nl_NL": "MUGLER"
+    }
+  },
+  {
+    "code": "mulberry",
+    "attribute": "manufacturer",
+    "sort_order": 897,
+    "labels": {
+      "en_US": "Mulberry",
+      "nl_NL": "Mulberry"
+    }
+  },
+  {
+    "code": "munthe",
+    "attribute": "manufacturer",
+    "sort_order": 1694,
+    "labels": {
+      "en_US": "Munthe",
+      "nl_NL": "Munthe"
+    }
+  },
+  {
+    "code": "my_brand",
+    "attribute": "manufacturer",
+    "sort_order": 362,
+    "labels": {
+      "en_US": "My Brand",
+      "nl_NL": "My Brand"
+    }
+  },
+  {
+    "code": "my_jewellery",
+    "attribute": "manufacturer",
+    "sort_order": 1578,
+    "labels": {
+      "en_US": "My Jewellery",
+      "nl_NL": "My Jewellery"
+    }
+  },
+  {
+    "code": "n_21",
+    "attribute": "manufacturer",
+    "sort_order": 1210,
+    "labels": {
+      "en_US": "N 21",
+      "nl_NL": "N 21"
+    }
+  },
+  {
+    "code": "nahmias",
+    "attribute": "manufacturer",
+    "sort_order": 1002,
+    "labels": {
+      "en_US": "Nahmias",
+      "nl_NL": "Nahmias"
+    }
+  },
+  {
+    "code": "naked_wolfe",
+    "attribute": "manufacturer",
+    "sort_order": 1452,
+    "labels": {
+      "en_US": "Naked Wolfe",
+      "nl_NL": "Naked Wolfe"
+    }
+  },
+  {
+    "code": "nanushka",
+    "attribute": "manufacturer",
+    "sort_order": 826,
+    "labels": {
+      "en_US": "Nanushka",
+      "nl_NL": "Nanushka"
+    }
+  },
+  {
+    "code": "napapijri",
+    "attribute": "manufacturer",
+    "sort_order": 365,
+    "labels": {
+      "en_US": "Napapijri",
+      "nl_NL": "Napapijri"
+    }
+  },
+  {
+    "code": "natan",
+    "attribute": "manufacturer",
+    "sort_order": 1401,
+    "labels": {
+      "en_US": "Natan",
+      "nl_NL": "Natan"
+    }
+  },
+  {
+    "code": "ncub",
+    "attribute": "manufacturer",
+    "sort_order": 1614,
+    "labels": {
+      "en_US": "NCUB",
+      "nl_NL": "NCUB"
+    }
+  },
+  {
+    "code": "neil_barrett",
+    "attribute": "manufacturer",
+    "sort_order": 366,
+    "labels": {
+      "en_US": "Neil Barrett",
+      "nl_NL": "Neil Barrett"
+    }
+  },
+  {
+    "code": "nensi_dojaka",
+    "attribute": "manufacturer",
+    "sort_order": 1266,
+    "labels": {
+      "en_US": "Nensi Dojaka",
+      "nl_NL": "Nensi Dojaka"
+    }
+  },
+  {
+    "code": "new_amsterdam_surf_association",
+    "attribute": "manufacturer",
+    "sort_order": 682,
+    "labels": {
+      "en_US": "New Amsterdam Surf Association",
+      "nl_NL": "New Amsterdam Surf Association"
+    }
+  },
+  {
+    "code": "new_balance",
+    "attribute": "manufacturer",
+    "sort_order": 370,
+    "labels": {
+      "en_US": "New Balance",
+      "nl_NL": "New Balance"
+    }
+  },
+  {
+    "code": "new_bling",
+    "attribute": "manufacturer",
+    "sort_order": 1573,
+    "labels": {
+      "en_US": "New Bling",
+      "nl_NL": "New Bling"
+    }
+  },
+  {
+    "code": "new_era",
+    "attribute": "manufacturer",
+    "sort_order": 977,
+    "labels": {
+      "en_US": "New Era",
+      "nl_NL": "New Era"
+    }
+  },
+  {
+    "code": "nicholas_kirkwood",
+    "attribute": "manufacturer",
+    "sort_order": 1252,
+    "labels": {
+      "en_US": "Nicholas Kirkwood",
+      "nl_NL": "Nicholas Kirkwood"
+    }
+  },
+  {
+    "code": "niels_peeraer",
+    "attribute": "manufacturer",
+    "sort_order": 1374,
+    "labels": {
+      "en_US": "Niels Peeraer",
+      "nl_NL": "Niels Peeraer"
+    }
+  },
+  {
+    "code": "nike",
+    "attribute": "manufacturer",
+    "sort_order": 373,
+    "labels": {
+      "en_US": "Nike",
+      "nl_NL": "Nike"
+    }
+  },
+  {
+    "code": "nikkie",
+    "attribute": "manufacturer",
+    "sort_order": 374,
+    "labels": {
+      "en_US": "Nikkie",
+      "nl_NL": "Nikkie"
+    }
+  },
+  {
+    "code": "nina_ricci",
+    "attribute": "manufacturer",
+    "sort_order": 1087,
+    "labels": {
+      "en_US": "Nina Ricci",
+      "nl_NL": "Nina Ricci"
+    }
+  },
+  {
+    "code": "ninalilou",
+    "attribute": "manufacturer",
+    "sort_order": 1205,
+    "labels": {
+      "en_US": "Ninalilou",
+      "nl_NL": "Ninalilou"
+    }
+  },
+  {
+    "code": "ninamounah",
+    "attribute": "manufacturer",
+    "sort_order": 1075,
+    "labels": {
+      "en_US": "Ninamounah",
+      "nl_NL": "Ninamounah"
+    }
+  },
+  {
+    "code": "nine_in_the_morning",
+    "attribute": "manufacturer",
+    "sort_order": 1715,
+    "labels": {
+      "en_US": "Nine in the Morning",
+      "nl_NL": "Nine in the Morning"
+    }
+  },
+  {
+    "code": "ninetyfour",
+    "attribute": "manufacturer",
+    "sort_order": 375,
+    "labels": {
+      "en_US": "Ninetyfour",
+      "nl_NL": "Ninetyfour"
+    }
+  },
+  {
+    "code": "nn07",
+    "attribute": "manufacturer",
+    "sort_order": 377,
+    "labels": {
+      "en_US": "NN07",
+      "nl_NL": "NN07"
+    }
+  },
+  {
+    "code": "no_map_society",
+    "attribute": "manufacturer",
+    "sort_order": 1717,
+    "labels": {
+      "en_US": "No Map Society",
+      "nl_NL": "No Map Society"
+    }
+  },
+  {
+    "code": "nobis",
+    "attribute": "manufacturer",
+    "sort_order": 378,
+    "labels": {
+      "en_US": "Nobis",
+      "nl_NL": "Nobis"
+    }
+  },
+  {
+    "code": "nomos_glashutte",
+    "attribute": "manufacturer",
+    "sort_order": 1520,
+    "labels": {
+      "en_US": "Nomos Glashütte",
+      "nl_NL": "Nomos Glashütte"
+    }
+  },
+  {
+    "code": "norma_kamali",
+    "attribute": "manufacturer",
+    "sort_order": 1145,
+    "labels": {
+      "en_US": "Norma Kamali",
+      "nl_NL": "Norma Kamali"
+    }
+  },
+  {
+    "code": "norse_projects",
+    "attribute": "manufacturer",
+    "sort_order": 926,
+    "labels": {
+      "en_US": "Norse Projects",
+      "nl_NL": "Norse Projects"
+    }
+  },
+  {
+    "code": "north_sails",
+    "attribute": "manufacturer",
+    "sort_order": 790,
+    "labels": {
+      "en_US": "North Sails",
+      "nl_NL": "North Sails"
+    }
+  },
+  {
+    "code": "nubikk",
+    "attribute": "manufacturer",
+    "sort_order": 379,
+    "labels": {
+      "en_US": "Nubikk",
+      "nl_NL": "Nubikk"
+    }
+  },
+  {
+    "code": "nudie_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1743,
+    "labels": {
+      "en_US": "Nudie Jeans",
+      "nl_NL": "Nudie Jeans"
+    }
+  },
+  {
+    "code": "nunoo",
+    "attribute": "manufacturer",
+    "sort_order": 918,
+    "labels": {
+      "en_US": "Nunoo",
+      "nl_NL": "Nunoo"
+    }
+  },
+  {
+    "code": "oakley",
+    "attribute": "manufacturer",
+    "sort_order": 1541,
+    "labels": {
+      "en_US": "Oakley",
+      "nl_NL": "Oakley"
+    }
+  },
+  {
+    "code": "oakwood",
+    "attribute": "manufacturer",
+    "sort_order": 1426,
+    "labels": {
+      "en_US": "Oakwood",
+      "nl_NL": "Oakwood"
+    }
+  },
+  {
+    "code": "oamc",
+    "attribute": "manufacturer",
+    "sort_order": 1003,
+    "labels": {
+      "en_US": "OAMC",
+      "nl_NL": "OAMC"
+    }
+  },
+  {
+    "code": "oas",
+    "attribute": "manufacturer",
+    "sort_order": 1427,
+    "labels": {
+      "en_US": "OAS",
+      "nl_NL": "OAS"
+    }
+  },
+  {
+    "code": "obey",
+    "attribute": "manufacturer",
+    "sort_order": 953,
+    "labels": {
+      "en_US": "Obey",
+      "nl_NL": "Obey"
+    }
+  },
+  {
+    "code": "oblo_unique",
+    "attribute": "manufacturer",
+    "sort_order": 1428,
+    "labels": {
+      "en_US": "Oblo Unique",
+      "nl_NL": "Oblo Unique"
+    }
+  },
+  {
+    "code": "off_the_pitch",
+    "attribute": "manufacturer",
+    "sort_order": 381,
+    "labels": {
+      "en_US": "OFF THE PITCH",
+      "nl_NL": "OFF THE PITCH"
+    }
+  },
+  {
+    "code": "off_white",
+    "attribute": "manufacturer",
+    "sort_order": 382,
+    "labels": {
+      "en_US": "OFF-WHITE",
+      "nl_NL": "OFF-WHITE"
+    }
+  },
+  {
+    "code": "officine_generale",
+    "attribute": "manufacturer",
+    "sort_order": 1314,
+    "labels": {
+      "en_US": "Officine Generale",
+      "nl_NL": "Officine Generale"
+    }
+  },
+  {
+    "code": "olaf",
+    "attribute": "manufacturer",
+    "sort_order": 383,
+    "labels": {
+      "en_US": "Olaf",
+      "nl_NL": "Olaf"
+    }
+  },
+  {
+    "code": "olaf_hussein",
+    "attribute": "manufacturer",
+    "sort_order": 807,
+    "labels": {
+      "en_US": "Olaf Hussein",
+      "nl_NL": "Olaf Hussein"
+    }
+  },
+  {
+    "code": "olend",
+    "attribute": "manufacturer",
+    "sort_order": 1697,
+    "labels": {
+      "en_US": "Ölend",
+      "nl_NL": "Ölend"
+    }
+  },
+  {
+    "code": "oliver_peoples",
+    "attribute": "manufacturer",
+    "sort_order": 1375,
+    "labels": {
+      "en_US": "Oliver Peoples",
+      "nl_NL": "Oliver Peoples"
+    }
+  },
+  {
+    "code": "olympic",
+    "attribute": "manufacturer",
+    "sort_order": 1408,
+    "labels": {
+      "en_US": "Olympic",
+      "nl_NL": "Olympic"
+    }
+  },
+  {
+    "code": "omega",
+    "attribute": "manufacturer",
+    "sort_order": 1482,
+    "labels": {
+      "en_US": "Omega",
+      "nl_NL": "Omega"
+    }
+  },
+  {
+    "code": "on",
+    "attribute": "manufacturer",
+    "sort_order": 937,
+    "labels": {
+      "en_US": "ON",
+      "nl_NL": "ON"
+    }
+  },
+  {
+    "code": "on_running",
+    "attribute": "manufacturer",
+    "sort_order": 1060,
+    "labels": {
+      "en_US": "On Running",
+      "nl_NL": "On Running"
+    }
+  },
+  {
+    "code": "one_first_movers",
+    "attribute": "manufacturer",
+    "sort_order": 979,
+    "labels": {
+      "en_US": "Øne First Movers",
+      "nl_NL": "Øne First Movers"
+    }
+  },
+  {
+    "code": "only",
+    "attribute": "manufacturer",
+    "sort_order": 1720,
+    "labels": {
+      "en_US": "Only",
+      "nl_NL": "Only"
+    }
+  },
+  {
+    "code": "opening_ceremony",
+    "attribute": "manufacturer",
+    "sort_order": 1730,
+    "labels": {
+      "en_US": "Opening Ceremony",
+      "nl_NL": "Opening Ceremony"
+    }
+  },
+  {
+    "code": "orciani",
+    "attribute": "manufacturer",
+    "sort_order": 1103,
+    "labels": {
+      "en_US": "Orciani",
+      "nl_NL": "Orciani"
+    }
+  },
+  {
+    "code": "original_vintage",
+    "attribute": "manufacturer",
+    "sort_order": 1615,
+    "labels": {
+      "en_US": "Original Vintage",
+      "nl_NL": "Original Vintage"
+    }
+  },
+  {
+    "code": "oris",
+    "attribute": "manufacturer",
+    "sort_order": 1521,
+    "labels": {
+      "en_US": "Oris",
+      "nl_NL": "Oris"
+    }
+  },
+  {
+    "code": "orlebar_brown",
+    "attribute": "manufacturer",
+    "sort_order": 1714,
+    "labels": {
+      "en_US": "Orlebar Brown",
+      "nl_NL": "Orlebar Brown"
+    }
+  },
+  {
+    "code": "oscar_de_la_renta",
+    "attribute": "manufacturer",
+    "sort_order": 1376,
+    "labels": {
+      "en_US": "Oscar De La Renta",
+      "nl_NL": "Oscar De La Renta"
+    }
+  },
+  {
+    "code": "oseree",
+    "attribute": "manufacturer",
+    "sort_order": 1734,
+    "labels": {
+      "en_US": "Oséree",
+      "nl_NL": "Oséree"
+    }
+  },
+  {
+    "code": "ottod_ame",
+    "attribute": "manufacturer",
+    "sort_order": 1429,
+    "labels": {
+      "en_US": "Ottod'Ame",
+      "nl_NL": "Ottod'Ame"
+    }
+  },
+  {
+    "code": "ottolinger",
+    "attribute": "manufacturer",
+    "sort_order": 824,
+    "labels": {
+      "en_US": "Ottolinger",
+      "nl_NL": "Ottolinger"
+    }
+  },
+  {
+    "code": "our_legacy",
+    "attribute": "manufacturer",
+    "sort_order": 964,
+    "labels": {
+      "en_US": "Our Legacy",
+      "nl_NL": "Our Legacy"
+    }
+  },
+  {
+    "code": "p448",
+    "attribute": "manufacturer",
+    "sort_order": 1107,
+    "labels": {
+      "en_US": "P448",
+      "nl_NL": "P448"
+    }
+  },
+  {
+    "code": "paciotti",
+    "attribute": "manufacturer",
+    "sort_order": 1272,
+    "labels": {
+      "en_US": "Paciotti",
+      "nl_NL": "Paciotti"
+    }
+  },
+  {
+    "code": "paco_rabanne",
+    "attribute": "manufacturer",
+    "sort_order": 1298,
+    "labels": {
+      "en_US": "Paco Rabanne",
+      "nl_NL": "Paco Rabanne"
+    }
+  },
+  {
+    "code": "paige",
+    "attribute": "manufacturer",
+    "sort_order": 1277,
+    "labels": {
+      "en_US": "PAIGE",
+      "nl_NL": "PAIGE"
+    }
+  },
+  {
+    "code": "pal",
+    "attribute": "manufacturer",
+    "sort_order": 1337,
+    "labels": {
+      "en_US": "PAL",
+      "nl_NL": "PAL"
+    }
+  },
+  {
+    "code": "palm_angels",
+    "attribute": "manufacturer",
+    "sort_order": 385,
+    "labels": {
+      "en_US": "Palm Angels",
+      "nl_NL": "Palm Angels"
+    }
+  },
+  {
+    "code": "palto",
+    "attribute": "manufacturer",
+    "sort_order": 1187,
+    "labels": {
+      "en_US": "Palto",
+      "nl_NL": "Palto"
+    }
+  },
+  {
+    "code": "panchic",
+    "attribute": "manufacturer",
+    "sort_order": 1113,
+    "labels": {
+      "en_US": "Panchic",
+      "nl_NL": "Panchic"
+    }
+  },
+  {
+    "code": "panerai",
+    "attribute": "manufacturer",
+    "sort_order": 1486,
+    "labels": {
+      "en_US": "Panerai",
+      "nl_NL": "Panerai"
+    }
+  },
+  {
+    "code": "paolo_pecora",
+    "attribute": "manufacturer",
+    "sort_order": 1114,
+    "labels": {
+      "en_US": "Paolo Pecora",
+      "nl_NL": "Paolo Pecora"
+    }
+  },
+  {
+    "code": "paraboot",
+    "attribute": "manufacturer",
+    "sort_order": 1129,
+    "labels": {
+      "en_US": "Paraboot",
+      "nl_NL": "Paraboot"
+    }
+  },
+  {
+    "code": "parajumpers",
+    "attribute": "manufacturer",
+    "sort_order": 388,
+    "labels": {
+      "en_US": "Parajumpers",
+      "nl_NL": "Parajumpers"
+    }
+  },
+  {
+    "code": "parel_studios",
+    "attribute": "manufacturer",
+    "sort_order": 1069,
+    "labels": {
+      "en_US": "Parel studios",
+      "nl_NL": "Parel studios"
+    }
+  },
+  {
+    "code": "paris_texas",
+    "attribute": "manufacturer",
+    "sort_order": 1285,
+    "labels": {
+      "en_US": "Paris Texas",
+      "nl_NL": "Paris Texas"
+    }
+  },
+  {
+    "code": "parmigiani_fleurier",
+    "attribute": "manufacturer",
+    "sort_order": 1522,
+    "labels": {
+      "en_US": "Parmigiani Fleurier",
+      "nl_NL": "Parmigiani Fleurier"
+    }
+  },
+  {
+    "code": "parosh",
+    "attribute": "manufacturer",
+    "sort_order": 1042,
+    "labels": {
+      "en_US": "P.A.R.O.S.H.",
+      "nl_NL": "P.A.R.O.S.H."
+    }
+  },
+  {
+    "code": "parte_di_me",
+    "attribute": "manufacturer",
+    "sort_order": 1571,
+    "labels": {
+      "en_US": "Parte di Me",
+      "nl_NL": "Parte di Me"
+    }
+  },
+  {
+    "code": "patagonia",
+    "attribute": "manufacturer",
+    "sort_order": 642,
+    "labels": {
+      "en_US": "Patagonia",
+      "nl_NL": "Patagonia"
+    }
+  },
+  {
+    "code": "patek_philippe",
+    "attribute": "manufacturer",
+    "sort_order": 1480,
+    "labels": {
+      "en_US": "Patek Philippe",
+      "nl_NL": "Patek Philippe"
+    }
+  },
+  {
+    "code": "patou",
+    "attribute": "manufacturer",
+    "sort_order": 1088,
+    "labels": {
+      "en_US": "Patou",
+      "nl_NL": "Patou"
+    }
+  },
+  {
+    "code": "patrizia_bonfanti",
+    "attribute": "manufacturer",
+    "sort_order": 1416,
+    "labels": {
+      "en_US": "Patrizia Bonfanti",
+      "nl_NL": "Patrizia Bonfanti"
+    }
+  },
+  {
+    "code": "patrizia_pepe",
+    "attribute": "manufacturer",
+    "sort_order": 992,
+    "labels": {
+      "en_US": "Patrizia Pepe",
+      "nl_NL": "Patrizia Pepe"
+    }
+  },
+  {
+    "code": "paul_and_shark",
+    "attribute": "manufacturer",
+    "sort_order": 892,
+    "labels": {
+      "en_US": "Paul & Shark",
+      "nl_NL": "Paul & Shark"
+    }
+  },
+  {
+    "code": "paul_picot",
+    "attribute": "manufacturer",
+    "sort_order": 1523,
+    "labels": {
+      "en_US": "Paul Picot",
+      "nl_NL": "Paul Picot"
+    }
+  },
+  {
+    "code": "paul_rich",
+    "attribute": "manufacturer",
+    "sort_order": 940,
+    "labels": {
+      "en_US": "Paul Rich",
+      "nl_NL": "Paul Rich"
+    }
+  },
+  {
+    "code": "paul_smith",
+    "attribute": "manufacturer",
+    "sort_order": 1046,
+    "labels": {
+      "en_US": "Paul Smith",
+      "nl_NL": "Paul Smith"
+    }
+  },
+  {
+    "code": "paul_warmer",
+    "attribute": "manufacturer",
+    "sort_order": 811,
+    "labels": {
+      "en_US": "Paul Warmer",
+      "nl_NL": "Paul Warmer"
+    }
+  },
+  {
+    "code": "pdf_di_domenico_formichetti",
+    "attribute": "manufacturer",
+    "sort_order": 1035,
+    "labels": {
+      "en_US": "PDF di Domenico Formichetti",
+      "nl_NL": "PDF di Domenico Formichetti"
+    }
+  },
+  {
+    "code": "pdpaola",
+    "attribute": "manufacturer",
+    "sort_order": 1671,
+    "labels": {}
+  },
+  {
+    "code": "peacemaker_oamc",
+    "attribute": "manufacturer",
+    "sort_order": 1338,
+    "labels": {
+      "en_US": "Peacemaker_OAMC",
+      "nl_NL": "Peacemaker_OAMC"
+    }
+  },
+  {
+    "code": "peak_performance",
+    "attribute": "manufacturer",
+    "sort_order": 668,
+    "labels": {
+      "en_US": "Peak Performance",
+      "nl_NL": "Peak Performance"
+    }
+  },
+  {
+    "code": "pedro_garcia",
+    "attribute": "manufacturer",
+    "sort_order": 1286,
+    "labels": {
+      "en_US": "Pedro Garcia",
+      "nl_NL": "Pedro Garcia"
+    }
+  },
+  {
+    "code": "people_of_shibuya",
+    "attribute": "manufacturer",
+    "sort_order": 922,
+    "labels": {
+      "en_US": "People of Shibuya",
+      "nl_NL": "People of Shibuya"
+    }
+  },
+  {
+    "code": "pepe_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 1727,
+    "labels": {
+      "en_US": "Pepe Jeans",
+      "nl_NL": "Pepe Jeans"
+    }
+  },
+  {
+    "code": "pequignet",
+    "attribute": "manufacturer",
+    "sort_order": 1524,
+    "labels": {
+      "en_US": "Pequignet",
+      "nl_NL": "Pequignet"
+    }
+  },
+  {
+    "code": "peserico",
+    "attribute": "manufacturer",
+    "sort_order": 1315,
+    "labels": {
+      "en_US": "Peserico",
+      "nl_NL": "Peserico"
+    }
+  },
+  {
+    "code": "peuterey",
+    "attribute": "manufacturer",
+    "sort_order": 401,
+    "labels": {
+      "en_US": "Peuterey",
+      "nl_NL": "Peuterey"
+    }
+  },
+  {
+    "code": "pharmacy_club",
+    "attribute": "manufacturer",
+    "sort_order": 561,
+    "labels": {
+      "en_US": "Pharmacy Club",
+      "nl_NL": "Pharmacy Club"
+    }
+  },
+  {
+    "code": "philipp_plein",
+    "attribute": "manufacturer",
+    "sort_order": 402,
+    "labels": {
+      "en_US": "Philipp Plein",
+      "nl_NL": "Philipp Plein"
+    }
+  },
+  {
+    "code": "philippe_model",
+    "attribute": "manufacturer",
+    "sort_order": 403,
+    "labels": {
+      "en_US": "Philippe Model",
+      "nl_NL": "Philippe Model"
+    }
+  },
+  {
+    "code": "philosophy_by_lorenzo_serafini",
+    "attribute": "manufacturer",
+    "sort_order": 1385,
+    "labels": {
+      "en_US": "Philosophy by Lorenzo Serafini",
+      "nl_NL": "Philosophy by Lorenzo Serafini"
+    }
+  },
+  {
+    "code": "philosophy_di_lorenzo_serafini",
+    "attribute": "manufacturer",
+    "sort_order": 1207,
+    "labels": {
+      "en_US": "Philosophy di Lorenzo Serafini",
+      "nl_NL": "Philosophy di Lorenzo Serafini"
+    }
+  },
+  {
+    "code": "piacenza_1773",
+    "attribute": "manufacturer",
+    "sort_order": 1167,
+    "labels": {
+      "en_US": "Piacenza 1733",
+      "nl_NL": "Piacenza 1733"
+    }
+  },
+  {
+    "code": "piaget",
+    "attribute": "manufacturer",
+    "sort_order": 1525,
+    "labels": {
+      "en_US": "Piaget",
+      "nl_NL": "Piaget"
+    }
+  },
+  {
+    "code": "piccolo_seeds",
+    "attribute": "manufacturer",
+    "sort_order": 1616,
+    "labels": {
+      "en_US": "Piccolo Seeds",
+      "nl_NL": "Piccolo Seeds"
+    }
+  },
+  {
+    "code": "piedaterre_venezia",
+    "attribute": "manufacturer",
+    "sort_order": 1617,
+    "labels": {
+      "en_US": "Piedàterre Venezia",
+      "nl_NL": "Piedàterre Venezia"
+    }
+  },
+  {
+    "code": "pierre_balmain",
+    "attribute": "manufacturer",
+    "sort_order": 1247,
+    "labels": {
+      "en_US": "Pierre Balmain",
+      "nl_NL": "Pierre Balmain"
+    }
+  },
+  {
+    "code": "pierre_cardin",
+    "attribute": "manufacturer",
+    "sort_order": 1761,
+    "labels": {
+      "en_US": "Pierre Cardin",
+      "nl_NL": "Pierre Cardin"
+    }
+  },
+  {
+    "code": "pierre_hardy",
+    "attribute": "manufacturer",
+    "sort_order": 1377,
+    "labels": {
+      "en_US": "Pierre Hardy",
+      "nl_NL": "Pierre Hardy"
+    }
+  },
+  {
+    "code": "pierre_louis_mascia",
+    "attribute": "manufacturer",
+    "sort_order": 1176,
+    "labels": {
+      "en_US": "Pierre Louis Mascia",
+      "nl_NL": "Pierre Louis Mascia"
+    }
+  },
+  {
+    "code": "pig_and_hen",
+    "attribute": "manufacturer",
+    "sort_order": 1755,
+    "labels": {
+      "en_US": "Pig & Hen",
+      "nl_NL": "Pig & Hen"
+    }
+  },
+  {
+    "code": "pinko",
+    "attribute": "manufacturer",
+    "sort_order": 888,
+    "labels": {
+      "en_US": "Pinko",
+      "nl_NL": "Pinko"
+    }
+  },
+  {
+    "code": "plato",
+    "attribute": "manufacturer",
+    "sort_order": 1098,
+    "labels": {
+      "en_US": "Plato",
+      "nl_NL": "Plato"
+    }
+  },
+  {
+    "code": "pleasures",
+    "attribute": "manufacturer",
+    "sort_order": 970,
+    "labels": {
+      "en_US": "Pleasures",
+      "nl_NL": "Pleasures"
+    }
+  },
+  {
+    "code": "pleats_please",
+    "attribute": "manufacturer",
+    "sort_order": 1335,
+    "labels": {
+      "en_US": "Pleats Please",
+      "nl_NL": "Pleats Please"
+    }
+  },
+  {
+    "code": "plein_sport",
+    "attribute": "manufacturer",
+    "sort_order": 1279,
+    "labels": {
+      "en_US": "Plein Sport",
+      "nl_NL": "Plein Sport"
+    }
+  },
+  {
+    "code": "pockies",
+    "attribute": "manufacturer",
+    "sort_order": 1758,
+    "labels": {
+      "en_US": "Pockies",
+      "nl_NL": "Pockies"
+    }
+  },
+  {
+    "code": "polaroid",
+    "attribute": "manufacturer",
+    "sort_order": 1762,
+    "labels": {
+      "en_US": "Polaroid",
+      "nl_NL": "Polaroid"
+    }
+  },
+  {
+    "code": "police",
+    "attribute": "manufacturer",
+    "sort_order": 1763,
+    "labels": {
+      "en_US": "Police",
+      "nl_NL": "Police"
+    }
+  },
+  {
+    "code": "polly_plume",
+    "attribute": "manufacturer",
+    "sort_order": 1296,
+    "labels": {
+      "en_US": "Polly Plume",
+      "nl_NL": "Polly Plume"
+    }
+  },
+  {
+    "code": "pony",
+    "attribute": "manufacturer",
+    "sort_order": 1264,
+    "labels": {
+      "en_US": "Pony",
+      "nl_NL": "Pony"
+    }
+  },
+  {
+    "code": "pop_trading_company",
+    "attribute": "manufacturer",
+    "sort_order": 1065,
+    "labels": {
+      "en_US": "Pop Training Company",
+      "nl_NL": "Pop Training Company"
+    }
+  },
+  {
+    "code": "porsche_design",
+    "attribute": "manufacturer",
+    "sort_order": 1526,
+    "labels": {
+      "en_US": "Porsche Design",
+      "nl_NL": "Porsche Design"
+    }
+  },
+  {
+    "code": "posa",
+    "attribute": "manufacturer",
+    "sort_order": 994,
+    "labels": {
+      "en_US": "Posa",
+      "nl_NL": "Posa"
+    }
+  },
+  {
+    "code": "prada",
+    "attribute": "manufacturer",
+    "sort_order": 411,
+    "labels": {
+      "en_US": "Prada",
+      "nl_NL": "Prada"
+    }
+  },
+  {
+    "code": "premiata",
+    "attribute": "manufacturer",
+    "sort_order": 412,
+    "labels": {
+      "en_US": "Premiata",
+      "nl_NL": "Premiata"
+    }
+  },
+  {
+    "code": "proenza_schouler",
+    "attribute": "manufacturer",
+    "sort_order": 1202,
+    "labels": {
+      "en_US": "Proenza Schouler",
+      "nl_NL": "Proenza Schouler"
+    }
+  },
+  {
+    "code": "profuomo",
+    "attribute": "manufacturer",
+    "sort_order": 1433,
+    "labels": {
+      "en_US": "Profuomo",
+      "nl_NL": "Profuomo"
+    }
+  },
+  {
+    "code": "project_x_paris",
+    "attribute": "manufacturer",
+    "sort_order": 1478,
+    "labels": {
+      "en_US": "Project x Paris",
+      "nl_NL": "Project x Paris"
+    }
+  },
+  {
+    "code": "prototypes",
+    "attribute": "manufacturer",
+    "sort_order": 1559,
+    "labels": {}
+  },
+  {
+    "code": "ps_dont_forget_me",
+    "attribute": "manufacturer",
+    "sort_order": 1430,
+    "labels": {
+      "en_US": "PS. Don't Forget Me",
+      "nl_NL": "PS. Don't Forget Me"
+    }
+  },
+  {
+    "code": "pt_torino",
+    "attribute": "manufacturer",
+    "sort_order": 1108,
+    "labels": {
+      "en_US": "PT Torino",
+      "nl_NL": "PT Torino"
+    }
+  },
+  {
+    "code": "pt01_pt05",
+    "attribute": "manufacturer",
+    "sort_order": 1256,
+    "labels": {
+      "en_US": "PT01/PT05",
+      "nl_NL": "PT01/PT05"
+    }
+  },
+  {
+    "code": "puma",
+    "attribute": "manufacturer",
+    "sort_order": 416,
+    "labels": {
+      "en_US": "Puma",
+      "nl_NL": "Puma"
+    }
+  },
+  {
+    "code": "puraai",
+    "attribute": "manufacturer",
+    "sort_order": 1548,
+    "labels": {
+      "en_US": "Puraai",
+      "nl_NL": "Puraai"
+    }
+  },
+  {
+    "code": "pure_path",
+    "attribute": "manufacturer",
+    "sort_order": 989,
+    "labels": {
+      "en_US": "Pure Path",
+      "nl_NL": "Pure Path"
+    }
+  },
+  {
+    "code": "purewhite",
+    "attribute": "manufacturer",
+    "sort_order": 417,
+    "labels": {
+      "en_US": "Purewhite",
+      "nl_NL": "Purewhite"
+    }
+  },
+  {
+    "code": "purple_brand",
+    "attribute": "manufacturer",
+    "sort_order": 1063,
+    "labels": {
+      "en_US": "Purple Brand",
+      "nl_NL": "Purple Brand"
+    }
+  },
+  {
+    "code": "pyrenex",
+    "attribute": "manufacturer",
+    "sort_order": 1275,
+    "labels": {
+      "en_US": "Pyrenex",
+      "nl_NL": "Pyrenex"
+    }
+  },
+  {
+    "code": "quid",
+    "attribute": "manufacturer",
+    "sort_order": 1618,
+    "labels": {
+      "en_US": "Quid",
+      "nl_NL": "Quid"
+    }
+  },
+  {
+    "code": "quotrell",
+    "attribute": "manufacturer",
+    "sort_order": 420,
+    "labels": {
+      "en_US": "Quotrell",
+      "nl_NL": "Quotrell"
+    }
+  },
+  {
+    "code": "r13",
+    "attribute": "manufacturer",
+    "sort_order": 1233,
+    "labels": {
+      "en_US": "R13",
+      "nl_NL": "R13"
+    }
+  },
+  {
+    "code": "rabanne",
+    "attribute": "manufacturer",
+    "sort_order": 1147,
+    "labels": {
+      "en_US": "Rabanne",
+      "nl_NL": "Rabanne"
+    }
+  },
+  {
+    "code": "radical",
+    "attribute": "manufacturer",
+    "sort_order": 422,
+    "labels": {
+      "en_US": "Radical",
+      "nl_NL": "Radical"
+    }
+  },
+  {
+    "code": "rado",
+    "attribute": "manufacturer",
+    "sort_order": 1527,
+    "labels": {
+      "en_US": "Rado",
+      "nl_NL": "Rado"
+    }
+  },
+  {
+    "code": "raf_simons",
+    "attribute": "manufacturer",
+    "sort_order": 423,
+    "labels": {
+      "en_US": "Raf Simons",
+      "nl_NL": "Raf Simons"
+    }
+  },
+  {
+    "code": "rag_and_bone",
+    "attribute": "manufacturer",
+    "sort_order": 1316,
+    "labels": {
+      "en_US": "Rag & Bone",
+      "nl_NL": "Rag & Bone"
+    }
+  },
+  {
+    "code": "rainkiss",
+    "attribute": "manufacturer",
+    "sort_order": 982,
+    "labels": {
+      "en_US": "Rainkiss",
+      "nl_NL": "Rainkiss"
+    }
+  },
+  {
+    "code": "rains",
+    "attribute": "manufacturer",
+    "sort_order": 935,
+    "labels": {
+      "en_US": "Rains",
+      "nl_NL": "Rains"
+    }
+  },
+  {
+    "code": "ralph_and_russo",
+    "attribute": "manufacturer",
+    "sort_order": 1234,
+    "labels": {
+      "en_US": "Ralph & Russo",
+      "nl_NL": "Ralph & Russo"
+    }
+  },
+  {
+    "code": "ralph_lauren",
+    "attribute": "manufacturer",
+    "sort_order": 425,
+    "labels": {
+      "en_US": "Ralph Lauren",
+      "nl_NL": "Ralph Lauren"
+    }
+  },
+  {
+    "code": "ray_ban",
+    "attribute": "manufacturer",
+    "sort_order": 1710,
+    "labels": {
+      "en_US": "Ray-Ban",
+      "nl_NL": "Ray-Ban"
+    }
+  },
+  {
+    "code": "re_done",
+    "attribute": "manufacturer",
+    "sort_order": 1151,
+    "labels": {
+      "en_US": "Re-Done",
+      "nl_NL": "Re-Done"
+    }
+  },
+  {
+    "code": "rebecca_minkoff",
+    "attribute": "manufacturer",
+    "sort_order": 1290,
+    "labels": {
+      "en_US": "Rebecca Minkoff",
+      "nl_NL": "Rebecca Minkoff"
+    }
+  },
+  {
+    "code": "recto",
+    "attribute": "manufacturer",
+    "sort_order": 1748,
+    "labels": {
+      "en_US": "Recto",
+      "nl_NL": "Recto"
+    }
+  },
+  {
+    "code": "red_valentino",
+    "attribute": "manufacturer",
+    "sort_order": 1235,
+    "labels": {
+      "en_US": "RED Valentino",
+      "nl_NL": "RED Valentino"
+    }
+  },
+  {
+    "code": "redwings_and_alohas",
+    "attribute": "manufacturer",
+    "sort_order": 1475,
+    "labels": {
+      "en_US": "Redwings & Alohas",
+      "nl_NL": "Redwings & Alohas"
+    }
+  },
+  {
+    "code": "reebok",
+    "attribute": "manufacturer",
+    "sort_order": 966,
+    "labels": {
+      "en_US": "Reebok",
+      "nl_NL": "Reebok"
+    }
+  },
+  {
+    "code": "reinders",
+    "attribute": "manufacturer",
+    "sort_order": 428,
+    "labels": {
+      "en_US": "Reinders",
+      "nl_NL": "Reinders"
+    }
+  },
+  {
+    "code": "remain_birger",
+    "attribute": "manufacturer",
+    "sort_order": 1324,
+    "labels": {
+      "en_US": "REMAIN Birger",
+      "nl_NL": "REMAIN Birger"
+    }
+  },
+  {
+    "code": "rene_caovilla",
+    "attribute": "manufacturer",
+    "sort_order": 429,
+    "labels": {
+      "en_US": "Rene Caovilla",
+      "nl_NL": "Rene Caovilla"
+    }
+  },
+  {
+    "code": "repeat_cashmere",
+    "attribute": "manufacturer",
+    "sort_order": 1447,
+    "labels": {
+      "en_US": "Repeat Cashmere",
+      "nl_NL": "Repeat Cashmere"
+    }
+  },
+  {
+    "code": "replay",
+    "attribute": "manufacturer",
+    "sort_order": 971,
+    "labels": {
+      "en_US": "Replay",
+      "nl_NL": "Replay"
+    }
+  },
+  {
+    "code": "represent",
+    "attribute": "manufacturer",
+    "sort_order": 432,
+    "labels": {
+      "en_US": "Represent",
+      "nl_NL": "Represent"
+    }
+  },
+  {
+    "code": "reset",
+    "attribute": "manufacturer",
+    "sort_order": 1402,
+    "labels": {
+      "en_US": "Reset",
+      "nl_NL": "Reset"
+    }
+  },
+  {
+    "code": "reternity",
+    "attribute": "manufacturer",
+    "sort_order": 1030,
+    "labels": {
+      "en_US": "Reternity",
+      "nl_NL": "Reternity"
+    }
+  },
+  {
+    "code": "retrofete",
+    "attribute": "manufacturer",
+    "sort_order": 1651,
+    "labels": {
+      "en_US": "Retrofête",
+      "nl_NL": "Retrofête"
+    }
+  },
+  {
+    "code": "retrosuperfuture",
+    "attribute": "manufacturer",
+    "sort_order": 1004,
+    "labels": {
+      "en_US": "RETROSUPERFUTURE",
+      "nl_NL": "RETROSUPERFUTURE"
+    }
+  },
+  {
+    "code": "rhizome",
+    "attribute": "manufacturer",
+    "sort_order": 1619,
+    "labels": {
+      "en_US": "Rhizome",
+      "nl_NL": "Rhizome"
+    }
+  },
+  {
+    "code": "rhude",
+    "attribute": "manufacturer",
+    "sort_order": 555,
+    "labels": {
+      "en_US": "Rhude",
+      "nl_NL": "Rhude"
+    }
+  },
+  {
+    "code": "rhun",
+    "attribute": "manufacturer",
+    "sort_order": 1691,
+    "labels": {
+      "en_US": "RHUN",
+      "nl_NL": "RHUN"
+    }
+  },
+  {
+    "code": "richesse",
+    "attribute": "manufacturer",
+    "sort_order": 764,
+    "labels": {
+      "en_US": "Richesse",
+      "nl_NL": "Richesse"
+    }
+  },
+  {
+    "code": "rick_owens",
+    "attribute": "manufacturer",
+    "sort_order": 435,
+    "labels": {
+      "en_US": "Rick Owens",
+      "nl_NL": "Rick Owens"
+    }
+  },
+  {
+    "code": "rick_owens_drkshdw",
+    "attribute": "manufacturer",
+    "sort_order": 840,
+    "labels": {
+      "en_US": "Rick Owens DRKSHDW",
+      "nl_NL": "Rick Owens DRKSHDW"
+    }
+  },
+  {
+    "code": "rick_owens_lilies",
+    "attribute": "manufacturer",
+    "sort_order": 963,
+    "labels": {
+      "en_US": "Rick Owens Lilies",
+      "nl_NL": "Rick Owens Lilies"
+    }
+  },
+  {
+    "code": "rixo",
+    "attribute": "manufacturer",
+    "sort_order": 1690,
+    "labels": {
+      "en_US": "Rixo",
+      "nl_NL": "Rixo"
+    }
+  },
+  {
+    "code": "roa",
+    "attribute": "manufacturer",
+    "sort_order": 1074,
+    "labels": {
+      "en_US": "ROA",
+      "nl_NL": "ROA"
+    }
+  },
+  {
+    "code": "roberto_cavalli",
+    "attribute": "manufacturer",
+    "sort_order": 968,
+    "labels": {
+      "en_US": "Roberto Cavalli",
+      "nl_NL": "Roberto Cavalli"
+    }
+  },
+  {
+    "code": "roberto_collina",
+    "attribute": "manufacturer",
+    "sort_order": 1177,
+    "labels": {
+      "en_US": "Roberto Collina",
+      "nl_NL": "Roberto Collina"
+    }
+  },
+  {
+    "code": "roberto_festa",
+    "attribute": "manufacturer",
+    "sort_order": 1386,
+    "labels": {
+      "en_US": "Roberto Festa",
+      "nl_NL": "Roberto Festa"
+    }
+  },
+  {
+    "code": "rodebjer",
+    "attribute": "manufacturer",
+    "sort_order": 1325,
+    "labels": {
+      "en_US": "Rodebjer",
+      "nl_NL": "Rodebjer"
+    }
+  },
+  {
+    "code": "roger_dubuis",
+    "attribute": "manufacturer",
+    "sort_order": 1528,
+    "labels": {
+      "en_US": "Roger Dubuis",
+      "nl_NL": "Roger Dubuis"
+    }
+  },
+  {
+    "code": "roger_vivier",
+    "attribute": "manufacturer",
+    "sort_order": 1326,
+    "labels": {
+      "en_US": "Roger Vivier",
+      "nl_NL": "Roger Vivier"
+    }
+  },
+  {
+    "code": "rohe",
+    "attribute": "manufacturer",
+    "sort_order": 1735,
+    "labels": {
+      "en_US": "Rohe",
+      "nl_NL": "Rohe"
+    }
+  },
+  {
+    "code": "roland_mouret",
+    "attribute": "manufacturer",
+    "sort_order": 1327,
+    "labels": {
+      "en_US": "Roland Mouret",
+      "nl_NL": "Roland Mouret"
+    }
+  },
+  {
+    "code": "rolex",
+    "attribute": "manufacturer",
+    "sort_order": 1479,
+    "labels": {
+      "en_US": "Rolex",
+      "nl_NL": "Rolex"
+    }
+  },
+  {
+    "code": "romain_jerome",
+    "attribute": "manufacturer",
+    "sort_order": 1529,
+    "labels": {
+      "en_US": "Romain Jerome",
+      "nl_NL": "Romain Jerome"
+    }
+  },
+  {
+    "code": "rosamaria",
+    "attribute": "manufacturer",
+    "sort_order": 1183,
+    "labels": {
+      "en_US": "RosaMaria",
+      "nl_NL": "RosaMaria"
+    }
+  },
+  {
+    "code": "rosefield",
+    "attribute": "manufacturer",
+    "sort_order": 1441,
+    "labels": {
+      "en_US": "Rosefield",
+      "nl_NL": "Rosefield"
+    }
+  },
+  {
+    "code": "rossignol",
+    "attribute": "manufacturer",
+    "sort_order": 1248,
+    "labels": {
+      "en_US": "Rossignol",
+      "nl_NL": "Rossignol"
+    }
+  },
+  {
+    "code": "rotate",
+    "attribute": "manufacturer",
+    "sort_order": 1036,
+    "labels": {
+      "en_US": "Rotate",
+      "nl_NL": "Rotate"
+    }
+  },
+  {
+    "code": "roy_rogers",
+    "attribute": "manufacturer",
+    "sort_order": 1126,
+    "labels": {
+      "en_US": "Roy Roger's",
+      "nl_NL": "Roy Roger's"
+    }
+  },
+  {
+    "code": "rrd",
+    "attribute": "manufacturer",
+    "sort_order": 445,
+    "labels": {
+      "en_US": "RRD",
+      "nl_NL": "RRD"
+    }
+  },
+  {
+    "code": "rta",
+    "attribute": "manufacturer",
+    "sort_order": 1737,
+    "labels": {
+      "en_US": "RTA",
+      "nl_NL": "RTA"
+    }
+  },
+  {
+    "code": "run_of",
+    "attribute": "manufacturer",
+    "sort_order": 942,
+    "labels": {
+      "en_US": "Run Of",
+      "nl_NL": "Run Of"
+    }
+  },
+  {
+    "code": "sacai",
+    "attribute": "manufacturer",
+    "sort_order": 447,
+    "labels": {
+      "en_US": "Sacai",
+      "nl_NL": "Sacai"
+    }
+  },
+  {
+    "code": "saint_blanc",
+    "attribute": "manufacturer",
+    "sort_order": 978,
+    "labels": {
+      "en_US": "Saint Blanc",
+      "nl_NL": "Saint Blanc"
+    }
+  },
+  {
+    "code": "saint_laurent",
+    "attribute": "manufacturer",
+    "sort_order": 449,
+    "labels": {
+      "en_US": "Saint Laurent",
+      "nl_NL": "Saint Laurent"
+    }
+  },
+  {
+    "code": "saint_mxxxxxx",
+    "attribute": "manufacturer",
+    "sort_order": 1353,
+    "labels": {
+      "en_US": "Saint Mxxxxxx",
+      "nl_NL": "Saint Mxxxxxx"
+    }
+  },
+  {
+    "code": "salomon",
+    "attribute": "manufacturer",
+    "sort_order": 842,
+    "labels": {
+      "en_US": "Salomon",
+      "nl_NL": "Salomon"
+    }
+  },
+  {
+    "code": "salvatore_ferragamo",
+    "attribute": "manufacturer",
+    "sort_order": 1211,
+    "labels": {
+      "en_US": "Salvatore Ferragamo",
+      "nl_NL": "Salvatore Ferragamo"
+    }
+  },
+  {
+    "code": "sam_edelman",
+    "attribute": "manufacturer",
+    "sort_order": 1347,
+    "labels": {
+      "en_US": "Sam Edelman",
+      "nl_NL": "Sam Edelman"
+    }
+  },
+  {
+    "code": "samsoe_samsoe",
+    "attribute": "manufacturer",
+    "sort_order": 451,
+    "labels": {
+      "en_US": "Samsøe Samsøe",
+      "nl_NL": "Samsøe Samsøe"
+    }
+  },
+  {
+    "code": "samsung",
+    "attribute": "manufacturer",
+    "sort_order": 1415,
+    "labels": {
+      "en_US": "Samsung",
+      "nl_NL": "Samsung"
+    }
+  },
+  {
+    "code": "sandqvist",
+    "attribute": "manufacturer",
+    "sort_order": 1125,
+    "labels": {
+      "en_US": "Sandqvist",
+      "nl_NL": "Sandqvist"
+    }
+  },
+  {
+    "code": "sandro",
+    "attribute": "manufacturer",
+    "sort_order": 990,
+    "labels": {
+      "en_US": "Sandro",
+      "nl_NL": "Sandro"
+    }
+  },
+  {
+    "code": "santa_brands",
+    "attribute": "manufacturer",
+    "sort_order": 1620,
+    "labels": {
+      "en_US": "Santa Brands",
+      "nl_NL": "Santa Brands"
+    }
+  },
+  {
+    "code": "santaniello",
+    "attribute": "manufacturer",
+    "sort_order": 1178,
+    "labels": {
+      "en_US": "SANTANIELLO",
+      "nl_NL": "SANTANIELLO"
+    }
+  },
+  {
+    "code": "santoni",
+    "attribute": "manufacturer",
+    "sort_order": 452,
+    "labels": {
+      "en_US": "Santoni",
+      "nl_NL": "Santoni"
+    }
+  },
+  {
+    "code": "sara_battaglia",
+    "attribute": "manufacturer",
+    "sort_order": 1378,
+    "labels": {
+      "en_US": "Sara Battaglia",
+      "nl_NL": "Sara Battaglia"
+    }
+  },
+  {
+    "code": "sarahwear",
+    "attribute": "manufacturer",
+    "sort_order": 1621,
+    "labels": {
+      "en_US": "SARAHWEAR",
+      "nl_NL": "SARAHWEAR"
+    }
+  },
+  {
+    "code": "sartorio",
+    "attribute": "manufacturer",
+    "sort_order": 1622,
+    "labels": {
+      "en_US": "Sartorio",
+      "nl_NL": "Sartorio"
+    }
+  },
+  {
+    "code": "sato",
+    "attribute": "manufacturer",
+    "sort_order": 1566,
+    "labels": {
+      "en_US": "Sato",
+      "nl_NL": "Sato"
+    }
+  },
+  {
+    "code": "satoshi_nakamoto",
+    "attribute": "manufacturer",
+    "sort_order": 1560,
+    "labels": {
+      "en_US": "Satoshi Nakamoto",
+      "nl_NL": "Satoshi Nakamoto"
+    }
+  },
+  {
+    "code": "saucony",
+    "attribute": "manufacturer",
+    "sort_order": 453,
+    "labels": {
+      "en_US": "Saucony",
+      "nl_NL": "Saucony"
+    }
+  },
+  {
+    "code": "saulina",
+    "attribute": "manufacturer",
+    "sort_order": 1362,
+    "labels": {
+      "en_US": "Saulina",
+      "nl_NL": "Saulina"
+    }
+  },
+  {
+    "code": "savannah_morrow",
+    "attribute": "manufacturer",
+    "sort_order": 1652,
+    "labels": {
+      "en_US": "Savannah Morrow",
+      "nl_NL": "Savannah Morrow"
+    }
+  },
+  {
+    "code": "save_the_duck",
+    "attribute": "manufacturer",
+    "sort_order": 893,
+    "labels": {
+      "en_US": "Save the Duck",
+      "nl_NL": "Save the Duck"
+    }
+  },
+  {
+    "code": "scholl",
+    "attribute": "manufacturer",
+    "sort_order": 1110,
+    "labels": {
+      "en_US": "Scholl",
+      "nl_NL": "Scholl"
+    }
+  },
+  {
+    "code": "scotch_and_soda",
+    "attribute": "manufacturer",
+    "sort_order": 1450,
+    "labels": {
+      "en_US": "Scotch & Soda",
+      "nl_NL": "Scotch & Soda"
+    }
+  },
+  {
+    "code": "sease",
+    "attribute": "manufacturer",
+    "sort_order": 1328,
+    "labels": {
+      "en_US": "SEASE",
+      "nl_NL": "SEASE"
+    }
+  },
+  {
+    "code": "seaside",
+    "attribute": "manufacturer",
+    "sort_order": 873,
+    "labels": {
+      "en_US": "Seaside",
+      "nl_NL": "Seaside"
+    }
+  },
+  {
+    "code": "sebago",
+    "attribute": "manufacturer",
+    "sort_order": 1184,
+    "labels": {
+      "en_US": "Sebago",
+      "nl_NL": "Sebago"
+    }
+  },
+  {
+    "code": "second_female",
+    "attribute": "manufacturer",
+    "sort_order": 1693,
+    "labels": {
+      "en_US": "Second Female",
+      "nl_NL": "Second Female"
+    }
+  },
+  {
+    "code": "see_by_chloe",
+    "attribute": "manufacturer",
+    "sort_order": 802,
+    "labels": {
+      "en_US": "See by Chloe",
+      "nl_NL": "See by Chloe"
+    }
+  },
+  {
+    "code": "seiko",
+    "attribute": "manufacturer",
+    "sort_order": 1185,
+    "labels": {
+      "en_US": "Seiko",
+      "nl_NL": "Seiko"
+    }
+  },
+  {
+    "code": "selected_femme",
+    "attribute": "manufacturer",
+    "sort_order": 1410,
+    "labels": {
+      "en_US": "Selected Femme",
+      "nl_NL": "Selected Femme"
+    }
+  },
+  {
+    "code": "selected_homme",
+    "attribute": "manufacturer",
+    "sort_order": 1411,
+    "labels": {
+      "en_US": "Selected Homme",
+      "nl_NL": "Selected Homme"
+    }
+  },
+  {
+    "code": "self_portrait",
+    "attribute": "manufacturer",
+    "sort_order": 917,
+    "labels": {
+      "en_US": "Self-Portrait",
+      "nl_NL": "Self-Portrait"
+    }
+  },
+  {
+    "code": "semicouture",
+    "attribute": "manufacturer",
+    "sort_order": 1241,
+    "labels": {
+      "en_US": "Semicouture",
+      "nl_NL": "Semicouture"
+    }
+  },
+  {
+    "code": "serge_pariente",
+    "attribute": "manufacturer",
+    "sort_order": 1270,
+    "labels": {
+      "en_US": "Serge Pariente",
+      "nl_NL": "Serge Pariente"
+    }
+  },
+  {
+    "code": "sergio_rossi",
+    "attribute": "manufacturer",
+    "sort_order": 969,
+    "labels": {
+      "en_US": "Sergio Rossi",
+      "nl_NL": "Sergio Rossi"
+    }
+  },
+  {
+    "code": "service_area",
+    "attribute": "manufacturer",
+    "sort_order": 1576,
+    "labels": {
+      "en_US": "Service Area",
+      "nl_NL": "Service Area"
+    }
+  },
+  {
+    "code": "service_works",
+    "attribute": "manufacturer",
+    "sort_order": 1707,
+    "labels": {
+      "en_US": "Service Works",
+      "nl_NL": "Service Works"
+    }
+  },
+  {
+    "code": "sessun",
+    "attribute": "manufacturer",
+    "sort_order": 1444,
+    "labels": {
+      "en_US": "Sessùn",
+      "nl_NL": "Sessùn"
+    }
+  },
+  {
+    "code": "seven",
+    "attribute": "manufacturer",
+    "sort_order": 1056,
+    "labels": {
+      "en_US": "Seven",
+      "nl_NL": "Seven"
+    }
+  },
+  {
+    "code": "seventh",
+    "attribute": "manufacturer",
+    "sort_order": 1575,
+    "labels": {
+      "en_US": "Seventh",
+      "nl_NL": "Seventh"
+    }
+  },
+  {
+    "code": "seventyone_percent",
+    "attribute": "manufacturer",
+    "sort_order": 1623,
+    "labels": {
+      "en_US": "SeventyOne Percent",
+      "nl_NL": "SeventyOne Percent"
+    }
+  },
+  {
+    "code": "shabbies",
+    "attribute": "manufacturer",
+    "sort_order": 1334,
+    "labels": {
+      "en_US": "Shabbies",
+      "nl_NL": "Shabbies"
+    }
+  },
+  {
+    "code": "si_rossi",
+    "attribute": "manufacturer",
+    "sort_order": 1267,
+    "labels": {
+      "en_US": "Si Rossi",
+      "nl_NL": "Si Rossi"
+    }
+  },
+  {
+    "code": "silvian_heach",
+    "attribute": "manufacturer",
+    "sort_order": 863,
+    "labels": {
+      "en_US": "Silvian Heach",
+      "nl_NL": "Silvian Heach"
+    }
+  },
+  {
+    "code": "simon_miller",
+    "attribute": "manufacturer",
+    "sort_order": 1379,
+    "labels": {
+      "en_US": "Simon Miller",
+      "nl_NL": "Simon Miller"
+    }
+  },
+  {
+    "code": "simona_corsellini",
+    "attribute": "manufacturer",
+    "sort_order": 1274,
+    "labels": {
+      "en_US": "Simona Corsellini",
+      "nl_NL": "Simona Corsellini"
+    }
+  },
+  {
+    "code": "sinn",
+    "attribute": "manufacturer",
+    "sort_order": 1530,
+    "labels": {
+      "en_US": "Sinn",
+      "nl_NL": "Sinn"
+    }
+  },
+  {
+    "code": "sisters",
+    "attribute": "manufacturer",
+    "sort_order": 1624,
+    "labels": {
+      "en_US": "Sisters",
+      "nl_NL": "Sisters"
+    }
+  },
+  {
+    "code": "skechers",
+    "attribute": "manufacturer",
+    "sort_order": 1460,
+    "labels": {
+      "en_US": "Skechers",
+      "nl_NL": "Skechers"
+    }
+  },
+  {
+    "code": "slazenger",
+    "attribute": "manufacturer",
+    "sort_order": 1721,
+    "labels": {
+      "en_US": "Slazenger",
+      "nl_NL": "Slazenger"
+    }
+  },
+  {
+    "code": "slide_design",
+    "attribute": "manufacturer",
+    "sort_order": 1625,
+    "labels": {
+      "en_US": "SLIDE design",
+      "nl_NL": "SLIDE design"
+    }
+  },
+  {
+    "code": "solace_london",
+    "attribute": "manufacturer",
+    "sort_order": 1626,
+    "labels": {
+      "en_US": "Solace London",
+      "nl_NL": "Solace London"
+    }
+  },
+  {
+    "code": "sonia_rykiel",
+    "attribute": "manufacturer",
+    "sort_order": 1380,
+    "labels": {
+      "en_US": "Sonia Rykiel",
+      "nl_NL": "Sonia Rykiel"
+    }
+  },
+  {
+    "code": "sophie_webster",
+    "attribute": "manufacturer",
+    "sort_order": 1653,
+    "labels": {
+      "en_US": "Sophie Webster",
+      "nl_NL": "Sophie Webster"
+    }
+  },
+  {
+    "code": "sorbet_island",
+    "attribute": "manufacturer",
+    "sort_order": 1627,
+    "labels": {
+      "en_US": "Sorbet Island",
+      "nl_NL": "Sorbet Island"
+    }
+  },
+  {
+    "code": "sospiro",
+    "attribute": "manufacturer",
+    "sort_order": 1468,
+    "labels": {
+      "en_US": "Sospiro",
+      "nl_NL": "Sospiro"
+    }
+  },
+  {
+    "code": "Soulland",
+    "attribute": "manufacturer",
+    "sort_order": 933,
+    "labels": {
+      "en_US": "SOULLAND",
+      "nl_NL": "SOULLAND"
+    }
+  },
+  {
+    "code": "sportmax",
+    "attribute": "manufacturer",
+    "sort_order": 1028,
+    "labels": {
+      "en_US": "Sportmax",
+      "nl_NL": "Sportmax"
+    }
+  },
+  {
+    "code": "sporty_rich",
+    "attribute": "manufacturer",
+    "sort_order": 948,
+    "labels": {
+      "en_US": "Sporty & Rich",
+      "nl_NL": "Sporty & Rich"
+    }
+  },
+  {
+    "code": "sprayground",
+    "attribute": "manufacturer",
+    "sort_order": 1158,
+    "labels": {
+      "en_US": "Sprayground",
+      "nl_NL": "Sprayground"
+    }
+  },
+  {
+    "code": "squale",
+    "attribute": "manufacturer",
+    "sort_order": 1531,
+    "labels": {
+      "en_US": "Squale",
+      "nl_NL": "Squale"
+    }
+  },
+  {
+    "code": "srvc",
+    "attribute": "manufacturer",
+    "sort_order": 1561,
+    "labels": {
+      "en_US": "SRVC",
+      "nl_NL": "SRVC"
+    }
+  },
+  {
+    "code": "stand_studio",
+    "attribute": "manufacturer",
+    "sort_order": 1037,
+    "labels": {
+      "en_US": "Stand Studio",
+      "nl_NL": "Stand Studio"
+    }
+  },
+  {
+    "code": "staud",
+    "attribute": "manufacturer",
+    "sort_order": 1148,
+    "labels": {
+      "en_US": "Staud",
+      "nl_NL": "Staud"
+    }
+  },
+  {
+    "code": "stefan_meier",
+    "attribute": "manufacturer",
+    "sort_order": 1628,
+    "labels": {
+      "en_US": "Stefan Meier",
+      "nl_NL": "Stefan Meier"
+    }
+  },
+  {
+    "code": "stella_mccartney",
+    "attribute": "manufacturer",
+    "sort_order": 473,
+    "labels": {
+      "en_US": "Stella McCartney",
+      "nl_NL": "Stella McCartney"
+    }
+  },
+  {
+    "code": "steve_madden",
+    "attribute": "manufacturer",
+    "sort_order": 916,
+    "labels": {
+      "en_US": "Steve Madden",
+      "nl_NL": "Steve Madden"
+    }
+  },
+  {
+    "code": "stieglitz",
+    "attribute": "manufacturer",
+    "sort_order": 895,
+    "labels": {
+      "en_US": "Stieglitz",
+      "nl_NL": "Stieglitz"
+    }
+  },
+  {
+    "code": "stine_goya",
+    "attribute": "manufacturer",
+    "sort_order": 1436,
+    "labels": {
+      "en_US": "Stine Goya",
+      "nl_NL": "Stine Goya"
+    }
+  },
+  {
+    "code": "stone_island",
+    "attribute": "manufacturer",
+    "sort_order": 476,
+    "labels": {
+      "en_US": "Stone Island",
+      "nl_NL": "Stone Island"
+    }
+  },
+  {
+    "code": "stone_island_junior",
+    "attribute": "manufacturer",
+    "sort_order": 477,
+    "labels": {
+      "en_US": "Stone Island Junior",
+      "nl_NL": "Stone Island Junior"
+    }
+  },
+  {
+    "code": "stone_island_shadow",
+    "attribute": "manufacturer",
+    "sort_order": 723,
+    "labels": {
+      "en_US": "Stone Island Shadow",
+      "nl_NL": "Stone Island Shadow"
+    }
+  },
+  {
+    "code": "streim_studios",
+    "attribute": "manufacturer",
+    "sort_order": 1083,
+    "labels": {
+      "en_US": "Streim Studios",
+      "nl_NL": "Streim Studios"
+    }
+  },
+  {
+    "code": "stuart_weitzman",
+    "attribute": "manufacturer",
+    "sort_order": 1149,
+    "labels": {
+      "en_US": "Stuart Weitzman",
+      "nl_NL": "Stuart Weitzman"
+    }
+  },
+  {
+    "code": "studio_ar",
+    "attribute": "manufacturer",
+    "sort_order": 1018,
+    "labels": {
+      "en_US": "Studio AR",
+      "nl_NL": "Studio AR"
+    }
+  },
+  {
+    "code": "studio_nicholson",
+    "attribute": "manufacturer",
+    "sort_order": 949,
+    "labels": {
+      "en_US": "Studio Nicholson",
+      "nl_NL": "Studio Nicholson"
+    }
+  },
+  {
+    "code": "stussy",
+    "attribute": "manufacturer",
+    "sort_order": 666,
+    "labels": {
+      "en_US": "Stüssy",
+      "nl_NL": "Stüssy"
+    }
+  },
+  {
+    "code": "suicoke",
+    "attribute": "manufacturer",
+    "sort_order": 1005,
+    "labels": {
+      "en_US": "Suicoke",
+      "nl_NL": "Suicoke"
+    }
+  },
+  {
+    "code": "sun68",
+    "attribute": "manufacturer",
+    "sort_order": 1168,
+    "labels": {
+      "en_US": "SUN68",
+      "nl_NL": "SUN68"
+    }
+  },
+  {
+    "code": "sundek",
+    "attribute": "manufacturer",
+    "sort_order": 483,
+    "labels": {
+      "en_US": "sundek",
+      "nl_NL": "sundek"
+    }
+  },
+  {
+    "code": "sunflower",
+    "attribute": "manufacturer",
+    "sort_order": 1744,
+    "labels": {
+      "en_US": "Sunflower",
+      "nl_NL": "Sunflower"
+    }
+  },
+  {
+    "code": "superdry",
+    "attribute": "manufacturer",
+    "sort_order": 1723,
+    "labels": {
+      "en_US": "Superdry",
+      "nl_NL": "Superdry"
+    }
+  },
+  {
+    "code": "superga",
+    "attribute": "manufacturer",
+    "sort_order": 1236,
+    "labels": {
+      "en_US": "Superga",
+      "nl_NL": "Superga"
+    }
+  },
+  {
+    "code": "susanna_blu",
+    "attribute": "manufacturer",
+    "sort_order": 1654,
+    "labels": {
+      "en_US": "Susanna Blu",
+      "nl_NL": "Susanna Blu"
+    }
+  },
+  {
+    "code": "swarovski",
+    "attribute": "manufacturer",
+    "sort_order": 1014,
+    "labels": {
+      "en_US": "Swarovski",
+      "nl_NL": "Swarovski"
+    }
+  },
+  {
+    "code": "swatch",
+    "attribute": "manufacturer",
+    "sort_order": 983,
+    "labels": {
+      "en_US": "Swatch",
+      "nl_NL": "Swatch"
+    }
+  },
+  {
+    "code": "swc_stepney_workers_club",
+    "attribute": "manufacturer",
+    "sort_order": 930,
+    "labels": {
+      "en_US": "S.W.C Stepney Workers Club",
+      "nl_NL": "S.W.C Stepney Workers Club"
+    }
+  },
+  {
+    "code": "swims",
+    "attribute": "manufacturer",
+    "sort_order": 1329,
+    "labels": {
+      "en_US": "Swims",
+      "nl_NL": "Swims"
+    }
+  },
+  {
+    "code": "tag_heuer",
+    "attribute": "manufacturer",
+    "sort_order": 1485,
+    "labels": {
+      "en_US": "Tag Heuer",
+      "nl_NL": "Tag Heuer"
+    }
+  },
+  {
+    "code": "tagliatore",
+    "attribute": "manufacturer",
+    "sort_order": 1127,
+    "labels": {
+      "en_US": "Tagliatore",
+      "nl_NL": "Tagliatore"
+    }
+  },
+  {
+    "code": "tasaki",
+    "attribute": "manufacturer",
+    "sort_order": 1382,
+    "labels": {
+      "en_US": "Tasaki",
+      "nl_NL": "Tasaki"
+    }
+  },
+  {
+    "code": "taschen",
+    "attribute": "manufacturer",
+    "sort_order": 1629,
+    "labels": {
+      "en_US": "Taschen",
+      "nl_NL": "Taschen"
+    }
+  },
+  {
+    "code": "tatras",
+    "attribute": "manufacturer",
+    "sort_order": 1128,
+    "labels": {
+      "en_US": "Tatras",
+      "nl_NL": "Tatras"
+    }
+  },
+  {
+    "code": "ted_baker",
+    "attribute": "manufacturer",
+    "sort_order": 945,
+    "labels": {
+      "en_US": "Ted Baker",
+      "nl_NL": "Ted Baker"
+    }
+  },
+  {
+    "code": "teleria_zed",
+    "attribute": "manufacturer",
+    "sort_order": 1179,
+    "labels": {
+      "en_US": "Teleria Zed",
+      "nl_NL": "Teleria Zed"
+    }
+  },
+  {
+    "code": "telfar",
+    "attribute": "manufacturer",
+    "sort_order": 1383,
+    "labels": {
+      "en_US": "Telfar",
+      "nl_NL": "Telfar"
+    }
+  },
+  {
+    "code": "ten_c",
+    "attribute": "manufacturer",
+    "sort_order": 1465,
+    "labels": {
+      "en_US": "Ten C",
+      "nl_NL": "Ten C"
+    }
+  },
+  {
+    "code": "the_attico",
+    "attribute": "manufacturer",
+    "sort_order": 954,
+    "labels": {
+      "en_US": "The Attico",
+      "nl_NL": "The Attico"
+    }
+  },
+  {
+    "code": "the_bridge",
+    "attribute": "manufacturer",
+    "sort_order": 1365,
+    "labels": {
+      "en_US": "The Bridge",
+      "nl_NL": "The Bridge"
+    }
+  },
+  {
+    "code": "the_chesterfield_brand",
+    "attribute": "manufacturer",
+    "sort_order": 1672,
+    "labels": {
+      "en_US": "The Chesterfield Brand",
+      "nl_NL": "The Chesterfield Brand"
+    }
+  },
+  {
+    "code": "the_gigi",
+    "attribute": "manufacturer",
+    "sort_order": 1260,
+    "labels": {
+      "en_US": "The Gigi",
+      "nl_NL": "The Gigi"
+    }
+  },
+  {
+    "code": "the_house_of_blinckers",
+    "attribute": "manufacturer",
+    "sort_order": 1754,
+    "labels": {
+      "en_US": "The House Of Blinckers",
+      "nl_NL": "The House Of Blinckers"
+    }
+  },
+  {
+    "code": "the_latest",
+    "attribute": "manufacturer",
+    "sort_order": 1630,
+    "labels": {
+      "en_US": "The Latest",
+      "nl_NL": "The Latest"
+    }
+  },
+  {
+    "code": "the_lola_club",
+    "attribute": "manufacturer",
+    "sort_order": 1673,
+    "labels": {
+      "en_US": "The Lola Club",
+      "nl_NL": "The Lola Club"
+    }
+  },
+  {
+    "code": "the_new_originals",
+    "attribute": "manufacturer",
+    "sort_order": 808,
+    "labels": {
+      "en_US": "The New Originals",
+      "nl_NL": "The New Originals"
+    }
+  },
+  {
+    "code": "the_north_face",
+    "attribute": "manufacturer",
+    "sort_order": 499,
+    "labels": {
+      "en_US": "The North Face",
+      "nl_NL": "The North Face"
+    }
+  },
+  {
+    "code": "the_row",
+    "attribute": "manufacturer",
+    "sort_order": 1204,
+    "labels": {
+      "en_US": "The Row",
+      "nl_NL": "The Row"
+    }
+  },
+  {
+    "code": "themoire",
+    "attribute": "manufacturer",
+    "sort_order": 1265,
+    "labels": {
+      "en_US": "Themoirè",
+      "nl_NL": "Themoirè"
+    }
+  },
+  {
+    "code": "thom_browne",
+    "attribute": "manufacturer",
+    "sort_order": 502,
+    "labels": {
+      "en_US": "Thom Browne",
+      "nl_NL": "Thom Browne"
+    }
+  },
+  {
+    "code": "thom_krom",
+    "attribute": "manufacturer",
+    "sort_order": 1431,
+    "labels": {
+      "en_US": "Thom Krom",
+      "nl_NL": "Thom Krom"
+    }
+  },
+  {
+    "code": "thug_club",
+    "attribute": "manufacturer",
+    "sort_order": 1354,
+    "labels": {
+      "en_US": "Thug Club",
+      "nl_NL": "Thug Club"
+    }
+  },
+  {
+    "code": "ti_sento",
+    "attribute": "manufacturer",
+    "sort_order": 1011,
+    "labels": {
+      "en_US": "Ti Sento",
+      "nl_NL": "Ti Sento"
+    }
+  },
+  {
+    "code": "timberland",
+    "attribute": "manufacturer",
+    "sort_order": 1366,
+    "labels": {
+      "en_US": "Timberland",
+      "nl_NL": "Timberland"
+    }
+  },
+  {
+    "code": "tods",
+    "attribute": "manufacturer",
+    "sort_order": 506,
+    "labels": {
+      "en_US": "Tod's",
+      "nl_NL": "Tod's"
+    }
+  },
+  {
+    "code": "tom_ford",
+    "attribute": "manufacturer",
+    "sort_order": 507,
+    "labels": {
+      "en_US": "Tom Ford",
+      "nl_NL": "Tom Ford"
+    }
+  },
+  {
+    "code": "tom_rebl",
+    "attribute": "manufacturer",
+    "sort_order": 1294,
+    "labels": {
+      "en_US": "Tom Rebl",
+      "nl_NL": "Tom Rebl"
+    }
+  },
+  {
+    "code": "tommy_hilfiger",
+    "attribute": "manufacturer",
+    "sort_order": 508,
+    "labels": {
+      "en_US": "Tommy Hilfiger",
+      "nl_NL": "Tommy Hilfiger"
+    }
+  },
+  {
+    "code": "tommy_jeans",
+    "attribute": "manufacturer",
+    "sort_order": 880,
+    "labels": {
+      "en_US": "Tommy Jeans",
+      "nl_NL": "Tommy Jeans"
+    }
+  },
+  {
+    "code": "tonywack",
+    "attribute": "manufacturer",
+    "sort_order": 1031,
+    "labels": {
+      "en_US": "Tonywack",
+      "nl_NL": "Tonywack"
+    }
+  },
+  {
+    "code": "tooco",
+    "attribute": "manufacturer",
+    "sort_order": 1631,
+    "labels": {
+      "en_US": "TOOCO",
+      "nl_NL": "TOOCO"
+    }
+  },
+  {
+    "code": "toral",
+    "attribute": "manufacturer",
+    "sort_order": 939,
+    "labels": {
+      "en_US": "Toral",
+      "nl_NL": "Toral"
+    }
+  },
+  {
+    "code": "tory_burch",
+    "attribute": "manufacturer",
+    "sort_order": 1047,
+    "labels": {
+      "en_US": "Tory Burch",
+      "nl_NL": "Tory Burch"
+    }
+  },
+  {
+    "code": "toteme",
+    "attribute": "manufacturer",
+    "sort_order": 1330,
+    "labels": {
+      "en_US": "Toteme",
+      "nl_NL": "Toteme"
+    }
+  },
+  {
+    "code": "triadoro",
+    "attribute": "manufacturer",
+    "sort_order": 1543,
+    "labels": {
+      "en_US": "TriaD'oro",
+      "nl_NL": "TriaD'oro"
+    }
+  },
+  {
+    "code": "trickers",
+    "attribute": "manufacturer",
+    "sort_order": 1280,
+    "labels": {
+      "en_US": "Tricker's",
+      "nl_NL": "Tricker's"
+    }
+  },
+  {
+    "code": "trussardi",
+    "attribute": "manufacturer",
+    "sort_order": 1760,
+    "labels": {
+      "en_US": "Trussardi",
+      "nl_NL": "Trussardi"
+    }
+  },
+  {
+    "code": "tudor",
+    "attribute": "manufacturer",
+    "sort_order": 1484,
+    "labels": {
+      "en_US": "Tudor",
+      "nl_NL": "Tudor"
+    }
+  },
+  {
+    "code": "tw_steel",
+    "attribute": "manufacturer",
+    "sort_order": 941,
+    "labels": {
+      "en_US": "TW Steel",
+      "nl_NL": "TW Steel"
+    }
+  },
+  {
+    "code": "twin_set",
+    "attribute": "manufacturer",
+    "sort_order": 1123,
+    "labels": {
+      "en_US": "Twin-set",
+      "nl_NL": "Twin-set"
+    }
+  },
+  {
+    "code": "u_boat",
+    "attribute": "manufacturer",
+    "sort_order": 1532,
+    "labels": {
+      "en_US": "U-Boat",
+      "nl_NL": "U-Boat"
+    }
+  },
+  {
+    "code": "UBR",
+    "attribute": "manufacturer",
+    "sort_order": 924,
+    "labels": {
+      "en_US": "UBR",
+      "nl_NL": "UBR"
+    }
+  },
+  {
+    "code": "ugg",
+    "attribute": "manufacturer",
+    "sort_order": 515,
+    "labels": {
+      "en_US": "UGG",
+      "nl_NL": "UGG"
+    }
+  },
+  {
+    "code": "ulysse_nardin",
+    "attribute": "manufacturer",
+    "sort_order": 1533,
+    "labels": {
+      "en_US": "Ulysse Nardin",
+      "nl_NL": "Ulysse Nardin"
+    }
+  },
+  {
+    "code": "umbro",
+    "attribute": "manufacturer",
+    "sort_order": 1339,
+    "labels": {
+      "en_US": "Umbro",
+      "nl_NL": "Umbro"
+    }
+  },
+  {
+    "code": "under_armour",
+    "attribute": "manufacturer",
+    "sort_order": 619,
+    "labels": {
+      "en_US": "Under Armour",
+      "nl_NL": "Under Armour"
+    }
+  },
+  {
+    "code": "undercover",
+    "attribute": "manufacturer",
+    "sort_order": 1006,
+    "labels": {
+      "en_US": "Undercover",
+      "nl_NL": "Undercover"
+    }
+  },
+  {
+    "code": "union_glashutte",
+    "attribute": "manufacturer",
+    "sort_order": 1534,
+    "labels": {
+      "en_US": "Union Glashütte",
+      "nl_NL": "Union Glashütte"
+    }
+  },
+  {
+    "code": "unique_the_label",
+    "attribute": "manufacturer",
+    "sort_order": 1756,
+    "labels": {
+      "en_US": "Unique The Label",
+      "nl_NL": "Unique The Label"
+    }
+  },
+  {
+    "code": "universal_works",
+    "attribute": "manufacturer",
+    "sort_order": 1708,
+    "labels": {
+      "en_US": "Universal Works",
+      "nl_NL": "Universal Works"
+    }
+  },
+  {
+    "code": "untitled_artworks",
+    "attribute": "manufacturer",
+    "sort_order": 1038,
+    "labels": {
+      "en_US": "Untitled Artworks",
+      "nl_NL": "Untitled Artworks"
+    }
+  },
+  {
+    "code": "vacheron_constantin",
+    "attribute": "manufacturer",
+    "sort_order": 1535,
+    "labels": {
+      "en_US": "Vacheron Constantin",
+      "nl_NL": "Vacheron Constantin"
+    }
+  },
+  {
+    "code": "valentino",
+    "attribute": "manufacturer",
+    "sort_order": 519,
+    "labels": {
+      "en_US": "Valentino",
+      "nl_NL": "Valentino"
+    }
+  },
+  {
+    "code": "valentino_by_mario_valentino",
+    "attribute": "manufacturer",
+    "sort_order": 849,
+    "labels": {
+      "en_US": "Valentino by Mario Valentino",
+      "nl_NL": "Valentino by Mario Valentino"
+    }
+  },
+  {
+    "code": "valentino_garavani",
+    "attribute": "manufacturer",
+    "sort_order": 1237,
+    "labels": {
+      "en_US": "Valentino Garavani",
+      "nl_NL": "Valentino Garavani"
+    }
+  },
+  {
+    "code": "valenza",
+    "attribute": "manufacturer",
+    "sort_order": 1356,
+    "labels": {
+      "en_US": "Valenza",
+      "nl_NL": "Valenza"
+    }
+  },
+  {
+    "code": "valextra",
+    "attribute": "manufacturer",
+    "sort_order": 1384,
+    "labels": {
+      "en_US": "Valextra",
+      "nl_NL": "Valextra"
+    }
+  },
+  {
+    "code": "vans",
+    "attribute": "manufacturer",
+    "sort_order": 522,
+    "labels": {
+      "en_US": "Vans",
+      "nl_NL": "Vans"
+    }
+  },
+  {
+    "code": "vaquera",
+    "attribute": "manufacturer",
+    "sort_order": 1562,
+    "labels": {
+      "en_US": "VAQUERA",
+      "nl_NL": "VAQUERA"
+    }
+  },
+  {
+    "code": "vedder_and_vedder",
+    "attribute": "manufacturer",
+    "sort_order": 1082,
+    "labels": {
+      "en_US": "Vedder & Vedder",
+      "nl_NL": "Vedder & Vedder"
+    }
+  },
+  {
+    "code": "veilance",
+    "attribute": "manufacturer",
+    "sort_order": 1655,
+    "labels": {
+      "en_US": "Veilance",
+      "nl_NL": "Veilance"
+    }
+  },
+  {
+    "code": "veja",
+    "attribute": "manufacturer",
+    "sort_order": 523,
+    "labels": {
+      "en_US": "Veja",
+      "nl_NL": "Veja"
+    }
+  },
+  {
+    "code": "vero_moda",
+    "attribute": "manufacturer",
+    "sort_order": 1726,
+    "labels": {
+      "en_US": "Vero Moda",
+      "nl_NL": "Vero Moda"
+    }
+  },
+  {
+    "code": "veronica_beard",
+    "attribute": "manufacturer",
+    "sort_order": 1331,
+    "labels": {
+      "en_US": "Veronica Beard",
+      "nl_NL": "Veronica Beard"
+    }
+  },
+  {
+    "code": "versace",
+    "attribute": "manufacturer",
+    "sort_order": 524,
+    "labels": {
+      "en_US": "Versace",
+      "nl_NL": "Versace"
+    }
+  },
+  {
+    "code": "versace_jeans_couture",
+    "attribute": "manufacturer",
+    "sort_order": 625,
+    "labels": {
+      "en_US": "Versace Jeans Couture",
+      "nl_NL": "Versace Jeans Couture"
+    }
+  },
+  {
+    "code": "vespa",
+    "attribute": "manufacturer",
+    "sort_order": 578,
+    "labels": {
+      "en_US": "Vespa",
+      "nl_NL": "Vespa"
+    }
+  },
+  {
+    "code": "vetements",
+    "attribute": "manufacturer",
+    "sort_order": 527,
+    "labels": {
+      "en_US": "Vetements",
+      "nl_NL": "Vetements"
+    }
+  },
+  {
+    "code": "via_roma_15",
+    "attribute": "manufacturer",
+    "sort_order": 1169,
+    "labels": {
+      "en_US": "Via Roma 15",
+      "nl_NL": "Via Roma 15"
+    }
+  },
+  {
+    "code": "via_vai",
+    "attribute": "manufacturer",
+    "sort_order": 1577,
+    "labels": {
+      "en_US": "VIA VAI",
+      "nl_NL": "VIA VAI"
+    }
+  },
+  {
+    "code": "vic_mattie",
+    "attribute": "manufacturer",
+    "sort_order": 857,
+    "labels": {
+      "en_US": "Vic Matie",
+      "nl_NL": "Vic Matie"
+    }
+  },
+  {
+    "code": "victoria_beckham",
+    "attribute": "manufacturer",
+    "sort_order": 1440,
+    "labels": {
+      "en_US": "Victoria Beckham",
+      "nl_NL": "Victoria Beckham"
+    }
+  },
+  {
+    "code": "victorias_secret",
+    "attribute": "manufacturer",
+    "sort_order": 1764,
+    "labels": {
+      "en_US": "Victoria's Secret",
+      "nl_NL": "Victoria's Secret"
+    }
+  },
+  {
+    "code": "victorinox",
+    "attribute": "manufacturer",
+    "sort_order": 1579,
+    "labels": {
+      "en_US": "Victorinox",
+      "nl_NL": "Victorinox"
+    }
+  },
+  {
+    "code": "vilebrequin",
+    "attribute": "manufacturer",
+    "sort_order": 914,
+    "labels": {
+      "en_US": "Vilebrequin",
+      "nl_NL": "Vilebrequin"
+    }
+  },
+  {
+    "code": "vince",
+    "attribute": "manufacturer",
+    "sort_order": 1705,
+    "labels": {
+      "en_US": "Vince",
+      "nl_NL": "Vince"
+    }
+  },
+  {
+    "code": "vipera",
+    "attribute": "manufacturer",
+    "sort_order": 1632,
+    "labels": {}
+  },
+  {
+    "code": "visvim",
+    "attribute": "manufacturer",
+    "sort_order": 1007,
+    "labels": {
+      "en_US": "Visvim",
+      "nl_NL": "Visvim"
+    }
+  },
+  {
+    "code": "vitelli",
+    "attribute": "manufacturer",
+    "sort_order": 1633,
+    "labels": {
+      "en_US": "Vitelli",
+      "nl_NL": "Vitelli"
+    }
+  },
+  {
+    "code": "vivienne_westwood",
+    "attribute": "manufacturer",
+    "sort_order": 965,
+    "labels": {
+      "en_US": "Vivienne Westwood",
+      "nl_NL": "Vivienne Westwood"
+    }
+  },
+  {
+    "code": "vndx_amsterdam",
+    "attribute": "manufacturer",
+    "sort_order": 1081,
+    "labels": {
+      "en_US": "VNDX Amsterdam",
+      "nl_NL": "VNDX Amsterdam"
+    }
+  },
+  {
+    "code": "von_dutch",
+    "attribute": "manufacturer",
+    "sort_order": 976,
+    "labels": {
+      "en_US": "Von Dutch",
+      "nl_NL": "Von Dutch"
+    }
+  },
+  {
+    "code": "wahts",
+    "attribute": "manufacturer",
+    "sort_order": 923,
+    "labels": {
+      "en_US": "Wahts",
+      "nl_NL": "Wahts"
+    }
+  },
+  {
+    "code": "waimari",
+    "attribute": "manufacturer",
+    "sort_order": 1656,
+    "labels": {
+      "en_US": "WAIMARI",
+      "nl_NL": "WAIMARI"
+    }
+  },
+  {
+    "code": "wales_bonner",
+    "attribute": "manufacturer",
+    "sort_order": 1008,
+    "labels": {
+      "en_US": "Wales Bonner",
+      "nl_NL": "Wales Bonner"
+    }
+  },
+  {
+    "code": "wandler",
+    "attribute": "manufacturer",
+    "sort_order": 1170,
+    "labels": {
+      "en_US": "Wandler",
+      "nl_NL": "Wandler"
+    }
+  },
+  {
+    "code": "wardrobenyc",
+    "attribute": "manufacturer",
+    "sort_order": 1634,
+    "labels": {
+      "en_US": "WARDROBE.NYC",
+      "nl_NL": "WARDROBE.NYC"
+    }
+  },
+  {
+    "code": "who_decides_war",
+    "attribute": "manufacturer",
+    "sort_order": 1355,
+    "labels": {
+      "en_US": "Who Decides War",
+      "nl_NL": "Who Decides War"
+    }
+  },
+  {
+    "code": "wild_cashmere",
+    "attribute": "manufacturer",
+    "sort_order": 1635,
+    "labels": {
+      "en_US": "Wild Cashmere",
+      "nl_NL": "Wild Cashmere"
+    }
+  },
+  {
+    "code": "wild_things",
+    "attribute": "manufacturer",
+    "sort_order": 1636,
+    "labels": {
+      "en_US": "Wild Things",
+      "nl_NL": "Wild Things"
+    }
+  },
+  {
+    "code": "willy_chavarria",
+    "attribute": "manufacturer",
+    "sort_order": 1563,
+    "labels": {
+      "en_US": "Willy Chavarria",
+      "nl_NL": "Willy Chavarria"
+    }
+  },
+  {
+    "code": "windsor_smith",
+    "attribute": "manufacturer",
+    "sort_order": 1171,
+    "labels": {
+      "en_US": "Windsor Smith",
+      "nl_NL": "Windsor Smith"
+    }
+  },
+  {
+    "code": "winkelstraat_nl",
+    "attribute": "manufacturer",
+    "sort_order": 551,
+    "labels": {
+      "en_US": "Winkelstraat.nl",
+      "nl_NL": "Winkelstraat.nl"
+    }
+  },
+  {
+    "code": "winkelstraatnl",
+    "attribute": "manufacturer",
+    "sort_order": 535,
+    "labels": {
+      "en_US": "Winkelstraat.nl",
+      "nl_NL": "Winkelstraat.nl"
+    }
+  },
+  {
+    "code": "wolford",
+    "attribute": "manufacturer",
+    "sort_order": 1637,
+    "labels": {
+      "en_US": "Wolford",
+      "nl_NL": "Wolford"
+    }
+  },
+  {
+    "code": "won_hundred",
+    "attribute": "manufacturer",
+    "sort_order": 1695,
+    "labels": {
+      "en_US": "Won Hundred",
+      "nl_NL": "Won Hundred"
+    }
+  },
+  {
+    "code": "wood_wood",
+    "attribute": "manufacturer",
+    "sort_order": 958,
+    "labels": {
+      "en_US": "Wood Wood",
+      "nl_NL": "Wood Wood"
+    }
+  },
+  {
+    "code": "woodbird",
+    "attribute": "manufacturer",
+    "sort_order": 1709,
+    "labels": {
+      "en_US": "Woodbird",
+      "nl_NL": "Woodbird"
+    }
+  },
+  {
+    "code": "woodrow_studio",
+    "attribute": "manufacturer",
+    "sort_order": 1546,
+    "labels": {
+      "en_US": "Woodrow Studio",
+      "nl_NL": "Woodrow Studio"
+    }
+  },
+  {
+    "code": "woolrich",
+    "attribute": "manufacturer",
+    "sort_order": 538,
+    "labels": {
+      "en_US": "Woolrich",
+      "nl_NL": "Woolrich"
+    }
+  },
+  {
+    "code": "wrangler",
+    "attribute": "manufacturer",
+    "sort_order": 1740,
+    "labels": {
+      "en_US": "Wrangler",
+      "nl_NL": "Wrangler"
+    }
+  },
+  {
+    "code": "wrong_friends",
+    "attribute": "manufacturer",
+    "sort_order": 713,
+    "labels": {
+      "en_US": "Wrong Friends",
+      "nl_NL": "Wrong Friends"
+    }
+  },
+  {
+    "code": "xacus",
+    "attribute": "manufacturer",
+    "sort_order": 1711,
+    "labels": {
+      "en_US": "Xacus",
+      "nl_NL": "Xacus"
+    }
+  },
+  {
+    "code": "xirena",
+    "attribute": "manufacturer",
+    "sort_order": 1403,
+    "labels": {
+      "en_US": "Xirena",
+      "nl_NL": "Xirena"
+    }
+  },
+  {
+    "code": "xplct",
+    "attribute": "manufacturer",
+    "sort_order": 552,
+    "labels": {
+      "en_US": "XPLCT",
+      "nl_NL": "XPLCT"
+    }
+  },
+  {
+    "code": "xplct_studios",
+    "attribute": "manufacturer",
+    "sort_order": 1413,
+    "labels": {
+      "en_US": "XPLCT Studios",
+      "nl_NL": "XPLCT Studios"
+    }
+  },
+  {
+    "code": "y_project",
+    "attribute": "manufacturer",
+    "sort_order": 947,
+    "labels": {
+      "en_US": "Y/Project",
+      "nl_NL": "Y/Project"
+    }
+  },
+  {
+    "code": "y3",
+    "attribute": "manufacturer",
+    "sort_order": 539,
+    "labels": {
+      "en_US": "Y-3",
+      "nl_NL": "Y-3"
+    }
+  },
+  {
+    "code": "yeezy",
+    "attribute": "manufacturer",
+    "sort_order": 1745,
+    "labels": {
+      "en_US": "Yeezy",
+      "nl_NL": "Yeezy"
+    }
+  },
+  {
+    "code": "yohji_yamamoto",
+    "attribute": "manufacturer",
+    "sort_order": 1064,
+    "labels": {
+      "en_US": "Yohji Yamamoto",
+      "nl_NL": "Yohji Yamamoto"
+    }
+  },
+  {
+    "code": "you_must_create",
+    "attribute": "manufacturer",
+    "sort_order": 1747,
+    "labels": {
+      "en_US": "You Must Create",
+      "nl_NL": "You Must Create"
+    }
+  },
+  {
+    "code": "ys_yohji_yamamoto",
+    "attribute": "manufacturer",
+    "sort_order": 1244,
+    "labels": {
+      "en_US": "Y's Yohji Yamamoto",
+      "nl_NL": "Y's Yohji Yamamoto"
+    }
+  },
+  {
+    "code": "zadig_and_voltaire",
+    "attribute": "manufacturer",
+    "sort_order": 1391,
+    "labels": {
+      "en_US": "Zadig&Voltaire",
+      "nl_NL": "Zadig&Voltaire"
+    }
+  },
+  {
+    "code": "zadig_et_voltaire",
+    "attribute": "manufacturer",
+    "sort_order": 546,
+    "labels": {
+      "en_US": "Zadig et Voltaire",
+      "nl_NL": "Zadig et Voltaire"
+    }
+  },
+  {
+    "code": "zanellato",
+    "attribute": "manufacturer",
+    "sort_order": 1172,
+    "labels": {
+      "en_US": "Zanellato",
+      "nl_NL": "Zanellato"
+    }
+  },
+  {
+    "code": "zegna",
+    "attribute": "manufacturer",
+    "sort_order": 1009,
+    "labels": {
+      "en_US": "Zegna",
+      "nl_NL": "Zegna"
+    }
+  },
+  {
+    "code": "zenith",
+    "attribute": "manufacturer",
+    "sort_order": 1536,
+    "labels": {
+      "en_US": "Zenith",
+      "nl_NL": "Zenith"
+    }
+  },
+  {
+    "code": "zimmermann",
+    "attribute": "manufacturer",
+    "sort_order": 993,
+    "labels": {
+      "en_US": "Zimmermann",
+      "nl_NL": "Zimmermann"
+    }
+  },
+  {
+    "code": "zoe_karssen",
+    "attribute": "manufacturer",
+    "sort_order": 1271,
+    "labels": {
+      "en_US": "Zoe Karssen",
+      "nl_NL": "Zoe Karssen"
+    }
+  }
+]

@@ -4,6 +4,7 @@ const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLoc
 const { upsertProduct, disableProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
+const { findBrandCode } = require("./brandmap");
 
 const isFullSync = process.argv.includes("--full");
 
@@ -15,7 +16,7 @@ function cleanImages(product) {
   });
 }
 
-function buildPayload({ product, variant, images, price, specialPrice, quantity }) {
+function buildPayload({ product, variant, images, price, specialPrice, quantity, brandCode }) {
   const payload = {
     identifier: `shopify_variant_${variant.id}`,
     parent: `shopify_product_${product.id}`,
@@ -25,7 +26,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity 
       name: [{ data: product.title, locale: config.defaultLocale }, { data: product.title, locale: config.secondaryLocale }],
       description: [{ data: product.body_html || product.title, locale: config.defaultLocale }, { data: product.body_html || product.title, locale: config.secondaryLocale }],
       price: [{ data: [{ amount: price, currency: "EUR" }] }],
-      manufacturer: [{ data: formatManufacturer(product.vendor) }],
+      manufacturer: [{ data: brandCode }],
       manufacturer_product_number: [{ data: String(variant.id) }],
       retailer_manufacturer_product_number: [{ data: variant.sku || String(variant.id) }],
       quantity: [{ data: quantity }],
@@ -33,7 +34,10 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity 
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
   if (variant.option1) payload.values.size = [{ data: variant.option1 }];
-  if (variant.option2) payload.values.color = [{ data: variant.option2.replace(/[_-]/g, " ") }];
+  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxxl|xxxxl|xxxs|xxs|one size|\d+|\d+\.\d+)$/i;
+  if (variant.option2 && !sizePattern.test(variant.option2.trim())) {
+    payload.values.color = [{ data: variant.option2.replace(/[_-]/g, " ") }];
+  }
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
     images.slice(0, 5).forEach((url, i) => { payload.values[`image_${i + 1}`] = [{ data: url }]; });
@@ -75,7 +79,7 @@ async function sync() {
     for (const variant of product.variants) {
       try {
         const inventoryLevels = await getInventoryLevels(variant.inventory_item_id);
-        await new Promise((r) => setTimeout(r, 150));
+        await new Promise((r) => setTimeout(r, 600));
 
         let stockQuantity = 0, markupRate = null, stockLocationName = null;
         for (const level of inventoryLevels) {
@@ -96,9 +100,11 @@ async function sync() {
 
         const originalPrice = parseFloat(variant.price);
         const compareAt = variant.compare_at_price ? parseFloat(variant.compare_at_price) : null;
+        const brandCode = findBrandCode(product.vendor);
+        if (!brandCode) { stats.skipped++; continue; }
         const { price, specialPrice } = calculatePrice(originalPrice, compareAt, markupRate);
 
-        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity });
+        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
         await upsertProduct(payload);
         stats.synced++;
         console.log(`  ✅ ${product.title} | ${variant.option1 || "-"} | €${price} | ${stockLocationName} | qty: ${stockQuantity}`);
