@@ -10,7 +10,7 @@ async function getToken() {
 
   const { data } = await axios.post(
     "https://content.winkelstraat.nl/api/oauth/v1/retailer/token",
-    { grant_type: "client_credentials" },
+    {},
     {
       headers: {
         "Authorization": "Basic " + credentials,
