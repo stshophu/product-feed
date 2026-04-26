@@ -7,16 +7,6 @@ const { getCategoryCode } = require("./categories");
 
 const isFullSync = process.argv.includes("--full");
 
-function getCategoryCode(productType) {
-  const categoryMap = {
-    "T-shirt": "7460", "Sneakers": "92", "Dress": "120",
-    "Jacket": "200", "Pants": "300", "Shoes": "92",
-    "Bag": "400", "Accessory": "500",
-  };
-  if (categoryMap[productType]) return categoryMap[productType];
-  const key = Object.keys(categoryMap).find((k) => productType?.toLowerCase().includes(k.toLowerCase()));
-  return categoryMap[key] || "120";
-}
 
 function cleanImages(product) {
   return (product.images || []).map((img) => img.src).filter((url) => {
