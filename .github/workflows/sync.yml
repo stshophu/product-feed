@@ -1,4 +1,4 @@
-name: Shopify → Winkelstraat Catalog Sync
+name: Shopify to Winkelstraat Catalog Sync
 
 on:
   schedule:
@@ -39,4 +39,10 @@ jobs:
           SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           WSNL_CLIENT_ID: ${{ secrets.WSNL_CLIENT_ID }}
-          WSNL_CLIENT
+          WSNL_CLIENT_SECRET: ${{ secrets.WSNL_CLIENT_SECRET }}
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "full" ]; then
+            node sync.js --full
+          else
+            node sync.js
+          fi
