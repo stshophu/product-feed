@@ -1,0 +1,42 @@
+name: Shopify → Winkelstraat Catalog Sync
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Sync mode"
+        required: true
+        default: "incremental"
+        type: choice
+        options:
+          - incremental
+          - full
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run incremental sync (scheduled)
+        if: github.event_name == 'schedule'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          WSNL_CLIENT_ID: ${{ secrets.WSNL_CLIENT_ID }}
+          WSNL_CLIENT_SECRET: ${{ secrets.WSNL_CLIENT_SECRET }}
+        run: node sync.js
+      - name: Run sync (manual)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          WSNL_CLIENT_ID: ${{ secrets.WSNL_CLIENT_ID }}
+          WSNL_CLIENT
