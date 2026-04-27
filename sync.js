@@ -34,7 +34,11 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
-  if (variant.option1) payload.values.size = [{ data: variant.option1 }];
+  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|xxxs|xxs|one.?size|\d+[\.,]?\d*|\d+\/\d+|one_size)$/i;
+  const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim());
+  const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
+  const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
+  if (sizeValue) payload.values.size = [{ data: sizeValue }];
   const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxxl|xxxxl|xxxs|xxs|one size|\d+|\d+\.\d+)$/i;
   if (variant.option2 && !sizePattern.test(variant.option2.trim())) {
     payload.values.color = [{ data: findColor(variant, product.tags) }];
