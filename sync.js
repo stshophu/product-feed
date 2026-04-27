@@ -40,10 +40,12 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
   const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|xxxs|xxs|one.?size|\d+[\.,]?\d*|\d+\/\d+|one_size)$/i;
-  const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim());
+  const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
+  const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
   const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
-  if (sizeValue) payload.values.size = [{ data: sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") }];
+  const cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
+  if (cleanSize && !colorWords.test(cleanSize)) payload.values.size = [{ data: cleanSize }];
   payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
