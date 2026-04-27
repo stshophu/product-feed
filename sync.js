@@ -6,8 +6,10 @@ const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 const { findColor } = require("./colormap");
+const { stripHtml } = require("./striphtml");
 
 const isFullSync = process.argv.includes("--full");
+
 
 
 function cleanImages(product) {
@@ -25,7 +27,10 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     category: getCategoryCode(product.product_type, product.tags),
     values: {
       name: [{ data: product.title, locale: config.defaultLocale }, { data: product.title, locale: config.secondaryLocale }],
-      description: [{ data: product.body_html || product.title, locale: config.defaultLocale }, { data: product.body_html || product.title, locale: config.secondaryLocale }],
+      description: [
+        { data: stripHtml(product.body_html) || product.title, locale: config.defaultLocale },
+        { data: stripHtml(product.body_html) || product.title, locale: config.secondaryLocale }
+      ],
       price: [{ data: [{ amount: price, currency: "EUR" }] }],
       manufacturer: [{ data: brandCode }],
       manufacturer_product_number: [{ data: String(variant.id) }],
@@ -39,10 +44,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
   const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
   if (sizeValue) payload.values.size = [{ data: sizeValue }];
-  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxxl|xxxxl|xxxs|xxs|one size|\d+|\d+\.\d+)$/i;
-  if (variant.option2 && !sizePattern.test(variant.option2.trim())) {
-    payload.values.color = [{ data: findColor(variant, product.tags) }];
-  }
+  payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
     images.slice(0, 5).forEach((url, i) => { payload.values[`image_${i + 1}`] = [{ data: url }]; });
