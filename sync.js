@@ -118,7 +118,18 @@ async function sync() {
         const { price, specialPrice } = calculatePrice(originalPrice, compareAt, markupRate);
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
-        await upsertProduct(payload);
+        try {
+          await upsertProduct(payload);
+        } catch(upsertErr) {
+          const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
+          if (msg.includes('Cursor not valid')) {
+            // Delete and recreate
+            await deleteProduct(payload.identifier);
+            await upsertProduct(payload);
+          } else {
+            throw upsertErr;
+          }
+        }
         stats.synced++;
         console.log(`  ✅ ${product.title} | ${variant.option1 || "-"} | €${price} | ${stockLocationName} | qty: ${stockQuantity}`);
       } catch (e) {
