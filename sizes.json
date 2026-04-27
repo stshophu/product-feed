@@ -1,0 +1,4106 @@
+[
+  {
+    "code": "0",
+    "attribute": "size",
+    "sort_order": 0,
+    "labels": {
+      "en_US": "0",
+      "nl_NL": "0"
+    }
+  },
+  {
+    "code": "0_3",
+    "attribute": "size",
+    "sort_order": 1,
+    "labels": {
+      "en_US": "0/3",
+      "nl_NL": "0/3"
+    }
+  },
+  {
+    "code": "00",
+    "attribute": "size",
+    "sort_order": 2,
+    "labels": {
+      "en_US": "00",
+      "nl_NL": "00"
+    }
+  },
+  {
+    "code": "1",
+    "attribute": "size",
+    "sort_order": 3,
+    "labels": {
+      "en_US": "1",
+      "nl_NL": "1"
+    }
+  },
+  {
+    "code": "1_3",
+    "attribute": "size",
+    "sort_order": 5,
+    "labels": {
+      "en_US": "1/3 M",
+      "nl_NL": "1/3 M"
+    }
+  },
+  {
+    "code": "1_m",
+    "attribute": "size",
+    "sort_order": 4,
+    "labels": {
+      "en_US": "1 M",
+      "nl_NL": "1 M"
+    }
+  },
+  {
+    "code": "10",
+    "attribute": "size",
+    "sort_order": 6,
+    "labels": {
+      "en_US": "10",
+      "nl_NL": "10"
+    }
+  },
+  {
+    "code": "10_5",
+    "attribute": "size",
+    "sort_order": 7,
+    "labels": {
+      "en_US": "10,5",
+      "nl_NL": "10,5"
+    }
+  },
+  {
+    "code": "100",
+    "attribute": "size",
+    "sort_order": 8,
+    "labels": {
+      "en_US": "100",
+      "nl_NL": "100"
+    }
+  },
+  {
+    "code": "104_4yr",
+    "attribute": "size",
+    "sort_order": 9,
+    "labels": {
+      "en_US": "104 (4YR)",
+      "nl_NL": "104 (4YR)"
+    }
+  },
+  {
+    "code": "105",
+    "attribute": "size",
+    "sort_order": 10,
+    "labels": {
+      "en_US": "105",
+      "nl_NL": "105"
+    }
+  },
+  {
+    "code": "11",
+    "attribute": "size",
+    "sort_order": 11,
+    "labels": {
+      "en_US": "11",
+      "nl_NL": "11"
+    }
+  },
+  {
+    "code": "11_5",
+    "attribute": "size",
+    "sort_order": 12,
+    "labels": {
+      "en_US": "11,5",
+      "nl_NL": "11,5"
+    }
+  },
+  {
+    "code": "110",
+    "attribute": "size",
+    "sort_order": 13,
+    "labels": {
+      "en_US": "110",
+      "nl_NL": "110"
+    }
+  },
+  {
+    "code": "110_5yr",
+    "attribute": "size",
+    "sort_order": 14,
+    "labels": {
+      "en_US": "110 (5YR)",
+      "nl_NL": "110 (5YR)"
+    }
+  },
+  {
+    "code": "115",
+    "attribute": "size",
+    "sort_order": 15,
+    "labels": {
+      "en_US": "115",
+      "nl_NL": "115"
+    }
+  },
+  {
+    "code": "116_6yr",
+    "attribute": "size",
+    "sort_order": 16,
+    "labels": {
+      "en_US": "116 (6YR)",
+      "nl_NL": "116 (6YR)"
+    }
+  },
+  {
+    "code": "12",
+    "attribute": "size",
+    "sort_order": 17,
+    "labels": {
+      "en_US": "12",
+      "nl_NL": "12"
+    }
+  },
+  {
+    "code": "12_24",
+    "attribute": "size",
+    "sort_order": 19,
+    "labels": {
+      "en_US": "12/24 M",
+      "nl_NL": "12/24 M"
+    }
+  },
+  {
+    "code": "12_5",
+    "attribute": "size",
+    "sort_order": 18,
+    "labels": {
+      "en_US": "12,5",
+      "nl_NL": "12,5"
+    }
+  },
+  {
+    "code": "120",
+    "attribute": "size",
+    "sort_order": 20,
+    "labels": {
+      "en_US": "120",
+      "nl_NL": "120"
+    }
+  },
+  {
+    "code": "122_7yr",
+    "attribute": "size",
+    "sort_order": 21,
+    "labels": {
+      "en_US": "122 (7YR)",
+      "nl_NL": "122 (7YR)"
+    }
+  },
+  {
+    "code": "125",
+    "attribute": "size",
+    "sort_order": 410,
+    "labels": {
+      "en_US": "125",
+      "nl_NL": "125"
+    }
+  },
+  {
+    "code": "128_8yr",
+    "attribute": "size",
+    "sort_order": 22,
+    "labels": {
+      "en_US": "128 (8YR)",
+      "nl_NL": "128 (8YR)"
+    }
+  },
+  {
+    "code": "13",
+    "attribute": "size",
+    "sort_order": 23,
+    "labels": {
+      "en_US": "13",
+      "nl_NL": "13"
+    }
+  },
+  {
+    "code": "134_9yr",
+    "attribute": "size",
+    "sort_order": 24,
+    "labels": {
+      "en_US": "134 (9YR)",
+      "nl_NL": "134 (9YR)"
+    }
+  },
+  {
+    "code": "14",
+    "attribute": "size",
+    "sort_order": 25,
+    "labels": {
+      "en_US": "14",
+      "nl_NL": "14"
+    }
+  },
+  {
+    "code": "140_10yr",
+    "attribute": "size",
+    "sort_order": 26,
+    "labels": {
+      "en_US": "140 (10YR)",
+      "nl_NL": "140 (10YR)"
+    }
+  },
+  {
+    "code": "146_11yr",
+    "attribute": "size",
+    "sort_order": 27,
+    "labels": {
+      "en_US": "146 (11YR)",
+      "nl_NL": "146 (11YR)"
+    }
+  },
+  {
+    "code": "15",
+    "attribute": "size",
+    "sort_order": 28,
+    "labels": {
+      "en_US": "15",
+      "nl_NL": "15"
+    }
+  },
+  {
+    "code": "15_5",
+    "attribute": "size",
+    "sort_order": 29,
+    "labels": {
+      "en_US": "15,5",
+      "nl_NL": "15,5"
+    }
+  },
+  {
+    "code": "152_12yr",
+    "attribute": "size",
+    "sort_order": 30,
+    "labels": {
+      "en_US": "152 (12YR)",
+      "nl_NL": "152 (12YR)"
+    }
+  },
+  {
+    "code": "154",
+    "attribute": "size",
+    "sort_order": 31,
+    "labels": {
+      "en_US": "154",
+      "nl_NL": "154"
+    }
+  },
+  {
+    "code": "158_13yr",
+    "attribute": "size",
+    "sort_order": 32,
+    "labels": {
+      "en_US": "158 (13YR)",
+      "nl_NL": "158 (13YR)"
+    }
+  },
+  {
+    "code": "16",
+    "attribute": "size",
+    "sort_order": 33,
+    "labels": {
+      "en_US": "16",
+      "nl_NL": "16"
+    }
+  },
+  {
+    "code": "16_5",
+    "attribute": "size",
+    "sort_order": 34,
+    "labels": {
+      "en_US": "16,5",
+      "nl_NL": "16,5"
+    }
+  },
+  {
+    "code": "164_14yr",
+    "attribute": "size",
+    "sort_order": 35,
+    "labels": {
+      "en_US": "164 (14YR)",
+      "nl_NL": "164 (14YR)"
+    }
+  },
+  {
+    "code": "17",
+    "attribute": "size",
+    "sort_order": 36,
+    "labels": {
+      "en_US": "17",
+      "nl_NL": "17"
+    }
+  },
+  {
+    "code": "17_5",
+    "attribute": "size",
+    "sort_order": 435,
+    "labels": {
+      "en_US": "17,5",
+      "nl_NL": "17,5"
+    }
+  },
+  {
+    "code": "170_15yr",
+    "attribute": "size",
+    "sort_order": 37,
+    "labels": {
+      "en_US": "170 (15YR)",
+      "nl_NL": "170 (15YR)"
+    }
+  },
+  {
+    "code": "176_16yr",
+    "attribute": "size",
+    "sort_order": 38,
+    "labels": {
+      "en_US": "176 (16YR)",
+      "nl_NL": "176 (16YR)"
+    }
+  },
+  {
+    "code": "18",
+    "attribute": "size",
+    "sort_order": 39,
+    "labels": {
+      "en_US": "18",
+      "nl_NL": "18"
+    }
+  },
+  {
+    "code": "18_5",
+    "attribute": "size",
+    "sort_order": 421,
+    "labels": {
+      "en_US": "18,5",
+      "nl_NL": "18,5"
+    }
+  },
+  {
+    "code": "188",
+    "attribute": "size",
+    "sort_order": 40,
+    "labels": {
+      "en_US": "188",
+      "nl_NL": "188"
+    }
+  },
+  {
+    "code": "19",
+    "attribute": "size",
+    "sort_order": 41,
+    "labels": {
+      "en_US": "19",
+      "nl_NL": "19"
+    }
+  },
+  {
+    "code": "19_5",
+    "attribute": "size",
+    "sort_order": 324,
+    "labels": {
+      "en_US": "19,5",
+      "nl_NL": "19,5"
+    }
+  },
+  {
+    "code": "2",
+    "attribute": "size",
+    "sort_order": 42,
+    "labels": {
+      "en_US": "2",
+      "nl_NL": "2"
+    }
+  },
+  {
+    "code": "20",
+    "attribute": "size",
+    "sort_order": 43,
+    "labels": {
+      "en_US": "20",
+      "nl_NL": "20"
+    }
+  },
+  {
+    "code": "20_5",
+    "attribute": "size",
+    "sort_order": 323,
+    "labels": {
+      "en_US": "20,5",
+      "nl_NL": "20,5"
+    }
+  },
+  {
+    "code": "21",
+    "attribute": "size",
+    "sort_order": 44,
+    "labels": {
+      "en_US": "21",
+      "nl_NL": "21"
+    }
+  },
+  {
+    "code": "21_5",
+    "attribute": "size",
+    "sort_order": 325,
+    "labels": {
+      "en_US": "21,5",
+      "nl_NL": "21,5"
+    }
+  },
+  {
+    "code": "22",
+    "attribute": "size",
+    "sort_order": 45,
+    "labels": {
+      "en_US": "22",
+      "nl_NL": "22"
+    }
+  },
+  {
+    "code": "22_5",
+    "attribute": "size",
+    "sort_order": 46,
+    "labels": {
+      "en_US": "22,5",
+      "nl_NL": "22,5"
+    }
+  },
+  {
+    "code": "23",
+    "attribute": "size",
+    "sort_order": 47,
+    "labels": {
+      "en_US": "23",
+      "nl_NL": "23"
+    }
+  },
+  {
+    "code": "23_26",
+    "attribute": "size",
+    "sort_order": 346,
+    "labels": {
+      "en_US": "23/26",
+      "nl_NL": "23/26"
+    }
+  },
+  {
+    "code": "23_5",
+    "attribute": "size",
+    "sort_order": 48,
+    "labels": {
+      "en_US": "23,5",
+      "nl_NL": "23,5"
+    }
+  },
+  {
+    "code": "24",
+    "attribute": "size",
+    "sort_order": 49,
+    "labels": {
+      "en_US": "24",
+      "nl_NL": "24"
+    }
+  },
+  {
+    "code": "24_26",
+    "attribute": "size",
+    "sort_order": 347,
+    "labels": {
+      "en_US": "24/26",
+      "nl_NL": "24/26"
+    }
+  },
+  {
+    "code": "24_30",
+    "attribute": "size",
+    "sort_order": 50,
+    "labels": {
+      "en_US": "24/30",
+      "nl_NL": "24/30"
+    }
+  },
+  {
+    "code": "24_31",
+    "attribute": "size",
+    "sort_order": 51,
+    "labels": {
+      "en_US": "24/31",
+      "nl_NL": "24/31"
+    }
+  },
+  {
+    "code": "24_32",
+    "attribute": "size",
+    "sort_order": 52,
+    "labels": {
+      "en_US": "24/32",
+      "nl_NL": "24/32"
+    }
+  },
+  {
+    "code": "24_33",
+    "attribute": "size",
+    "sort_order": 53,
+    "labels": {
+      "en_US": "24/33",
+      "nl_NL": "24/33"
+    }
+  },
+  {
+    "code": "24_34",
+    "attribute": "size",
+    "sort_order": 54,
+    "labels": {
+      "en_US": "24/34",
+      "nl_NL": "24/34"
+    }
+  },
+  {
+    "code": "24_36",
+    "attribute": "size",
+    "sort_order": 55,
+    "labels": {
+      "en_US": "24/36",
+      "nl_NL": "24/36"
+    }
+  },
+  {
+    "code": "24_5",
+    "attribute": "size",
+    "sort_order": 316,
+    "labels": {
+      "en_US": "24,5",
+      "nl_NL": "24,5"
+    }
+  },
+  {
+    "code": "25",
+    "attribute": "size",
+    "sort_order": 56,
+    "labels": {
+      "en_US": "25",
+      "nl_NL": "25"
+    }
+  },
+  {
+    "code": "25_26",
+    "attribute": "size",
+    "sort_order": 330,
+    "labels": {
+      "en_US": "25/26",
+      "nl_NL": "25/26"
+    }
+  },
+  {
+    "code": "25_28",
+    "attribute": "size",
+    "sort_order": 329,
+    "labels": {
+      "en_US": "25/28",
+      "nl_NL": "25/28"
+    }
+  },
+  {
+    "code": "25_30",
+    "attribute": "size",
+    "sort_order": 57,
+    "labels": {
+      "en_US": "25/30",
+      "nl_NL": "25/30"
+    }
+  },
+  {
+    "code": "25_31",
+    "attribute": "size",
+    "sort_order": 58,
+    "labels": {
+      "en_US": "25/31",
+      "nl_NL": "25/31"
+    }
+  },
+  {
+    "code": "25_32",
+    "attribute": "size",
+    "sort_order": 59,
+    "labels": {
+      "en_US": "25/32",
+      "nl_NL": "25/32"
+    }
+  },
+  {
+    "code": "25_33",
+    "attribute": "size",
+    "sort_order": 60,
+    "labels": {
+      "en_US": "25/33",
+      "nl_NL": "25/33"
+    }
+  },
+  {
+    "code": "25_34",
+    "attribute": "size",
+    "sort_order": 61,
+    "labels": {
+      "en_US": "25/34",
+      "nl_NL": "25/34"
+    }
+  },
+  {
+    "code": "25_5",
+    "attribute": "size",
+    "sort_order": 317,
+    "labels": {
+      "en_US": "25,5",
+      "nl_NL": "25,5"
+    }
+  },
+  {
+    "code": "26",
+    "attribute": "size",
+    "sort_order": 62,
+    "labels": {
+      "en_US": "26",
+      "nl_NL": "26"
+    }
+  },
+  {
+    "code": "26_26",
+    "attribute": "size",
+    "sort_order": 337,
+    "labels": {
+      "en_US": "26/26",
+      "nl_NL": "26/26"
+    }
+  },
+  {
+    "code": "26_27",
+    "attribute": "size",
+    "sort_order": 350,
+    "labels": {
+      "en_US": "26/27",
+      "nl_NL": "26/27"
+    }
+  },
+  {
+    "code": "26_28",
+    "attribute": "size",
+    "sort_order": 331,
+    "labels": {
+      "en_US": "26/28",
+      "nl_NL": "26/28"
+    }
+  },
+  {
+    "code": "26_30",
+    "attribute": "size",
+    "sort_order": 63,
+    "labels": {
+      "en_US": "26/30",
+      "nl_NL": "26/30"
+    }
+  },
+  {
+    "code": "26_31",
+    "attribute": "size",
+    "sort_order": 64,
+    "labels": {
+      "en_US": "26/31",
+      "nl_NL": "26/31"
+    }
+  },
+  {
+    "code": "26_32",
+    "attribute": "size",
+    "sort_order": 65,
+    "labels": {
+      "en_US": "26/32",
+      "nl_NL": "26/32"
+    }
+  },
+  {
+    "code": "26_33",
+    "attribute": "size",
+    "sort_order": 66,
+    "labels": {
+      "en_US": "26/33",
+      "nl_NL": "26/33"
+    }
+  },
+  {
+    "code": "26_34",
+    "attribute": "size",
+    "sort_order": 67,
+    "labels": {
+      "en_US": "26/34",
+      "nl_NL": "26/34"
+    }
+  },
+  {
+    "code": "26_5",
+    "attribute": "size",
+    "sort_order": 318,
+    "labels": {
+      "en_US": "26,5",
+      "nl_NL": "26,5"
+    }
+  },
+  {
+    "code": "27",
+    "attribute": "size",
+    "sort_order": 68,
+    "labels": {
+      "en_US": "27",
+      "nl_NL": "27"
+    }
+  },
+  {
+    "code": "27_26",
+    "attribute": "size",
+    "sort_order": 343,
+    "labels": {
+      "en_US": "27/26",
+      "nl_NL": "27/26"
+    }
+  },
+  {
+    "code": "27_28",
+    "attribute": "size",
+    "sort_order": 332,
+    "labels": {
+      "en_US": "27/28",
+      "nl_NL": "27/28"
+    }
+  },
+  {
+    "code": "27_30",
+    "attribute": "size",
+    "sort_order": 70,
+    "labels": {
+      "en_US": "27/30",
+      "nl_NL": "27/30"
+    }
+  },
+  {
+    "code": "27_31",
+    "attribute": "size",
+    "sort_order": 71,
+    "labels": {
+      "en_US": "27/31",
+      "nl_NL": "27/31"
+    }
+  },
+  {
+    "code": "27_32",
+    "attribute": "size",
+    "sort_order": 72,
+    "labels": {
+      "en_US": "27/32",
+      "nl_NL": "27/32"
+    }
+  },
+  {
+    "code": "27_33",
+    "attribute": "size",
+    "sort_order": 73,
+    "labels": {
+      "en_US": "27/33",
+      "nl_NL": "27/33"
+    }
+  },
+  {
+    "code": "27_34",
+    "attribute": "size",
+    "sort_order": 74,
+    "labels": {
+      "en_US": "27/34",
+      "nl_NL": "27/34"
+    }
+  },
+  {
+    "code": "27_5",
+    "attribute": "size",
+    "sort_order": 69,
+    "labels": {
+      "en_US": "27,5",
+      "nl_NL": "27,5"
+    }
+  },
+  {
+    "code": "28",
+    "attribute": "size",
+    "sort_order": 75,
+    "labels": {
+      "en_US": "28",
+      "nl_NL": "28"
+    }
+  },
+  {
+    "code": "28_26",
+    "attribute": "size",
+    "sort_order": 345,
+    "labels": {
+      "en_US": "28/26",
+      "nl_NL": "28/26"
+    }
+  },
+  {
+    "code": "28_28",
+    "attribute": "size",
+    "sort_order": 335,
+    "labels": {
+      "en_US": "28/28",
+      "nl_NL": "28/28"
+    }
+  },
+  {
+    "code": "28_30",
+    "attribute": "size",
+    "sort_order": 77,
+    "labels": {
+      "en_US": "28/30",
+      "nl_NL": "28/30"
+    }
+  },
+  {
+    "code": "28_31",
+    "attribute": "size",
+    "sort_order": 78,
+    "labels": {
+      "en_US": "28/31",
+      "nl_NL": "28/31"
+    }
+  },
+  {
+    "code": "28_32",
+    "attribute": "size",
+    "sort_order": 79,
+    "labels": {
+      "en_US": "28/32",
+      "nl_NL": "28/32"
+    }
+  },
+  {
+    "code": "28_33",
+    "attribute": "size",
+    "sort_order": 80,
+    "labels": {
+      "en_US": "28/33",
+      "nl_NL": "28/33"
+    }
+  },
+  {
+    "code": "28_34",
+    "attribute": "size",
+    "sort_order": 81,
+    "labels": {
+      "en_US": "28/34",
+      "nl_NL": "28/34"
+    }
+  },
+  {
+    "code": "28_5",
+    "attribute": "size",
+    "sort_order": 76,
+    "labels": {
+      "en_US": "28,5",
+      "nl_NL": "28,5"
+    }
+  },
+  {
+    "code": "29",
+    "attribute": "size",
+    "sort_order": 82,
+    "labels": {
+      "en_US": "29",
+      "nl_NL": "29"
+    }
+  },
+  {
+    "code": "29_26",
+    "attribute": "size",
+    "sort_order": 338,
+    "labels": {
+      "en_US": "29/26",
+      "nl_NL": "29/26"
+    }
+  },
+  {
+    "code": "29_28",
+    "attribute": "size",
+    "sort_order": 336,
+    "labels": {
+      "en_US": "29/28",
+      "nl_NL": "29/28"
+    }
+  },
+  {
+    "code": "29_30",
+    "attribute": "size",
+    "sort_order": 83,
+    "labels": {
+      "en_US": "29/30",
+      "nl_NL": "29/30"
+    }
+  },
+  {
+    "code": "29_31",
+    "attribute": "size",
+    "sort_order": 84,
+    "labels": {
+      "en_US": "29/31",
+      "nl_NL": "29/31"
+    }
+  },
+  {
+    "code": "29_32",
+    "attribute": "size",
+    "sort_order": 85,
+    "labels": {
+      "en_US": "29/32",
+      "nl_NL": "29/32"
+    }
+  },
+  {
+    "code": "29_33",
+    "attribute": "size",
+    "sort_order": 86,
+    "labels": {
+      "en_US": "29/33",
+      "nl_NL": "29/33"
+    }
+  },
+  {
+    "code": "29_34",
+    "attribute": "size",
+    "sort_order": 87,
+    "labels": {
+      "en_US": "29/34",
+      "nl_NL": "29/34"
+    }
+  },
+  {
+    "code": "29_5",
+    "attribute": "size",
+    "sort_order": 319,
+    "labels": {
+      "en_US": "29,5",
+      "nl_NL": "29,5"
+    }
+  },
+  {
+    "code": "3",
+    "attribute": "size",
+    "sort_order": 88,
+    "labels": {
+      "en_US": "3",
+      "nl_NL": "3"
+    }
+  },
+  {
+    "code": "3_6",
+    "attribute": "size",
+    "sort_order": 90,
+    "labels": {
+      "en_US": "3/6 M",
+      "nl_NL": "3/6 M"
+    }
+  },
+  {
+    "code": "3_m",
+    "attribute": "size",
+    "sort_order": 89,
+    "labels": {
+      "en_US": "3 M",
+      "nl_NL": "3 M"
+    }
+  },
+  {
+    "code": "30",
+    "attribute": "size",
+    "sort_order": 91,
+    "labels": {
+      "en_US": "30",
+      "nl_NL": "30"
+    }
+  },
+  {
+    "code": "30_26",
+    "attribute": "size",
+    "sort_order": 334,
+    "labels": {
+      "en_US": "30/26",
+      "nl_NL": "30/26"
+    }
+  },
+  {
+    "code": "30_28",
+    "attribute": "size",
+    "sort_order": 340,
+    "labels": {
+      "en_US": "30/28",
+      "nl_NL": "30/28"
+    }
+  },
+  {
+    "code": "30_30",
+    "attribute": "size",
+    "sort_order": 92,
+    "labels": {
+      "en_US": "30/30",
+      "nl_NL": "30/30"
+    }
+  },
+  {
+    "code": "30_31",
+    "attribute": "size",
+    "sort_order": 93,
+    "labels": {
+      "en_US": "30/31",
+      "nl_NL": "30/31"
+    }
+  },
+  {
+    "code": "30_32",
+    "attribute": "size",
+    "sort_order": 94,
+    "labels": {
+      "en_US": "30/32",
+      "nl_NL": "30/32"
+    }
+  },
+  {
+    "code": "30_33",
+    "attribute": "size",
+    "sort_order": 95,
+    "labels": {
+      "en_US": "30/33",
+      "nl_NL": "30/33"
+    }
+  },
+  {
+    "code": "30_34",
+    "attribute": "size",
+    "sort_order": 96,
+    "labels": {
+      "en_US": "30/34",
+      "nl_NL": "30/34"
+    }
+  },
+  {
+    "code": "30_36",
+    "attribute": "size",
+    "sort_order": 327,
+    "labels": {
+      "en_US": "30/36",
+      "nl_NL": "30/36"
+    }
+  },
+  {
+    "code": "30_5",
+    "attribute": "size",
+    "sort_order": 320,
+    "labels": {
+      "en_US": "30,5",
+      "nl_NL": "30,5"
+    }
+  },
+  {
+    "code": "31",
+    "attribute": "size",
+    "sort_order": 97,
+    "labels": {
+      "en_US": "31",
+      "nl_NL": "31"
+    }
+  },
+  {
+    "code": "31_28",
+    "attribute": "size",
+    "sort_order": 344,
+    "labels": {
+      "en_US": "31/28",
+      "nl_NL": "31/28"
+    }
+  },
+  {
+    "code": "31_30",
+    "attribute": "size",
+    "sort_order": 98,
+    "labels": {
+      "en_US": "31/30",
+      "nl_NL": "31/30"
+    }
+  },
+  {
+    "code": "31_31",
+    "attribute": "size",
+    "sort_order": 99,
+    "labels": {
+      "en_US": "31/31",
+      "nl_NL": "31/31"
+    }
+  },
+  {
+    "code": "31_32",
+    "attribute": "size",
+    "sort_order": 100,
+    "labels": {
+      "en_US": "31/32",
+      "nl_NL": "31/32"
+    }
+  },
+  {
+    "code": "31_33",
+    "attribute": "size",
+    "sort_order": 101,
+    "labels": {
+      "en_US": "31/33",
+      "nl_NL": "31/33"
+    }
+  },
+  {
+    "code": "31_34",
+    "attribute": "size",
+    "sort_order": 102,
+    "labels": {
+      "en_US": "31/34",
+      "nl_NL": "31/34"
+    }
+  },
+  {
+    "code": "31_36",
+    "attribute": "size",
+    "sort_order": 328,
+    "labels": {
+      "en_US": "31/36",
+      "nl_NL": "31/36"
+    }
+  },
+  {
+    "code": "31_5",
+    "attribute": "size",
+    "sort_order": 321,
+    "labels": {
+      "en_US": "31,5",
+      "nl_NL": "31,5"
+    }
+  },
+  {
+    "code": "32",
+    "attribute": "size",
+    "sort_order": 103,
+    "labels": {
+      "en_US": "32",
+      "nl_NL": "32"
+    }
+  },
+  {
+    "code": "32_28",
+    "attribute": "size",
+    "sort_order": 333,
+    "labels": {
+      "en_US": "32/28",
+      "nl_NL": "32/28"
+    }
+  },
+  {
+    "code": "32_30",
+    "attribute": "size",
+    "sort_order": 105,
+    "labels": {
+      "en_US": "32/30",
+      "nl_NL": "32/30"
+    }
+  },
+  {
+    "code": "32_31",
+    "attribute": "size",
+    "sort_order": 106,
+    "labels": {
+      "en_US": "32/31",
+      "nl_NL": "32/31"
+    }
+  },
+  {
+    "code": "32_32",
+    "attribute": "size",
+    "sort_order": 107,
+    "labels": {
+      "en_US": "32/32",
+      "nl_NL": "32/32"
+    }
+  },
+  {
+    "code": "32_33",
+    "attribute": "size",
+    "sort_order": 108,
+    "labels": {
+      "en_US": "32/33",
+      "nl_NL": "32/33"
+    }
+  },
+  {
+    "code": "32_34",
+    "attribute": "size",
+    "sort_order": 109,
+    "labels": {
+      "en_US": "32/34",
+      "nl_NL": "32/34"
+    }
+  },
+  {
+    "code": "32_36",
+    "attribute": "size",
+    "sort_order": 110,
+    "labels": {
+      "en_US": "32/36",
+      "nl_NL": "32/36"
+    }
+  },
+  {
+    "code": "32_38",
+    "attribute": "size",
+    "sort_order": 111,
+    "labels": {
+      "en_US": "32/38",
+      "nl_NL": "32/38"
+    }
+  },
+  {
+    "code": "32_40",
+    "attribute": "size",
+    "sort_order": 112,
+    "labels": {
+      "en_US": "32/40",
+      "nl_NL": "32/40"
+    }
+  },
+  {
+    "code": "32_5",
+    "attribute": "size",
+    "sort_order": 104,
+    "labels": {
+      "en_US": "32,5",
+      "nl_NL": "32,5"
+    }
+  },
+  {
+    "code": "33",
+    "attribute": "size",
+    "sort_order": 113,
+    "labels": {
+      "en_US": "33",
+      "nl_NL": "33"
+    }
+  },
+  {
+    "code": "33_30",
+    "attribute": "size",
+    "sort_order": 115,
+    "labels": {
+      "en_US": "33/30",
+      "nl_NL": "33/30"
+    }
+  },
+  {
+    "code": "33_31",
+    "attribute": "size",
+    "sort_order": 116,
+    "labels": {
+      "en_US": "33/31",
+      "nl_NL": "33/31"
+    }
+  },
+  {
+    "code": "33_32",
+    "attribute": "size",
+    "sort_order": 117,
+    "labels": {
+      "en_US": "33/32",
+      "nl_NL": "33/32"
+    }
+  },
+  {
+    "code": "33_33",
+    "attribute": "size",
+    "sort_order": 118,
+    "labels": {
+      "en_US": "33/33",
+      "nl_NL": "33/33"
+    }
+  },
+  {
+    "code": "33_34",
+    "attribute": "size",
+    "sort_order": 119,
+    "labels": {
+      "en_US": "33/34",
+      "nl_NL": "33/34"
+    }
+  },
+  {
+    "code": "33_36",
+    "attribute": "size",
+    "sort_order": 120,
+    "labels": {
+      "en_US": "33/36",
+      "nl_NL": "33/36"
+    }
+  },
+  {
+    "code": "33_5",
+    "attribute": "size",
+    "sort_order": 114,
+    "labels": {
+      "en_US": "33,5",
+      "nl_NL": "33,5"
+    }
+  },
+  {
+    "code": "34",
+    "attribute": "size",
+    "sort_order": 121,
+    "labels": {
+      "en_US": "34",
+      "nl_NL": "34"
+    }
+  },
+  {
+    "code": "34_1_3",
+    "attribute": "size",
+    "sort_order": 122,
+    "labels": {
+      "en_US": "34 1/3",
+      "nl_NL": "34 1/3"
+    }
+  },
+  {
+    "code": "34_2_3",
+    "attribute": "size",
+    "sort_order": 123,
+    "labels": {
+      "en_US": "34 2/3",
+      "nl_NL": "34 2/3"
+    }
+  },
+  {
+    "code": "34_30",
+    "attribute": "size",
+    "sort_order": 125,
+    "labels": {
+      "en_US": "34/30",
+      "nl_NL": "34/30"
+    }
+  },
+  {
+    "code": "34_31",
+    "attribute": "size",
+    "sort_order": 126,
+    "labels": {
+      "en_US": "34/31",
+      "nl_NL": "34/31"
+    }
+  },
+  {
+    "code": "34_32",
+    "attribute": "size",
+    "sort_order": 127,
+    "labels": {
+      "en_US": "34/32",
+      "nl_NL": "34/32"
+    }
+  },
+  {
+    "code": "34_33",
+    "attribute": "size",
+    "sort_order": 128,
+    "labels": {
+      "en_US": "34/33",
+      "nl_NL": "34/33"
+    }
+  },
+  {
+    "code": "34_34",
+    "attribute": "size",
+    "sort_order": 129,
+    "labels": {
+      "en_US": "34/34",
+      "nl_NL": "34/34"
+    }
+  },
+  {
+    "code": "34_36",
+    "attribute": "size",
+    "sort_order": 130,
+    "labels": {
+      "en_US": "34/36",
+      "nl_NL": "34/36"
+    }
+  },
+  {
+    "code": "34_38",
+    "attribute": "size",
+    "sort_order": 131,
+    "labels": {
+      "en_US": "34/38",
+      "nl_NL": "34/38"
+    }
+  },
+  {
+    "code": "34_40",
+    "attribute": "size",
+    "sort_order": 132,
+    "labels": {
+      "en_US": "34/40",
+      "nl_NL": "34/40"
+    }
+  },
+  {
+    "code": "34_5",
+    "attribute": "size",
+    "sort_order": 124,
+    "labels": {
+      "en_US": "34,5",
+      "nl_NL": "34,5"
+    }
+  },
+  {
+    "code": "35",
+    "attribute": "size",
+    "sort_order": 133,
+    "labels": {
+      "en_US": "35",
+      "nl_NL": "35"
+    }
+  },
+  {
+    "code": "35_1_3",
+    "attribute": "size",
+    "sort_order": 134,
+    "labels": {
+      "en_US": "35 1/3",
+      "nl_NL": "35 1/3"
+    }
+  },
+  {
+    "code": "35_2_3",
+    "attribute": "size",
+    "sort_order": 135,
+    "labels": {
+      "en_US": "35 2/3",
+      "nl_NL": "35 2/3"
+    }
+  },
+  {
+    "code": "35_30",
+    "attribute": "size",
+    "sort_order": 137,
+    "labels": {
+      "en_US": "35/30",
+      "nl_NL": "35/30"
+    }
+  },
+  {
+    "code": "35_31",
+    "attribute": "size",
+    "sort_order": 138,
+    "labels": {
+      "en_US": "35/31",
+      "nl_NL": "35/31"
+    }
+  },
+  {
+    "code": "35_32",
+    "attribute": "size",
+    "sort_order": 139,
+    "labels": {
+      "en_US": "35/32",
+      "nl_NL": "35/32"
+    }
+  },
+  {
+    "code": "35_33",
+    "attribute": "size",
+    "sort_order": 140,
+    "labels": {
+      "en_US": "35/33",
+      "nl_NL": "35/33"
+    }
+  },
+  {
+    "code": "35_34",
+    "attribute": "size",
+    "sort_order": 141,
+    "labels": {
+      "en_US": "35/34",
+      "nl_NL": "35/34"
+    }
+  },
+  {
+    "code": "35_36",
+    "attribute": "size",
+    "sort_order": 142,
+    "labels": {
+      "en_US": "35/36",
+      "nl_NL": "35/36"
+    }
+  },
+  {
+    "code": "35_38",
+    "attribute": "size",
+    "sort_order": 418,
+    "labels": {
+      "en_US": "35/38",
+      "nl_NL": "35/38"
+    }
+  },
+  {
+    "code": "35_5",
+    "attribute": "size",
+    "sort_order": 136,
+    "labels": {
+      "en_US": "35,5",
+      "nl_NL": "35,5"
+    }
+  },
+  {
+    "code": "36",
+    "attribute": "size",
+    "sort_order": 143,
+    "labels": {
+      "en_US": "36",
+      "nl_NL": "36"
+    }
+  },
+  {
+    "code": "36_1_3",
+    "attribute": "size",
+    "sort_order": 144,
+    "labels": {
+      "en_US": "36 1/3",
+      "nl_NL": "36 1/3"
+    }
+  },
+  {
+    "code": "36_2_3",
+    "attribute": "size",
+    "sort_order": 145,
+    "labels": {
+      "en_US": "36 2/3",
+      "nl_NL": "36 2/3"
+    }
+  },
+  {
+    "code": "36_30",
+    "attribute": "size",
+    "sort_order": 147,
+    "labels": {
+      "en_US": "36/30",
+      "nl_NL": "36/30"
+    }
+  },
+  {
+    "code": "36_31",
+    "attribute": "size",
+    "sort_order": 148,
+    "labels": {
+      "en_US": "36/31",
+      "nl_NL": "36/31"
+    }
+  },
+  {
+    "code": "36_32",
+    "attribute": "size",
+    "sort_order": 149,
+    "labels": {
+      "en_US": "36/32",
+      "nl_NL": "36/32"
+    }
+  },
+  {
+    "code": "36_33",
+    "attribute": "size",
+    "sort_order": 150,
+    "labels": {
+      "en_US": "36/33",
+      "nl_NL": "36/33"
+    }
+  },
+  {
+    "code": "36_34",
+    "attribute": "size",
+    "sort_order": 151,
+    "labels": {
+      "en_US": "36/34",
+      "nl_NL": "36/34"
+    }
+  },
+  {
+    "code": "36_36",
+    "attribute": "size",
+    "sort_order": 152,
+    "labels": {
+      "en_US": "36/36",
+      "nl_NL": "36/36"
+    }
+  },
+  {
+    "code": "36_38",
+    "attribute": "size",
+    "sort_order": 153,
+    "labels": {
+      "en_US": "36/38",
+      "nl_NL": "36/38"
+    }
+  },
+  {
+    "code": "36_40",
+    "attribute": "size",
+    "sort_order": 154,
+    "labels": {
+      "en_US": "36/40",
+      "nl_NL": "36/40"
+    }
+  },
+  {
+    "code": "36_5",
+    "attribute": "size",
+    "sort_order": 146,
+    "labels": {
+      "en_US": "36,5",
+      "nl_NL": "36,5"
+    }
+  },
+  {
+    "code": "37",
+    "attribute": "size",
+    "sort_order": 155,
+    "labels": {
+      "en_US": "37",
+      "nl_NL": "37"
+    }
+  },
+  {
+    "code": "37_1_3",
+    "attribute": "size",
+    "sort_order": 156,
+    "labels": {
+      "en_US": "37 1/3",
+      "nl_NL": "37 1/3"
+    }
+  },
+  {
+    "code": "37_2_3",
+    "attribute": "size",
+    "sort_order": 157,
+    "labels": {
+      "en_US": "37 2/3",
+      "nl_NL": "37 2/3"
+    }
+  },
+  {
+    "code": "37_5",
+    "attribute": "size",
+    "sort_order": 158,
+    "labels": {
+      "en_US": "37,5",
+      "nl_NL": "37,5"
+    }
+  },
+  {
+    "code": "38",
+    "attribute": "size",
+    "sort_order": 159,
+    "labels": {
+      "en_US": "38",
+      "nl_NL": "38"
+    }
+  },
+  {
+    "code": "38_1_3",
+    "attribute": "size",
+    "sort_order": 160,
+    "labels": {
+      "en_US": "38 1/3",
+      "nl_NL": "38 1/3"
+    }
+  },
+  {
+    "code": "38_2_3",
+    "attribute": "size",
+    "sort_order": 161,
+    "labels": {
+      "en_US": "38 2/3",
+      "nl_NL": "38 2/3"
+    }
+  },
+  {
+    "code": "38_30",
+    "attribute": "size",
+    "sort_order": 163,
+    "labels": {
+      "en_US": "38/30",
+      "nl_NL": "38/30"
+    }
+  },
+  {
+    "code": "38_31",
+    "attribute": "size",
+    "sort_order": 164,
+    "labels": {
+      "en_US": "38/31",
+      "nl_NL": "38/31"
+    }
+  },
+  {
+    "code": "38_32",
+    "attribute": "size",
+    "sort_order": 165,
+    "labels": {
+      "en_US": "38/32",
+      "nl_NL": "38/32"
+    }
+  },
+  {
+    "code": "38_33",
+    "attribute": "size",
+    "sort_order": 166,
+    "labels": {
+      "en_US": "38/33",
+      "nl_NL": "38/33"
+    }
+  },
+  {
+    "code": "38_34",
+    "attribute": "size",
+    "sort_order": 167,
+    "labels": {
+      "en_US": "38/34",
+      "nl_NL": "38/34"
+    }
+  },
+  {
+    "code": "38_36",
+    "attribute": "size",
+    "sort_order": 168,
+    "labels": {
+      "en_US": "38/36",
+      "nl_NL": "38/36"
+    }
+  },
+  {
+    "code": "38_38",
+    "attribute": "size",
+    "sort_order": 169,
+    "labels": {
+      "en_US": "38/38",
+      "nl_NL": "38/38"
+    }
+  },
+  {
+    "code": "38_40",
+    "attribute": "size",
+    "sort_order": 170,
+    "labels": {
+      "en_US": "38/40",
+      "nl_NL": "38/40"
+    }
+  },
+  {
+    "code": "38_5",
+    "attribute": "size",
+    "sort_order": 162,
+    "labels": {
+      "en_US": "38,5",
+      "nl_NL": "38,5"
+    }
+  },
+  {
+    "code": "39",
+    "attribute": "size",
+    "sort_order": 171,
+    "labels": {
+      "en_US": "39",
+      "nl_NL": "39"
+    }
+  },
+  {
+    "code": "39_1_3",
+    "attribute": "size",
+    "sort_order": 172,
+    "labels": {
+      "en_US": "39 1/3",
+      "nl_NL": "39 1/3"
+    }
+  },
+  {
+    "code": "39_2_3",
+    "attribute": "size",
+    "sort_order": 173,
+    "labels": {
+      "en_US": "39 2/3",
+      "nl_NL": "39 2/3"
+    }
+  },
+  {
+    "code": "39_41",
+    "attribute": "size",
+    "sort_order": 357,
+    "labels": {
+      "en_US": "39/41",
+      "nl_NL": "39/41"
+    }
+  },
+  {
+    "code": "39_5",
+    "attribute": "size",
+    "sort_order": 174,
+    "labels": {
+      "en_US": "39,5",
+      "nl_NL": "39,5"
+    }
+  },
+  {
+    "code": "4",
+    "attribute": "size",
+    "sort_order": 175,
+    "labels": {
+      "en_US": "4",
+      "nl_NL": "4"
+    }
+  },
+  {
+    "code": "40",
+    "attribute": "size",
+    "sort_order": 176,
+    "labels": {
+      "en_US": "40",
+      "nl_NL": "40"
+    }
+  },
+  {
+    "code": "40_1_3",
+    "attribute": "size",
+    "sort_order": 177,
+    "labels": {
+      "en_US": "40 1/3",
+      "nl_NL": "40 1/3"
+    }
+  },
+  {
+    "code": "40_2_3",
+    "attribute": "size",
+    "sort_order": 178,
+    "labels": {
+      "en_US": "40 2/3",
+      "nl_NL": "40 2/3"
+    }
+  },
+  {
+    "code": "40_30",
+    "attribute": "size",
+    "sort_order": 348,
+    "labels": {
+      "en_US": "40/30",
+      "nl_NL": "40/30"
+    }
+  },
+  {
+    "code": "40_32",
+    "attribute": "size",
+    "sort_order": 342,
+    "labels": {
+      "en_US": "40/32",
+      "nl_NL": "40/32"
+    }
+  },
+  {
+    "code": "40_5",
+    "attribute": "size",
+    "sort_order": 179,
+    "labels": {
+      "en_US": "40,5",
+      "nl_NL": "40,5"
+    }
+  },
+  {
+    "code": "41",
+    "attribute": "size",
+    "sort_order": 180,
+    "labels": {
+      "en_US": "41",
+      "nl_NL": "41"
+    }
+  },
+  {
+    "code": "41_1_3",
+    "attribute": "size",
+    "sort_order": 181,
+    "labels": {
+      "en_US": "41 1/3",
+      "nl_NL": "41 1/3"
+    }
+  },
+  {
+    "code": "41_2_3",
+    "attribute": "size",
+    "sort_order": 182,
+    "labels": {
+      "en_US": "41 2/3",
+      "nl_NL": "41 2/3"
+    }
+  },
+  {
+    "code": "41_5",
+    "attribute": "size",
+    "sort_order": 183,
+    "labels": {
+      "en_US": "41,5",
+      "nl_NL": "41,5"
+    }
+  },
+  {
+    "code": "42",
+    "attribute": "size",
+    "sort_order": 184,
+    "labels": {
+      "en_US": "42",
+      "nl_NL": "42"
+    }
+  },
+  {
+    "code": "42_2_3",
+    "attribute": "size",
+    "sort_order": 185,
+    "labels": {
+      "en_US": "42 2/3",
+      "nl_NL": "42 2/3"
+    }
+  },
+  {
+    "code": "42_32",
+    "attribute": "size",
+    "sort_order": 339,
+    "labels": {
+      "en_US": "42/32",
+      "nl_NL": "42/32"
+    }
+  },
+  {
+    "code": "42_34",
+    "attribute": "size",
+    "sort_order": 341,
+    "labels": {
+      "en_US": "42/34",
+      "nl_NL": "42/34"
+    }
+  },
+  {
+    "code": "42_44",
+    "attribute": "size",
+    "sort_order": 419,
+    "labels": {
+      "en_US": "42/44",
+      "nl_NL": "42/44"
+    }
+  },
+  {
+    "code": "42_5",
+    "attribute": "size",
+    "sort_order": 186,
+    "labels": {
+      "en_US": "42,5",
+      "nl_NL": "42,5"
+    }
+  },
+  {
+    "code": "43",
+    "attribute": "size",
+    "sort_order": 187,
+    "labels": {
+      "en_US": "43",
+      "nl_NL": "43"
+    }
+  },
+  {
+    "code": "43_1_3",
+    "attribute": "size",
+    "sort_order": 188,
+    "labels": {
+      "en_US": "43 1/3",
+      "nl_NL": "43 1/3"
+    }
+  },
+  {
+    "code": "43_5",
+    "attribute": "size",
+    "sort_order": 189,
+    "labels": {
+      "en_US": "43,5",
+      "nl_NL": "43,5"
+    }
+  },
+  {
+    "code": "44",
+    "attribute": "size",
+    "sort_order": 190,
+    "labels": {
+      "en_US": "44",
+      "nl_NL": "44"
+    }
+  },
+  {
+    "code": "44_1_3",
+    "attribute": "size",
+    "sort_order": 191,
+    "labels": {
+      "en_US": "44 1/3",
+      "nl_NL": "44 1/3"
+    }
+  },
+  {
+    "code": "44_2_3",
+    "attribute": "size",
+    "sort_order": 192,
+    "labels": {
+      "en_US": "44 2/3",
+      "nl_NL": "44 2/3"
+    }
+  },
+  {
+    "code": "44_5",
+    "attribute": "size",
+    "sort_order": 193,
+    "labels": {
+      "en_US": "44,5",
+      "nl_NL": "44,5"
+    }
+  },
+  {
+    "code": "45",
+    "attribute": "size",
+    "sort_order": 194,
+    "labels": {
+      "en_US": "45",
+      "nl_NL": "45"
+    }
+  },
+  {
+    "code": "45_1_3",
+    "attribute": "size",
+    "sort_order": 195,
+    "labels": {
+      "en_US": "45 1/3",
+      "nl_NL": "45 1/3"
+    }
+  },
+  {
+    "code": "45_2_3",
+    "attribute": "size",
+    "sort_order": 196,
+    "labels": {
+      "en_US": "45 2/3",
+      "nl_NL": "45 2/3"
+    }
+  },
+  {
+    "code": "45_47",
+    "attribute": "size",
+    "sort_order": 420,
+    "labels": {
+      "en_US": "45/47",
+      "nl_NL": "45/47"
+    }
+  },
+  {
+    "code": "45_5",
+    "attribute": "size",
+    "sort_order": 197,
+    "labels": {
+      "en_US": "45,5",
+      "nl_NL": "45,5"
+    }
+  },
+  {
+    "code": "46",
+    "attribute": "size",
+    "sort_order": 198,
+    "labels": {
+      "en_US": "46",
+      "nl_NL": "46"
+    }
+  },
+  {
+    "code": "46_1_3",
+    "attribute": "size",
+    "sort_order": 199,
+    "labels": {
+      "en_US": "46 1/3",
+      "nl_NL": "46 1/3"
+    }
+  },
+  {
+    "code": "46_2_3",
+    "attribute": "size",
+    "sort_order": 200,
+    "labels": {
+      "en_US": "46 2/3",
+      "nl_NL": "46 2/3"
+    }
+  },
+  {
+    "code": "46_5",
+    "attribute": "size",
+    "sort_order": 201,
+    "labels": {
+      "en_US": "46,5",
+      "nl_NL": "46,5"
+    }
+  },
+  {
+    "code": "47",
+    "attribute": "size",
+    "sort_order": 202,
+    "labels": {
+      "en_US": "47",
+      "nl_NL": "47"
+    }
+  },
+  {
+    "code": "47_1_3",
+    "attribute": "size",
+    "sort_order": 203,
+    "labels": {
+      "en_US": "47 1/3",
+      "nl_NL": "47 1/3"
+    }
+  },
+  {
+    "code": "47_2_3",
+    "attribute": "size",
+    "sort_order": 204,
+    "labels": {
+      "en_US": "47 2/3",
+      "nl_NL": "47 2/3"
+    }
+  },
+  {
+    "code": "47_5",
+    "attribute": "size",
+    "sort_order": 205,
+    "labels": {
+      "en_US": "47,5",
+      "nl_NL": "47,5"
+    }
+  },
+  {
+    "code": "48",
+    "attribute": "size",
+    "sort_order": 206,
+    "labels": {
+      "en_US": "48",
+      "nl_NL": "48"
+    }
+  },
+  {
+    "code": "48_1_3",
+    "attribute": "size",
+    "sort_order": 207,
+    "labels": {
+      "en_US": "48 1/3",
+      "nl_NL": "48 1/3"
+    }
+  },
+  {
+    "code": "48_2_3",
+    "attribute": "size",
+    "sort_order": 208,
+    "labels": {
+      "en_US": "48 2/3",
+      "nl_NL": "48 2/3"
+    }
+  },
+  {
+    "code": "48_5",
+    "attribute": "size",
+    "sort_order": 326,
+    "labels": {
+      "en_US": "48,5",
+      "nl_NL": "48,5"
+    }
+  },
+  {
+    "code": "49",
+    "attribute": "size",
+    "sort_order": 209,
+    "labels": {
+      "en_US": "49",
+      "nl_NL": "49"
+    }
+  },
+  {
+    "code": "49_5",
+    "attribute": "size",
+    "sort_order": 416,
+    "labels": {
+      "en_US": "49,5",
+      "nl_NL": "49,5"
+    }
+  },
+  {
+    "code": "5",
+    "attribute": "size",
+    "sort_order": 210,
+    "labels": {
+      "en_US": "5",
+      "nl_NL": "5"
+    }
+  },
+  {
+    "code": "5_5",
+    "attribute": "size",
+    "sort_order": 211,
+    "labels": {
+      "en_US": "5,5",
+      "nl_NL": "5,5"
+    }
+  },
+  {
+    "code": "50",
+    "attribute": "size",
+    "sort_order": 212,
+    "labels": {
+      "en_US": "50",
+      "nl_NL": "50"
+    }
+  },
+  {
+    "code": "50_5",
+    "attribute": "size",
+    "sort_order": 417,
+    "labels": {
+      "en_US": "50,5",
+      "nl_NL": "50,5"
+    }
+  },
+  {
+    "code": "51",
+    "attribute": "size",
+    "sort_order": 213,
+    "labels": {
+      "en_US": "51",
+      "nl_NL": "51"
+    }
+  },
+  {
+    "code": "52",
+    "attribute": "size",
+    "sort_order": 214,
+    "labels": {
+      "en_US": "52",
+      "nl_NL": "52"
+    }
+  },
+  {
+    "code": "53",
+    "attribute": "size",
+    "sort_order": 215,
+    "labels": {
+      "en_US": "53",
+      "nl_NL": "53"
+    }
+  },
+  {
+    "code": "54",
+    "attribute": "size",
+    "sort_order": 216,
+    "labels": {
+      "en_US": "54",
+      "nl_NL": "54"
+    }
+  },
+  {
+    "code": "55",
+    "attribute": "size",
+    "sort_order": 217,
+    "labels": {
+      "en_US": "55",
+      "nl_NL": "55"
+    }
+  },
+  {
+    "code": "56",
+    "attribute": "size",
+    "sort_order": 218,
+    "labels": {
+      "en_US": "56",
+      "nl_NL": "56"
+    }
+  },
+  {
+    "code": "57",
+    "attribute": "size",
+    "sort_order": 219,
+    "labels": {
+      "en_US": "57",
+      "nl_NL": "57"
+    }
+  },
+  {
+    "code": "58",
+    "attribute": "size",
+    "sort_order": 220,
+    "labels": {
+      "en_US": "58",
+      "nl_NL": "58"
+    }
+  },
+  {
+    "code": "59",
+    "attribute": "size",
+    "sort_order": 221,
+    "labels": {
+      "en_US": "59",
+      "nl_NL": "59"
+    }
+  },
+  {
+    "code": "6",
+    "attribute": "size",
+    "sort_order": 222,
+    "labels": {
+      "en_US": "6",
+      "nl_NL": "6"
+    }
+  },
+  {
+    "code": "6_5",
+    "attribute": "size",
+    "sort_order": 223,
+    "labels": {
+      "en_US": "6,5",
+      "nl_NL": "6,5"
+    }
+  },
+  {
+    "code": "6_9",
+    "attribute": "size",
+    "sort_order": 224,
+    "labels": {
+      "en_US": "6/9 M",
+      "nl_NL": "6/9 M"
+    }
+  },
+  {
+    "code": "6_m",
+    "attribute": "size",
+    "sort_order": 404,
+    "labels": {
+      "en_US": "6 M",
+      "nl_NL": "6 M"
+    }
+  },
+  {
+    "code": "60",
+    "attribute": "size",
+    "sort_order": 225,
+    "labels": {
+      "en_US": "60",
+      "nl_NL": "60"
+    }
+  },
+  {
+    "code": "61",
+    "attribute": "size",
+    "sort_order": 226,
+    "labels": {
+      "en_US": "61",
+      "nl_NL": "61"
+    }
+  },
+  {
+    "code": "62",
+    "attribute": "size",
+    "sort_order": 227,
+    "labels": {
+      "en_US": "62",
+      "nl_NL": "62"
+    }
+  },
+  {
+    "code": "62_4m",
+    "attribute": "size",
+    "sort_order": 228,
+    "labels": {
+      "en_US": "62 (3M)",
+      "nl_NL": "62 (3M)"
+    }
+  },
+  {
+    "code": "63",
+    "attribute": "size",
+    "sort_order": 422,
+    "labels": {
+      "en_US": "63",
+      "nl_NL": "63"
+    }
+  },
+  {
+    "code": "64",
+    "attribute": "size",
+    "sort_order": 423,
+    "labels": {
+      "en_US": "64",
+      "nl_NL": "64"
+    }
+  },
+  {
+    "code": "65",
+    "attribute": "size",
+    "sort_order": 415,
+    "labels": {
+      "en_US": "65",
+      "nl_NL": "65"
+    }
+  },
+  {
+    "code": "66",
+    "attribute": "size",
+    "sort_order": 424,
+    "labels": {
+      "en_US": "66",
+      "nl_NL": "66"
+    }
+  },
+  {
+    "code": "67",
+    "attribute": "size",
+    "sort_order": 425,
+    "labels": {
+      "en_US": "67",
+      "nl_NL": "67"
+    }
+  },
+  {
+    "code": "68",
+    "attribute": "size",
+    "sort_order": 426,
+    "labels": {
+      "en_US": "68",
+      "nl_NL": "68"
+    }
+  },
+  {
+    "code": "68_6m",
+    "attribute": "size",
+    "sort_order": 229,
+    "labels": {
+      "en_US": "68 (6M)",
+      "nl_NL": "68 (6M)"
+    }
+  },
+  {
+    "code": "69",
+    "attribute": "size",
+    "sort_order": 427,
+    "labels": {
+      "en_US": "69",
+      "nl_NL": "69"
+    }
+  },
+  {
+    "code": "7",
+    "attribute": "size",
+    "sort_order": 230,
+    "labels": {
+      "en_US": "7",
+      "nl_NL": "7"
+    }
+  },
+  {
+    "code": "7_5",
+    "attribute": "size",
+    "sort_order": 231,
+    "labels": {
+      "en_US": "7,5",
+      "nl_NL": "7,5"
+    }
+  },
+  {
+    "code": "70",
+    "attribute": "size",
+    "sort_order": 232,
+    "labels": {
+      "en_US": "70",
+      "nl_NL": "70"
+    }
+  },
+  {
+    "code": "71",
+    "attribute": "size",
+    "sort_order": 428,
+    "labels": {
+      "en_US": "71",
+      "nl_NL": "71"
+    }
+  },
+  {
+    "code": "72",
+    "attribute": "size",
+    "sort_order": 429,
+    "labels": {
+      "en_US": "72",
+      "nl_NL": "72"
+    }
+  },
+  {
+    "code": "74_9m",
+    "attribute": "size",
+    "sort_order": 233,
+    "labels": {
+      "en_US": "74 (9M)",
+      "nl_NL": "74 (9M)"
+    }
+  },
+  {
+    "code": "75",
+    "attribute": "size",
+    "sort_order": 234,
+    "labels": {
+      "en_US": "75",
+      "nl_NL": "75"
+    }
+  },
+  {
+    "code": "8",
+    "attribute": "size",
+    "sort_order": 235,
+    "labels": {
+      "en_US": "8",
+      "nl_NL": "8"
+    }
+  },
+  {
+    "code": "8_5",
+    "attribute": "size",
+    "sort_order": 236,
+    "labels": {
+      "en_US": "8,5",
+      "nl_NL": "8,5"
+    }
+  },
+  {
+    "code": "80",
+    "attribute": "size",
+    "sort_order": 237,
+    "labels": {
+      "en_US": "80",
+      "nl_NL": "80"
+    }
+  },
+  {
+    "code": "80_1yr",
+    "attribute": "size",
+    "sort_order": 238,
+    "labels": {
+      "en_US": "80 (1YR)",
+      "nl_NL": "80 (1YR)"
+    }
+  },
+  {
+    "code": "85",
+    "attribute": "size",
+    "sort_order": 239,
+    "labels": {
+      "en_US": "85",
+      "nl_NL": "85"
+    }
+  },
+  {
+    "code": "86_1_5yr",
+    "attribute": "size",
+    "sort_order": 240,
+    "labels": {
+      "en_US": "86 (1.5YR)",
+      "nl_NL": "86 (1.5YR)"
+    }
+  },
+  {
+    "code": "9",
+    "attribute": "size",
+    "sort_order": 241,
+    "labels": {
+      "en_US": "9",
+      "nl_NL": "9"
+    }
+  },
+  {
+    "code": "9_12",
+    "attribute": "size",
+    "sort_order": 243,
+    "labels": {
+      "en_US": "9/12 M",
+      "nl_NL": "9/12 M"
+    }
+  },
+  {
+    "code": "9_5",
+    "attribute": "size",
+    "sort_order": 242,
+    "labels": {
+      "en_US": "9,5",
+      "nl_NL": "9,5"
+    }
+  },
+  {
+    "code": "9_m",
+    "attribute": "size",
+    "sort_order": 405,
+    "labels": {
+      "en_US": "9 M",
+      "nl_NL": "9 M"
+    }
+  },
+  {
+    "code": "90",
+    "attribute": "size",
+    "sort_order": 244,
+    "labels": {
+      "en_US": "90",
+      "nl_NL": "90"
+    }
+  },
+  {
+    "code": "92_2yr",
+    "attribute": "size",
+    "sort_order": 245,
+    "labels": {
+      "en_US": "92 (2YR)",
+      "nl_NL": "92 (2YR)"
+    }
+  },
+  {
+    "code": "95",
+    "attribute": "size",
+    "sort_order": 246,
+    "labels": {
+      "en_US": "95",
+      "nl_NL": "95"
+    }
+  },
+  {
+    "code": "98_3yr",
+    "attribute": "size",
+    "sort_order": 247,
+    "labels": {
+      "en_US": "98 (3YR)",
+      "nl_NL": "98 (3YR)"
+    }
+  },
+  {
+    "code": "C",
+    "attribute": "size",
+    "sort_order": 430,
+    "labels": {
+      "en_US": "C",
+      "nl_NL": "C"
+    }
+  },
+  {
+    "code": "D",
+    "attribute": "size",
+    "sort_order": 431,
+    "labels": {
+      "en_US": "D",
+      "nl_NL": "D"
+    }
+  },
+  {
+    "code": "de_34",
+    "attribute": "size",
+    "sort_order": 248,
+    "labels": {
+      "en_US": "DE 34",
+      "nl_NL": "DE 34"
+    }
+  },
+  {
+    "code": "de_36",
+    "attribute": "size",
+    "sort_order": 249,
+    "labels": {
+      "en_US": "DE 36",
+      "nl_NL": "DE 36"
+    }
+  },
+  {
+    "code": "de_38",
+    "attribute": "size",
+    "sort_order": 250,
+    "labels": {
+      "en_US": "DE 38",
+      "nl_NL": "DE 38"
+    }
+  },
+  {
+    "code": "de_40",
+    "attribute": "size",
+    "sort_order": 251,
+    "labels": {
+      "en_US": "DE 40",
+      "nl_NL": "DE 40"
+    }
+  },
+  {
+    "code": "de_42",
+    "attribute": "size",
+    "sort_order": 252,
+    "labels": {
+      "en_US": "DE 42",
+      "nl_NL": "DE 42"
+    }
+  },
+  {
+    "code": "de_44",
+    "attribute": "size",
+    "sort_order": 253,
+    "labels": {
+      "en_US": "DE 44",
+      "nl_NL": "DE 44"
+    }
+  },
+  {
+    "code": "de_46",
+    "attribute": "size",
+    "sort_order": 254,
+    "labels": {
+      "en_US": "DE 46",
+      "nl_NL": "DE 46"
+    }
+  },
+  {
+    "code": "E",
+    "attribute": "size",
+    "sort_order": 432,
+    "labels": {
+      "en_US": "E",
+      "nl_NL": "E"
+    }
+  },
+  {
+    "code": "fr_34",
+    "attribute": "size",
+    "sort_order": 255,
+    "labels": {
+      "en_US": "FR 34",
+      "nl_NL": "FR 34"
+    }
+  },
+  {
+    "code": "fr_36",
+    "attribute": "size",
+    "sort_order": 256,
+    "labels": {
+      "en_US": "FR 36",
+      "nl_NL": "FR 36"
+    }
+  },
+  {
+    "code": "fr_38",
+    "attribute": "size",
+    "sort_order": 257,
+    "labels": {
+      "en_US": "FR 38",
+      "nl_NL": "FR 38"
+    }
+  },
+  {
+    "code": "fr_40",
+    "attribute": "size",
+    "sort_order": 258,
+    "labels": {
+      "en_US": "FR 40",
+      "nl_NL": "FR 40"
+    }
+  },
+  {
+    "code": "fr_42",
+    "attribute": "size",
+    "sort_order": 259,
+    "labels": {
+      "en_US": "FR 42",
+      "nl_NL": "FR 42"
+    }
+  },
+  {
+    "code": "fr_44",
+    "attribute": "size",
+    "sort_order": 260,
+    "labels": {
+      "en_US": "FR 44",
+      "nl_NL": "FR 44"
+    }
+  },
+  {
+    "code": "fr_46",
+    "attribute": "size",
+    "sort_order": 261,
+    "labels": {
+      "en_US": "FR 46",
+      "nl_NL": "FR 46"
+    }
+  },
+  {
+    "code": "fr_48",
+    "attribute": "size",
+    "sort_order": 262,
+    "labels": {
+      "en_US": "FR 48",
+      "nl_NL": "FR 48"
+    }
+  },
+  {
+    "code": "G",
+    "attribute": "size",
+    "sort_order": 433,
+    "labels": {
+      "en_US": "G",
+      "nl_NL": "G"
+    }
+  },
+  {
+    "code": "H",
+    "attribute": "size",
+    "sort_order": 434,
+    "labels": {
+      "en_US": "H",
+      "nl_NL": "H"
+    }
+  },
+  {
+    "code": "IT_34",
+    "attribute": "size",
+    "sort_order": 408,
+    "labels": {
+      "en_US": "IT 34",
+      "nl_NL": "IT 34"
+    }
+  },
+  {
+    "code": "IT_35",
+    "attribute": "size",
+    "sort_order": 412,
+    "labels": {
+      "en_US": "IT 35",
+      "nl_NL": "IT 35"
+    }
+  },
+  {
+    "code": "IT_35_5",
+    "attribute": "size",
+    "sort_order": 413,
+    "labels": {
+      "en_US": "IT 35,5",
+      "nl_NL": "IT 35,5"
+    }
+  },
+  {
+    "code": "it_36",
+    "attribute": "size",
+    "sort_order": 263,
+    "labels": {
+      "en_US": "IT 36",
+      "nl_NL": "IT 36"
+    }
+  },
+  {
+    "code": "it_36_5",
+    "attribute": "size",
+    "sort_order": 356,
+    "labels": {
+      "en_US": "IT 36,5",
+      "nl_NL": "IT 36,5"
+    }
+  },
+  {
+    "code": "it_37",
+    "attribute": "size",
+    "sort_order": 357,
+    "labels": {
+      "en_US": "IT 37",
+      "nl_NL": "IT 37"
+    }
+  },
+  {
+    "code": "it_37_5",
+    "attribute": "size",
+    "sort_order": 358,
+    "labels": {
+      "en_US": "IT 37,5",
+      "nl_NL": "IT 37,5"
+    }
+  },
+  {
+    "code": "it_38",
+    "attribute": "size",
+    "sort_order": 264,
+    "labels": {
+      "en_US": "IT 38",
+      "nl_NL": "IT 38"
+    }
+  },
+  {
+    "code": "it_38_5",
+    "attribute": "size",
+    "sort_order": 359,
+    "labels": {
+      "en_US": "IT 38,5",
+      "nl_NL": "IT 38,5"
+    }
+  },
+  {
+    "code": "it_39",
+    "attribute": "size",
+    "sort_order": 360,
+    "labels": {
+      "en_US": "IT 39",
+      "nl_NL": "IT 39"
+    }
+  },
+  {
+    "code": "it_39_5",
+    "attribute": "size",
+    "sort_order": 361,
+    "labels": {
+      "en_US": "IT 39,5",
+      "nl_NL": "IT 39,5"
+    }
+  },
+  {
+    "code": "it_40",
+    "attribute": "size",
+    "sort_order": 265,
+    "labels": {
+      "en_US": "IT 40",
+      "nl_NL": "IT 40"
+    }
+  },
+  {
+    "code": "it_40_5",
+    "attribute": "size",
+    "sort_order": 362,
+    "labels": {
+      "en_US": "IT 40,5",
+      "nl_NL": "IT 40,5"
+    }
+  },
+  {
+    "code": "it_41",
+    "attribute": "size",
+    "sort_order": 363,
+    "labels": {
+      "en_US": "IT 41",
+      "nl_NL": "IT 41"
+    }
+  },
+  {
+    "code": "it_41_5",
+    "attribute": "size",
+    "sort_order": 364,
+    "labels": {
+      "en_US": "IT 41,5",
+      "nl_NL": "IT 41,5"
+    }
+  },
+  {
+    "code": "it_42",
+    "attribute": "size",
+    "sort_order": 266,
+    "labels": {
+      "en_US": "IT 42",
+      "nl_NL": "IT 42"
+    }
+  },
+  {
+    "code": "it_42_5",
+    "attribute": "size",
+    "sort_order": 365,
+    "labels": {
+      "en_US": "IT 42,5",
+      "nl_NL": "IT 42,5"
+    }
+  },
+  {
+    "code": "it_43",
+    "attribute": "size",
+    "sort_order": 366,
+    "labels": {
+      "en_US": "IT 43",
+      "nl_NL": "IT 43"
+    }
+  },
+  {
+    "code": "it_43_5",
+    "attribute": "size",
+    "sort_order": 367,
+    "labels": {
+      "en_US": "IT 43,5",
+      "nl_NL": "IT 43,5"
+    }
+  },
+  {
+    "code": "it_44",
+    "attribute": "size",
+    "sort_order": 267,
+    "labels": {
+      "en_US": "IT 44",
+      "nl_NL": "IT 44"
+    }
+  },
+  {
+    "code": "it_44_5",
+    "attribute": "size",
+    "sort_order": 368,
+    "labels": {
+      "en_US": "IT 44,5",
+      "nl_NL": "IT 44,5"
+    }
+  },
+  {
+    "code": "it_45",
+    "attribute": "size",
+    "sort_order": 369,
+    "labels": {
+      "en_US": "IT 45",
+      "nl_NL": "IT 45"
+    }
+  },
+  {
+    "code": "it_45_5",
+    "attribute": "size",
+    "sort_order": 370,
+    "labels": {
+      "en_US": "IT 45,5",
+      "nl_NL": "IT 45,5"
+    }
+  },
+  {
+    "code": "it_46",
+    "attribute": "size",
+    "sort_order": 268,
+    "labels": {
+      "en_US": "IT 46",
+      "nl_NL": "IT 46"
+    }
+  },
+  {
+    "code": "it_46_5",
+    "attribute": "size",
+    "sort_order": 371,
+    "labels": {
+      "en_US": "IT 46,5",
+      "nl_NL": "IT 46,5"
+    }
+  },
+  {
+    "code": "it_47",
+    "attribute": "size",
+    "sort_order": 372,
+    "labels": {
+      "en_US": "IT 47",
+      "nl_NL": "IT 47"
+    }
+  },
+  {
+    "code": "it_47_5",
+    "attribute": "size",
+    "sort_order": 373,
+    "labels": {
+      "en_US": "IT 47,5",
+      "nl_NL": "IT 47,5"
+    }
+  },
+  {
+    "code": "it_48",
+    "attribute": "size",
+    "sort_order": 269,
+    "labels": {
+      "en_US": "IT 48",
+      "nl_NL": "IT 48"
+    }
+  },
+  {
+    "code": "it_48_5",
+    "attribute": "size",
+    "sort_order": 374,
+    "labels": {
+      "en_US": "IT 48,5",
+      "nl_NL": "IT 48,5"
+    }
+  },
+  {
+    "code": "it_49",
+    "attribute": "size",
+    "sort_order": 375,
+    "labels": {
+      "en_US": "IT 49",
+      "nl_NL": "IT 49"
+    }
+  },
+  {
+    "code": "it_50",
+    "attribute": "size",
+    "sort_order": 270,
+    "labels": {
+      "en_US": "IT 50",
+      "nl_NL": "IT 50"
+    }
+  },
+  {
+    "code": "it_52",
+    "attribute": "size",
+    "sort_order": 271,
+    "labels": {
+      "en_US": "IT 52",
+      "nl_NL": "IT 52"
+    }
+  },
+  {
+    "code": "it_54",
+    "attribute": "size",
+    "sort_order": 272,
+    "labels": {
+      "en_US": "IT 54",
+      "nl_NL": "IT 54"
+    }
+  },
+  {
+    "code": "it_56",
+    "attribute": "size",
+    "sort_order": 273,
+    "labels": {
+      "en_US": "IT 56",
+      "nl_NL": "IT 56"
+    }
+  },
+  {
+    "code": "it_58",
+    "attribute": "size",
+    "sort_order": 274,
+    "labels": {
+      "en_US": "IT 58",
+      "nl_NL": "IT 58"
+    }
+  },
+  {
+    "code": "it_60",
+    "attribute": "size",
+    "sort_order": 275,
+    "labels": {
+      "en_US": "IT 60",
+      "nl_NL": "IT 60"
+    }
+  },
+  {
+    "code": "l",
+    "attribute": "size",
+    "sort_order": 276,
+    "labels": {
+      "en_US": "L",
+      "nl_NL": "L"
+    }
+  },
+  {
+    "code": "L_XL",
+    "attribute": "size",
+    "sort_order": 354,
+    "labels": {
+      "en_US": "L/XL",
+      "nl_NL": "L/XL"
+    }
+  },
+  {
+    "code": "m",
+    "attribute": "size",
+    "sort_order": 277,
+    "labels": {
+      "en_US": "M",
+      "nl_NL": "M"
+    }
+  },
+  {
+    "code": "M_L",
+    "attribute": "size",
+    "sort_order": 353,
+    "labels": {
+      "en_US": "M/L",
+      "nl_NL": "M/L"
+    }
+  },
+  {
+    "code": "MM",
+    "attribute": "size",
+    "sort_order": 322,
+    "labels": {
+      "en_US": "MM",
+      "nl_NL": "MM"
+    }
+  },
+  {
+    "code": "new_born",
+    "attribute": "size",
+    "sort_order": 278,
+    "labels": {
+      "en_US": "New Born",
+      "nl_NL": "New Born"
+    }
+  },
+  {
+    "code": "one_size",
+    "attribute": "size",
+    "sort_order": 279,
+    "labels": {
+      "en_US": "One Size",
+      "nl_NL": "One Size"
+    }
+  },
+  {
+    "code": "s",
+    "attribute": "size",
+    "sort_order": 280,
+    "labels": {
+      "en_US": "S",
+      "nl_NL": "S"
+    }
+  },
+  {
+    "code": "S_M",
+    "attribute": "size",
+    "sort_order": 352,
+    "labels": {
+      "en_US": "S/M",
+      "nl_NL": "S/M"
+    }
+  },
+  {
+    "code": "shoesit_35",
+    "attribute": "size",
+    "sort_order": 377,
+    "labels": {
+      "en_US": "Shoes IT 35",
+      "nl_NL": "Shoes IT 35"
+    }
+  },
+  {
+    "code": "shoesit_35_5",
+    "attribute": "size",
+    "sort_order": 378,
+    "labels": {
+      "en_US": "Shoes IT 35,5",
+      "nl_NL": "Shoes IT 35,5"
+    }
+  },
+  {
+    "code": "shoesit_36",
+    "attribute": "size",
+    "sort_order": 379,
+    "labels": {
+      "en_US": "Shoes IT 36",
+      "nl_NL": "Shoes IT 36"
+    }
+  },
+  {
+    "code": "shoesit_36_5",
+    "attribute": "size",
+    "sort_order": 380,
+    "labels": {
+      "en_US": "Shoes IT 36,5",
+      "nl_NL": "Shoes IT 36,5"
+    }
+  },
+  {
+    "code": "shoesit_37",
+    "attribute": "size",
+    "sort_order": 376,
+    "labels": {
+      "en_US": "Shoes IT 37",
+      "nl_NL": "Shoes IT 37"
+    }
+  },
+  {
+    "code": "shoesit_38",
+    "attribute": "size",
+    "sort_order": 382,
+    "labels": {
+      "en_US": "Shoes IT 38",
+      "nl_NL": "Shoes IT 38"
+    }
+  },
+  {
+    "code": "shoesit_38_5",
+    "attribute": "size",
+    "sort_order": 383,
+    "labels": {
+      "en_US": "Shoes IT 38,5",
+      "nl_NL": "Shoes IT 38,5"
+    }
+  },
+  {
+    "code": "shoesit_39",
+    "attribute": "size",
+    "sort_order": 384,
+    "labels": {
+      "en_US": "Shoes IT 39",
+      "nl_NL": "Shoes IT 39"
+    }
+  },
+  {
+    "code": "shoesit_39_5",
+    "attribute": "size",
+    "sort_order": 385,
+    "labels": {
+      "en_US": "Shoes IT 39,5",
+      "nl_NL": "Shoes IT 39,5"
+    }
+  },
+  {
+    "code": "shoesit_40",
+    "attribute": "size",
+    "sort_order": 386,
+    "labels": {
+      "en_US": "Shoes IT 40",
+      "nl_NL": "Shoes IT 40"
+    }
+  },
+  {
+    "code": "shoesit_40_5",
+    "attribute": "size",
+    "sort_order": 387,
+    "labels": {
+      "en_US": "Shoes IT 40,5",
+      "nl_NL": "Shoes IT 40,5"
+    }
+  },
+  {
+    "code": "shoesit_41",
+    "attribute": "size",
+    "sort_order": 388,
+    "labels": {
+      "en_US": "Shoes IT 41",
+      "nl_NL": "Shoes IT 41"
+    }
+  },
+  {
+    "code": "shoesit_41_5",
+    "attribute": "size",
+    "sort_order": 389,
+    "labels": {
+      "en_US": "Shoes IT 41,5",
+      "nl_NL": "Shoes IT 41,5"
+    }
+  },
+  {
+    "code": "shoesit_42",
+    "attribute": "size",
+    "sort_order": 390,
+    "labels": {
+      "en_US": "Shoes IT 42",
+      "nl_NL": "Shoes IT 42"
+    }
+  },
+  {
+    "code": "shoesit_42_5",
+    "attribute": "size",
+    "sort_order": 391,
+    "labels": {
+      "en_US": "Shoes IT 42,5",
+      "nl_NL": "Shoes IT 42,5"
+    }
+  },
+  {
+    "code": "shoesit_43",
+    "attribute": "size",
+    "sort_order": 392,
+    "labels": {
+      "en_US": "Shoes IT 43",
+      "nl_NL": "Shoes IT 43"
+    }
+  },
+  {
+    "code": "shoesit_43_5",
+    "attribute": "size",
+    "sort_order": 393,
+    "labels": {
+      "en_US": "Shoes IT 43,5",
+      "nl_NL": "Shoes IT 43,5"
+    }
+  },
+  {
+    "code": "shoesit_44",
+    "attribute": "size",
+    "sort_order": 394,
+    "labels": {
+      "en_US": "Shoes IT 44",
+      "nl_NL": "Shoes IT 44"
+    }
+  },
+  {
+    "code": "shoesit_44_5",
+    "attribute": "size",
+    "sort_order": 395,
+    "labels": {
+      "en_US": "Shoes IT 44,5",
+      "nl_NL": "Shoes IT 44,5"
+    }
+  },
+  {
+    "code": "shoesit_45",
+    "attribute": "size",
+    "sort_order": 396,
+    "labels": {
+      "en_US": "Shoes IT 45",
+      "nl_NL": "Shoes IT 45"
+    }
+  },
+  {
+    "code": "shoesit_45_5",
+    "attribute": "size",
+    "sort_order": 397,
+    "labels": {
+      "en_US": "Shoes IT 45,5",
+      "nl_NL": "Shoes IT 45,5"
+    }
+  },
+  {
+    "code": "shoesit_46",
+    "attribute": "size",
+    "sort_order": 398,
+    "labels": {
+      "en_US": "Shoes IT 46",
+      "nl_NL": "Shoes IT 46"
+    }
+  },
+  {
+    "code": "shoesit_46_5",
+    "attribute": "size",
+    "sort_order": 399,
+    "labels": {
+      "en_US": "Shoes IT 46,5",
+      "nl_NL": "Shoes IT 46,5"
+    }
+  },
+  {
+    "code": "shoesit_47",
+    "attribute": "size",
+    "sort_order": 400,
+    "labels": {
+      "en_US": "Shoes IT 47",
+      "nl_NL": "Shoes IT 47"
+    }
+  },
+  {
+    "code": "shoesit_47_5",
+    "attribute": "size",
+    "sort_order": 401,
+    "labels": {
+      "en_US": "Shoes IT 47,5",
+      "nl_NL": "Shoes IT 47,5"
+    }
+  },
+  {
+    "code": "shoesit_48",
+    "attribute": "size",
+    "sort_order": 402,
+    "labels": {
+      "en_US": "Shoes IT 48",
+      "nl_NL": "Shoes IT 48"
+    }
+  },
+  {
+    "code": "shoesit_48_5",
+    "attribute": "size",
+    "sort_order": 403,
+    "labels": {
+      "en_US": "Shoes IT 48,5",
+      "nl_NL": "Shoes IT 48,5"
+    }
+  },
+  {
+    "code": "uk_1",
+    "attribute": "size",
+    "sort_order": 281,
+    "labels": {
+      "en_US": "UK 1",
+      "nl_NL": "UK 1"
+    }
+  },
+  {
+    "code": "uk_1_5",
+    "attribute": "size",
+    "sort_order": 282,
+    "labels": {
+      "en_US": "UK 1,5",
+      "nl_NL": "UK 1,5"
+    }
+  },
+  {
+    "code": "uk_10",
+    "attribute": "size",
+    "sort_order": 283,
+    "labels": {
+      "en_US": "UK 10",
+      "nl_NL": "UK 10"
+    }
+  },
+  {
+    "code": "uk_10_5",
+    "attribute": "size",
+    "sort_order": 284,
+    "labels": {
+      "en_US": "UK 10,5",
+      "nl_NL": "UK 10,5"
+    }
+  },
+  {
+    "code": "uk_11",
+    "attribute": "size",
+    "sort_order": 285,
+    "labels": {
+      "en_US": "UK 11",
+      "nl_NL": "UK 11"
+    }
+  },
+  {
+    "code": "uk_11_5",
+    "attribute": "size",
+    "sort_order": 286,
+    "labels": {
+      "en_US": "UK 11,5",
+      "nl_NL": "UK 11,5"
+    }
+  },
+  {
+    "code": "uk_12",
+    "attribute": "size",
+    "sort_order": 287,
+    "labels": {
+      "en_US": "UK 12",
+      "nl_NL": "UK 12"
+    }
+  },
+  {
+    "code": "uk_12_5",
+    "attribute": "size",
+    "sort_order": 288,
+    "labels": {
+      "en_US": "UK 12,5",
+      "nl_NL": "UK 12,5"
+    }
+  },
+  {
+    "code": "uk_13",
+    "attribute": "size",
+    "sort_order": 289,
+    "labels": {
+      "en_US": "UK 13",
+      "nl_NL": "UK 13"
+    }
+  },
+  {
+    "code": "uk_13_5",
+    "attribute": "size",
+    "sort_order": 290,
+    "labels": {
+      "en_US": "UK 13,5",
+      "nl_NL": "UK 13,5"
+    }
+  },
+  {
+    "code": "uk_14",
+    "attribute": "size",
+    "sort_order": 291,
+    "labels": {
+      "en_US": "UK 14",
+      "nl_NL": "UK 14"
+    }
+  },
+  {
+    "code": "uk_2",
+    "attribute": "size",
+    "sort_order": 292,
+    "labels": {
+      "en_US": "UK 2",
+      "nl_NL": "UK 2"
+    }
+  },
+  {
+    "code": "uk_2_5",
+    "attribute": "size",
+    "sort_order": 293,
+    "labels": {
+      "en_US": "UK 2,5",
+      "nl_NL": "UK 2,5"
+    }
+  },
+  {
+    "code": "uk_3",
+    "attribute": "size",
+    "sort_order": 294,
+    "labels": {
+      "en_US": "UK 3",
+      "nl_NL": "UK 3"
+    }
+  },
+  {
+    "code": "uk_3_5",
+    "attribute": "size",
+    "sort_order": 295,
+    "labels": {
+      "en_US": "UK 3,5",
+      "nl_NL": "UK 3,5"
+    }
+  },
+  {
+    "code": "uk_4",
+    "attribute": "size",
+    "sort_order": 296,
+    "labels": {
+      "en_US": "UK 4",
+      "nl_NL": "UK 4"
+    }
+  },
+  {
+    "code": "uk_4_5",
+    "attribute": "size",
+    "sort_order": 297,
+    "labels": {
+      "en_US": "UK 4,5",
+      "nl_NL": "UK 4,5"
+    }
+  },
+  {
+    "code": "uk_5",
+    "attribute": "size",
+    "sort_order": 298,
+    "labels": {
+      "en_US": "UK 5",
+      "nl_NL": "UK 5"
+    }
+  },
+  {
+    "code": "uk_5_5",
+    "attribute": "size",
+    "sort_order": 299,
+    "labels": {
+      "en_US": "UK 5,5",
+      "nl_NL": "UK 5,5"
+    }
+  },
+  {
+    "code": "uk_6",
+    "attribute": "size",
+    "sort_order": 300,
+    "labels": {
+      "en_US": "UK 6",
+      "nl_NL": "UK 6"
+    }
+  },
+  {
+    "code": "uk_6_5",
+    "attribute": "size",
+    "sort_order": 301,
+    "labels": {
+      "en_US": "UK 6,5",
+      "nl_NL": "UK 6,5"
+    }
+  },
+  {
+    "code": "uk_7",
+    "attribute": "size",
+    "sort_order": 302,
+    "labels": {
+      "en_US": "UK 7",
+      "nl_NL": "UK 7"
+    }
+  },
+  {
+    "code": "uk_7_5",
+    "attribute": "size",
+    "sort_order": 303,
+    "labels": {
+      "en_US": "UK 7,5",
+      "nl_NL": "UK 7,5"
+    }
+  },
+  {
+    "code": "uk_8",
+    "attribute": "size",
+    "sort_order": 304,
+    "labels": {
+      "en_US": "UK 8",
+      "nl_NL": "UK 8"
+    }
+  },
+  {
+    "code": "uk_8_5",
+    "attribute": "size",
+    "sort_order": 305,
+    "labels": {
+      "en_US": "UK 8,5",
+      "nl_NL": "UK 8,5"
+    }
+  },
+  {
+    "code": "uk_9",
+    "attribute": "size",
+    "sort_order": 306,
+    "labels": {
+      "en_US": "UK 9",
+      "nl_NL": "UK 9"
+    }
+  },
+  {
+    "code": "uk_9_5",
+    "attribute": "size",
+    "sort_order": 307,
+    "labels": {
+      "en_US": "UK 9,5",
+      "nl_NL": "UK 9,5"
+    }
+  },
+  {
+    "code": "us_10",
+    "attribute": "size",
+    "sort_order": 6,
+    "labels": {
+      "en_US": "US 10",
+      "nl_NL": "US 10"
+    }
+  },
+  {
+    "code": "us_10_5",
+    "attribute": "size",
+    "sort_order": 7,
+    "labels": {
+      "en_US": "US 10,5",
+      "nl_NL": "US 10,5"
+    }
+  },
+  {
+    "code": "us_11",
+    "attribute": "size",
+    "sort_order": 11,
+    "labels": {
+      "en_US": "US 11",
+      "nl_NL": "US 11"
+    }
+  },
+  {
+    "code": "us_11_5",
+    "attribute": "size",
+    "sort_order": 12,
+    "labels": {
+      "en_US": "US 11,5",
+      "nl_NL": "US 11,5"
+    }
+  },
+  {
+    "code": "us_12",
+    "attribute": "size",
+    "sort_order": 17,
+    "labels": {
+      "en_US": "US 12",
+      "nl_NL": "US 12"
+    }
+  },
+  {
+    "code": "us_12_5",
+    "attribute": "size",
+    "sort_order": 18,
+    "labels": {
+      "en_US": "US 12,5",
+      "nl_NL": "US 12,5"
+    }
+  },
+  {
+    "code": "us_13",
+    "attribute": "size",
+    "sort_order": 23,
+    "labels": {
+      "en_US": "US 13",
+      "nl_NL": "US 13"
+    }
+  },
+  {
+    "code": "us_14",
+    "attribute": "size",
+    "sort_order": 25,
+    "labels": {
+      "en_US": "US 14",
+      "nl_NL": "US 14"
+    }
+  },
+  {
+    "code": "us_15",
+    "attribute": "size",
+    "sort_order": 28,
+    "labels": {
+      "en_US": "US 15",
+      "nl_NL": "US 15"
+    }
+  },
+  {
+    "code": "us_16",
+    "attribute": "size",
+    "sort_order": 33,
+    "labels": {
+      "en_US": "US 16",
+      "nl_NL": "US 16"
+    }
+  },
+  {
+    "code": "us_2",
+    "attribute": "size",
+    "sort_order": 42,
+    "labels": {
+      "en_US": "US 2",
+      "nl_NL": "US 2"
+    }
+  },
+  {
+    "code": "us_3",
+    "attribute": "size",
+    "sort_order": 88,
+    "labels": {
+      "en_US": "US 3",
+      "nl_NL": "US 3"
+    }
+  },
+  {
+    "code": "US_3_5",
+    "attribute": "size",
+    "sort_order": 414,
+    "labels": {
+      "en_US": "US 3,5",
+      "nl_NL": "US 3,5"
+    }
+  },
+  {
+    "code": "us_4",
+    "attribute": "size",
+    "sort_order": 175,
+    "labels": {
+      "en_US": "US 4",
+      "nl_NL": "US 4"
+    }
+  },
+  {
+    "code": "US_4_5",
+    "attribute": "size",
+    "sort_order": 409,
+    "labels": {
+      "en_US": "US 4,5",
+      "nl_NL": "US 4,5"
+    }
+  },
+  {
+    "code": "US_5",
+    "attribute": "size",
+    "sort_order": 407,
+    "labels": {
+      "en_US": "US 5",
+      "nl_NL": "US 5"
+    }
+  },
+  {
+    "code": "us_5_5",
+    "attribute": "size",
+    "sort_order": 211,
+    "labels": {
+      "en_US": "US 5,5",
+      "nl_NL": "US 5,5"
+    }
+  },
+  {
+    "code": "us_6",
+    "attribute": "size",
+    "sort_order": 222,
+    "labels": {
+      "en_US": "US 6",
+      "nl_NL": "US 6"
+    }
+  },
+  {
+    "code": "us_6_5",
+    "attribute": "size",
+    "sort_order": 223,
+    "labels": {
+      "en_US": "US 6,5",
+      "nl_NL": "US 6,5"
+    }
+  },
+  {
+    "code": "us_7",
+    "attribute": "size",
+    "sort_order": 230,
+    "labels": {
+      "en_US": "US 7",
+      "nl_NL": "US 7"
+    }
+  },
+  {
+    "code": "us_7_5",
+    "attribute": "size",
+    "sort_order": 231,
+    "labels": {
+      "en_US": "US 7,5",
+      "nl_NL": "US 7,5"
+    }
+  },
+  {
+    "code": "us_8",
+    "attribute": "size",
+    "sort_order": 235,
+    "labels": {
+      "en_US": "US 8",
+      "nl_NL": "US 8"
+    }
+  },
+  {
+    "code": "us_8_5",
+    "attribute": "size",
+    "sort_order": 236,
+    "labels": {
+      "en_US": "US 8,5",
+      "nl_NL": "US 8,5"
+    }
+  },
+  {
+    "code": "us_9",
+    "attribute": "size",
+    "sort_order": 241,
+    "labels": {
+      "en_US": "US 9",
+      "nl_NL": "US 9"
+    }
+  },
+  {
+    "code": "us_9_5",
+    "attribute": "size",
+    "sort_order": 242,
+    "labels": {
+      "en_US": "US 9,5",
+      "nl_NL": "US 9,5"
+    }
+  },
+  {
+    "code": "xl",
+    "attribute": "size",
+    "sort_order": 308,
+    "labels": {
+      "en_US": "XL",
+      "nl_NL": "XL"
+    }
+  },
+  {
+    "code": "XL_XXL",
+    "attribute": "size",
+    "sort_order": 355,
+    "labels": {
+      "en_US": "XL/XXL",
+      "nl_NL": "XL/XXL"
+    }
+  },
+  {
+    "code": "xs",
+    "attribute": "size",
+    "sort_order": 309,
+    "labels": {
+      "en_US": "XS",
+      "nl_NL": "XS"
+    }
+  },
+  {
+    "code": "XS_S",
+    "attribute": "size",
+    "sort_order": 351,
+    "labels": {
+      "en_US": "XS/S",
+      "nl_NL": "XS/S"
+    }
+  },
+  {
+    "code": "xxl",
+    "attribute": "size",
+    "sort_order": 310,
+    "labels": {
+      "en_US": "XXL",
+      "nl_NL": "XXL"
+    }
+  },
+  {
+    "code": "xxs",
+    "attribute": "size",
+    "sort_order": 311,
+    "labels": {
+      "en_US": "XXS",
+      "nl_NL": "XXS"
+    }
+  },
+  {
+    "code": "xxxl",
+    "attribute": "size",
+    "sort_order": 312,
+    "labels": {
+      "en_US": "XXXL",
+      "nl_NL": "XXXL"
+    }
+  },
+  {
+    "code": "xxxs",
+    "attribute": "size",
+    "sort_order": 411,
+    "labels": {
+      "en_US": "XXXS",
+      "nl_NL": "XXXS"
+    }
+  },
+  {
+    "code": "xxxxl",
+    "attribute": "size",
+    "sort_order": 313,
+    "labels": {
+      "en_US": "XXXXL",
+      "nl_NL": "XXXXL"
+    }
+  },
+  {
+    "code": "xxxxxl",
+    "attribute": "size",
+    "sort_order": 314,
+    "labels": {
+      "en_US": "XXXXXL",
+      "nl_NL": "XXXXXL"
+    }
+  },
+  {
+    "code": "xxxxxxl",
+    "attribute": "size",
+    "sort_order": 315,
+    "labels": {
+      "en_US": "XXXXXXL",
+      "nl_NL": "XXXXXXL"
+    }
+  }
+]

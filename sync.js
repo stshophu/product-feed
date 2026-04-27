@@ -44,7 +44,11 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
   const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
-  const cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
+  let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
+  // Round half sizes down (42.5 -> 42)
+  if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
+    cleanSize = String(Math.floor(parseFloat(cleanSize)));
+  }
   if (cleanSize && !colorWords.test(cleanSize)) payload.values.size = [{ data: cleanSize }];
   payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
