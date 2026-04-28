@@ -49,7 +49,11 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
     cleanSize = String(Math.floor(parseFloat(cleanSize)));
   }
-  if (cleanSize && !colorWords.test(cleanSize)) payload.values.size = [{ data: cleanSize }];
+  const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"]; // accessories, bags
+  const productCategory = getCategoryCode(product.product_type, product.tags);
+  if (cleanSize && !colorWords.test(cleanSize) && !noSizeCategories.includes(productCategory)) {
+    payload.values.size = [{ data: cleanSize }];
+  }
   payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
