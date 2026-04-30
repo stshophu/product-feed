@@ -1,7 +1,7 @@
 require("dotenv").config();
 const config = require("./config");
-const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLocationMap, formatManufacturer } = require("./shopify");
-const { upsertProduct, disableProduct } = require("./winkelstraat");
+const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLocationMap, formatManufacturer, getInventoryCost } = require("./shopify");
+const { upsertProduct, deleteProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
@@ -36,6 +36,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
       manufacturer_product_number: [{ data: String(variant.id) }],
       retailer_manufacturer_product_number: [{ data: variant.sku || String(variant.id) }],
       quantity: [{ data: quantity }],
+      ...(variant.barcode && /^[0-9]{12,13}$/.test(variant.barcode.trim()) ? { ean: [{ data: variant.barcode.trim() }] } : {}),
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
@@ -51,7 +52,8 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   }
   const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"]; // accessories, bags
   const productCategory = getCategoryCode(product.product_type, product.tags);
-  if (cleanSize && !colorWords.test(cleanSize) && !noSizeCategories.includes(productCategory)) {
+  const looksLikeSize = cleanSize && (sizePattern.test(cleanSize) || /^(one_size|xxs|xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl)$/i.test(cleanSize));
+  if (looksLikeSize && !colorWords.test(cleanSize) && !noSizeCategories.includes(productCategory)) {
     payload.values.size = [{ data: cleanSize }];
   }
   payload.values.color = [{ data: findColor(variant, product.tags) }];
@@ -88,7 +90,7 @@ async function sync() {
   for (const product of products) {
     if (product.status !== "active") {
       for (const variant of product.variants) {
-        try { await disableProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+        try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
       }
       continue;
     }
@@ -110,7 +112,7 @@ async function sync() {
         }
 
         if (!stockLocationName) {
-          try { await disableProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+          try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
           stats.skipped++;
           continue;
         }
