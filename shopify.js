@@ -36,7 +36,7 @@ async function fetchProducts(extraParams) {
   var products = [];
   var page_info = null;
   do {
-    var params = Object.assign({ limit: 250, fields: "id,title,body_html,variants,images,status,vendor,product_type,updated_at" }, extraParams);
+    var params = Object.assign({ limit: 250, fields: "id,title,body_html,variants,images,status,vendor,product_type,updated_at" }, page_info ? {} : extraParams);
     if (page_info) params.page_info = page_info;
     var result = await shopify.get("/products.json", { params });
     products.push.apply(products, result.data.products);
