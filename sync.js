@@ -40,7 +40,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
-  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|xxxs|xxs|one.?size|\d+[\.,]?\d*|\d+\/\d+|one_size)$/i;
+  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
   const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
   const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
@@ -124,6 +124,13 @@ async function sync() {
         const { price, specialPrice } = calculatePrice(originalPrice, compareAt, markupRate);
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
+        // Skip if EAN required but missing
+        const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
+        const hasEan = payload.values.ean && payload.values.ean[0]?.data;
+        if (eanRequired && !hasEan) {
+          stats.skipped++;
+          continue;
+        }
         try {
           await upsertProduct(payload);
         } catch(upsertErr) {
