@@ -5,6 +5,7 @@ const { upsertProduct, deleteProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
+const supplierBlacklist = require("./supplier_blacklist.json");
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
@@ -98,7 +99,7 @@ async function sync() {
     for (const variant of product.variants) {
       try {
         const inventoryLevels = await getInventoryLevels(variant.inventory_item_id);
-        await new Promise((r) => setTimeout(r, 600));
+        await new Promise((r) => setTimeout(r, 1000));
 
         let stockQuantity = 0, markupRate = null, stockLocationName = null;
         for (const level of inventoryLevels) {
