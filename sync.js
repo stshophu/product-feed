@@ -5,7 +5,8 @@ const { upsertProduct, deleteProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
-const supplierBlacklist = require("./supplier_blacklist.json");
+let supplierBlacklist = { skus: [], barcodes: [] };
+try { supplierBlacklist = require("./supplier_blacklist.json"); } catch(e) { console.log("No supplier blacklist found - all products will sync"); }
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
