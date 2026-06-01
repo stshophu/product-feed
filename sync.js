@@ -1,18 +1,22 @@
 require("dotenv").config();
 const config = require("./config");
-const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLocationMap, formatManufacturer, getInventoryCost } = require("./shopify");
+const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 let supplierBlacklist = { skus: [], barcodes: [] };
 try { supplierBlacklist = require("./supplier_blacklist.json"); } catch(e) { console.log("No supplier blacklist found - all products will sync"); }
+let costBasedBlocklist = new Set();
+try {
+  const bl = require("./3140_blocklist.json");
+  costBasedBlocklist = new Set(bl.map(String));
+  console.log(`🚫 3140 blocklist loaded: ${costBasedBlocklist.size} blocked variants`);
+} catch(e) { console.log("No 3140 blocklist found - all 3140 variants will sync"); }
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
 const isFullSync = process.argv.includes("--full");
-
-
 
 function cleanImages(product) {
   return (product.images || []).map((img) => img.src).filter((url) => {
@@ -48,11 +52,10 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
   const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
   let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
-  // Round half sizes down (42.5 -> 42)
   if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
     cleanSize = String(Math.floor(parseFloat(cleanSize)));
   }
-  const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"]; // accessories, bags
+  const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"];
   const productCategory = getCategoryCode(product.product_type, product.tags);
   const looksLikeSize = cleanSize && (sizePattern.test(cleanSize) || /^(one_size|xxs|xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl)$/i.test(cleanSize));
   if (looksLikeSize && !colorWords.test(cleanSize) && !noSizeCategories.includes(productCategory)) {
@@ -102,13 +105,14 @@ async function sync() {
         const inventoryLevels = await getInventoryLevels(variant.inventory_item_id);
         await new Promise((r) => setTimeout(r, 1000));
 
-        let stockQuantity = 0, markupRate = null, stockLocationName = null;
+        let stockQuantity = 0, markupRate = null, stockLocationName = null, locationConfig = null;
         for (const level of inventoryLevels) {
           if (!allowedLocationIds.has(String(level.location_id))) continue;
           if (level.available <= 0) continue;
           const locName = locationMap[level.location_id];
           stockQuantity = level.available;
-          markupRate = config.locations[locName].markup;
+          locationConfig = config.locations[locName];
+          markupRate = locationConfig.markup;
           stockLocationName = locName;
           break;
         }
@@ -119,14 +123,32 @@ async function sync() {
           continue;
         }
 
+        // Block loss-making 3140 variants
+        if (locationConfig.costBased && costBasedBlocklist.has(String(variant.inventory_item_id))) {
+          console.log(`  🚫 Blocked (loss-maker): ${product.title} | ${variant.option1 || "-"}`);
+          stats.skipped++;
+          continue;
+        }
+
         const originalPrice = parseFloat(variant.price);
         const compareAt = variant.compare_at_price ? parseFloat(variant.compare_at_price) : null;
         const brandCode = findBrandCode(product.vendor);
         if (!brandCode) { stats.skipped++; continue; }
-        const { price, specialPrice } = calculatePrice(originalPrice, compareAt, markupRate);
+
+        // Fetch cost for cost-based locations (3140)
+        let cost = 0;
+        if (locationConfig.costBased) {
+          cost = await getInventoryCost(variant.inventory_item_id);
+          await new Promise((r) => setTimeout(r, 500));
+        }
+
+        const { price, specialPrice } = calculatePrice(
+          originalPrice, compareAt, markupRate,
+          locationConfig.costBased ? cost : null,
+          locationConfig.costBased ? locationConfig.shipping : undefined
+        );
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
-        // Skip if EAN required but missing
         const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
         const hasEan = payload.values.ean && payload.values.ean[0]?.data;
         if (eanRequired && !hasEan) {
@@ -138,7 +160,6 @@ async function sync() {
         } catch(upsertErr) {
           const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
           if (msg.includes('Cursor not valid')) {
-            // Delete and recreate
             await deleteProduct(payload.identifier);
             await upsertProduct(payload);
           } else {
