@@ -46,13 +46,16 @@ async function getAllWsnlProducts() {
   const products = [];
   let page = 1;
   while (true) {
-    const url = `https://content.winkelstraat.nl/api/rest/v1/retailer/products?limit=100&with_count=false&pagination_type=page&page=${page}`;
+    const url = `https://content.winkelstraat.nl/api/rest/v1/retailer/products?limit=100&with_count=true&pagination_type=page&page=${page}`;
     const data = await wsnlGet(url);
     const items = data._embedded?.items || [];
+    if (items.length === 0) break;
     const enabled = items.filter(p => p.enabled);
     products.push(...enabled);
-    console.log(`  Page ${page}: ${enabled.length} enabled (total: ${products.length})`);
-    if (items.length < 100) break;
+    console.log(`  Page ${page}: ${items.length} items, ${enabled.length} enabled (running total: ${products.length})`);
+    // WSNL returns fewer items than `limit` even on full pages, so never
+    // break on page size — follow the API's own next-page link instead.
+    if (!data._links?.next) break;
     page++;
     await sleep(500);
   }
