@@ -114,7 +114,7 @@ async function safeDeleteFromWsnl(identifier) {
 
   // Step 2: Try PATCH with quantity 0 + disabled
   try {
-    await axios.patch(url, { enabled: false, category, values: cleanValues }, {
+    await axios.patch(url, { identifier: full.identifier, enabled: false, category, values: cleanValues }, {
       headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' }
     });
     await sleep(300);
