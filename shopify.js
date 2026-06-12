@@ -21,6 +21,11 @@ async function getInventoryLevels(inventoryItemId) {
   return data.inventory_levels;
 }
 
+async function getInventoryCost(inventoryItemId) {
+  const { data } = await shopify.get(`/inventory_items/${inventoryItemId}.json`);
+  return parseFloat(data.inventory_item.cost || 0);
+}
+
 async function getAllProducts() {
   return fetchProducts({});
 }
@@ -67,4 +72,4 @@ function formatManufacturer(raw) {
   }).join(" ");
 }
 
-module.exports = { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, buildLocationMap, formatManufacturer };
+module.exports = { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer };
