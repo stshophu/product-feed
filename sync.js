@@ -81,7 +81,7 @@ async function sync() {
 
   const [locationMap, products] = await Promise.all([
     buildLocationMap(),
-    isFullSync ? getAllProducts() : getRecentlyUpdatedProducts(35),
+    isFullSync ? getAllProducts() : getRecentlyUpdatedProducts(120),
   ]);
 
   console.log(`📦 ${products.length} products to process`);
