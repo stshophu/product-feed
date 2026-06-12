@@ -44,20 +44,37 @@ async function wsnlGet(url) {
 
 async function getAllWsnlProducts() {
   const products = [];
-  let page = 1;
+  const seen = new Set();
+  let page = 1, totalCount = null, fetched = 0;
   while (true) {
     const url = `https://content.winkelstraat.nl/api/rest/v1/retailer/products?limit=100&with_count=true&pagination_type=page&page=${page}`;
     const data = await wsnlGet(url);
+    if (totalCount === null) {
+      totalCount = data.items_count ?? null;
+      console.log(`  WSNL reports ${totalCount} total listings`);
+    }
     const items = data._embedded?.items || [];
     if (items.length === 0) break;
-    const enabled = items.filter(p => p.enabled);
+
+    // Guard: if the API ignores the page param and re-serves the same items, stop.
+    const newItems = items.filter(p => !seen.has(p.identifier));
+    if (newItems.length === 0) {
+      console.log(`  ⚠️  Page ${page} returned only already-seen items — API may ignore page param. Stopping.`);
+      break;
+    }
+    for (const p of newItems) seen.add(p.identifier);
+    fetched += newItems.length;
+
+    const enabled = newItems.filter(p => p.enabled);
     products.push(...enabled);
-    console.log(`  Page ${page}: ${items.length} items, ${enabled.length} enabled (running total: ${products.length})`);
-    // WSNL returns fewer items than `limit` even on full pages, so never
-    // break on page size — follow the API's own next-page link instead.
-    if (!data._links?.next) break;
+    console.log(`  Page ${page}: ${newItems.length} new items, ${enabled.length} enabled (fetched ${fetched}/${totalCount ?? '?'})`);
+
+    if (totalCount !== null && fetched >= totalCount) break;
     page++;
     await sleep(500);
+  }
+  if (totalCount !== null && fetched < totalCount) {
+    console.log(`  ⚠️  Only fetched ${fetched} of ${totalCount} listings — pagination incomplete!`);
   }
   return products;
 }
