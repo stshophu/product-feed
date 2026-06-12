@@ -8,6 +8,22 @@ const ALLOWED_LOCATIONS = new Set([
 ]);
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+const TRANSIENT_CODES = new Set(['ECONNRESET', 'ETIMEDOUT', 'ECONNABORTED', 'EAI_AGAIN', 'EPIPE']);
+async function withRetry(fn, label, attempts = 3) {
+  for (let i = 1; ; i++) {
+    try { return await fn(); }
+    catch (e) {
+      const status = e.response?.status;
+      const transient = TRANSIENT_CODES.has(e.code) || status === 429 || (status >= 500 && status < 600);
+      if (!transient || i >= attempts) throw e;
+      const wait = i * 2000;
+      console.log(`  ↻ ${label}: ${e.code || status}, retrying (${i}/${attempts - 1}) in ${wait / 1000}s`);
+      await sleep(wait);
+    }
+  }
+}
+
 let cachedToken = null, tokenExpiry = null;
 
 async function getToken() {
@@ -131,10 +147,10 @@ async function run() {
     try {
       let vdata;
       try {
-        const resp = await axios.get(
+        const resp = await withRetry(() => axios.get(
           `https://${process.env.SHOPIFY_DOMAIN}/admin/api/2025-01/variants/${variantId}.json?fields=id,inventory_item_id`,
           { headers: { 'X-Shopify-Access-Token': process.env.SHOPIFY_TOKEN } }
-        );
+        ), p.identifier);
         vdata = resp.data;
       } catch (shopifyErr) {
         if (shopifyErr.response?.status === 404) {
@@ -143,7 +159,7 @@ async function run() {
           if (DRY_RUN) {
             console.log(`[DRY] Orphan (deleted in Shopify), would delete: ${p.identifier}`);
           } else {
-            await safeDeleteFromWsnl(p.identifier);
+            await withRetry(() => safeDeleteFromWsnl(p.identifier), p.identifier + " delete");
             console.log(`🗑️  Orphan deleted: ${p.identifier}`);
           }
           deleted++;
@@ -154,7 +170,7 @@ async function run() {
       }
       await sleep(300);
 
-      const levels = await getInventoryLevels(vdata.variant.inventory_item_id);
+      const levels = await withRetry(() => getInventoryLevels(vdata.variant.inventory_item_id), p.identifier + ' inventory');
       await sleep(500);
 
       const hasAllowedStock = levels.some(l =>
@@ -171,7 +187,7 @@ async function run() {
       if (DRY_RUN) {
         console.log(`[DRY] Would delete: ${p.identifier}`);
       } else {
-        await safeDeleteFromWsnl(p.identifier);
+        await withRetry(() => safeDeleteFromWsnl(p.identifier), p.identifier + " delete");
         console.log(`🗑️  Deleted: ${p.identifier}`);
       }
       deleted++;
