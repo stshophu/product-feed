@@ -16,6 +16,7 @@ try {
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
+
 const isFullSync = process.argv.includes("--full");
 
 function cleanImages(product) {
@@ -39,7 +40,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
       ],
       price: [{ data: [{ amount: price, currency: "EUR" }] }],
       manufacturer: [{ data: brandCode }],
-      manufacturer_product_number: [{ data: String(variant.id) }],
+      manufacturer_product_number: [{ data: String(product.id) }],
       retailer_manufacturer_product_number: [{ data: variant.sku || String(variant.id) }],
       quantity: [{ data: quantity }],
       ...(variant.barcode && /^[0-9]{12,13}$/.test(variant.barcode.trim()) ? { ean: [{ data: variant.barcode.trim() }] } : {}),
