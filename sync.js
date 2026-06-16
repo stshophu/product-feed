@@ -16,6 +16,14 @@ try {
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
+// Derive a product-level MPN from a variant SKU by stripping the size suffix
+// (e.g. "DRS 19 2 ND SS22 09536 T_42" -> "DRS 19 2 ND SS22 09536").
+// WSNL requires the same MPN across all size variants of a product.
+function skuToMpn(sku) {
+  if (!sku) return null;
+  return sku.replace(/\s*T_[^\s]+$/i, "").trim() || null;
+}
+
 const isFullSync = process.argv.includes("--full");
 
 function cleanImages(product) {
@@ -39,7 +47,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
       ],
       price: [{ data: [{ amount: price, currency: "EUR" }] }],
       manufacturer: [{ data: brandCode }],
-      manufacturer_product_number: [{ data: String(variant.id) }],
+      manufacturer_product_number: [{ data: skuToMpn(variant.sku) || String(product.id) }],
       retailer_manufacturer_product_number: [{ data: variant.sku || String(variant.id) }],
       quantity: [{ data: quantity }],
       ...(variant.barcode && /^[0-9]{12,13}$/.test(variant.barcode.trim()) ? { ean: [{ data: variant.barcode.trim() }] } : {}),
