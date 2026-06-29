@@ -5,6 +5,41 @@ const { upsertProduct, deleteProduct } = require("./winkelstraat");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
+
+// The full-catalog run on 2026-06-29 produced 10,292 errors, almost all
+// "[API] Invalid API key or access token". The token WAS being refreshed
+// correctly (confirmed in logs), and there is no pacing at all between
+// the thousands of upsertProduct calls in a full sync — strong signal this
+// is WSNL rate-limiting the connection and returning a misleading
+// auth-style error rather than a proper 429. Two changes to compensate:
+//   1. A small pacing delay before every WSNL upsert (not just Shopify calls).
+//   2. Retry with backoff specifically when the error LOOKS like an auth
+//      failure but follows a recent successful token refresh — since a
+//      genuinely bad credential would fail immediately and consistently,
+//      not intermittently after thousands of successful calls.
+// If this remains the root cause, also ask WSNL support for the documented
+// rate limit on the retailer products endpoint so the delay can be tuned
+// precisely instead of guessed.
+const WSNL_PACING_MS = 300;
+async function wsnlUpsertWithRetry(payload, attempt = 1) {
+  await new Promise((r) => setTimeout(r, WSNL_PACING_MS));
+  try {
+    await upsertProduct(payload);
+  } catch (err) {
+    const msg = err.response ? JSON.stringify(err.response.data) : err.message;
+    const looksLikeAuthOrRateLimit =
+      msg.includes("Invalid API key") || msg.includes("access token") ||
+      (err.response && (err.response.status === 401 || err.response.status === 429));
+    if (looksLikeAuthOrRateLimit && attempt < 5) {
+      const wait = 1000 * Math.pow(2, attempt); // 2s, 4s, 8s, 16s
+      console.log(`  ⏳ WSNL auth/rate-limit-style error, retrying in ${wait / 1000}s (attempt ${attempt})`);
+      await new Promise((r) => setTimeout(r, wait));
+      return wsnlUpsertWithRetry(payload, attempt + 1);
+    }
+    throw err;
+  }
+}
+
 let supplierBlacklist = { skus: [], barcodes: [] };
 try { supplierBlacklist = require("./supplier_blacklist.json"); } catch(e) { console.log("No supplier blacklist found - all products will sync"); }
 let costBasedBlocklist = new Set();
@@ -157,12 +192,12 @@ async function sync() {
           continue;
         }
         try {
-          await upsertProduct(payload);
+          await wsnlUpsertWithRetry(payload);
         } catch(upsertErr) {
           const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
           if (msg.includes('Cursor not valid')) {
             await deleteProduct(payload.identifier);
-            await upsertProduct(payload);
+            await wsnlUpsertWithRetry(payload);
           } else {
             throw upsertErr;
           }
