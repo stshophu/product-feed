@@ -9,6 +9,27 @@ const shopify = axios.create({
   },
 });
 
+// Retry on Shopify rate limits (429) and transient server errors (5xx).
+// Without this a single 429 during a long full sync aborts the whole run.
+const MAX_RETRIES = 6;
+shopify.interceptors.response.use(null, async (error) => {
+  const cfg = error.config;
+  if (!cfg) throw error;
+  const status = error.response ? error.response.status : null;
+  const retriable = status === 429 || (status >= 500 && status < 600) || !error.response;
+  cfg.__retryCount = cfg.__retryCount || 0;
+  if (!retriable || cfg.__retryCount >= MAX_RETRIES) throw error;
+  cfg.__retryCount += 1;
+  // Shopify sends Retry-After (seconds) on 429; otherwise exponential backoff.
+  let waitMs;
+  const ra = error.response && error.response.headers && error.response.headers["retry-after"];
+  if (ra) waitMs = parseFloat(ra) * 1000;
+  else waitMs = Math.min(1000 * Math.pow(2, cfg.__retryCount), 16000);
+  console.log(`  ⏳ Shopify ${status || "network error"}, retry ${cfg.__retryCount}/${MAX_RETRIES} in ${Math.round(waitMs)}ms`);
+  await new Promise((r) => setTimeout(r, waitMs));
+  return shopify(cfg);
+});
+
 async function getLocations() {
   const { data } = await shopify.get("/locations.json");
   return data.locations;
