@@ -20,7 +20,7 @@ const { findBrandCode } = require("./brandmap");
 // If this remains the root cause, also ask WSNL support for the documented
 // rate limit on the retailer products endpoint so the delay can be tuned
 // precisely instead of guessed.
-const WSNL_PACING_MS = 300;
+const WSNL_PACING_MS = 50;
 async function wsnlUpsertWithRetry(payload, attempt = 1) {
   await new Promise((r) => setTimeout(r, WSNL_PACING_MS));
   try {
@@ -139,7 +139,6 @@ async function sync() {
     for (const variant of product.variants) {
       try {
         const inventoryLevels = await getInventoryLevels(variant.inventory_item_id);
-        await new Promise((r) => setTimeout(r, 1000));
 
         let stockQuantity = 0, markupRate = null, stockLocationName = null, locationConfig = null;
         for (const level of inventoryLevels) {
@@ -175,7 +174,6 @@ async function sync() {
         let cost = 0;
         if (locationConfig.costBased) {
           cost = await getInventoryCost(variant.inventory_item_id);
-          await new Promise((r) => setTimeout(r, 500));
         }
 
         const { price, specialPrice } = calculatePrice(
