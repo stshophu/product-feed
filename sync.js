@@ -82,12 +82,22 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
-  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
+  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|os|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
   const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
+  // Any of these mean "one size" in some source feed's convention (Loxuno uses
+  // "OS", others use "UNI"/"Unica"/"One Size"). WSNL only accepts a single
+  // canonical token for this, so every synonym must collapse to it -
+  // sending the raw synonym (e.g. "uni") gets a "not supported/disabled"
+  // error, and sending nothing at all (e.g. "OS" wasn't even recognized as
+  // a size before) gets a "must be unspecified" error demanding some value.
+  const oneSizeSynonyms = /^(os|uni|unica|one.?size|taille.?unique)$/i;
   const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
   const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
   const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
   let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
+  if (cleanSize && oneSizeSynonyms.test(cleanSize.trim())) {
+    cleanSize = "one_size";
+  }
   if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
     cleanSize = String(Math.floor(parseFloat(cleanSize)));
   }
