@@ -101,10 +101,20 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
     cleanSize = String(Math.floor(parseFloat(cleanSize)));
   }
+  // These categories don't reliably carry a size *option* in Shopify - many of
+  // their products only have a single "Colore" option and no size option at
+  // all, which used to leak the raw (often untranslated, e.g. "Avorio") color
+  // through as a fake size value. That's what this suppression is for.
+  // It must NOT apply when a size was genuinely detected on the variant
+  // (option1isSze / option2isSze true, including one-size markers like OS/UNI)
+  // - WSNL's schema for these categories does require a size value, and
+  // suppressing a real one is what was causing "must be unspecified" errors
+  // on every bag/hat/belt/wallet product in this category, one-size or not.
   const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"];
   const productCategory = getCategoryCode(product.product_type, product.tags);
+  const hasGenuineSize = option1isSze || option2isSze;
   const looksLikeSize = cleanSize && (sizePattern.test(cleanSize) || /^(one_size|xxs|xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl)$/i.test(cleanSize));
-  if (looksLikeSize && !colorWords.test(cleanSize) && !noSizeCategories.includes(productCategory)) {
+  if (looksLikeSize && !colorWords.test(cleanSize) && (hasGenuineSize || !noSizeCategories.includes(productCategory))) {
     payload.values.size = [{ data: cleanSize }];
   }
   payload.values.color = [{ data: findColor(variant, product.tags) }];
