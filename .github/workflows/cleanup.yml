@@ -1,4 +1,4 @@
-name: WSNL Orphan Cleanup
+name: Marketplace Orphan Cleanup
 
 on:
   schedule:
@@ -15,7 +15,7 @@ on:
           - dry-run
 
 concurrency:
-  group: wsnl-api
+  group: marketplace-api
   cancel-in-progress: false
 
 jobs:
@@ -34,19 +34,21 @@ jobs:
         env:
           SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
-          WSNL_CLIENT_ID: ${{ secrets.WSNL_CLIENT_ID }}
-          WSNL_CLIENT_SECRET: ${{ secrets.WSNL_CLIENT_SECRET }}
-        run: node cleanup_wsnl.js
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: node cleanup_marketplace.js
       - name: Run cleanup (manual)
         if: github.event_name == 'workflow_dispatch'
         env:
           SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
-          WSNL_CLIENT_ID: ${{ secrets.WSNL_CLIENT_ID }}
-          WSNL_CLIENT_SECRET: ${{ secrets.WSNL_CLIENT_SECRET }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
         run: |
           if [ "${{ github.event.inputs.mode }}" = "dry-run" ]; then
-            node cleanup_wsnl.js --dry-run
+            node cleanup_marketplace.js --dry-run
           else
-            node cleanup_wsnl.js
+            node cleanup_marketplace.js
           fi
