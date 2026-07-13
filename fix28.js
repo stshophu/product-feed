@@ -1,5 +1,5 @@
 const fs = require('fs');
-let code = fs.readFileSync('winkelstraat.js', 'utf8');
+let code = fs.readFileSync('marketplace.js', 'utf8');
 
 // Add disableBeforeDelete function
 code = code.replace(
@@ -9,7 +9,7 @@ code = code.replace(
   const headers = { Authorization: "Bearer " + token, "Content-Type": "application/json" };
   try {
     await axios.patch(
-      "https://content.winkelstraat.nl/api/rest/v1/retailer/products/" + identifier,
+      process.env.MARKETPLACE_API_BASE + "/api/rest/v1/retailer/products/" + identifier,
       { enabled: false, values: { quantity: [{ data: 0 }] } },
       { headers }
     );
@@ -21,5 +21,5 @@ async function deleteProduct(identifier) {
   await disableBeforeDelete(identifier);`
 );
 
-fs.writeFileSync('winkelstraat.js', code);
+fs.writeFileSync('marketplace.js', code);
 console.log('Done');

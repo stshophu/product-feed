@@ -1,10 +1,10 @@
-const WSNL_COMMISSION = 0.74;
+const MARKETPLACE_COMMISSION = 0.74;
 const TARGET_MARGIN = 1.40;
 
 function calculatePrice(originalPrice, compareAt, markupRate, cost, shipping) {
   // Cost-based pricing (3140 Warehouse)
   if (cost && cost > 0 && shipping !== undefined) {
-    const targetPrice = parseFloat(((cost + shipping) * TARGET_MARGIN / WSNL_COMMISSION).toFixed(2));
+    const targetPrice = parseFloat(((cost + shipping) * TARGET_MARGIN / MARKETPLACE_COMMISSION).toFixed(2));
     if (compareAt && compareAt > targetPrice) {
       return { price: parseFloat(compareAt.toFixed(2)), specialPrice: targetPrice };
     }

@@ -1,4 +1,4 @@
-// categories.js — Map Shopify product_type + gender tag → Winkelstraat category code
+// categories.js — Map Shopify product_type + gender tag → Marketplace category code
 
 function detectGender(tags) {
   if (!tags) return "women"; // default

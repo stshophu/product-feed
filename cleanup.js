@@ -2,8 +2,8 @@ require('dotenv').config();
 const axios = require('axios');
 
 async function cleanup() {
-  const creds = Buffer.from(process.env.WSNL_CLIENT_ID + ':' + process.env.WSNL_CLIENT_SECRET).toString('base64');
-  const { data: auth } = await axios.post('https://content.winkelstraat.nl/api/oauth/v1/retailer/token', {}, {
+  const creds = Buffer.from(process.env.MARKETPLACE_CLIENT_ID + ':' + process.env.MARKETPLACE_CLIENT_SECRET).toString('base64');
+  const { data: auth } = await axios.post(process.env.MARKETPLACE_API_BASE + '/api/oauth/v1/retailer/token', {}, {
     headers: { 'Authorization': 'Basic ' + creds, 'Content-Type': 'application/json' }
   });
   const token = auth.access_token;
@@ -14,7 +14,7 @@ async function cleanup() {
 
   while (true) {
     const { data } = await axios.get(
-      'https://content.winkelstraat.nl/api/rest/v1/retailer/products?limit=100&page=' + page,
+      process.env.MARKETPLACE_API_BASE + '/api/rest/v1/retailer/products?limit=100&page=' + page,
       { headers }
     );
     const items = data._embedded?.items || [];
@@ -26,7 +26,7 @@ async function cleanup() {
       if (qty === 0 || qty === null || qty === undefined) {
         try {
           await axios.delete(
-            'https://content.winkelstraat.nl/api/rest/v1/retailer/products/' + item.identifier,
+            process.env.MARKETPLACE_API_BASE + '/api/rest/v1/retailer/products/' + item.identifier,
             { headers }
           );
           console.log('Deleted:', item.identifier, item.values?.name?.[0]?.data);

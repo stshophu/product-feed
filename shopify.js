@@ -57,18 +57,44 @@ async function getRecentlyUpdatedProducts(minutes) {
   return fetchProducts({ updated_at_min: since });
 }
 
-async function fetchProducts(extraParams) {
+// Minimal-field product fetch for the stock-only light sync — skips
+// body_html/images/product_type/updated_at since that job never builds a
+// full Marketplace payload, only patches quantity or disables a listing.
+async function getAllProductsLight() {
+  return fetchProducts({}, "id,title,variants,status");
+}
+
+async function fetchProducts(extraParams, fieldsOverride) {
   if (!extraParams) extraParams = {};
+  var fields = fieldsOverride || "id,title,body_html,variants,images,status,vendor,product_type,updated_at";
   var products = [];
   var page_info = null;
   do {
-    var params = Object.assign({ limit: 250, fields: "id,title,body_html,variants,images,status,vendor,product_type,updated_at" }, page_info ? {} : extraParams);
+    var params = Object.assign({ limit: 250, fields: fields }, page_info ? {} : extraParams);
     if (page_info) params.page_info = page_info;
     var result = await shopify.get("/products.json", { params });
     products.push.apply(products, result.data.products);
     page_info = parseLinkHeader(result.headers.link);
   } while (page_info);
   return products;
+}
+
+// Bulk inventory levels for a fixed set of locations, paginated - used by
+// the light stock sync so it doesn't need one Shopify call per variant.
+// Shopify's inventory_levels.json accepts a comma-separated location_ids
+// filter and is paginated the same way as products.json.
+async function getInventoryLevelsForLocations(locationIds) {
+  var levels = [];
+  var page_info = null;
+  do {
+    var params = page_info
+      ? { limit: 250, page_info: page_info }
+      : { limit: 250, location_ids: locationIds.join(",") };
+    var result = await shopify.get("/inventory_levels.json", { params });
+    levels.push.apply(levels, result.data.inventory_levels);
+    page_info = parseLinkHeader(result.headers.link);
+  } while (page_info);
+  return levels;
 }
 
 async function buildLocationMap() {
@@ -93,4 +119,4 @@ function formatManufacturer(raw) {
   }).join(" ");
 }
 
-module.exports = { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer };
+module.exports = { getAllProducts, getAllProductsLight, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryLevelsForLocations, getInventoryCost, buildLocationMap, formatManufacturer };

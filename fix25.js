@@ -2,7 +2,7 @@ const fs = require('fs');
 let code = fs.readFileSync('sync.js', 'utf8');
 
 // Skip products that require EAN but don't have one
-// Categories that require EAN on Winkelstraat: jackets, shoes, etc.
+// Categories that require EAN on Marketplace: jackets, shoes, etc.
 const eanRequiredCategories = ['609', '24', '114', '199', '255', '92', '618', '612', '615', '617'];
 
 code = code.replace(

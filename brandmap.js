@@ -1,6 +1,6 @@
 const brands = require('./brands.json');
 
-// Build lookup map: normalized name → wsnl code
+// Build lookup map: normalized name → marketplace code
 const brandMap = {};
 brands.forEach(b => {
   // Store by code

@@ -1,7 +1,7 @@
 require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
-const { upsertProduct, deleteProduct } = require("./winkelstraat");
+const { upsertProduct, deleteProduct } = require("./marketplace");
 const { calculatePrice } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
@@ -10,19 +10,19 @@ const { findBrandCode } = require("./brandmap");
 // "[API] Invalid API key or access token". The token WAS being refreshed
 // correctly (confirmed in logs), and there is no pacing at all between
 // the thousands of upsertProduct calls in a full sync — strong signal this
-// is WSNL rate-limiting the connection and returning a misleading
+// is Marketplace rate-limiting the connection and returning a misleading
 // auth-style error rather than a proper 429. Two changes to compensate:
-//   1. A small pacing delay before every WSNL upsert (not just Shopify calls).
+//   1. A small pacing delay before every Marketplace upsert (not just Shopify calls).
 //   2. Retry with backoff specifically when the error LOOKS like an auth
 //      failure but follows a recent successful token refresh — since a
 //      genuinely bad credential would fail immediately and consistently,
 //      not intermittently after thousands of successful calls.
-// If this remains the root cause, also ask WSNL support for the documented
+// If this remains the root cause, also ask Marketplace support for the documented
 // rate limit on the retailer products endpoint so the delay can be tuned
 // precisely instead of guessed.
-const WSNL_PACING_MS = 50;
-async function wsnlUpsertWithRetry(payload, attempt = 1) {
-  await new Promise((r) => setTimeout(r, WSNL_PACING_MS));
+const MARKETPLACE_PACING_MS = 50;
+async function marketplaceUpsertWithRetry(payload, attempt = 1) {
+  await new Promise((r) => setTimeout(r, MARKETPLACE_PACING_MS));
   try {
     await upsertProduct(payload);
   } catch (err) {
@@ -32,9 +32,9 @@ async function wsnlUpsertWithRetry(payload, attempt = 1) {
       (err.response && (err.response.status === 401 || err.response.status === 429));
     if (looksLikeAuthOrRateLimit && attempt < 5) {
       const wait = 1000 * Math.pow(2, attempt); // 2s, 4s, 8s, 16s
-      console.log(`  ⏳ WSNL auth/rate-limit-style error, retrying in ${wait / 1000}s (attempt ${attempt})`);
+      console.log(`  ⏳ Marketplace auth/rate-limit-style error, retrying in ${wait / 1000}s (attempt ${attempt})`);
       await new Promise((r) => setTimeout(r, wait));
-      return wsnlUpsertWithRetry(payload, attempt + 1);
+      return marketplaceUpsertWithRetry(payload, attempt + 1);
     }
     throw err;
   }
@@ -85,7 +85,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|os|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
   const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
   // Any of these mean "one size" in some source feed's convention (Loxuno uses
-  // "OS", others use "UNI"/"Unica"/"One Size"). WSNL only accepts a single
+  // "OS", others use "UNI"/"Unica"/"One Size"). Marketplace only accepts a single
   // canonical token for this, so every synonym must collapse to it -
   // sending the raw synonym (e.g. "uni") gets a "not supported/disabled"
   // error, and sending nothing at all (e.g. "OS" wasn't even recognized as
@@ -107,7 +107,7 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   // through as a fake size value. That's what this suppression is for.
   // It must NOT apply when a size was genuinely detected on the variant
   // (option1isSze / option2isSze true, including one-size markers like OS/UNI)
-  // - WSNL's schema for these categories does require a size value, and
+  // - Marketplace's schema for these categories does require a size value, and
   // suppressing a real one is what was causing "must be unspecified" errors
   // on every bag/hat/belt/wallet product in this category, one-size or not.
   const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"];
@@ -210,12 +210,12 @@ async function sync() {
           continue;
         }
         try {
-          await wsnlUpsertWithRetry(payload);
+          await marketplaceUpsertWithRetry(payload);
         } catch(upsertErr) {
           const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
           if (msg.includes('Cursor not valid')) {
             await deleteProduct(payload.identifier);
-            await wsnlUpsertWithRetry(payload);
+            await marketplaceUpsertWithRetry(payload);
           } else {
             throw upsertErr;
           }

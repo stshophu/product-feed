@@ -1,4 +1,4 @@
-// Map common color words → Winkelstraat color codes
+// Map common color words → Marketplace color codes
 const colorKeywords = {
   'black': 'black', 'nero': 'black', 'schwarz': 'black', 'noir': 'black',
   'white': 'white', 'bianco': 'white', 'weiss': 'white', 'blanc': 'white', 'cream': 'white', 'ivory': 'white', 'off-white': 'white', 'offwhite': 'white',
