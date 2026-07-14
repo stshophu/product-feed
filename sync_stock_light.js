@@ -6,6 +6,21 @@ const {
 } = require("./shopify");
 const { updateStock, deleteProduct } = require("./marketplace");
 
+// Optional backstop only: sync.js now computes profit live against current
+// Shopify price/cost every run, so it needs no static list and automatically
+// catches new products. This light job still checks excluded_skus.json (if
+// present) since it doesn't fetch cost and can't compute profit itself -
+// it just avoids re-enabling stock on a SKU sync.js already excluded live.
+// Safe to leave this file stale or delete it; nothing here depends on it
+// being current.
+let excludedSkus = new Set();
+try {
+  excludedSkus = new Set(require("./excluded_skus.json").skus);
+  console.log(`🚫 Loaded ${excludedSkus.size} SKUs from optional exclusion backstop`);
+} catch (e) {
+  console.log("No excluded_skus.json found - relying on sync.js's live profit check only");
+}
+
 // ─────────────────────────────────────────────────────────────────────────
 // Light stock sync
 //
@@ -101,6 +116,12 @@ async function syncStockLight() {
         if (entry && entry.excluded) {
           // Also in stock at 3140 - not this job's listing to manage.
           stats.skippedOther++;
+          continue;
+        }
+
+        if (variant.sku && excludedSkus.has(variant.sku)) {
+          await paced(() => deleteProduct(identifier));
+          stats.disabled++;
           continue;
         }
 

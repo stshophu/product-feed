@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
-const { calculatePrice } = require("./pricing");
+const { calculatePrice, meetsMinProfit, MIN_PROFIT_EUR } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 
@@ -40,8 +40,9 @@ async function marketplaceUpsertWithRetry(payload, attempt = 1) {
   }
 }
 
-let supplierBlacklist = { skus: [], barcodes: [] };
-try { supplierBlacklist = require("./supplier_blacklist.json"); } catch(e) { console.log("No supplier blacklist found - all products will sync"); }
+// Minimum-profit filtering is done live per variant now (see meetsMinProfit
+// below, right after price/cost are computed) - no static SKU list to keep
+// in sync, so newly imported products get evaluated automatically too.
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
@@ -127,7 +128,7 @@ async function sync() {
   console.log("═══════════════════════════════════════════════════");
 
   const startTime = Date.now();
-  const stats = { synced: 0, skipped: 0, disabled: 0, errors: 0 };
+  const stats = { synced: 0, skipped: 0, skippedLowMargin: 0, disabled: 0, errors: 0 };
 
   const [locationMap, products] = await Promise.all([
     buildLocationMap(),
@@ -177,17 +178,25 @@ async function sync() {
         const brandCode = findBrandCode(product.vendor);
         if (!brandCode) { stats.skipped++; continue; }
 
-        // Fetch cost for cost-based locations (currently: 3170)
-        let cost = 0;
-        if (locationConfig.costBased) {
-          cost = await getInventoryCost(variant.inventory_item_id);
-        }
+        // Cost is needed for every location now, not just cost-based ones:
+        // cost-based locations use it to derive the price itself, and
+        // pass-through locations (3140/3171) need it for the live minimum-
+        // profit check below even though their listed price ignores it.
+        const cost = await getInventoryCost(variant.inventory_item_id);
 
         const { price, specialPrice } = calculatePrice(
           originalPrice, compareAt, markupRate,
           locationConfig.costBased ? cost : null,
           locationConfig.costBased ? locationConfig.shipping : undefined
         );
+
+        const { ok: profitOk, profit } = meetsMinProfit(price, specialPrice, cost);
+        if (!profitOk) {
+          try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+          stats.skippedLowMargin++;
+          console.log(`  ⏸️  ${product.title} | ${variant.sku || variant.id} | profit €${profit} < €${MIN_PROFIT_EUR} min - excluded from WSNL`);
+          continue;
+        }
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
         const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
@@ -218,7 +227,7 @@ async function sync() {
 
   const duration = ((Date.now() - startTime) / 1000).toFixed(1);
   console.log("═══════════════════════════════════════════════════");
-  console.log(`✅ Done in ${duration}s | Synced: ${stats.synced} | Skipped: ${stats.skipped} | Disabled: ${stats.disabled} | Errors: ${stats.errors}`);
+  console.log(`✅ Done in ${duration}s | Synced: ${stats.synced} | Skipped: ${stats.skipped} | Low margin: ${stats.skippedLowMargin} | Disabled: ${stats.disabled} | Errors: ${stats.errors}`);
   console.log("═══════════════════════════════════════════════════");
 }
 
