@@ -1,0 +1,42 @@
+name: Disable 3140 Marketplace Listings (one-off)
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Mode"
+        required: true
+        default: "dry-run"
+        type: choice
+        options:
+          - dry-run
+          - live
+
+concurrency:
+  group: marketplace-api
+  cancel-in-progress: false
+
+jobs:
+  disable-3140:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run disable-3140 script
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "live" ]; then
+            node disable_3140_products.js
+          else
+            node disable_3140_products.js --dry-run
+          fi
