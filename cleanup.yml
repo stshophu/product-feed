@@ -1,0 +1,54 @@
+name: Marketplace Orphan Cleanup
+
+on:
+  schedule:
+    - cron: "0 4 * * *"   # every Monday 04:00 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Cleanup mode"
+        required: true
+        default: "live"
+        type: choice
+        options:
+          - live
+          - dry-run
+
+concurrency:
+  group: marketplace-api
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run cleanup (scheduled, live)
+        if: github.event_name == 'schedule'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: node cleanup_marketplace.js
+      - name: Run cleanup (manual)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "dry-run" ]; then
+            node cleanup_marketplace.js --dry-run
+          else
+            node cleanup_marketplace.js
+          fi

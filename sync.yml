@@ -1,0 +1,59 @@
+name: Shopify to Marketplace Catalog Sync
+
+on:
+  schedule:
+    # Was */30 - now that sync_stock_light.js handles frequent stock/OOS
+    # refresh for 3170+3171 every 30 min (at :15/:45), this full-payload
+    # incremental (price/images/description/category, all 3 locations)
+    # only needs to run hourly. Kept at :00 so it never lands on the
+    # light job's :15/:45 slots.
+    - cron: "0 * * * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Sync mode"
+        required: true
+        default: "incremental"
+        type: choice
+        options:
+          - incremental
+          - full
+
+concurrency:
+  group: marketplace-api
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run incremental sync (scheduled)
+        if: github.event_name == 'schedule'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: node sync.js
+      - name: Run sync (manual)
+        if: github.event_name == 'workflow_dispatch'
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: |
+          if [ "${{ github.event.inputs.mode }}" = "full" ]; then
+            node sync.js --full
+          else
+            node sync.js
+          fi

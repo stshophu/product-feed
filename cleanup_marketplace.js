@@ -1,11 +1,22 @@
 require('dotenv').config();
 const axios = require('axios');
-const { getInventoryLevels } = require('./shopify');
+const { getInventoryLevels, buildLocationMap } = require('./shopify');
+const config = require('./config');
 
-const ALLOWED_LOCATIONS = new Set([
-  '107924324692', // 3171 Warehouse
-  '113070440788', // 3140 Warehouse
-]);
+// Was previously a hardcoded set of two location IDs (3171 + 3140) that had
+// drifted out of sync with config.js (missing 3170 entirely, and now also
+// wrongly including 3140, which is no longer synced at all). Resolved live
+// from config.js instead, so this always matches whatever sync.js currently
+// treats as valid - single source of truth.
+async function resolveAllowedLocations() {
+  const locationMap = await buildLocationMap();
+  const allowed = new Set(
+    Object.entries(locationMap)
+      .filter(([, name]) => config.locations[name])
+      .map(([id]) => String(id))
+  );
+  return allowed;
+}
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
@@ -130,8 +141,9 @@ async function safeDeleteFromMarketplace(identifier) {
 
 async function run() {
   const DRY_RUN = process.argv.includes('--dry-run');
+  const ALLOWED_LOCATIONS = await resolveAllowedLocations();
   console.log(`Mode: ${DRY_RUN ? 'DRY RUN' : 'LIVE'}`);
-  console.log('Allowed locations: 3171 + 3140');
+  console.log(`Allowed locations: ${Object.keys(config.locations).join(', ')} (ids: ${[...ALLOWED_LOCATIONS].join(', ')})`);
   console.log('Fetching all enabled Marketplace products...\n');
 
   const marketplaceProducts = await getAllMarketplaceProducts();
@@ -206,9 +218,13 @@ async function run() {
   }
 
   console.log(`\n\n=== DONE ===`);
-  console.log(`Kept (3171 or 3140 stock): ${kept}`);
+  console.log(`Kept (stock at ${Object.keys(config.locations).join(' or ')}): ${kept}`);
   console.log(`Deleted:                   ${deleted}`);
   console.log(`Errors:                    ${errors}`);
 }
 
-run().catch(e => console.log(e.message));
+module.exports = { getAllMarketplaceProducts, safeDeleteFromMarketplace };
+
+if (require.main === module) {
+  run().catch(e => console.log(e.message));
+}

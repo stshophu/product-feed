@@ -1,0 +1,33 @@
+name: Marketplace Light Stock Sync (Loxuno + Hanau)
+
+on:
+  schedule:
+    # Offset by 15 min from sync.yml's :00/:30 so the two never race for
+    # the Marketplace API at the same instant (both still share the marketplace-api
+    # concurrency group below as a safety net either way).
+    - cron: "15,45 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: marketplace-api
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - name: Run light stock sync
+        env:
+          SHOPIFY_DOMAIN: ${{ secrets.SHOPIFY_DOMAIN }}
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          MARKETPLACE_API_BASE: ${{ secrets.MARKETPLACE_API_BASE }}
+          MARKETPLACE_CLIENT_ID: ${{ secrets.MARKETPLACE_CLIENT_ID }}
+          MARKETPLACE_CLIENT_SECRET: ${{ secrets.MARKETPLACE_CLIENT_SECRET }}
+        run: node sync_stock_light.js

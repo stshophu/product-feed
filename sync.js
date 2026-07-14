@@ -42,12 +42,6 @@ async function marketplaceUpsertWithRetry(payload, attempt = 1) {
 
 let supplierBlacklist = { skus: [], barcodes: [] };
 try { supplierBlacklist = require("./supplier_blacklist.json"); } catch(e) { console.log("No supplier blacklist found - all products will sync"); }
-let costBasedBlocklist = new Set();
-try {
-  const bl = require("./3140_blocklist.json");
-  costBasedBlocklist = new Set(bl.map(String));
-  console.log(`🚫 3140 blocklist loaded: ${costBasedBlocklist.size} blocked variants`);
-} catch(e) { console.log("No 3140 blocklist found - all 3140 variants will sync"); }
 const { findColor } = require("./colormap");
 const { stripHtml } = require("./striphtml");
 
@@ -178,19 +172,12 @@ async function sync() {
           continue;
         }
 
-        // Block loss-making 3140 variants
-        if (locationConfig.costBased && costBasedBlocklist.has(String(variant.inventory_item_id))) {
-          console.log(`  🚫 Blocked (loss-maker): ${product.title} | ${variant.option1 || "-"}`);
-          stats.skipped++;
-          continue;
-        }
-
         const originalPrice = parseFloat(variant.price);
         const compareAt = variant.compare_at_price ? parseFloat(variant.compare_at_price) : null;
         const brandCode = findBrandCode(product.vendor);
         if (!brandCode) { stats.skipped++; continue; }
 
-        // Fetch cost for cost-based locations (3140)
+        // Fetch cost for cost-based locations (currently: 3170)
         let cost = 0;
         if (locationConfig.costBased) {
           cost = await getInventoryCost(variant.inventory_item_id);
