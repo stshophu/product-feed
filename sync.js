@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
-const { calculatePrice, meetsMinProfit, MIN_PROFIT_EUR } = require("./pricing");
+const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 
@@ -184,11 +184,31 @@ async function sync() {
         // profit check below even though their listed price ignores it.
         const cost = await getInventoryCost(variant.inventory_item_id);
 
-        const { price, specialPrice } = calculatePrice(
-          originalPrice, compareAt, markupRate,
-          locationConfig.costBased ? cost : null,
-          locationConfig.costBased ? locationConfig.shipping : undefined
-        );
+        // WSNL sale-period brand discount (Aug 2026) - only applies to the 7
+        // approved brands (see pricing.js). Falls back to the normal
+        // calculatePrice() path for every other vendor, unchanged. Items in
+        // the 7-brand deal that can't clear €20 profit even at 0% discount
+        // are excluded from WSNL entirely (not falling back to normal pricing).
+        const wsnlDiscount = calculateWsnlDiscountPrice(product.vendor, originalPrice, compareAt, cost);
+        if (wsnlDiscount && wsnlDiscount.excluded) {
+          try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+          stats.skippedLowMargin++;
+          console.log(`  ⏸️  ${product.title} | ${variant.sku || variant.id} | ${wsnlDiscount.brand} profit €${wsnlDiscount.profit} < €${MIN_WSNL_DISCOUNT_PROFIT_EUR} min (even at ${wsnlDiscount.appliedPct}% discount) - excluded from WSNL`);
+          continue;
+        }
+        let price, specialPrice;
+        if (wsnlDiscount) {
+          ({ price, specialPrice } = wsnlDiscount);
+          if (wsnlDiscount.capped) {
+            console.log(`  ✂️  ${product.title} | ${wsnlDiscount.brand} capped at ${wsnlDiscount.appliedPct}% (requested ${wsnlDiscount.requestedPct}%) to stay above cost`);
+          }
+        } else {
+          ({ price, specialPrice } = calculatePrice(
+            originalPrice, compareAt, markupRate,
+            locationConfig.costBased ? cost : null,
+            locationConfig.costBased ? locationConfig.shipping : undefined
+          ));
+        }
 
         const { ok: profitOk, profit } = meetsMinProfit(price, specialPrice, cost);
         if (!profitOk) {
