@@ -30,6 +30,16 @@ shopify.interceptors.response.use(null, async (error) => {
   return shopify(cfg);
 });
 
+async function getProduct(productId) {
+  try {
+    const { data } = await shopify.get(`/products/${productId}.json`);
+    return data.product;
+  } catch (e) {
+    if (e.response && e.response.status === 404) return null; // deleted from Shopify
+    throw e;
+  }
+}
+
 async function getLocations() {
   const { data } = await shopify.get("/locations.json");
   return data.locations;
@@ -126,4 +136,4 @@ function formatManufacturer(raw) {
   }).join(" ");
 }
 
-module.exports = { getAllProducts, getAllProductsLight, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryLevelsForLocations, getInventoryCost, getVariantInventoryItemId, buildLocationMap, formatManufacturer };
+module.exports = { getAllProducts, getAllProductsLight, getRecentlyUpdatedProducts, getProduct, getInventoryLevels, getInventoryLevelsForLocations, getInventoryCost, getVariantInventoryItemId, buildLocationMap, formatManufacturer };

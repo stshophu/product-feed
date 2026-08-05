@@ -170,13 +170,19 @@ async function sync() {
         if (!stockLocationName) {
           try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
           stats.skipped++;
+          const seenLocations = inventoryLevels.map(l => `${locationMap[l.location_id] || l.location_id}:${l.available}`).join(", ") || "none";
+          console.log(`  🚫 ${product.title} | ${variant.sku || variant.id} | no stock at a recognized location - has: [${seenLocations}]`);
           continue;
         }
 
         const originalPrice = parseFloat(variant.price);
         const compareAt = variant.compare_at_price ? parseFloat(variant.compare_at_price) : null;
         const brandCode = findBrandCode(product.vendor);
-        if (!brandCode) { stats.skipped++; continue; }
+        if (!brandCode) {
+          stats.skipped++;
+          console.log(`  🚫 ${product.title} | ${variant.sku || variant.id} | vendor "${product.vendor}" has no matching brand code`);
+          continue;
+        }
 
         // Cost is needed for every location now, not just cost-based ones:
         // cost-based locations use it to derive the price itself, and
@@ -227,6 +233,7 @@ async function sync() {
         const hasEan = payload.values.ean && payload.values.ean[0]?.data;
         if (eanRequired && !hasEan) {
           stats.skipped++;
+          console.log(`  🚫 ${product.title} | ${variant.sku || variant.id} | category ${payload.category} requires EAN but none is set`);
           continue;
         }
         try {
