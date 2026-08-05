@@ -185,11 +185,15 @@ async function sync() {
         const cost = await getInventoryCost(variant.inventory_item_id);
 
         // WSNL sale-period brand discount (Aug 2026) - only applies to the 7
-        // approved brands (see pricing.js). Falls back to the normal
-        // calculatePrice() path for every other vendor, unchanged. Items in
-        // the 7-brand deal that can't clear €20 profit even at 0% discount
-        // are excluded from WSNL entirely (not falling back to normal pricing).
-        const wsnlDiscount = calculateWsnlDiscountPrice(product.vendor, originalPrice, compareAt, cost);
+        // approved brands (see pricing.js), and NEVER for items stocked at
+        // "3171 Warehouse" - that location keeps its existing pass-through
+        // pricing unchanged, regardless of vendor/brand. Falls back to the
+        // normal calculatePrice() path for every other case. Items in the
+        // 7-brand deal (at 3140/3170) that can't clear €20 profit even at 0%
+        // discount are excluded from WSNL entirely.
+        const wsnlDiscount = stockLocationName === "3171 Warehouse"
+          ? null
+          : calculateWsnlDiscountPrice(product.vendor, originalPrice, compareAt, cost);
         if (wsnlDiscount && wsnlDiscount.excluded) {
           try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
           stats.skippedLowMargin++;
