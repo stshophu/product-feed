@@ -113,15 +113,16 @@ function calculatePrice(originalPrice, compareAt, markupRate, cost, shipping) {
     return { price: targetPrice, specialPrice: null };
   }
 
-  // Pass-through pricing (3171, 3140)
+  // Pass-through pricing (3171, 3140) - send Shopify's actual current price
+  // as the customer-facing price, always. Compare At is only ever added as
+  // the crossed-out "full retail" reference alongside it, when it's genuinely
+  // higher - it must NEVER replace/override the real selling price, or WSNL
+  // ends up charging the (higher) RRP instead of your actual price.
   const marked = parseFloat((originalPrice * (1 + markupRate)).toFixed(2));
-  if (!compareAt || compareAt <= 0) {
-    return { price: marked.toFixed(2), specialPrice: null };
+  if (compareAt && compareAt > marked) {
+    return { price: compareAt.toFixed(2), specialPrice: marked.toFixed(2) };
   }
-  if (marked >= compareAt) {
-    return { price: compareAt.toFixed(2), specialPrice: null };
-  }
-  return { price: compareAt.toFixed(2), specialPrice: marked.toFixed(2) };
+  return { price: marked.toFixed(2), specialPrice: null };
 }
 
 // Live margin check, run at sync time against whatever price/cost Shopify
