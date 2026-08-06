@@ -221,11 +221,14 @@ async function sync() {
         }
 
         const { ok: profitOk, profit } = meetsMinProfit(price, specialPrice, cost);
-        if (!profitOk) {
+        if (!profitOk && stockLocationName !== "3171 Warehouse") {
           try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
           stats.skippedLowMargin++;
           console.log(`  ⏸️  ${product.title} | ${variant.sku || variant.id} | profit €${profit} < €${MIN_PROFIT_EUR} min - excluded from WSNL`);
           continue;
+        }
+        if (!profitOk && stockLocationName === "3171 Warehouse") {
+          console.log(`  📦 ${product.title} | ${variant.sku || variant.id} | profit €${profit} below €${MIN_PROFIT_EUR} min, but listing anyway - 3171 office stock, always imported as-is`);
         }
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
