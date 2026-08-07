@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
-const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR } = require("./pricing");
+const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 
@@ -190,12 +190,47 @@ async function sync() {
         // profit check below even though their listed price ignores it.
         const cost = await getInventoryCost(variant.inventory_item_id);
 
-        // WSNL sale-period brand discount (Aug 2026) - only applies to the 7
-        // approved brands (see pricing.js), and NEVER for items stocked at
-        // "3171 Warehouse" - that location keeps its existing pass-through
-        // pricing unchanged, regardless of vendor/brand. Falls back to the
-        // normal calculatePrice() path for every other case. Items in the
-        // 7-brand deal (at 3140/3170) that can't clear €20 profit even at 0%
+        // ── WSNL price override (clearance / sell-out pricing) ──────────────
+        // Checked first, before brand-discount and calculatePrice logic.
+        // Override price is set in pricing.js WSNL_PRICE_OVERRIDES, keyed by
+        // SKU. It is a WSNL-only price — Shopify's own price is never touched.
+        // Override price is calculated at break-even (cost / WSNL_KEEP_RATE),
+        // so the profit check is skipped for these items.
+        const priceOverride = getWsnlPriceOverride(variant.sku);
+        if (priceOverride !== null) {
+          const price = priceOverride;
+          // Use Shopify's original price as the crossed-out compare-at when
+          // it's lower than the override (i.e. never — override is always
+          // higher), otherwise omit it to avoid showing a higher "was" price.
+          const specialPrice = null;
+          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL override price €${price} (Shopify: €${originalPrice})`);
+          const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
+          const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
+          const hasEan = payload.values.ean && payload.values.ean[0]?.data;
+          if (eanRequired && !hasEan) {
+            stats.skipped++;
+            console.log(`  🚫 ${product.title} | ${variant.sku} | category ${payload.category} requires EAN but none is set`);
+            continue;
+          }
+          try {
+            await marketplaceUpsertWithRetry(payload);
+          } catch(upsertErr) {
+            const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
+            if (msg.includes('Cursor not valid')) {
+              await deleteProduct(payload.identifier);
+              await marketplaceUpsertWithRetry(payload);
+            } else {
+              throw upsertErr;
+            }
+          }
+          stats.synced++;
+          continue;
+        }
+
+        // ── WSNL sale-period brand discount (Aug 2026) ───────────────────────
+        // Only applies to the 7 approved brands (see pricing.js), and NEVER
+        // for items stocked at "3171 Warehouse". Falls back to calculatePrice()
+        // for every other case. Items that can't clear €20 profit even at 0%
         // discount are excluded from WSNL entirely.
         const wsnlDiscount = stockLocationName === "3171 Warehouse"
           ? null
