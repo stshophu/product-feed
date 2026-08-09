@@ -198,12 +198,12 @@ async function sync() {
         // so the profit check is skipped for these items.
         const priceOverride = getWsnlPriceOverride(variant.sku);
         if (priceOverride !== null) {
-          const price = priceOverride;
-          // Use Shopify's original price as the crossed-out compare-at when
-          // it's lower than the override (i.e. never — override is always
-          // higher), otherwise omit it to avoid showing a higher "was" price.
-          const specialPrice = null;
-          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL override price €${price} (Shopify: €${originalPrice})`);
+          // Show original Shopify price as the crossed-out "was" price on WSNL,
+          // making the clearance discount visible to buyers.
+          // price = the "was" price (original Shopify), specialPrice = sale price (override).
+          const price = originalPrice > priceOverride ? originalPrice : priceOverride;
+          const specialPrice = originalPrice > priceOverride ? priceOverride : null;
+          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL override price €${priceOverride} was €${originalPrice} (Shopify: €${originalPrice})`);
           const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
           const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
           const hasEan = payload.values.ean && payload.values.ean[0]?.data;
