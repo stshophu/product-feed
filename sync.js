@@ -198,12 +198,11 @@ async function sync() {
         // so the profit check is skipped for these items.
         const priceOverride = getWsnlPriceOverride(variant.sku);
         if (priceOverride !== null) {
-          // Show original Shopify price as the crossed-out "was" price on WSNL,
-          // making the clearance discount visible to buyers.
-          // price = the "was" price (original Shopify), specialPrice = sale price (override).
-          const price = originalPrice > priceOverride ? originalPrice : priceOverride;
-          const specialPrice = originalPrice > priceOverride ? priceOverride : null;
-          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL override price €${priceOverride} was €${originalPrice} (Shopify: €${originalPrice})`);
+          // Use the clearance override as the sale price, and pass Shopify's
+          // compareAt through unchanged as the crossed-out "was" price on WSNL.
+          const price = compareAt || originalPrice;  // compare-at (RRP) as the display price
+          const specialPrice = priceOverride;         // override = the sale price shown
+          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL sale €${priceOverride} was €${price} (compareAt: €${compareAt})`);
           const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
           const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
           const hasEan = payload.values.ean && payload.values.ean[0]?.data;
@@ -265,6 +264,7 @@ async function sync() {
         if (!profitOk && stockLocationName === "3171 Warehouse") {
           console.log(`  📦 ${product.title} | ${variant.sku || variant.id} | profit €${profit} below €${MIN_PROFIT_EUR} min, but listing anyway - 3171 office stock, always imported as-is`);
         }
+
 
         const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
         const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
