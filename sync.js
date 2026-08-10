@@ -2,7 +2,7 @@ require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
-const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR } = require("./pricing");
+const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR, FIXED_COST_EUR, WSNL_COMMISSION } = require("./pricing");
 const { getCategoryCode } = require("./categories");
 const { findBrandCode } = require("./brandmap");
 
@@ -252,6 +252,55 @@ async function sync() {
             locationConfig.costBased ? cost : null,
             locationConfig.costBased ? locationConfig.shipping : undefined
           ));
+
+          // ── 3170 Warehouse: minimum profitable price ────────────────────────
+          // For 3170 (Loxuno) items not covered by a brand discount, calculate
+          // the minimum WSNL price that yields €20 profit after 26% commission,
+          // 19% DE VAT, and €15 fixed cost:
+          //
+          //   min_price = (cost + €15 + €20) / KEEP_RATE
+          //   KEEP_RATE = 1 - 0.26 - (0.19/1.19) = 0.58034
+          //
+          // Rules:
+          //   1. If min_price > compareAt (RRP) → exclude: can't price above RRP
+          //   2. If min_price > current price  → use min_price as the WSNL price
+          //   3. If current price already ≥ min_price → keep current price (more profit)
+          //
+          // compareAt always passes through unchanged as the crossed-out was-price.
+          // Only applies to 3170 non-discounted items.
+          if (!wsnlDiscount && stockLocationName === "3170 Warehouse" && cost && cost > 0) {
+            const WSNL_KEEP = 1 - WSNL_COMMISSION - (0.19 / 1.19);
+            const minPrice = parseFloat(((cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP).toFixed(2));
+            const rrp = compareAt || null;
+
+            if (rrp && minPrice > rrp) {
+              // Can't sell profitably below RRP — exclude from WSNL
+              try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+              stats.skippedLowMargin++;
+              console.log(`  🚫 ${product.title} | ${variant.sku || variant.id} | min price €${minPrice} > RRP €${rrp} — excluded from WSNL`);
+              continue;
+            }
+
+            const currentSalePrice = parseFloat(specialPrice ?? price);
+            if (minPrice > currentSalePrice) {
+              // Lift price to the profitable floor
+              if (specialPrice) {
+                specialPrice = minPrice;
+              } else {
+                // Use compareAt as the was-price, minPrice as the sale price
+                price = rrp || price;
+                specialPrice = minPrice;
+              }
+              console.log(`  💹 ${product.title} | ${variant.sku || variant.id} | lifted €${currentSalePrice} → €${minPrice} (RRP €${rrp}) profit ≥€${MIN_PROFIT_EUR}`);
+            } else {
+              // Already profitable — use compareAt as was-price if available
+              if (rrp && !specialPrice) {
+                price = rrp;
+                specialPrice = currentSalePrice;
+              }
+              console.log(`  ✅ ${product.title} | ${variant.sku || variant.id} | €${currentSalePrice} already profitable (min €${minPrice})`);
+            }
+          }
         }
 
         const { ok: profitOk, profit } = meetsMinProfit(price, specialPrice, cost);
