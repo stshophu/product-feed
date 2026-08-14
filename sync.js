@@ -4,7 +4,7 @@ const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInven
 const { upsertProduct, deleteProduct } = require("./marketplace");
 const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR, FIXED_COST_EUR, WSNL_COMMISSION } = require("./pricing");
 const { getCategoryCode, resolveCategory } = require("./categories");
-const { buildMetafieldIndex } = require("./metafields");
+const { buildMetafieldIndex, buildMetafieldIndexForProducts } = require("./metafields");
 const { resolveSize } = require("./sizemap");
 const { findBrandCode } = require("./brandmap");
 
@@ -148,11 +148,16 @@ async function sync() {
   const startTime = Date.now();
   const stats = { synced: 0, skipped: 0, skippedLowMargin: 0, disabled: 0, errors: 0 };
 
-  const [locationMap, products, meta] = await Promise.all([
+  const [locationMap, products] = await Promise.all([
     buildLocationMap(),
     isFullSync ? getAllProducts() : getRecentlyUpdatedProducts(120),
-    buildMetafieldIndex(),
   ]);
+
+  // Full sync pages the whole catalog; incremental fetches only what changed.
+  // On a typical hourly run that is one request instead of ~172.
+  const meta = isFullSync
+    ? await buildMetafieldIndex()
+    : await buildMetafieldIndexForProducts(products.map((p) => p.id));
 
   console.log(`📦 ${products.length} products to process`);
 

@@ -197,4 +197,52 @@ async function buildMetafieldIndex() {
   return index;
 }
 
-module.exports = { buildMetafieldIndex, KEY_MATCHERS };
+
+// ── Targeted fetch ─────────────────────────────────────────────────────────
+// Incremental syncs only touch products changed in the last 120 minutes —
+// typically a handful. Paging the entire catalog to serve those is what
+// produced the 429 storms in the 2026-08-14 audit run (172 pages, ~10 retries).
+// This fetches metafields for a known set of product IDs instead: one request
+// per 10 products, with their variants inline.
+//
+// NB: a disk cache would not help here. GitHub Actions runners are ephemeral,
+// so the file would be gone by the next run — and a persisted stale index is
+// worse than none, since newly added products would sync with no taxonomy.
+const NODES_QUERY = `
+query($ids: [ID!]!) {
+  nodes(ids: $ids) {
+    ... on Product {
+      id
+      metafields(first: 20) { nodes { namespace key value type } }
+      variants(first: 100) {
+        nodes { id metafields(first: 10) { nodes { namespace key value type } } }
+      }
+    }
+  }
+}`;
+
+async function buildMetafieldIndexForProducts(productIds) {
+  const index = { product: {}, variant: {} };
+  const ids = productIds.map((id) => `gid://shopify/Product/${id}`);
+  const BATCH = 10;
+  for (let i = 0; i < ids.length; i += BATCH) {
+    const batch = ids.slice(i, i + BATCH);
+    const data = await gql(NODES_QUERY, { ids: batch });
+    for (const node of data.nodes) {
+      if (!node || !node.id) continue;
+      const pid = numericId(node.id);
+      if (pid) index.product[pid] = collect(node.metafields.nodes);
+      for (const v of (node.variants && node.variants.nodes) || []) {
+        const vid = numericId(v.id);
+        if (vid) index.variant[vid] = collect(v.metafields.nodes);
+      }
+    }
+    // light pacing — GraphQL shares a leaky bucket with the REST calls in
+    // shopify.js, and this runs alongside them.
+    await new Promise((r) => setTimeout(r, 200));
+  }
+  console.log(`🏷️  Metafields fetched for ${Object.keys(index.product).length} products / ${Object.keys(index.variant).length} variants (targeted)`);
+  return index;
+}
+
+module.exports = { buildMetafieldIndex, buildMetafieldIndexForProducts, KEY_MATCHERS };
