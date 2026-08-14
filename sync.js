@@ -2,8 +2,10 @@ require("dotenv").config();
 const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
-const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR } = require("./pricing");
-const { getCategoryCode } = require("./categories");
+const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR, FIXED_COST_EUR, WSNL_COMMISSION } = require("./pricing");
+const { getCategoryCode, resolveCategory } = require("./categories");
+const { buildMetafieldIndex } = require("./metafields");
+const { resolveSize } = require("./sizemap");
 const { findBrandCode } = require("./brandmap");
 
 // The full-catalog run on 2026-06-29 produced 10,292 errors, almost all
@@ -56,12 +58,26 @@ function cleanImages(product) {
   });
 }
 
-function buildPayload({ product, variant, images, price, specialPrice, quantity, brandCode }) {
+function buildPayload({ product, variant, images, price, specialPrice, quantity, brandCode, meta }) {
+  const pMeta = (meta && meta.product[String(product.id)]) || {};
+  const vMeta = (meta && meta.variant[String(variant.id)]) || {};
+
+  // Taxonomy now comes from the Shopify metafields first; product_type and the
+  // product title are fallbacks only.
+  const resolved = resolveCategory({
+    gender: pMeta.gender,
+    category: pMeta.category,
+    subcategory: pMeta.subcategory,
+    productType: product.product_type,
+    tags: product.tags,
+    title: product.title,
+  });
+
   const payload = {
     identifier: `shopify_variant_${variant.id}`,
     parent: `shopify_product_${product.id}`,
     enabled: true,
-    category: getCategoryCode(product.product_type, product.tags),
+    category: resolved.code,
     values: {
       name: [{ data: product.title, locale: config.defaultLocale }, { data: product.title, locale: config.secondaryLocale }],
       description: [
@@ -77,41 +93,43 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
-  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|os|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
-  const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
-  // Any of these mean "one size" in some source feed's convention (Loxuno uses
-  // "OS", others use "UNI"/"Unica"/"One Size"). Marketplace only accepts a single
-  // canonical token for this, so every synonym must collapse to it -
-  // sending the raw synonym (e.g. "uni") gets a "not supported/disabled"
-  // error, and sending nothing at all (e.g. "OS" wasn't even recognized as
-  // a size before) gets a "must be unspecified" error demanding some value.
-  const oneSizeSynonyms = /^(os|uni|unica|one.?size|taille.?unique)$/i;
-  const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
-  const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
-  const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
-  let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
-  if (cleanSize && oneSizeSynonyms.test(cleanSize.trim())) {
-    cleanSize = "one_size";
+
+  // ── Size ────────────────────────────────────────────────────────────────
+  // Source of truth is now the variant Size metafield. Option positions are a
+  // fallback for variants the taxonomy pass hasn't reached yet.
+  //
+  // Every candidate is resolved against sizes.json (the marketplace's own 456-
+  // code vocabulary) via sizemap.resolveSize. That fixes two things the old
+  // regex did wrong: half sizes were floored (10,5 -> "10", i.e. the customer
+  // gets the wrong shoe), and unrecognised values were sent anyway and bounced
+  // by the API. resolveSize returns null for anything not in the vocabulary,
+  // and null means we omit the field rather than send garbage.
+  const sizeCandidates = [
+    vMeta.size,                       // variant metafield — preferred
+    variant.option1,
+    variant.option2,
+    variant.option3,
+  ];
+  let cleanSize = null;
+  let sizeFromMetafield = false;
+  for (let i = 0; i < sizeCandidates.length; i++) {
+    const resolvedSize = resolveSize(sizeCandidates[i]);
+    if (resolvedSize) {
+      cleanSize = resolvedSize;
+      sizeFromMetafield = i === 0;
+      break;
+    }
   }
-  if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
-    cleanSize = String(Math.floor(parseFloat(cleanSize)));
-  }
-  // These categories don't reliably carry a size *option* in Shopify - many of
-  // their products only have a single "Colore" option and no size option at
-  // all, which used to leak the raw (often untranslated, e.g. "Avorio") color
-  // through as a fake size value. That's what this suppression is for.
-  // It must NOT apply when a size was genuinely detected on the variant
-  // (option1isSze / option2isSze true, including one-size markers like OS/UNI)
-  // - Marketplace's schema for these categories does require a size value, and
-  // suppressing a real one is what was causing "must be unspecified" errors
-  // on every bag/hat/belt/wallet product in this category, one-size or not.
+
+  // These categories don't reliably carry a size option in Shopify. Suppression
+  // still applies ONLY when no genuine size was found — a real size (including
+  // one_size) must always be sent, or the API returns "must be unspecified"
+  // errors on every bag/hat/belt/wallet product.
   const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"];
-  const productCategory = getCategoryCode(product.product_type, product.tags);
-  const hasGenuineSize = option1isSze || option2isSze;
-  const looksLikeSize = cleanSize && (sizePattern.test(cleanSize) || /^(one_size|xxs|xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl)$/i.test(cleanSize));
-  if (looksLikeSize && !colorWords.test(cleanSize) && (hasGenuineSize || !noSizeCategories.includes(productCategory))) {
+  if (cleanSize && (sizeFromMetafield || !noSizeCategories.includes(resolved.code))) {
     payload.values.size = [{ data: cleanSize }];
   }
+
   payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
@@ -130,9 +148,10 @@ async function sync() {
   const startTime = Date.now();
   const stats = { synced: 0, skipped: 0, skippedLowMargin: 0, disabled: 0, errors: 0 };
 
-  const [locationMap, products] = await Promise.all([
+  const [locationMap, products, meta] = await Promise.all([
     buildLocationMap(),
     isFullSync ? getAllProducts() : getRecentlyUpdatedProducts(120),
+    buildMetafieldIndex(),
   ]);
 
   console.log(`📦 ${products.length} products to process`);
@@ -190,12 +209,46 @@ async function sync() {
         // profit check below even though their listed price ignores it.
         const cost = await getInventoryCost(variant.inventory_item_id);
 
-        // WSNL sale-period brand discount (Aug 2026) - only applies to the 7
-        // approved brands (see pricing.js), and NEVER for items stocked at
-        // "3171 Warehouse" - that location keeps its existing pass-through
-        // pricing unchanged, regardless of vendor/brand. Falls back to the
-        // normal calculatePrice() path for every other case. Items in the
-        // 7-brand deal (at 3140/3170) that can't clear €20 profit even at 0%
+        // ── WSNL price override (clearance / sell-out pricing) ──────────────
+        // Checked first, before brand-discount and calculatePrice logic.
+        // Override price is set in pricing.js WSNL_PRICE_OVERRIDES, keyed by
+        // SKU. It is a WSNL-only price — Shopify's own price is never touched.
+        // Override price is calculated at break-even (cost / WSNL_KEEP_RATE),
+        // so the profit check is skipped for these items.
+        const priceOverride = getWsnlPriceOverride(variant.sku);
+        if (priceOverride !== null) {
+          // Use the clearance override as the sale price, and pass Shopify's
+          // compareAt through unchanged as the crossed-out "was" price on WSNL.
+          const price = compareAt || originalPrice;  // compare-at (RRP) as the display price
+          const specialPrice = priceOverride;         // override = the sale price shown
+          console.log(`  💰 ${product.title} | ${variant.sku} | WSNL sale €${priceOverride} was €${price} (compareAt: €${compareAt})`);
+          const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode, meta });
+          const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
+          const hasEan = payload.values.ean && payload.values.ean[0]?.data;
+          if (eanRequired && !hasEan) {
+            stats.skipped++;
+            console.log(`  🚫 ${product.title} | ${variant.sku} | category ${payload.category} requires EAN but none is set`);
+            continue;
+          }
+          try {
+            await marketplaceUpsertWithRetry(payload);
+          } catch(upsertErr) {
+            const msg = upsertErr.response ? JSON.stringify(upsertErr.response.data) : upsertErr.message;
+            if (msg.includes('Cursor not valid')) {
+              await deleteProduct(payload.identifier);
+              await marketplaceUpsertWithRetry(payload);
+            } else {
+              throw upsertErr;
+            }
+          }
+          stats.synced++;
+          continue;
+        }
+
+        // ── WSNL sale-period brand discount (Aug 2026) ───────────────────────
+        // Only applies to the 7 approved brands (see pricing.js), and NEVER
+        // for items stocked at "3171 Warehouse". Falls back to calculatePrice()
+        // for every other case. Items that can't clear €20 profit even at 0%
         // discount are excluded from WSNL entirely.
         const wsnlDiscount = stockLocationName === "3171 Warehouse"
           ? null
@@ -218,6 +271,55 @@ async function sync() {
             locationConfig.costBased ? cost : null,
             locationConfig.costBased ? locationConfig.shipping : undefined
           ));
+
+          // ── 3170 Warehouse: minimum profitable price ────────────────────────
+          // For 3170 (Loxuno) items not covered by a brand discount, calculate
+          // the minimum WSNL price that yields €20 profit after 26% commission,
+          // 19% DE VAT, and €15 fixed cost:
+          //
+          //   min_price = (cost + €15 + €20) / KEEP_RATE
+          //   KEEP_RATE = 1 - 0.26 - (0.19/1.19) = 0.58034
+          //
+          // Rules:
+          //   1. If min_price > compareAt (RRP) → exclude: can't price above RRP
+          //   2. If min_price > current price  → use min_price as the WSNL price
+          //   3. If current price already ≥ min_price → keep current price (more profit)
+          //
+          // compareAt always passes through unchanged as the crossed-out was-price.
+          // Only applies to 3170 non-discounted items.
+          if (!wsnlDiscount && (stockLocationName === "3170 Warehouse" || stockLocationName === "3140 Warehouse") && cost && cost > 0) {
+            const WSNL_KEEP = 1 - WSNL_COMMISSION - (0.19 / 1.19);
+            const minPrice = parseFloat(((cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP).toFixed(2));
+            const rrp = compareAt || null;
+
+            if (rrp && minPrice > rrp) {
+              // Can't sell profitably below RRP — exclude from WSNL
+              try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+              stats.skippedLowMargin++;
+              console.log(`  🚫 ${product.title} | ${variant.sku || variant.id} | min price €${minPrice} > RRP €${rrp} — excluded from WSNL`);
+              continue;
+            }
+
+            const currentSalePrice = parseFloat(specialPrice ?? price);
+            if (minPrice > currentSalePrice) {
+              // Lift price to the profitable floor
+              if (specialPrice) {
+                specialPrice = minPrice;
+              } else {
+                // Use compareAt as the was-price, minPrice as the sale price
+                price = rrp || price;
+                specialPrice = minPrice;
+              }
+              console.log(`  💹 ${product.title} | ${variant.sku || variant.id} | lifted €${currentSalePrice} → €${minPrice} (RRP €${rrp}) profit ≥€${MIN_PROFIT_EUR}`);
+            } else {
+              // Already profitable — use compareAt as was-price if available
+              if (rrp && !specialPrice) {
+                price = rrp;
+                specialPrice = currentSalePrice;
+              }
+              console.log(`  ✅ ${product.title} | ${variant.sku || variant.id} | €${currentSalePrice} already profitable (min €${minPrice})`);
+            }
+          }
         }
 
         const { ok: profitOk, profit } = meetsMinProfit(price, specialPrice, cost);
@@ -231,7 +333,8 @@ async function sync() {
           console.log(`  📦 ${product.title} | ${variant.sku || variant.id} | profit €${profit} below €${MIN_PROFIT_EUR} min, but listing anyway - 3171 office stock, always imported as-is`);
         }
 
-        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
+
+        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode, meta });
         const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
         const hasEan = payload.values.ean && payload.values.ean[0]?.data;
         if (eanRequired && !hasEan) {

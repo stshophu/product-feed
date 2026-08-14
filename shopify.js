@@ -83,7 +83,12 @@ async function getAllProductsLight() {
 
 async function fetchProducts(extraParams, fieldsOverride) {
   if (!extraParams) extraParams = {};
-  var fields = fieldsOverride || "id,title,body_html,variants,images,status,vendor,product_type,updated_at";
+  // NOTE: "tags" was missing from this list. Because REST only returns the
+  // fields you ask for, product.tags was ALWAYS undefined downstream, so
+  // detectGender() fell through to its "women" default for the entire catalog
+  // and findColor() never saw a single tag. Both bugs were invisible in the
+  // logs. Do not remove "tags" from this list.
+  var fields = fieldsOverride || "id,title,body_html,variants,images,status,vendor,product_type,tags,updated_at";
   var products = [];
   var page_info = null;
   do {
