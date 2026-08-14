@@ -32,8 +32,10 @@ function detectGenderFrom(sources) {
   if (has(/\b(girls?|meisjes)\b/) && !has(/\b(boys?|jongens)\b/)) return "kids_girls";
   if (has(/\b(kids?|children|kinder|baby|babies|junior)\b/)) return "kids";
 
-  const women = has(/\b(women|womens|women'?s|woman|dames|damen|female|donna|femme|mujer|w)\b/);
-  const men = has(/\b(men|mens|men'?s|man|heren|herren|male|uomo|homme|hombre|m)\b/);
+  // NB: no bare "w"/"m" alternatives — a stray "M" in a title or tag would
+  // otherwise decide the gender of the whole product.
+  const women = has(/\b(women|womens|women'?s|woman|dames|damen|female|donna|femme|mujer)\b/);
+  const men = has(/\b(men|mens|men'?s|man|heren|herren|male|uomo|homme|hombre)\b/);
   if (women && !men) return "women";
   if (men && !women) return "men";
   // Both present (e.g. a "Men" product tagged "womenswear-adjacent") or neither:
@@ -59,11 +61,17 @@ const TYPE_OVERRIDES = {
     "shorts": "108",
     "jumpsuits": "215",
     "blazers": "189",
+    // "Formal Jacket" (81 products) would otherwise match the coat/jacket rule
+    // and land in outerwear. Confirmed by Ekaterina: these are blazers.
+    "formal jacket": "189",
+    "formal jackets": "189",
   },
   men: {
     "shorts": "19",
     "polo shirts": "23",
     "suits": "74",
+    "formal jacket": "74",
+    "formal jackets": "74",
   },
 };
 
@@ -73,13 +81,16 @@ const WOMEN_RULES = [
   [/\b(jean|denim)/, "116"],
   [/\b(dress|jurk|kleid|abito|robe)/, "118"],
   [/\b(top|t-shirt|tshirt|tee|shirt|maglia)/, "120"],
-  [/\b(sweater|sweatshirt|hoodie|cardigan|trui|knit|jumper|pullover|maglione)/, "126"],
+  [/\b(sweater|sweatshirt|hoodie|cardigan|trui|knit|jumper|pullover|maglione|vest|gilet|waistcoat)/, "126"],
   [/\b(skirt|rok|rock|gonna|jupe)/, "128"],
-  [/\b(bag|tas|purse|clutch|tote|backpack|handbag|borsa)/, "140"],
+  [/\b(bag|tas|purse|clutch|tote|backpack|handbag|borsa|pouch|crossbody|shoulder bag)/, "140"],
+  [/\b(bodysuit|body suit)/, "120"],
+  [/\b(poncho|cape)/, "114"],
+  [/\b(shrug|bolero)/, "126"],
   [/\b(blazer|suit)/, "189"],
-  [/\b(shoe|boot|sneaker|heel|flat|sandal|loafer|pump|footwear|schoen|scarpa|mule|espadrille|ballerina)/, "199"],
+  [/\b(shoe|boot|sneaker|heel|flat|sandal|loafer|pump|footwear|schoen|scarpa|mule|espadrille|ballerina|slipper|slide|lace-?up)/, "199"],
   [/\b(jumpsuit|romper|playsuit|overall|tuta)/, "215"],
-  [/\b(accessoir|accessory|accessories|belt|scarf|hat|cap|glove|jewel|jewellery|jewelry|watch|sunglass|wallet|riem|sjaal)/, "219"],
+  [/\b(accessoir|accessory|accessories|belt|scarf|hat|cap|glove|jewel|jewellery|jewelry|watch|sunglass|wallet|riem|sjaal|collar)/, "219"],
   [/\b(blouse|camicia)/, "7441"],
   [/\b(swim|bikini|badkleding|beachwear|costume)/, "7770"],
   [/\b(sport|activ|gym|yoga|running|track)/, "7792"],
@@ -94,9 +105,9 @@ const MEN_RULES = [
   [/\b(swim|badkleding|beachwear|costume)/, "26"],
   [/\b(blazer|vest|suit|gilet)/, "74"],
   [/\b(cardigan)/, "82"],
-  [/\b(accessoir|accessory|accessories|belt|scarf|hat|cap|glove|watch|sunglass|wallet|tie|riem|sjaal)/, "253"],
-  [/\b(shoe|boot|sneaker|loafer|sandal|footwear|schoen|scarpa|derby|oxford|moccasin)/, "255"],
-  [/\b(bag|tas|backpack|briefcase|borsa)/, "678"],
+  [/\b(accessoir|accessory|accessories|belt|scarf|hat|cap|glove|watch|sunglass|wallet|tie|riem|sjaal|collar)/, "253"],
+  [/\b(shoe|boot|sneaker|loafer|sandal|footwear|schoen|scarpa|derby|oxford|moccasin|slipper|slide|mule|espadrille|lace-?up)/, "255"],
+  [/\b(bag|tas|backpack|briefcase|borsa|pouch|clutch|crossbody|shoulder bag)/, "678"],
   [/\b(sport|activ|gym|running|track)/, "7793"],
 ];
 

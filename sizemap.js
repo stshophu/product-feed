@@ -43,6 +43,23 @@ const ONE_SIZE = /^(os|o\/s|uni|unica|uni\.?ca|one[\s._-]?size|onesize|taille[\s
 // "Colore" option and no size option. Kept as a guard on the fallback path.
 const COLOR_WORDS = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal|avorio|panna|grigio|argento|oro)$/i;
 
+// Aliases for values the audit found in the catalog that the vocabulary spells
+// differently. All targets verified present in sizes.json.
+const ALIASES = {
+  // 3XL/4XL notation -> the vocabulary's repeated-X spelling (92 variants)
+  "2xl": "xxl", "3xl": "xxxl", "4xl": "xxxxl", "5xl": "xxxxxl",
+  "xxl": "xxl", "2 xl": "xxl", "3 xl": "xxxl", "4 xl": "xxxxl",
+  // Kidswear year notation -> the vocabulary's "cm (nYR)" codes (53 variants)
+  "4y": "104_4yr", "5y": "110_5yr", "6y": "116_6yr", "7y": "122_7yr",
+  "8y": "128_8yr", "9y": "134_9yr", "10y": "140_10yr", "11y": "146_11yr",
+  "12y": "152_12yr", "13y": "158_13yr", "14y": "164_14yr", "15y": "170_15yr",
+  "16y": "176_16yr",
+  // Infant month notation. Note 18M maps to the 1.5YR code, and 24M to 2YR —
+  // the vocabulary has no separate 18/24-month entry.
+  "3m": "62_4m", "6m": "68_6m", "9m": "74_9m", "12m": "80_1yr",
+  "18m": "86_1_5yr", "24m": "92_2yr",
+};
+
 function resolveSize(raw) {
   if (raw === null || raw === undefined) return null;
   let v = String(raw).trim();
@@ -50,6 +67,13 @@ function resolveSize(raw) {
 
   if (ONE_SIZE.test(v)) return CODES.has("one_size") ? "one_size" : null;
   if (COLOR_WORDS.test(v)) return null;
+
+  // Dual-region labels like "EU39/US9" — take the EU/IT figure, drop the rest.
+  const dual = v.match(/^\s*(?:eu|it)\s*([0-9]+(?:[.,][0-9])?)\s*[/|]/i);
+  if (dual) v = dual[1];
+
+  const aliased = ALIASES[v.toLowerCase().replace(/\s+/g, "")];
+  if (aliased && CODES.has(aliased)) return aliased;
 
   // exact code as stored in Shopify (best case — the taxonomy work may already
   // be writing marketplace codes directly)
@@ -70,11 +94,13 @@ function resolveSize(raw) {
     .replace(/^_|_$/g, "");
   if (CODES.has(structural)) return structural;
 
-  // trailing unit noise: "42 IT", "M / EU", "US 8"
+  // trailing/leading region noise: "42 IT", "EU 39", "US 8"
   const stripped = structural
     .replace(/_(it|eu|uk|us|fr|de|int|intl)$/i, "")
-    .replace(/^(it|eu|uk|us|fr|de|int|intl)_/i, "");
+    .replace(/^(it|eu|uk|us|fr|de|int|intl)_?/i, "");
   if (CODES.has(stripped)) return stripped;
+  const strippedAlias = ALIASES[stripped.replace(/_/g, "")];
+  if (strippedAlias && CODES.has(strippedAlias)) return strippedAlias;
 
   return null;
 }

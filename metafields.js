@@ -93,12 +93,30 @@ function readValue(mf) {
   return v;
 }
 
+// The audit found THREE competing namespaces per field, e.g.
+//   category:    custom.category, filter.category, gs1.category_gpc
+//   subcategory: rewix.subcategory, filter.subcategory, custom.subcategory
+//   gender:      google.gender, rewix.gender, custom.gender
+// Without an explicit ranking, whichever one GraphQL happened to return first
+// won — a non-deterministic choice that would silently vary between products
+// and between runs. gs1.category_gpc in particular is a GS1 GPC brick term,
+// not a wearable-type name, so letting it win would poison the match.
+// Lower number = preferred. Unlisted namespaces rank last.
+const NAMESPACE_PRIORITY = { custom: 0, rewix: 1, filter: 2, google: 3, shopify: 4, gs1: 9 };
+
+function rank(ns) {
+  return NAMESPACE_PRIORITY[ns] !== undefined ? NAMESPACE_PRIORITY[ns] : 8;
+}
+
 function collect(metafieldNodes) {
   const out = {};
-  for (const mf of metafieldNodes || []) {
+  const chosenRank = {};
+  const nodes = (metafieldNodes || []).slice().sort((a, b) => rank(a.namespace) - rank(b.namespace));
+  for (const mf of nodes) {
     for (const [field, re] of Object.entries(KEY_MATCHERS)) {
-      if (out[field] !== undefined) continue;
+      if (out[field] !== undefined && chosenRank[field] <= rank(mf.namespace)) continue;
       if (re.test(mf.key)) {
+        chosenRank[field] = rank(mf.namespace);
         const val = readValue(mf);
         if (val && val.unresolved) {
           out[field + "_unresolved"] = val.unresolved;
