@@ -1,0 +1,276 @@
+// metafields.js — build an in-memory index of Shopify metafields.
+//
+// Why this exists: the REST products.json endpoint used by shopify.js does NOT
+// return metafields, so the taxonomy work done in Shopify (Category /
+// Subcategory product metafields, Size variant metafield) was completely
+// invisible to the sync. This module pulls them once per run via GraphQL and
+// hands sync.js a plain lookup:
+//
+//   index.product[<numeric product id>]  -> { category, subcategory, gender, ... }
+//   index.variant[<numeric variant id>]  -> { size, ... }
+//
+// It deliberately does NOT hard-code a namespace. Metafield definitions get
+// created with whatever namespace the Shopify UI/app picked ("custom",
+// "my_fields", "shopify", an app reserved one...), and guessing wrong would
+// silently produce an empty index — the exact failure mode we're fixing. So it
+// reads every metafield on the object and matches on the KEY name instead.
+
+const axios = require("axios");
+const config = require("./config");
+
+const KEY_MATCHERS = {
+  // order matters: subcategory must be tested before category, otherwise
+  // "subcategory" also matches the /categor/ pattern.
+  subcategory: /^(sub[_\-\s]?categor(y|ie)|unter[_\-\s]?kategorie)/i,
+  category: /^(categor(y|ie)|kategorie|product[_\-\s]?categor(y|ie))/i,
+  gender: /^(gender|geschlecht|sex|target[_\-\s]?(group|audience)|doelgroep)/i,
+  size: /^(size|maat|groesse|größe|grootte|taglia)/i,
+};
+
+function gqlClient() {
+  return axios.create({
+    baseURL: `https://${process.env.SHOPIFY_DOMAIN}/admin/api/${config.shopifyApiVersion}`,
+    headers: {
+      "X-Shopify-Access-Token": process.env.SHOPIFY_TOKEN,
+      "Content-Type": "application/json",
+    },
+    timeout: 60000,
+  });
+}
+
+// Shopify GraphQL returns HTTP 200 with a THROTTLED error in the body rather
+// than a 429, so the axios interceptor in shopify.js would not catch it.
+async function gql(query, variables, attempt = 1) {
+  const client = gqlClient();
+  let res;
+  try {
+    res = await client.post("/graphql.json", { query, variables });
+  } catch (e) {
+    if (attempt <= 5) {
+      const wait = Math.min(1000 * Math.pow(2, attempt), 16000);
+      console.log(`  ⏳ GraphQL network/${e.response?.status || "?"} error, retry ${attempt}/5 in ${wait}ms`);
+      await new Promise((r) => setTimeout(r, wait));
+      return gql(query, variables, attempt + 1);
+    }
+    throw e;
+  }
+  const errors = res.data.errors;
+  if (errors) {
+    const throttled = errors.some((x) => x.extensions && x.extensions.code === "THROTTLED");
+    if (throttled && attempt <= 8) {
+      const wait = Math.min(2000 * attempt, 20000);
+      console.log(`  ⏳ GraphQL throttled, retry ${attempt}/8 in ${wait}ms`);
+      await new Promise((r) => setTimeout(r, wait));
+      return gql(query, variables, attempt + 1);
+    }
+    throw new Error("GraphQL error: " + JSON.stringify(errors));
+  }
+  return res.data.data;
+}
+
+function numericId(gid) {
+  if (!gid) return null;
+  const m = String(gid).match(/(\d+)$/);
+  return m ? m[1] : null;
+}
+
+// Metafield values are strings. list.* types arrive as a JSON array string
+// (e.g. '["Coats","Jackets"]'); take the first entry so downstream code always
+// sees a plain string.
+function readValue(mf) {
+  if (!mf || mf.value === null || mf.value === undefined) return null;
+  let v = String(mf.value).trim();
+  if (!v) return null;
+  if (v.startsWith("[")) {
+    try {
+      const arr = JSON.parse(v);
+      if (Array.isArray(arr) && arr.length) v = String(arr[0]).trim();
+    } catch (_) { /* leave as-is */ }
+  }
+  // metaobject references can't be resolved to a label here — flag rather than
+  // silently feeding "gid://shopify/Metaobject/123" into the category matcher.
+  if (/^gid:\/\/shopify\//.test(v)) return { unresolved: v };
+  return v;
+}
+
+// The audit found THREE competing namespaces per field, e.g.
+//   category:    custom.category, filter.category, gs1.category_gpc
+//   subcategory: rewix.subcategory, filter.subcategory, custom.subcategory
+//   gender:      google.gender, rewix.gender, custom.gender
+// Without an explicit ranking, whichever one GraphQL happened to return first
+// won — a non-deterministic choice that would silently vary between products
+// and between runs. gs1.category_gpc in particular is a GS1 GPC brick term,
+// not a wearable-type name, so letting it win would poison the match.
+// Lower number = preferred. Unlisted namespaces rank last.
+const NAMESPACE_PRIORITY = { custom: 0, rewix: 1, filter: 2, google: 3, shopify: 4, gs1: 9 };
+
+function rank(ns) {
+  return NAMESPACE_PRIORITY[ns] !== undefined ? NAMESPACE_PRIORITY[ns] : 8;
+}
+
+function collect(metafieldNodes) {
+  const out = {};
+  const chosenRank = {};
+  const nodes = (metafieldNodes || []).slice().sort((a, b) => rank(a.namespace) - rank(b.namespace));
+  for (const mf of nodes) {
+    for (const [field, re] of Object.entries(KEY_MATCHERS)) {
+      if (out[field] !== undefined && chosenRank[field] <= rank(mf.namespace)) continue;
+      if (re.test(mf.key)) {
+        chosenRank[field] = rank(mf.namespace);
+        const val = readValue(mf);
+        if (val && val.unresolved) {
+          out[field + "_unresolved"] = val.unresolved;
+        } else if (val) {
+          out[field] = val;
+          out[field + "_source"] = `${mf.namespace}.${mf.key}`;
+        }
+        break;
+      }
+    }
+  }
+  return out;
+}
+
+
+// Explicit, named metafields instead of a "first N" window. Products carry 20+
+// metafields from apps (judgeme, shopify.*, global, ...) and the taxonomy
+// ones sit at the end, so the old 20-item window silently dropped them.
+// Deliberately excluded:
+//   google.gender  - wrong on many products (e.g. women's bras = "male")
+//   filter.size    - storefront filter bucket, not the real size
+//                    (IT58 suit = "4XL", 105 belt = "L", 7.5 gloves = "One Size")
+//   gs1.*          - GPC brick terms, not garment types
+const PRODUCT_MF = `
+      cc: metafield(namespace: "custom", key: "category") { namespace key value type }
+      rc: metafield(namespace: "rewix", key: "category") { namespace key value type }
+      fc: metafield(namespace: "filter", key: "category") { namespace key value type }
+      cs: metafield(namespace: "custom", key: "subcategory") { namespace key value type }
+      rs: metafield(namespace: "rewix", key: "subcategory") { namespace key value type }
+      fs: metafield(namespace: "filter", key: "subcategory") { namespace key value type }
+      cg: metafield(namespace: "custom", key: "gender") { namespace key value type }
+      rg: metafield(namespace: "rewix", key: "gender") { namespace key value type }`;
+const VARIANT_MF = `
+      vcs: metafield(namespace: "custom", key: "size") { namespace key value type }
+      vps: metafield(namespace: "poizon", key: "size") { namespace key value type }`;
+
+function mfNodes(node, aliases) {
+  return aliases.map((a) => node[a]).filter(Boolean);
+}
+const P_ALIASES = ["cc", "rc", "fc", "cs", "rs", "fs", "cg", "rg"];
+const V_ALIASES = ["vcs", "vps"];
+
+const PRODUCT_QUERY = `
+query($cursor: String) {
+  products(first: 50, after: $cursor) {
+    pageInfo { hasNextPage endCursor }
+    nodes {
+      id
+      ${PRODUCT_MF}
+    }
+  }
+}`;
+
+const VARIANT_QUERY = `
+query($cursor: String) {
+  productVariants(first: 100, after: $cursor) {
+    pageInfo { hasNextPage endCursor }
+    nodes {
+      id
+      ${VARIANT_MF}
+    }
+  }
+}`;
+
+async function buildMetafieldIndex() {
+  const index = { product: {}, variant: {} };
+
+  let cursor = null, pages = 0;
+  do {
+    const data = await gql(PRODUCT_QUERY, { cursor });
+    for (const node of data.products.nodes) {
+      const id = numericId(node.id);
+      if (id) index.product[id] = collect(mfNodes(node, P_ALIASES));
+    }
+    cursor = data.products.pageInfo.hasNextPage ? data.products.pageInfo.endCursor : null;
+    pages++;
+  } while (cursor);
+  console.log(`🏷️  Product metafields indexed: ${Object.keys(index.product).length} products (${pages} pages)`);
+
+  cursor = null; pages = 0;
+  do {
+    const data = await gql(VARIANT_QUERY, { cursor });
+    for (const node of data.productVariants.nodes) {
+      const id = numericId(node.id);
+      if (id) index.variant[id] = collect(mfNodes(node, V_ALIASES));
+    }
+    cursor = data.productVariants.pageInfo.hasNextPage ? data.productVariants.pageInfo.endCursor : null;
+    pages++;
+  } while (cursor);
+  console.log(`🏷️  Variant metafields indexed: ${Object.keys(index.variant).length} variants (${pages} pages)`);
+
+  // Coverage warning: if the taxonomy fields aren't landing, say so loudly at
+  // the start of the run instead of quietly falling back for 3000 products.
+  const prods = Object.values(index.product);
+  const withCat = prods.filter((p) => p.category || p.subcategory).length;
+  const vars = Object.values(index.variant);
+  const withSize = vars.filter((v) => v.size).length;
+  const pct = (n, d) => (d ? Math.round((n / d) * 100) : 0);
+  console.log(`🏷️  Coverage: category/subcategory on ${withCat}/${prods.length} products (${pct(withCat, prods.length)}%), size on ${withSize}/${vars.length} variants (${pct(withSize, vars.length)}%)`);
+  if (prods.length && pct(withCat, prods.length) < 50) {
+    console.log("  ⚠️  Fewer than half the products expose a Category/Subcategory metafield to the API.");
+    console.log("      Most likely cause: the metafield definition is not marked as readable by this");
+    console.log("      access token's app scopes, or the values sit on a metaobject reference.");
+  }
+
+  return index;
+}
+
+
+// ── Targeted fetch ─────────────────────────────────────────────────────────
+// Incremental syncs only touch products changed in the last 120 minutes —
+// typically a handful. Paging the entire catalog to serve those is what
+// produced the 429 storms in the 2026-08-14 audit run (172 pages, ~10 retries).
+// This fetches metafields for a known set of product IDs instead: one request
+// per 10 products, with their variants inline.
+//
+// NB: a disk cache would not help here. GitHub Actions runners are ephemeral,
+// so the file would be gone by the next run — and a persisted stale index is
+// worse than none, since newly added products would sync with no taxonomy.
+const NODES_QUERY = `
+query($ids: [ID!]!) {
+  nodes(ids: $ids) {
+    ... on Product {
+      id
+      ${PRODUCT_MF}
+      variants(first: 100) {
+        nodes { id ${VARIANT_MF} }
+      }
+    }
+  }
+}`;
+
+async function buildMetafieldIndexForProducts(productIds) {
+  const index = { product: {}, variant: {} };
+  const ids = productIds.map((id) => `gid://shopify/Product/${id}`);
+  const BATCH = 10;
+  for (let i = 0; i < ids.length; i += BATCH) {
+    const batch = ids.slice(i, i + BATCH);
+    const data = await gql(NODES_QUERY, { ids: batch });
+    for (const node of data.nodes) {
+      if (!node || !node.id) continue;
+      const pid = numericId(node.id);
+      if (pid) index.product[pid] = collect(mfNodes(node, P_ALIASES));
+      for (const v of (node.variants && node.variants.nodes) || []) {
+        const vid = numericId(v.id);
+        if (vid) index.variant[vid] = collect(mfNodes(v, V_ALIASES));
+      }
+    }
+    // light pacing — GraphQL shares a leaky bucket with the REST calls in
+    // shopify.js, and this runs alongside them.
+    await new Promise((r) => setTimeout(r, 200));
+  }
+  console.log(`🏷️  Metafields fetched for ${Object.keys(index.product).length} products / ${Object.keys(index.variant).length} variants (targeted)`);
+  return index;
+}
+
+module.exports = { buildMetafieldIndex, buildMetafieldIndexForProducts, KEY_MATCHERS };

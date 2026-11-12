@@ -3,7 +3,9 @@ const config = require("./config");
 const { getAllProducts, getRecentlyUpdatedProducts, getInventoryLevels, getInventoryCost, buildLocationMap, formatManufacturer } = require("./shopify");
 const { upsertProduct, deleteProduct } = require("./marketplace");
 const { calculatePrice, meetsMinProfit, calculateWsnlDiscountPrice, getWsnlPriceOverride, MIN_PROFIT_EUR, MIN_WSNL_DISCOUNT_PROFIT_EUR, FIXED_COST_EUR, WSNL_COMMISSION } = require("./pricing");
-const { getCategoryCode } = require("./categories");
+const { getCategoryCode, resolveCategory } = require("./categories");
+const { buildMetafieldIndex, buildMetafieldIndexForProducts } = require("./metafields");
+const { resolveSize } = require("./sizemap");
 const { findBrandCode } = require("./brandmap");
 
 // The full-catalog run on 2026-06-29 produced 10,292 errors, almost all
@@ -56,12 +58,26 @@ function cleanImages(product) {
   });
 }
 
-function buildPayload({ product, variant, images, price, specialPrice, quantity, brandCode }) {
+function buildPayload({ product, variant, images, price, specialPrice, quantity, brandCode, meta }) {
+  const pMeta = (meta && meta.product[String(product.id)]) || {};
+  const vMeta = (meta && meta.variant[String(variant.id)]) || {};
+
+  // Taxonomy now comes from the Shopify metafields first; product_type and the
+  // product title are fallbacks only.
+  const resolved = resolveCategory({
+    gender: pMeta.gender,
+    category: pMeta.category,
+    subcategory: pMeta.subcategory,
+    productType: product.product_type,
+    tags: product.tags,
+    title: product.title,
+  });
+
   const payload = {
     identifier: `shopify_variant_${variant.id}`,
     parent: `shopify_product_${product.id}`,
     enabled: true,
-    category: getCategoryCode(product.product_type, product.tags),
+    category: resolved.code,
     values: {
       name: [{ data: product.title, locale: config.defaultLocale }, { data: product.title, locale: config.secondaryLocale }],
       description: [
@@ -77,51 +93,48 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
     },
   };
   if (specialPrice) payload.values.special_price = [{ data: [{ amount: specialPrice, currency: "EUR" }] }];
-  const sizePattern = /^(xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl|3xl|4xl|5xl|xxxs|xxs|os|one.?size|one_size|uni|unica|taille.?unique|\d+[yY]|\d+[mM]|\d+[\/\-]\d+|\d+[\.\,]?\d*|one_size)$/i;
-  const colorWords = /^(black|white|blue|red|green|gray|grey|beige|brown|pink|orange|yellow|purple|gold|silver|navy|nude|nero|bianco|rosso|verde|blu|rosa|arancione|giallo|viola|marrone|beige|camel|cream|ivory|coral|taupe|khaki|olive|mint|teal|cyan|metallic|multicolor|multi|print|animal)$/i;
-  // Any of these mean "one size" in some source feed's convention (Loxuno uses
-  // "OS", others use "UNI"/"Unica"/"One Size"). Marketplace only accepts a single
-  // canonical token for this, so every synonym must collapse to it -
-  // sending the raw synonym (e.g. "uni") gets a "not supported/disabled"
-  // error, and sending nothing at all (e.g. "OS" wasn't even recognized as
-  // a size before) gets a "must be unspecified" error demanding some value.
-  const oneSizeSynonyms = /^(os|uni|unica|one.?size|taille.?unique)$/i;
-  // Region-prefixed sizes ("EU39/US9", "IT44", "IT50 | L") used to fail the
-  // pattern and the size was dropped, so WSNL showed "One Size". Keep the
-  // EU/IT number and drop the rest.
-  const stripRegion = (v) => {
-    if (!v) return v;
-    const m = String(v).trim().match(/^(?:eu|it)\s*([0-9]+(?:[.,][0-9])?)\s*(?:[\/|].*)?$/i);
-    return m ? m[1] : v;
-  };
-  const opt1 = stripRegion(variant.option1);
-  const opt2 = stripRegion(variant.option2);
-  const option1isSze = opt1 && sizePattern.test(opt1.trim()) && !colorWords.test(opt1.trim());
-  const option2isSze = opt2 && sizePattern.test(opt2.trim());
-  const sizeValue = option1isSze ? opt1 : (option2isSze ? opt2 : (opt1 || null));
-  let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
-  if (cleanSize && oneSizeSynonyms.test(cleanSize.trim())) {
-    cleanSize = "one_size";
+
+  // ── Size ────────────────────────────────────────────────────────────────
+  // Source of truth is now the variant Size metafield. Option positions are a
+  // fallback for variants the taxonomy pass hasn't reached yet.
+  //
+  // Every candidate is resolved against sizes.json (the marketplace's own 456-
+  // code vocabulary) via sizemap.resolveSize. That fixes two things the old
+  // regex did wrong: half sizes were floored (10,5 -> "10", i.e. the customer
+  // gets the wrong shoe), and unrecognised values were sent anyway and bounced
+  // by the API. resolveSize returns null for anything not in the vocabulary,
+  // and null means we omit the field rather than send garbage.
+  // The variant's own option value is the real size and wins. The size
+  // metafield (custom.size / poizon.size) is only a fallback for variants
+  // with no recognisable size option. filter.size is never read: it is a
+  // storefront filter bucket (IT58 suit = "4XL"), not the size.
+  const sizeCandidates = [
+    variant.option1,
+    variant.option2,
+    variant.option3,
+    vMeta.size,
+  ];
+  let cleanSize = null;
+  let sizeFromMetafield = false;
+  for (let i = 0; i < sizeCandidates.length; i++) {
+    const resolvedSize = resolveSize(sizeCandidates[i]);
+    if (resolvedSize) {
+      cleanSize = resolvedSize;
+      sizeFromMetafield = i === 3;
+      break;
+    }
   }
-  if (cleanSize && /^\d+\.5$/.test(cleanSize)) {
-    cleanSize = String(Math.floor(parseFloat(cleanSize)));
-  }
-  // These categories don't reliably carry a size *option* in Shopify - many of
-  // their products only have a single "Colore" option and no size option at
-  // all, which used to leak the raw (often untranslated, e.g. "Avorio") color
-  // through as a fake size value. That's what this suppression is for.
-  // It must NOT apply when a size was genuinely detected on the variant
-  // (option1isSze / option2isSze true, including one-size markers like OS/UNI)
-  // - Marketplace's schema for these categories does require a size value, and
-  // suppressing a real one is what was causing "must be unspecified" errors
-  // on every bag/hat/belt/wallet product in this category, one-size or not.
+  const sizeFromOption = Boolean(cleanSize) && !sizeFromMetafield;
+
+  // These categories don't reliably carry a size option in Shopify. Suppression
+  // still applies ONLY when no genuine size was found — a real size (including
+  // one_size) must always be sent, or the API returns "must be unspecified"
+  // errors on every bag/hat/belt/wallet product.
   const noSizeCategories = ["219", "253", "140", "678", "7850", "7851"];
-  const productCategory = getCategoryCode(product.product_type, product.tags);
-  const hasGenuineSize = option1isSze || option2isSze;
-  const looksLikeSize = cleanSize && (sizePattern.test(cleanSize) || /^(one_size|xxs|xs|s|m|l|xl|xxl|xxxl|xxxxl|xxxxxl)$/i.test(cleanSize));
-  if (looksLikeSize && !colorWords.test(cleanSize) && (hasGenuineSize || !noSizeCategories.includes(productCategory))) {
+  if (cleanSize && (sizeFromOption || sizeFromMetafield || !noSizeCategories.includes(resolved.code))) {
     payload.values.size = [{ data: cleanSize }];
   }
+
   payload.values.color = [{ data: findColor(variant, product.tags) }];
   if (images.length > 0) {
     payload.values.image_default = [{ data: images[0] }];
@@ -144,6 +157,12 @@ async function sync() {
     buildLocationMap(),
     isFullSync ? getAllProducts() : getRecentlyUpdatedProducts(120),
   ]);
+
+  // Full sync pages the whole catalog; incremental fetches only what changed.
+  // On a typical hourly run that is one request instead of ~172.
+  const meta = isFullSync
+    ? await buildMetafieldIndex()
+    : await buildMetafieldIndexForProducts(products.map((p) => p.id));
 
   console.log(`📦 ${products.length} products to process`);
 
@@ -213,7 +232,7 @@ async function sync() {
           const price = compareAt || originalPrice;  // compare-at (RRP) as the display price
           const specialPrice = priceOverride;         // override = the sale price shown
           console.log(`  💰 ${product.title} | ${variant.sku} | WSNL sale €${priceOverride} was €${price} (compareAt: €${compareAt})`);
-          const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
+          const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode, meta });
           const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
           const hasEan = payload.values.ean && payload.values.ean[0]?.data;
           if (eanRequired && !hasEan) {
@@ -325,7 +344,7 @@ async function sync() {
         }
 
 
-        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode });
+        const payload = buildPayload({ product, variant, images, price, specialPrice, quantity: stockQuantity, brandCode, meta });
         const eanRequired = ["609","24","114","199","255","92","618","612","615","617"].includes(payload.category);
         const hasEan = payload.values.ean && payload.values.ean[0]?.data;
         if (eanRequired && !hasEan) {
