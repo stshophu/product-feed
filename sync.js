@@ -86,9 +86,19 @@ function buildPayload({ product, variant, images, price, specialPrice, quantity,
   // error, and sending nothing at all (e.g. "OS" wasn't even recognized as
   // a size before) gets a "must be unspecified" error demanding some value.
   const oneSizeSynonyms = /^(os|uni|unica|one.?size|taille.?unique)$/i;
-  const option1isSze = variant.option1 && sizePattern.test(variant.option1.trim()) && !colorWords.test(variant.option1.trim());
-  const option2isSze = variant.option2 && sizePattern.test(variant.option2.trim());
-  const sizeValue = option1isSze ? variant.option1 : (option2isSze ? variant.option2 : (variant.option1 || null));
+  // Region-prefixed sizes ("EU39/US9", "IT44", "IT50 | L") used to fail the
+  // pattern and the size was dropped, so WSNL showed "One Size". Keep the
+  // EU/IT number and drop the rest.
+  const stripRegion = (v) => {
+    if (!v) return v;
+    const m = String(v).trim().match(/^(?:eu|it)\s*([0-9]+(?:[.,][0-9])?)\s*(?:[\/|].*)?$/i);
+    return m ? m[1] : v;
+  };
+  const opt1 = stripRegion(variant.option1);
+  const opt2 = stripRegion(variant.option2);
+  const option1isSze = opt1 && sizePattern.test(opt1.trim()) && !colorWords.test(opt1.trim());
+  const option2isSze = opt2 && sizePattern.test(opt2.trim());
+  const sizeValue = option1isSze ? opt1 : (option2isSze ? opt2 : (opt1 || null));
   let cleanSize = sizeValue ? sizeValue.replace(/,/g, ".").replace(/^one size$/i, "one_size") : null;
   if (cleanSize && oneSizeSynonyms.test(cleanSize.trim())) {
     cleanSize = "one_size";
