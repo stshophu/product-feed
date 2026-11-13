@@ -1,4 +1,4 @@
-name: Marketplace Light Stock Sync (Rewix + Loxuno)
+name: Marketplace Light Stock Sync (Rewix + Loxuno + Hanau)
 
 on:
   schedule:
