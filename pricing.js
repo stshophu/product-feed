@@ -8,7 +8,7 @@ const WSNL_KEEP_RATE      = 1 - WSNL_COMMISSION - NL_VAT_FRACTION; // 0.56645
 
 const MARKETPLACE_COMMISSION = 1 - WSNL_COMMISSION; // kept for legacy callers (0.74)
 const TARGET_MARGIN           = 1.40;
-const MIN_PROFIT_EUR          = 20;   // minimum acceptable profit per item on WSNL
+const MIN_PROFIT_EUR          = 50;   // minimum profit per item on WSNL (13 Nov 2026: raised from 20 - returns)
 const FIXED_COST_EUR          = 15;   // flat per-item handling cost (regular listings)
 const FIXED_COST_CLEARANCE    = 0;    // no fixed cost for clearance/override-priced items
 
@@ -113,7 +113,7 @@ function findWsnlDiscountBrand(vendor) {
   return WSNL_DISCOUNT_VENDOR_ALIASES[v] || null;
 }
 
-const MIN_WSNL_DISCOUNT_PROFIT_EUR = 20;
+const MIN_WSNL_DISCOUNT_PROFIT_EUR = MIN_PROFIT_EUR; // legacy name
 
 // ---------------------------------------------------------------------------
 // getWsnlPriceOverride(sku)
@@ -156,6 +156,57 @@ function calculateWsnlDiscountPrice(vendor, originalPrice, compareAt, cost) {
   return { price, specialPrice, brand, requestedPct, appliedPct: parseFloat(appliedPct.toFixed(1)), capped, profit };
 }
 
+
+// ---------------------------------------------------------------------------
+// computeWsnlListing  (Rewix 3169 + Loxuno 3170, from 13 Nov 2026)
+// ---------------------------------------------------------------------------
+// Every item goes to WSNL at full price (RRP = Shopify compare-at, or the
+// Shopify price if there is none) with a sale price on top:
+//
+//   target discount = brand discount (WSNL_BRAND_DISCOUNTS) or DEFAULT 30%,
+//                     + BF extra 5% for WSNL's requested brands until BF_END
+//   floor price     = (cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP_RATE
+//   applied         = min(target, the discount that still keeps the floor)
+//   applied < MIN_DISCOUNT_PCT  -> excluded (would barely show a discount)
+//   no cost price               -> excluded (profit can't be checked)
+//
+// So the profit check runs on the final discounted price, after commission,
+// NL VAT and the fixed per-item cost. Hanau (3171) does not use this.
+const DEFAULT_DISCOUNT_PCT = 30;
+const MIN_DISCOUNT_PCT     = 10;
+const BF_EXTRA_PCT         = 5;
+const BF_END               = new Date("2026-12-01T00:00:00+01:00"); // extra 5% until end of 30 Nov (NL time)
+const BF_EXTRA_BRANDS      = new Set([
+  "palm angels", "dsquared2", "balenciaga", "saint laurent", "dolce & gabbana", "marc jacobs",
+]);
+
+function computeWsnlListing({ vendor, shopPrice, compareAt, cost, now = new Date() }) {
+  if (!cost || cost <= 0) return { excluded: true, reason: "no cost price in Shopify" };
+  const rrp = compareAt && compareAt > shopPrice ? compareAt : shopPrice;
+  if (!rrp || rrp <= 0) return { excluded: true, reason: "no price" };
+
+  const v = (vendor || "").toLowerCase().trim();
+  const brand = findWsnlDiscountBrand(vendor);
+  let targetPct = brand ? WSNL_BRAND_DISCOUNTS[brand] : DEFAULT_DISCOUNT_PCT;
+  const bfExtra = now < BF_END && !WSNL_DISCOUNT_EXCLUDED_VENDORS.has(v) && BF_EXTRA_BRANDS.has(v);
+  if (bfExtra) targetPct += BF_EXTRA_PCT;
+
+  const floorPrice = (cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP_RATE;
+  const maxPct = (1 - floorPrice / rrp) * 100;
+  const appliedPct = Math.min(targetPct, maxPct);
+  if (appliedPct < MIN_DISCOUNT_PCT) {
+    return { excluded: true, reason: `max ${Math.max(0, maxPct).toFixed(1)}% off RRP at €${MIN_PROFIT_EUR} profit (min ${MIN_DISCOUNT_PCT}%)` };
+  }
+  // round the sale price UP to the cent so rounding never dips below the floor
+  const specialPrice = Math.ceil(rrp * (1 - appliedPct / 100) * 100) / 100;
+  const profit = parseFloat((specialPrice * WSNL_KEEP_RATE - cost - FIXED_COST_EUR).toFixed(2));
+  return {
+    price: parseFloat(rrp.toFixed(2)), specialPrice, profit,
+    targetPct, appliedPct: parseFloat(appliedPct.toFixed(1)),
+    capped: appliedPct < targetPct, bfExtra,
+  };
+}
+
 // ---------------------------------------------------------------------------
 // calculatePrice  (pass-through and cost-based)
 // ---------------------------------------------------------------------------
@@ -191,6 +242,7 @@ function meetsMinProfit(price, specialPrice, cost) {
 }
 
 module.exports = {
+  computeWsnlListing,
   calculatePrice,
   meetsMinProfit,
   calculateWsnlDiscountPrice,
