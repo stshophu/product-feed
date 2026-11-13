@@ -297,7 +297,7 @@ async function sync() {
           //
           // compareAt always passes through unchanged as the crossed-out was-price.
           // Only applies to 3170 non-discounted items.
-          if (!wsnlDiscount && (stockLocationName === "3170 Warehouse" || stockLocationName === "3140 Warehouse") && cost && cost > 0) {
+          if (!wsnlDiscount && (stockLocationName === "3170 Warehouse" || stockLocationName === "3169 Warehouse") && cost && cost > 0) {
             const WSNL_KEEP = 1 - WSNL_COMMISSION - (0.19 / 1.19);
             const minPrice = parseFloat(((cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP).toFixed(2));
             const rrp = compareAt || null;

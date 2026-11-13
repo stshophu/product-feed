@@ -76,6 +76,14 @@ async function updateStock(identifier, quantity) {
       // Not on Marketplace yet - full sync's job to create it, not this one's.
       return;
     }
+    // The API treats PATCH as an upsert: for a variant that is not listed
+    // (e.g. removed by sync.js's profit check) it tries to create it and
+    // rejects it for lack of a category. Same meaning as a 404 - not listed,
+    // and this light job must never create it - so not an error.
+    const msg = e.response && JSON.stringify(e.response.data || "");
+    if (e.response && e.response.status === 422 && msg && msg.includes("category attribute is missing")) {
+      return;
+    }
     throw e;
   }
 }
