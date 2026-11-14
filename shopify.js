@@ -78,7 +78,7 @@ async function getRecentlyUpdatedProducts(minutes) {
 // body_html/images/product_type/updated_at since that job never builds a
 // full Marketplace payload, only patches quantity or disables a listing.
 async function getAllProductsLight() {
-  return fetchProducts({}, "id,title,variants,status");
+  return fetchProducts({}, "id,title,variants,status,updated_at");
 }
 
 async function fetchProducts(extraParams, fieldsOverride) {

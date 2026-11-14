@@ -48,6 +48,20 @@ const LIGHT_SYNC_LOCATIONS = ["3170 Warehouse", "3169 Warehouse", "3171 Warehous
 const EXCLUDED_LOCATION = null;
 
 const MARKETPLACE_PACING_MS = 50;
+
+// Changes-only mode (14 Nov 2026). Going through all ~10,000 variants every
+// run took 60-100 min, which kept the shared "marketplace-api" queue blocked
+// so most catalog syncs were cancelled while waiting. Now a run only touches
+// variants whose stock level (Shopify inventory_level.updated_at) or product
+// (status/variants -> product.updated_at) changed in the last LOOKBACK_HOURS.
+// Once a night (03:00-03:29 UTC run), or with LIGHT_FULL=1, it does the old
+// complete pass as a safety net.
+const LOOKBACK_HOURS = parseFloat(process.env.LIGHT_LOOKBACK_HOURS || "3");
+function isFullPass() {
+  if (process.env.LIGHT_FULL === "1") return true;
+  const now = new Date();
+  return now.getUTCHours() === 3 && now.getUTCMinutes() < 30;
+}
 async function paced(fn) {
   await new Promise((r) => setTimeout(r, MARKETPLACE_PACING_MS));
   return fn();
@@ -91,11 +105,19 @@ async function syncStockLight() {
   console.log(`📦 ${products.length} products to check`);
   console.log(`📊 ${levels.length} inventory levels fetched`);
 
-  // inventory_item_id -> { light: bestAvailableQty, excluded: hasStockAt3140 }
+  const fullPass = isFullPass();
+  const since = Date.now() - LOOKBACK_HOURS * 3600 * 1000;
+  const changed = (ts) => ts && new Date(ts).getTime() >= since;
+  console.log(fullPass
+    ? "🌙 Complete pass (all variants)"
+    : `⚡ Changes only: stock or product updated in the last ${LOOKBACK_HOURS}h`);
+
+  // inventory_item_id -> { light: bestAvailableQty, excluded: hasStockAt3140, recent }
   const stockByItem = new Map();
   for (const lvl of levels) {
     const key = String(lvl.inventory_item_id);
-    const entry = stockByItem.get(key) || { light: 0, excluded: false };
+    const entry = stockByItem.get(key) || { light: 0, excluded: false, recent: false };
+    if (changed(lvl.updated_at)) entry.recent = true;
     if (String(lvl.location_id) === excludedLocationId) {
       if (lvl.available > 0) entry.excluded = true;
     } else if (lightLocationIds.includes(String(lvl.location_id))) {
@@ -104,10 +126,17 @@ async function syncStockLight() {
     stockByItem.set(key, entry);
   }
 
+  let skippedUnchanged = 0;
   for (const product of products) {
+    const productChanged = changed(product.updated_at);
     for (const variant of product.variants) {
       const identifier = `shopify_variant_${variant.id}`;
       const entry = stockByItem.get(String(variant.inventory_item_id));
+
+      if (!fullPass && !productChanged && !(entry && entry.recent) && !changed(variant.updated_at)) {
+        skippedUnchanged++;
+        continue;
+      }
 
       try {
         if (product.status !== "active") {
@@ -147,7 +176,7 @@ async function syncStockLight() {
   console.log("═══════════════════════════════════════════════════");
   console.log(
     `✅ Done in ${duration}s | Updated: ${stats.updated} | Disabled: ${stats.disabled} | ` +
-      `Skipped (3140-owned): ${stats.skippedOther} | Errors: ${stats.errors}`
+      `Skipped (3140-owned): ${stats.skippedOther} | Unchanged: ${skippedUnchanged} | Errors: ${stats.errors}`
   );
   console.log("═══════════════════════════════════════════════════");
 }
