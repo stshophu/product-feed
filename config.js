@@ -9,7 +9,10 @@ module.exports = {
     //                  shop price - instead of being excluded ("lift").
     //   3171 Hanau   - office stock, always listed (see sync.js).
     // Profit = WSNL price x 0.56645 (26% commission, NL VAT) - cost - EUR 15.
-    "3169 Warehouse": { markup: 0, shipping: 15, minProfit: 50 },
+    // maxCost (15 Nov 2026): Rewix is paid to the supplier when the order comes
+    // in, WSNL pays out ~14 days later. To limit the cash tied up per order,
+    // Rewix items with a cost price above EUR 600 are not listed on WSNL.
+    "3169 Warehouse": { markup: 0, shipping: 15, minProfit: 50, maxCost: 600 },
     "3170 Warehouse": { markup: 0, shipping: 15, minProfit: 30, lift: true },
     "3140 Warehouse": { markup: 0, shipping: 15, minProfit: 30, lift: true },
     "3171 Warehouse": { markup: 0, shipping: 15 },

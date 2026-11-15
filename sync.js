@@ -282,6 +282,12 @@ async function sync() {
           }
         } else {
           const locCfg = config.locations[stockLocationName] || {};
+          if (locCfg.maxCost && cost > locCfg.maxCost) {
+            try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
+            stats.skippedLowMargin++;
+            console.log(`  💶 ${product.title} | ${variant.sku || variant.id} | ${stockLocationName} | cost €${cost} above €${locCfg.maxCost} cap - excluded from WSNL`);
+            continue;
+          }
           const listing = computeWsnlListing({ vendor: product.vendor, shopPrice: originalPrice, compareAt, cost, minProfit: locCfg.minProfit, lift: locCfg.lift });
           if (listing.excluded) {
             try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
