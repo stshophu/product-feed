@@ -174,13 +174,16 @@ function calculateWsnlDiscountPrice(vendor, originalPrice, compareAt, cost) {
 // NL VAT and the fixed per-item cost. Hanau (3171) does not use this.
 const DEFAULT_DISCOUNT_PCT = 30;
 const MIN_DISCOUNT_PCT     = 10;
+// Lift locations (Loxuno/Tluxy): WSNL price may be at most this much above
+// the shop price; cheap items that would need more are not listed.
+const MAX_LIFT_PCT         = 30;
 const BF_EXTRA_PCT         = 5;
 const BF_END               = new Date("2026-12-01T00:00:00+01:00"); // extra 5% until end of 30 Nov (NL time)
 const BF_EXTRA_BRANDS      = new Set([
   "palm angels", "dsquared2", "balenciaga", "saint laurent", "dolce & gabbana", "marc jacobs",
 ]);
 
-function computeWsnlListing({ vendor, shopPrice, compareAt, cost, now = new Date() }) {
+function computeWsnlListing({ vendor, shopPrice, compareAt, cost, now = new Date(), minProfit = MIN_PROFIT_EUR, lift = false }) {
   if (!cost || cost <= 0) return { excluded: true, reason: "no cost price in Shopify" };
   const rrp = compareAt && compareAt > shopPrice ? compareAt : shopPrice;
   if (!rrp || rrp <= 0) return { excluded: true, reason: "no price" };
@@ -191,11 +194,28 @@ function computeWsnlListing({ vendor, shopPrice, compareAt, cost, now = new Date
   const bfExtra = now < BF_END && !WSNL_DISCOUNT_EXCLUDED_VENDORS.has(v) && BF_EXTRA_BRANDS.has(v);
   if (bfExtra) targetPct += BF_EXTRA_PCT;
 
-  const floorPrice = (cost + FIXED_COST_EUR + MIN_PROFIT_EUR) / WSNL_KEEP_RATE;
+  const floorPrice = (cost + FIXED_COST_EUR + minProfit) / WSNL_KEEP_RATE;
   const maxPct = (1 - floorPrice / rrp) * 100;
   const appliedPct = Math.min(targetPct, maxPct);
   if (appliedPct < MIN_DISCOUNT_PCT) {
-    return { excluded: true, reason: `max ${Math.max(0, maxPct).toFixed(1)}% off RRP at €${MIN_PROFIT_EUR} profit (min ${MIN_DISCOUNT_PCT}%)` };
+    if (lift) {
+      // No room for a real discount (Loxuno/Tluxy have no true RRP): list at
+      // the price that clears minProfit, never below the shop price. Show the
+      // shop price/RRP as was-price only if it is still above that.
+      const liftPrice = Math.ceil(Math.max(floorPrice, shopPrice) * 100) / 100;
+      if (liftPrice > shopPrice * (1 + MAX_LIFT_PCT / 100)) {
+        return { excluded: true, reason: `needs €${liftPrice} for €${minProfit} profit = +${((liftPrice / shopPrice - 1) * 100).toFixed(0)}% over shop price (max +${MAX_LIFT_PCT}%)` };
+      }
+      const wasPrice = rrp > liftPrice ? parseFloat(rrp.toFixed(2)) : liftPrice;
+      const profit = parseFloat((liftPrice * WSNL_KEEP_RATE - cost - FIXED_COST_EUR).toFixed(2));
+      return {
+        price: wasPrice, specialPrice: wasPrice > liftPrice ? liftPrice : null, profit,
+        targetPct, appliedPct: wasPrice > liftPrice ? parseFloat(((1 - liftPrice / wasPrice) * 100).toFixed(1)) : 0,
+        capped: true, bfExtra: false, lifted: liftPrice > shopPrice,
+        liftPct: parseFloat(((liftPrice / shopPrice - 1) * 100).toFixed(1)),
+      };
+    }
+    return { excluded: true, reason: `max ${Math.max(0, maxPct).toFixed(1)}% off RRP at €${minProfit} profit (min ${MIN_DISCOUNT_PCT}%)` };
   }
   // round the sale price UP to the cent so rounding never dips below the floor
   const specialPrice = Math.ceil(rrp * (1 - appliedPct / 100) * 100) / 100;

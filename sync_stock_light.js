@@ -44,7 +44,7 @@ try {
 // 13 Nov 2026: WSNL = Rewix (3169) + Loxuno (3170) + Hanau (3171). Tluxy
 // (3140) is no longer on WSNL, so there is no "owned by the full sync"
 // exclusion any more: anything without stock here is deleted.
-const LIGHT_SYNC_LOCATIONS = ["3170 Warehouse", "3169 Warehouse", "3171 Warehouse"];
+const LIGHT_SYNC_LOCATIONS = ["3170 Warehouse", "3169 Warehouse", "3171 Warehouse", "3140 Warehouse"];
 const EXCLUDED_LOCATION = null;
 
 const MARKETPLACE_PACING_MS = 50;
@@ -69,7 +69,7 @@ async function paced(fn) {
 
 async function syncStockLight() {
   console.log("═══════════════════════════════════════════════════");
-  console.log("🔄 LIGHT stock sync started (3169 Rewix + 3170 Loxuno + 3171 Hanau)");
+  console.log("🔄 LIGHT stock sync started (3169 Rewix + 3170 Loxuno + 3171 Hanau + 3140 Tluxy)");
   console.log(`⏰ ${new Date().toISOString()}`);
   console.log("═══════════════════════════════════════════════════");
 

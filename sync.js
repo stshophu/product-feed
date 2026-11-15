@@ -281,7 +281,8 @@ async function sync() {
             console.log(`  📦 ${product.title} | ${variant.sku || variant.id} | profit €${profit} below €${MIN_PROFIT_EUR} min, but listing anyway - 3171 office stock`);
           }
         } else {
-          const listing = computeWsnlListing({ vendor: product.vendor, shopPrice: originalPrice, compareAt, cost });
+          const locCfg = config.locations[stockLocationName] || {};
+          const listing = computeWsnlListing({ vendor: product.vendor, shopPrice: originalPrice, compareAt, cost, minProfit: locCfg.minProfit, lift: locCfg.lift });
           if (listing.excluded) {
             try { await deleteProduct(`shopify_variant_${variant.id}`); stats.disabled++; } catch (_) {}
             stats.skippedLowMargin++;
@@ -289,7 +290,7 @@ async function sync() {
             continue;
           }
           ({ price, specialPrice } = listing);
-          console.log(`  🏷️  ${product.title} | ${variant.sku || variant.id} | RRP €${listing.price} → €${listing.specialPrice} (-${listing.appliedPct}%${listing.capped ? `, capped from ${listing.targetPct}%` : ""}${listing.bfExtra ? ", BF +5%" : ""}) profit €${listing.profit}`);
+          console.log(`  🏷️  ${product.title} | ${variant.sku || variant.id} | RRP €${listing.price} → €${listing.specialPrice} (-${listing.appliedPct}%${listing.capped ? `, capped from ${listing.targetPct}%` : ""}${listing.bfExtra ? ", BF +5%" : ""}${listing.lifted ? `, +${listing.liftPct}% over shop price` : ""}) profit €${listing.profit}`);
         }
 
 
