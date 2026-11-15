@@ -33,8 +33,9 @@ async function marketplaceUpsertWithRetry(payload, attempt = 1) {
     // and reject the item with 422 "An size value must be unspecified" even
     // when the variant has a real one (e.g. "UNI"). Send it once more without
     // the size instead of dropping the item.
-    if (err.response && err.response.status === 422 && msg.includes("size value must be unspecified")
-        && payload.values && payload.values.size) {
+    // (The 422 is in the response body; the HTTP status itself differs, so
+    // match on the message, not on err.response.status.)
+    if (msg.includes("size value must be unspecified") && payload.values && payload.values.size) {
       const { size, ...rest } = payload.values;
       console.log(`  ↩️  size not allowed in this category - resending without size`);
       return marketplaceUpsertWithRetry({ ...payload, values: rest }, attempt);
