@@ -37,7 +37,7 @@ function normalise(raw) {
     .replace(/[.,]/g, ",");
 }
 
-const ONE_SIZE = /^(os|o\/s|uni|unica|uni\.?ca|one[\s._-]?size|onesize|taille[\s._-]?unique|tu|einheitsgroesse|einheitsgröße|única|unic)$/i;
+const ONE_SIZE = /^(os|o\/s|u|uni|unica|uni\.?ca|one[\s._-]?size|onesize|no[\s._-]?size|taille[\s._-]?unique|tu|einheitsgroesse|einheitsgröße|única|unic)$/i;
 
 // Colour words that used to leak through as sizes when a product had only a
 // "Colore" option and no size option. Kept as a guard on the fallback path.
@@ -58,6 +58,8 @@ const ALIASES = {
   // the vocabulary has no separate 18/24-month entry.
   "3m": "62_4m", "6m": "68_6m", "9m": "74_9m", "12m": "80_1yr",
   "18m": "86_1_5yr", "24m": "92_2yr",
+  // Patrizia Pepe (Rewix) writes its own numeric sizes 1-5 as Roman numerals.
+  "i": "1", "ii": "2", "iii": "3", "iv": "4", "v": "5",
 };
 
 function resolveSize(raw) {
@@ -93,6 +95,8 @@ function resolveSize(raw) {
     .replace(/_+/g, "_")
     .replace(/^_|_$/g, "");
   if (CODES.has(structural)) return structural;
+  // Combined letter sizes are upper-case in the vocabulary: "S-M" -> S_M
+  if (CODES.has(structural.toUpperCase())) return structural.toUpperCase();
 
   // trailing/leading region noise: "42 IT", "EU 39", "US 8"
   const stripped = structural

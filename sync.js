@@ -29,17 +29,9 @@ async function marketplaceUpsertWithRetry(payload, attempt = 1) {
     await upsertProduct(payload);
   } catch (err) {
     const msg = err.response ? JSON.stringify(err.response.data) : err.message;
-    // Some WSNL categories (card holders, backpacks, ...) take no size at all
-    // and reject the item with 422 "An size value must be unspecified" even
-    // when the variant has a real one (e.g. "UNI"). Send it once more without
-    // the size instead of dropping the item.
-    // (The 422 is in the response body; the HTTP status itself differs, so
-    // match on the message, not on err.response.status.)
-    if (msg.includes("size value must be unspecified") && payload.values && payload.values.size) {
-      const { size, ...rest } = payload.values;
-      console.log(`  ↩️  size not allowed in this category - resending without size`);
-      return marketplaceUpsertWithRetry({ ...payload, values: rest }, attempt);
-    }
+    // Note: WSNL's 422 "An size value must be unspecified" actually means the
+    // size is MISSING (required for that item). Fix is in sizemap.js (resolve
+    // the size), not here - do not strip sizes on this error.
     const looksLikeAuthOrRateLimit =
       msg.includes("Invalid API key") || msg.includes("access token") ||
       (err.response && (err.response.status === 401 || err.response.status === 429));
